@@ -1,4 +1,4 @@
-const DEFAULT_API_ENDPOINT = "https://chat.ecnu.edu.cn/open/api/v1/chat/completions";
+const DEFAULT_API_ENDPOINT = "";
 const DEFAULT_MODEL = "ecnu-max";
 const GROUP_COLORS = ["#ef4444", "#0f766e", "#2563eb", "#d97706", "#7c3aed", "#0891b2"];
 
@@ -595,7 +595,7 @@ async function handleMnemonic(item, mnemonicBox, button) {
     }
     state.pendingMnemonic = { item, mnemonicBox, button };
     openApiDialog();
-    showToast("请先配置 API Key 或代理地址", true);
+    showToast("请先填写 Supabase Function URL 和 anon key", true);
     return;
   }
 
@@ -625,63 +625,14 @@ async function generateMnemonic(item, mnemonicBox, button) {
 }
 
 async function requestMnemonic(word) {
-  if (isProxyMode()) {
-    return requestMnemonicViaProxy(word);
-  }
-
-  return requestMnemonicDirect(word);
-}
-
-async function requestMnemonicDirect(word) {
-  const payload = {
-    model: state.api.model,
-    messages: [
-      {
-        role: "system",
-        content:
-          "你是一个幽默、富有想象力的雅思英语老师。为单词提供生动、好记的助记法。可以利用谐音、词根词缀或荒诞画面。必须精简，直接输出助记文本，总字数控制在50字以内。",
-      },
-      {
-        role: "user",
-        content: `请为雅思单词 '${word}' 提供一个助记法。`,
-      },
-    ],
-    stream: false,
-  };
-
   let response;
   try {
     response = await fetch(state.api.endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        apikey: state.api.key,
         Authorization: `Bearer ${state.api.key}`,
-      },
-      body: JSON.stringify(payload),
-    });
-  } catch {
-    throw new Error("请求失败，可能是接口未允许 CORS");
-  }
-
-  if (!response.ok) {
-    const message = await readErrorMessage(response);
-    throw new Error(message || `API 返回 ${response.status}`);
-  }
-
-  const data = await response.json();
-  const text = extractMnemonicText(data);
-
-  if (!text) throw new Error("API 返回为空");
-  return text;
-}
-
-async function requestMnemonicViaProxy(word) {
-  let response;
-  try {
-    response = await fetch(state.api.endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         word,
@@ -689,17 +640,17 @@ async function requestMnemonicViaProxy(word) {
       }),
     });
   } catch {
-    throw new Error("代理请求失败，请检查 Worker 地址");
+    throw new Error("Supabase 函数请求失败，请检查 Function URL");
   }
 
   if (!response.ok) {
     const message = await readErrorMessage(response);
-    throw new Error(message || `代理返回 ${response.status}`);
+    throw new Error(message || `Supabase 函数返回 ${response.status}`);
   }
 
   const data = await response.json();
   const text = extractMnemonicText(data);
-  if (!text) throw new Error("代理返回为空");
+  if (!text) throw new Error("Supabase 函数返回为空");
   return text;
 }
 
@@ -771,22 +722,16 @@ function clearApiSettings() {
 }
 
 function updateApiState() {
-  if (state.api.key) {
-    els.apiState.textContent = `直连 API：${state.api.model}`;
-  } else if (isProxyMode()) {
-    els.apiState.textContent = `代理 API：${state.api.model}`;
+  if (canCallMnemonicApi()) {
+    els.apiState.textContent = `Supabase 代理：${state.api.model}`;
   } else {
-    els.apiState.textContent = "助记 API 未配置";
+    els.apiState.textContent = "Supabase 代理未配置";
   }
   els.apiState.classList.toggle("is-ready", canCallMnemonicApi());
 }
 
 function canCallMnemonicApi() {
-  return Boolean(state.api.key) || isProxyMode();
-}
-
-function isProxyMode() {
-  return !state.api.key && Boolean(state.api.endpoint) && state.api.endpoint !== DEFAULT_API_ENDPOINT;
+  return Boolean(state.api.endpoint && state.api.key);
 }
 
 function showToast(message, isError = false) {

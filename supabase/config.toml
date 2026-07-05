@@ -1,0 +1,2 @@
+[functions.mnemonic-proxy]
+verify_jwt = true

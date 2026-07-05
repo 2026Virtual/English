@@ -59,7 +59,7 @@
         <h2 id="chapter-title">加载中</h2>
         <p id="chapter-meta">正在读取词表</p>
       </div>
-      <div id="api-state" class="status-pill">助记 API 未配置</div>
+      <div id="api-state" class="status-pill">Supabase 代理未配置</div>
     </section>
 
     <section id="word-list" class="word-list" aria-live="polite"></section>
@@ -90,19 +90,19 @@
       </div>
 
       <label class="dialog-field">
-        <span>接口地址</span>
-        <input id="api-endpoint" type="url" inputmode="url" autocomplete="off">
+        <span>Supabase Function URL</span>
+        <input id="api-endpoint" type="url" inputmode="url" autocomplete="off" placeholder="https://<project-ref>.supabase.co/functions/v1/mnemonic-proxy">
       </label>
       <label class="dialog-field">
         <span>模型</span>
         <input id="api-model" type="text" autocomplete="off">
       </label>
       <label class="dialog-field">
-        <span>API Key</span>
-        <input id="api-key" type="password" autocomplete="off" placeholder="直连接口时填写，代理模式留空">
+        <span>Supabase anon key</span>
+        <input id="api-key" type="password" autocomplete="off" placeholder="eyJ...">
       </label>
 
-      <p class="dialog-note">直连接口需要 API Key 且接口必须允许 CORS。推荐把接口地址填成自己的 Cloudflare Worker 代理地址，并把 API Key 放在 Worker Secret 里，此处留空。</p>
+      <p class="dialog-note">这里填写的是 Supabase 项目的 anon key，可以公开放在浏览器里。真实大模型密钥放到 Supabase Edge Function 的 Secrets 中。</p>
 
       <div class="dialog-actions">
         <button class="tool-button" type="button" id="clear-api">
