@@ -7,8 +7,9 @@
 - 按现有 `vocabulary.txt` 解析章节、词群、单词、词性、释义和例句。
 - 使用浏览器 Web Speech API 播放英文发音，适配 Android Chrome。
 - 支持 A 类本 / B 类本工作区；工作区只保存在本次页面内存中，刷新或重新进入后为空。
-- 支持导出本次工作区为 Markdown 文件，手机下载后可本地保存。
+- 支持工作区按单词去重，并导出本次工作区为简洁 Markdown 文件，手机下载后可本地保存。
 - 支持通过 Supabase Edge Function 代理调用助记 API，真实大模型 API Key 不写入仓库。
+- 支持页面打开后立即预热 Supabase Edge Function，并每 10 分钟自动预热一次。
 - 支持默写检查和搜索。
 
 ## GitHub Pages 部署
@@ -82,6 +83,8 @@ https://<project-ref>.supabase.co/functions/v1/mnemonic-proxy
 - `Supabase anon key`: 填第 8 步复制的 anon public key
 
 保存后页面顶部状态应显示 `Supabase 代理：ecnu-max`，再点击单词卡片里的 `助记`。
+
+网页会把 Supabase Function URL、模型名和 anon public key 保存在浏览器 `localStorage`，用于下次打开页面后自动预热 Edge Function。这里保存的不是大模型密钥；真实大模型密钥仍只保存在 Supabase Secrets 的 `LLM_API_KEY` 中。
 
 ### CLI 部署可选
 

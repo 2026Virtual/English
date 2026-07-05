@@ -19,15 +19,19 @@ Deno.serve(async (req) => {
     return json({ error: "Method not allowed" }, 405);
   }
 
-  if (!LLM_API_KEY) {
-    return json({ error: "Missing Supabase secret: LLM_API_KEY" }, 500);
-  }
-
-  let body: { word?: string; model?: string };
+  let body: { warmup?: boolean; word?: string; model?: string };
   try {
     body = await req.json();
   } catch {
     return json({ error: "Invalid JSON body" }, 400);
+  }
+
+  if (body.warmup) {
+    return json({ status: "warm" });
+  }
+
+  if (!LLM_API_KEY) {
+    return json({ error: "Missing Supabase secret: LLM_API_KEY" }, 500);
   }
 
   const word = body.word?.trim();

@@ -1,6 +1,8 @@
 const DEFAULT_API_ENDPOINT = "";
 const DEFAULT_MODEL = "ecnu-max";
 const GROUP_COLORS = ["#ef4444", "#0f766e", "#2563eb", "#d97706", "#7c3aed", "#0891b2"];
+const API_SETTINGS_STORAGE_KEY = "personal-vocab-supabase-settings";
+const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
 
 const state = {
   chapters: [],
@@ -15,6 +17,7 @@ const state = {
   },
   voices: [],
   pendingMnemonic: null,
+  prewarmTimer: null,
 };
 
 const els = {};
@@ -22,6 +25,9 @@ const els = {};
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
   bindEvents();
+  loadApiSettings();
+  updateApiState();
+  startPrewarmLoop();
   initVoices();
   loadData();
 });
@@ -390,12 +396,21 @@ function createSpan(text) {
 }
 
 function addNote(item, type, chapterName) {
+  const wordKey = normalizeWordKey(item.word);
+  const existingNote = state.notes.find((note) => note.key === wordKey);
+  if (existingNote) {
+    showToast(`${item.word} 已在 ${existingNote.type}类本，未重复添加`, true);
+    return;
+  }
+
   state.notes.push({
+    key: wordKey,
     type,
     word: item.word,
     pos: item.pos,
     meaning: item.meaning,
     sentence: item.sentence,
+    mnemonic: getMnemonicForWord(item.word),
     chapterName,
     time: new Date(),
   });
@@ -442,13 +457,13 @@ function exportNotes() {
     return;
   }
 
-  const markdown = buildNotesMarkdown();
-  const datePart = formatDateForFile(new Date());
+  const datePart = formatDateForNoteTitle(new Date());
+  const markdown = buildNotesMarkdown(datePart);
   const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `english-notes-${datePart}.md`;
+  link.download = `词汇笔记${datePart}.md`;
   document.body.append(link);
   link.click();
   link.remove();
@@ -456,31 +471,31 @@ function exportNotes() {
   showToast("笔记已导出");
 }
 
-function buildNotesMarkdown() {
-  const exportedAt = new Date();
+function buildNotesMarkdown(datePart) {
   const groups = {
     A: state.notes.filter((note) => note.type === "A"),
     B: state.notes.filter((note) => note.type === "B"),
   };
 
-  const lines = [
-    "# 雅思词汇笔记",
-    "",
-    `导出时间：${formatDateTime(exportedAt)}`,
-    "",
-  ];
+  const lines = [`# 词汇笔记${datePart}`, ""];
 
   ["A", "B"].forEach((type) => {
     lines.push(`## ${type}类本`, "");
     if (!groups[type].length) {
-      lines.push("- 无", "");
+      lines.push("无", "");
       return;
     }
 
     groups[type].forEach((note) => {
-      lines.push(`- [${type}类] **${note.word}** ${note.pos ? `_${note.pos}_ ` : ""}${note.meaning}`);
-      if (note.sentence) lines.push(`  - ${note.sentence}`);
-      lines.push(`  - 章节：${note.chapterName}`);
+      lines.push(
+        [
+          cleanNoteField(note.word),
+          cleanNoteField(note.pos),
+          cleanNoteField(note.meaning),
+          cleanNoteField(note.sentence),
+          cleanNoteField(getMnemonicForWord(note.word) || note.mnemonic),
+        ].join(" ｜"),
+      );
     });
     lines.push("");
   });
@@ -496,6 +511,16 @@ function clearWorkspace() {
   state.notes = [];
   renderWorkspace();
   showToast("工作区已清空");
+}
+
+function getMnemonicForWord(word) {
+  return state.mnemonics.get(normalizeWordKey(word)) || "";
+}
+
+function cleanNoteField(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function openWorkspace() {
@@ -654,6 +679,27 @@ async function requestMnemonic(word) {
   return text;
 }
 
+async function warmEdgeFunction() {
+  if (!canCallMnemonicApi()) return;
+
+  try {
+    await fetch(state.api.endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: state.api.key,
+        Authorization: `Bearer ${state.api.key}`,
+      },
+      body: JSON.stringify({
+        warmup: true,
+        model: state.api.model,
+      }),
+    });
+  } catch (error) {
+    console.warn("Supabase warmup failed", error);
+  }
+}
+
 function extractMnemonicText(data) {
   return (
     data?.mnemonic?.trim?.() ||
@@ -698,6 +744,8 @@ function saveApiSettings() {
   state.api.model = els.apiModel.value.trim() || DEFAULT_MODEL;
   state.api.key = els.apiKey.value.trim();
   updateApiState();
+  persistApiSettings();
+  startPrewarmLoop();
   showToast(canCallMnemonicApi() ? "API 设置已保存" : "API 未配置完整", !canCallMnemonicApi());
 
   const pending = state.pendingMnemonic;
@@ -717,6 +765,8 @@ function clearApiSettings() {
   els.apiEndpoint.value = state.api.endpoint;
   els.apiModel.value = state.api.model;
   els.apiKey.value = "";
+  clearPersistedApiSettings();
+  stopPrewarmLoop();
   updateApiState();
   showToast("API 设置已清除");
 }
@@ -732,6 +782,61 @@ function updateApiState() {
 
 function canCallMnemonicApi() {
   return Boolean(state.api.endpoint && state.api.key);
+}
+
+function loadApiSettings() {
+  try {
+    const raw = localStorage.getItem(API_SETTINGS_STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    state.api.endpoint = typeof saved.endpoint === "string" ? saved.endpoint : DEFAULT_API_ENDPOINT;
+    state.api.model = typeof saved.model === "string" && saved.model ? saved.model : DEFAULT_MODEL;
+    state.api.key = typeof saved.key === "string" ? saved.key : "";
+  } catch {
+    clearPersistedApiSettings();
+  }
+}
+
+function persistApiSettings() {
+  if (!canCallMnemonicApi()) {
+    clearPersistedApiSettings();
+    return;
+  }
+
+  try {
+    localStorage.setItem(
+      API_SETTINGS_STORAGE_KEY,
+      JSON.stringify({
+        endpoint: state.api.endpoint,
+        model: state.api.model,
+        key: state.api.key,
+      }),
+    );
+  } catch {
+    showToast("浏览器无法保存 API 设置", true);
+  }
+}
+
+function clearPersistedApiSettings() {
+  try {
+    localStorage.removeItem(API_SETTINGS_STORAGE_KEY);
+  } catch {
+    // Ignore storage errors.
+  }
+}
+
+function startPrewarmLoop() {
+  stopPrewarmLoop();
+  if (!canCallMnemonicApi()) return;
+
+  warmEdgeFunction();
+  state.prewarmTimer = window.setInterval(warmEdgeFunction, PREWARM_INTERVAL_MS);
+}
+
+function stopPrewarmLoop() {
+  if (!state.prewarmTimer) return;
+  window.clearInterval(state.prewarmTimer);
+  state.prewarmTimer = null;
 }
 
 function showToast(message, isError = false) {
@@ -758,12 +863,7 @@ function normalizeWordKey(word) {
   return String(word).trim().toLowerCase();
 }
 
-function formatDateForFile(date) {
+function formatDateForNoteTitle(date) {
   const pad = (value) => String(value).padStart(2, "0");
-  return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
-}
-
-function formatDateTime(date) {
-  const pad = (value) => String(value).padStart(2, "0");
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}`;
+  return `${pad(date.getMonth() + 1)}-${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
 }

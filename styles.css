@@ -201,6 +201,12 @@ h1 {
   font-weight: 650;
 }
 
+.field-hint {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .control-field input,
 .control-field select,
 .dialog-field input {
