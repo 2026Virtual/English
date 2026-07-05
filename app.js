@@ -19,6 +19,7 @@ const state = {
   voices: [],
   pendingMnemonic: null,
   prewarmTimer: null,
+  currentAudio: null,
 };
 
 const els = {};
@@ -627,20 +628,112 @@ function initVoices() {
 }
 
 function speakWord(word) {
-  if (!("speechSynthesis" in window)) {
-    showToast("当前浏览器不支持发音", true);
+  const text = normalizeAudioText(word);
+  if (!text) {
+    showToast("播放失败", true);
     return;
   }
 
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-US";
-  utterance.rate = 0.82;
-  utterance.pitch = 1;
-  utterance.voice = pickEnglishVoice();
-  utterance.onerror = () => showToast("播放失败", true);
+  const primary = shouldUseRemoteAudioFirst() ? playRemoteWordAudio : speakWithWebSpeech;
+  const fallback = shouldUseRemoteAudioFirst() ? speakWithWebSpeech : playRemoteWordAudio;
 
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
+  primary(text).catch(() => {
+    fallback(text).catch(() => showToast("播放失败", true));
+  });
+}
+
+function speakWithWebSpeech(word) {
+  return new Promise((resolve, reject) => {
+    if (!("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") {
+      reject(new Error("Speech synthesis is unavailable"));
+      return;
+    }
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(word);
+    let settled = false;
+
+    const settle = (callback, value) => {
+      if (settled) return;
+      settled = true;
+      window.clearTimeout(startTimer);
+      callback(value);
+    };
+
+    const startTimer = window.setTimeout(() => {
+      synth.cancel();
+      settle(reject, new Error("Speech synthesis did not start"));
+    }, 1800);
+
+    utterance.lang = "en-US";
+    utterance.rate = 0.86;
+    utterance.pitch = 1;
+
+    const voice = pickEnglishVoice();
+    if (voice) utterance.voice = voice;
+
+    utterance.onstart = () => settle(resolve);
+    utterance.onend = () => settle(resolve);
+    utterance.onerror = (event) => settle(reject, event);
+
+    synth.cancel();
+    synth.speak(utterance);
+    if (synth.paused) synth.resume();
+  });
+}
+
+function playRemoteWordAudio(word) {
+  return new Promise((resolve, reject) => {
+    try {
+      if (state.currentAudio) {
+        state.currentAudio.pause();
+        state.currentAudio = null;
+      }
+
+      const audio = new Audio(buildRemoteAudioUrl(word));
+      state.currentAudio = audio;
+      audio.preload = "auto";
+
+      let settled = false;
+      const settle = (callback, value) => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(loadTimer);
+        callback(value);
+      };
+
+      const loadTimer = window.setTimeout(() => {
+        settle(reject, new Error("Remote audio timed out"));
+      }, 5000);
+
+      audio.onplaying = () => settle(resolve);
+      audio.onended = () => settle(resolve);
+      audio.onerror = () => settle(reject, new Error("Remote audio failed"));
+
+      const playResult = audio.play();
+      if (playResult && typeof playResult.catch === "function") {
+        playResult.catch((error) => settle(reject, error));
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+function shouldUseRemoteAudioFirst() {
+  return /Android/i.test(navigator.userAgent);
+}
+
+function buildRemoteAudioUrl(word) {
+  return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`;
+}
+
+function normalizeAudioText(word) {
+  return String(word || "")
+    .trim()
+    .split("/")
+    .find(Boolean)
+    ?.trim() || "";
 }
 
 function pickEnglishVoice() {
