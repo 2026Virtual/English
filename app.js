@@ -5,12 +5,13 @@ const API_SETTINGS_STORAGE_KEY = "personal-vocab-supabase-settings";
 const WORKSPACE_STORAGE_KEY = "personal-vocab-workspace";
 const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
 const PAGE_COPY = {
+  home: "个人学习入口",
   vocabulary: "逻辑词群记忆",
   reading: "雅思阅读训练",
 };
 
 const state = {
-  activePage: "vocabulary",
+  activePage: "home",
   chapters: [],
   chapterIndex: 0,
   searchText: "",
@@ -43,8 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function cacheElements() {
   els.toast = document.getElementById("toast");
+  els.appHeader = document.querySelector(".app-header");
   els.subtitle = document.getElementById("app-subtitle");
-  els.navButtons = Array.from(document.querySelectorAll(".nav-button"));
+  els.homeView = document.getElementById("home-view");
+  els.homeButton = document.getElementById("home-button");
+  els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
   els.readingView = document.getElementById("reading-view");
   els.vocabActions = document.getElementById("vocab-actions");
@@ -74,7 +78,9 @@ function cacheElements() {
 }
 
 function bindEvents() {
-  els.navButtons.forEach((button) => {
+  els.homeButton.addEventListener("click", () => switchPage("home"));
+
+  els.homeMenuButtons.forEach((button) => {
     button.addEventListener("click", () => switchPage(button.dataset.page));
   });
 
@@ -115,36 +121,37 @@ function bindEvents() {
 }
 
 function pageFromHash() {
-  return window.location.hash === "#reading" ? "reading" : "vocabulary";
+  if (window.location.hash === "#vocabulary") return "vocabulary";
+  if (window.location.hash === "#reading") return "reading";
+  return "home";
 }
 
 function switchPage(page, options = {}) {
-  const nextPage = page === "reading" ? "reading" : "vocabulary";
+  const nextPage = page === "vocabulary" || page === "reading" ? page : "home";
   const updateHash = options.updateHash !== false;
+  const isHome = nextPage === "home";
 
   state.activePage = nextPage;
+  document.body.classList.toggle("is-home", isHome);
+  els.appHeader.hidden = isHome;
+  els.homeView.hidden = !isHome;
   els.vocabularyView.hidden = nextPage !== "vocabulary";
   els.readingView.hidden = nextPage !== "reading";
   els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
   els.subtitle.textContent = getPageSubtitle(nextPage);
 
-  if (nextPage !== "vocabulary") {
+  if (isHome || nextPage !== "vocabulary") {
     closeWorkspace();
     closeApiDialog();
   }
 
-  els.navButtons.forEach((button) => {
-    const isActive = button.dataset.page === nextPage;
-    button.classList.toggle("is-active", isActive);
-    if (isActive) {
-      button.setAttribute("aria-current", "page");
-    } else {
-      button.removeAttribute("aria-current");
+  if (updateHash) {
+    const nextUrl = isHome
+      ? `${window.location.pathname}${window.location.search}`
+      : `#${nextPage}`;
+    if (`${window.location.pathname}${window.location.search}${window.location.hash}` !== nextUrl) {
+      window.history.replaceState(null, "", nextUrl);
     }
-  });
-
-  if (updateHash && window.location.hash !== `#${nextPage}`) {
-    window.history.replaceState(null, "", `#${nextPage}`);
   }
 
   refreshIcons();

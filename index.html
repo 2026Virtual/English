@@ -11,10 +11,10 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
-<body>
+<body class="is-home">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <header class="app-header">
+  <header class="app-header" hidden>
     <div class="brand">
       <img src="./favicon.svg" class="brand-mark" alt="">
       <div>
@@ -23,35 +23,59 @@
       </div>
     </div>
 
-    <nav class="main-nav" aria-label="主菜单">
-      <button id="nav-vocabulary" class="nav-button is-active" type="button" data-page="vocabulary" aria-current="page">
-        <i data-lucide="book-open"></i>
-        <span>背单词</span>
+    <div class="header-tools">
+      <button id="home-button" class="tool-button" type="button">
+        <i data-lucide="layout-grid"></i>
+        <span>菜单</span>
       </button>
-      <button id="nav-reading" class="nav-button" type="button" data-page="reading">
-        <i data-lucide="newspaper"></i>
-        <span>快速阅读</span>
-      </button>
-    </nav>
-
-    <div id="vocab-actions" class="header-actions">
-      <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
-        <i data-lucide="settings"></i>
-      </button>
-      <button id="open-workspace" class="tool-button" type="button">
-        <i data-lucide="notebook-tabs"></i>
-        <span>工作区</span>
-        <strong id="note-count">0</strong>
-      </button>
-      <button id="export-notes" class="tool-button primary" type="button">
-        <i data-lucide="download"></i>
-        <span>导出笔记</span>
-      </button>
+      <div id="vocab-actions" class="header-actions">
+        <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
+          <i data-lucide="settings"></i>
+        </button>
+        <button id="open-workspace" class="tool-button" type="button">
+          <i data-lucide="notebook-tabs"></i>
+          <span>工作区</span>
+          <strong id="note-count">0</strong>
+        </button>
+        <button id="export-notes" class="tool-button primary" type="button">
+          <i data-lucide="download"></i>
+          <span>导出笔记</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main class="app-main">
-    <section id="vocabulary-view" class="app-view" data-page="vocabulary">
+    <section id="home-view" class="app-view home-view" data-page="home">
+      <div class="home-card">
+        <div class="home-brand">
+          <img src="./favicon.svg" class="home-mark" alt="">
+          <div>
+            <p>个人背单词系统</p>
+            <h2>选择学习模块</h2>
+          </div>
+        </div>
+
+        <div class="home-menu" aria-label="学习模块">
+          <button class="home-menu-button" type="button" data-page="vocabulary">
+            <i data-lucide="book-open"></i>
+            <span>
+              <strong>背单词</strong>
+              <small>词表、发音、助记、工作区</small>
+            </span>
+          </button>
+          <button class="home-menu-button" type="button" data-page="reading">
+            <i data-lucide="newspaper"></i>
+            <span>
+              <strong>快速阅读</strong>
+              <small>雅思阅读题库</small>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vocabulary-view" class="app-view" data-page="vocabulary" hidden>
       <section class="controls" aria-label="词表控制">
         <label class="control-field">
           <span>章节</span>
