@@ -2,6 +2,7 @@ const DEFAULT_API_ENDPOINT = "";
 const DEFAULT_MODEL = "ecnu-max";
 const GROUP_COLORS = ["#ef4444", "#0f766e", "#2563eb", "#d97706", "#7c3aed", "#0891b2"];
 const API_SETTINGS_STORAGE_KEY = "personal-vocab-supabase-settings";
+const WORKSPACE_STORAGE_KEY = "personal-vocab-workspace";
 const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
 
 const state = {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
   bindEvents();
   loadApiSettings();
+  loadWorkspace();
   updateApiState();
   startPrewarmLoop();
   initVoices();
@@ -415,6 +417,7 @@ function addNote(item, type, chapterName) {
     time: new Date(),
   });
 
+  persistWorkspace();
   renderWorkspace();
   showToast(`已加入 ${type} 类本：${item.word}`);
 }
@@ -437,6 +440,9 @@ function renderWorkspace() {
     const item = document.createElement("li");
     item.className = `workspace-item type-${note.type.toLowerCase()}`;
 
+    const copy = document.createElement("div");
+    copy.className = "workspace-copy";
+
     const title = document.createElement("strong");
     title.textContent = `${note.type}类 · ${note.word}`;
 
@@ -446,9 +452,16 @@ function renderWorkspace() {
     const chapter = document.createElement("small");
     chapter.textContent = note.chapterName;
 
-    item.append(title, meaning, chapter);
+    const removeButton = createIconButton("x", `从工作区删除 ${note.word}`, "workspace-remove", () => {
+      removeNote(note.key);
+    });
+
+    copy.append(title, meaning, chapter);
+    item.append(copy, removeButton);
     els.workspaceList.append(item);
   });
+
+  refreshIcons();
 }
 
 function exportNotes() {
@@ -509,8 +522,73 @@ function clearWorkspace() {
     return;
   }
   state.notes = [];
+  clearPersistedWorkspace();
   renderWorkspace();
   showToast("工作区已清空");
+}
+
+function removeNote(noteKey) {
+  const note = state.notes.find((item) => item.key === noteKey);
+  state.notes = state.notes.filter((item) => item.key !== noteKey);
+  persistWorkspace();
+  renderWorkspace();
+  showToast(note ? `已移除 ${note.word}` : "已移除");
+}
+
+function loadWorkspace() {
+  try {
+    const raw = localStorage.getItem(WORKSPACE_STORAGE_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    if (!Array.isArray(saved)) return;
+
+    state.notes = saved
+      .filter((note) => note && typeof note.word === "string" && typeof note.type === "string")
+      .map((note) => ({
+        key: normalizeWordKey(note.word),
+        type: note.type === "B" ? "B" : "A",
+        word: note.word,
+        pos: note.pos || "",
+        meaning: note.meaning || "",
+        sentence: note.sentence || "",
+        mnemonic: note.mnemonic || "",
+        chapterName: note.chapterName || "",
+        time: note.time ? new Date(note.time) : new Date(),
+      }));
+  } catch {
+    clearPersistedWorkspace();
+  }
+}
+
+function persistWorkspace() {
+  try {
+    localStorage.setItem(
+      WORKSPACE_STORAGE_KEY,
+      JSON.stringify(
+        state.notes.map((note) => ({
+          key: note.key,
+          type: note.type,
+          word: note.word,
+          pos: note.pos,
+          meaning: note.meaning,
+          sentence: note.sentence,
+          mnemonic: getMnemonicForWord(note.word) || note.mnemonic,
+          chapterName: note.chapterName,
+          time: note.time instanceof Date ? note.time.toISOString() : note.time,
+        })),
+      ),
+    );
+  } catch {
+    showToast("浏览器无法保存工作区", true);
+  }
+}
+
+function clearPersistedWorkspace() {
+  try {
+    localStorage.removeItem(WORKSPACE_STORAGE_KEY);
+  } catch {
+    // Ignore storage errors.
+  }
 }
 
 function getMnemonicForWord(word) {

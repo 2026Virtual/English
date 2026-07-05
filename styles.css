@@ -184,7 +184,8 @@ h1 {
 .controls {
   display: grid;
   grid-template-columns: minmax(180px, 0.75fr) minmax(240px, 1.25fr) 40px;
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 7px;
   align-items: end;
 }
 
@@ -202,9 +203,11 @@ h1 {
 }
 
 .field-hint {
+  grid-column: 2 / 3;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.45;
+  padding-top: 2px;
 }
 
 .control-field input,
@@ -497,6 +500,37 @@ h1 {
   background: #ffffff;
 }
 
+.workspace-item {
+  grid-template-columns: minmax(0, 1fr) 34px;
+  align-items: center;
+}
+
+.workspace-copy {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.workspace-remove {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 8px;
+  color: var(--red);
+  background: #fff1f2;
+  cursor: pointer;
+}
+
+.workspace-remove:hover {
+  border-color: rgba(220, 38, 38, 0.42);
+  background: #fee2e2;
+}
+
+.workspace-remove svg {
+  width: 16px;
+  height: 16px;
+}
+
 .workspace-item.type-a {
   border-left-color: var(--amber);
 }
@@ -641,6 +675,11 @@ h1 {
   .search-field {
     grid-column: 1 / -1;
     grid-row: 2;
+  }
+
+  .field-hint {
+    grid-column: 1 / -1;
+    grid-row: 3;
   }
 
   .controls .warn {
