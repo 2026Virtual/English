@@ -588,14 +588,14 @@ function startDictation(card, originalWord) {
 }
 
 async function handleMnemonic(item, mnemonicBox, button) {
-  if (!state.api.key) {
+  if (!canCallMnemonicApi()) {
     if (item.mnemonic) {
       mnemonicBox.classList.toggle("is-visible");
       return;
     }
     state.pendingMnemonic = { item, mnemonicBox, button };
     openApiDialog();
-    showToast("请先填写 API Key", true);
+    showToast("请先配置 API Key 或代理地址", true);
     return;
   }
 
@@ -625,6 +625,14 @@ async function generateMnemonic(item, mnemonicBox, button) {
 }
 
 async function requestMnemonic(word) {
+  if (isProxyMode()) {
+    return requestMnemonicViaProxy(word);
+  }
+
+  return requestMnemonicDirect(word);
+}
+
+async function requestMnemonicDirect(word) {
   const payload = {
     model: state.api.model,
     messages: [
@@ -661,13 +669,47 @@ async function requestMnemonic(word) {
   }
 
   const data = await response.json();
-  const text =
-    data?.choices?.[0]?.message?.content?.trim() ||
-    data?.choices?.[0]?.text?.trim() ||
-    "";
+  const text = extractMnemonicText(data);
 
   if (!text) throw new Error("API 返回为空");
   return text;
+}
+
+async function requestMnemonicViaProxy(word) {
+  let response;
+  try {
+    response = await fetch(state.api.endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        word,
+        model: state.api.model,
+      }),
+    });
+  } catch {
+    throw new Error("代理请求失败，请检查 Worker 地址");
+  }
+
+  if (!response.ok) {
+    const message = await readErrorMessage(response);
+    throw new Error(message || `代理返回 ${response.status}`);
+  }
+
+  const data = await response.json();
+  const text = extractMnemonicText(data);
+  if (!text) throw new Error("代理返回为空");
+  return text;
+}
+
+function extractMnemonicText(data) {
+  return (
+    data?.mnemonic?.trim?.() ||
+    data?.choices?.[0]?.message?.content?.trim?.() ||
+    data?.choices?.[0]?.text?.trim?.() ||
+    ""
+  );
 }
 
 async function readErrorMessage(response) {
@@ -705,12 +747,12 @@ function saveApiSettings() {
   state.api.model = els.apiModel.value.trim() || DEFAULT_MODEL;
   state.api.key = els.apiKey.value.trim();
   updateApiState();
-  showToast(state.api.key ? "API 设置已保存" : "API Key 为空", !state.api.key);
+  showToast(canCallMnemonicApi() ? "API 设置已保存" : "API 未配置完整", !canCallMnemonicApi());
 
   const pending = state.pendingMnemonic;
   state.pendingMnemonic = null;
   closeApiDialog();
-  if (pending && state.api.key) {
+  if (pending && canCallMnemonicApi()) {
     generateMnemonic(pending.item, pending.mnemonicBox, pending.button);
   }
 }
@@ -729,8 +771,22 @@ function clearApiSettings() {
 }
 
 function updateApiState() {
-  els.apiState.textContent = state.api.key ? `助记 API：${state.api.model}` : "助记 API 未配置";
-  els.apiState.classList.toggle("is-ready", Boolean(state.api.key));
+  if (state.api.key) {
+    els.apiState.textContent = `直连 API：${state.api.model}`;
+  } else if (isProxyMode()) {
+    els.apiState.textContent = `代理 API：${state.api.model}`;
+  } else {
+    els.apiState.textContent = "助记 API 未配置";
+  }
+  els.apiState.classList.toggle("is-ready", canCallMnemonicApi());
+}
+
+function canCallMnemonicApi() {
+  return Boolean(state.api.key) || isProxyMode();
+}
+
+function isProxyMode() {
+  return !state.api.key && Boolean(state.api.endpoint) && state.api.endpoint !== DEFAULT_API_ENDPOINT;
 }
 
 function showToast(message, isError = false) {
