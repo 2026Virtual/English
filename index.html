@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <title>雅思词汇真经</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="app-header">
+    <div class="brand">
+      <img src="./favicon.svg" class="brand-mark" alt="">
+      <div>
+        <h1>雅思词汇真经</h1>
+        <p id="app-subtitle">逻辑词群记忆</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
+        <i data-lucide="settings"></i>
+      </button>
+      <button id="open-workspace" class="tool-button" type="button">
+        <i data-lucide="notebook-tabs"></i>
+        <span>工作区</span>
+        <strong id="note-count">0</strong>
+      </button>
+      <button id="export-notes" class="tool-button primary" type="button">
+        <i data-lucide="download"></i>
+        <span>导出笔记</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="controls" aria-label="词表控制">
+      <label class="control-field">
+        <span>章节</span>
+        <select id="chapter-select"></select>
+      </label>
+      <label class="control-field search-field">
+        <span>搜索</span>
+        <input id="search-input" type="search" autocomplete="off" placeholder="word / 释义 / 例句">
+      </label>
+      <button id="clear-workspace" class="icon-button warn" type="button" aria-label="清空工作区" title="清空工作区">
+        <i data-lucide="trash-2"></i>
+      </button>
+    </section>
+
+    <section class="chapter-strip" aria-live="polite">
+      <div>
+        <h2 id="chapter-title">加载中</h2>
+        <p id="chapter-meta">正在读取词表</p>
+      </div>
+      <div id="api-state" class="status-pill">助记 API 未配置</div>
+    </section>
+
+    <section id="word-list" class="word-list" aria-live="polite"></section>
+  </main>
+
+  <aside id="workspace-panel" class="workspace-panel" aria-hidden="true" aria-label="本次学习工作区">
+    <div class="panel-head">
+      <div>
+        <h2>工作区</h2>
+        <p id="workspace-meta">本次访问 0 条</p>
+      </div>
+      <button id="close-workspace" class="icon-button" type="button" aria-label="关闭工作区" title="关闭工作区">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <ol id="workspace-list" class="workspace-list"></ol>
+  </aside>
+
+  <div id="panel-backdrop" class="panel-backdrop" hidden></div>
+
+  <dialog id="api-dialog" class="api-dialog">
+    <form id="api-form" class="api-form">
+      <div class="dialog-head">
+        <h2>助记 API</h2>
+        <button class="icon-button" type="button" id="close-api-dialog" aria-label="关闭设置" title="关闭设置">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <label class="dialog-field">
+        <span>接口地址</span>
+        <input id="api-endpoint" type="url" inputmode="url" autocomplete="off">
+      </label>
+      <label class="dialog-field">
+        <span>模型</span>
+        <input id="api-model" type="text" autocomplete="off">
+      </label>
+      <label class="dialog-field">
+        <span>API Key</span>
+        <input id="api-key" type="password" autocomplete="off" placeholder="sk-...">
+      </label>
+
+      <p class="dialog-note">静态页面不会保存密钥；刷新或重新进入后需要重新填写。浏览器直连接口时，接口服务必须允许 CORS。</p>
+
+      <div class="dialog-actions">
+        <button class="tool-button" type="button" id="clear-api">
+          <i data-lucide="eraser"></i>
+          <span>清除</span>
+        </button>
+        <button class="tool-button primary" type="submit">
+          <i data-lucide="check"></i>
+          <span>保存</span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
