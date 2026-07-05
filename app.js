@@ -4,8 +4,13 @@ const GROUP_COLORS = ["#ef4444", "#0f766e", "#2563eb", "#d97706", "#7c3aed", "#0
 const API_SETTINGS_STORAGE_KEY = "personal-vocab-supabase-settings";
 const WORKSPACE_STORAGE_KEY = "personal-vocab-workspace";
 const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
+const PAGE_COPY = {
+  vocabulary: "逻辑词群记忆",
+  reading: "雅思阅读训练",
+};
 
 const state = {
+  activePage: "vocabulary",
   chapters: [],
   chapterIndex: 0,
   searchText: "",
@@ -27,6 +32,7 @@ const els = {};
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
   bindEvents();
+  switchPage(pageFromHash(), { updateHash: false });
   loadApiSettings();
   loadWorkspace();
   updateApiState();
@@ -38,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function cacheElements() {
   els.toast = document.getElementById("toast");
   els.subtitle = document.getElementById("app-subtitle");
+  els.navButtons = Array.from(document.querySelectorAll(".nav-button"));
+  els.vocabularyView = document.getElementById("vocabulary-view");
+  els.readingView = document.getElementById("reading-view");
+  els.vocabActions = document.getElementById("vocab-actions");
   els.chapterSelect = document.getElementById("chapter-select");
   els.searchInput = document.getElementById("search-input");
   els.wordList = document.getElementById("word-list");
@@ -64,6 +74,14 @@ function cacheElements() {
 }
 
 function bindEvents() {
+  els.navButtons.forEach((button) => {
+    button.addEventListener("click", () => switchPage(button.dataset.page));
+  });
+
+  window.addEventListener("hashchange", () => {
+    switchPage(pageFromHash(), { updateHash: false });
+  });
+
   els.chapterSelect.addEventListener("change", (event) => {
     state.chapterIndex = Number(event.target.value);
     renderWords();
@@ -94,6 +112,49 @@ function bindEvents() {
       closeApiDialog();
     }
   });
+}
+
+function pageFromHash() {
+  return window.location.hash === "#reading" ? "reading" : "vocabulary";
+}
+
+function switchPage(page, options = {}) {
+  const nextPage = page === "reading" ? "reading" : "vocabulary";
+  const updateHash = options.updateHash !== false;
+
+  state.activePage = nextPage;
+  els.vocabularyView.hidden = nextPage !== "vocabulary";
+  els.readingView.hidden = nextPage !== "reading";
+  els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
+  els.subtitle.textContent = getPageSubtitle(nextPage);
+
+  if (nextPage !== "vocabulary") {
+    closeWorkspace();
+    closeApiDialog();
+  }
+
+  els.navButtons.forEach((button) => {
+    const isActive = button.dataset.page === nextPage;
+    button.classList.toggle("is-active", isActive);
+    if (isActive) {
+      button.setAttribute("aria-current", "page");
+    } else {
+      button.removeAttribute("aria-current");
+    }
+  });
+
+  if (updateHash && window.location.hash !== `#${nextPage}`) {
+    window.history.replaceState(null, "", `#${nextPage}`);
+  }
+
+  refreshIcons();
+}
+
+function getPageSubtitle(page) {
+  if (page === "vocabulary" && state.chapters.length) {
+    return `${state.chapters.length} 个章节`;
+  }
+  return PAGE_COPY[page] || PAGE_COPY.vocabulary;
 }
 
 async function loadData() {
@@ -235,7 +296,7 @@ function renderWords() {
   els.chapterMeta.textContent = query
     ? `${entries.length} 个匹配结果`
     : `${chapter.groups.length} 个词群 · ${totalWords} 个单词`;
-  els.subtitle.textContent = `${state.chapters.length} 个章节`;
+  els.subtitle.textContent = getPageSubtitle(state.activePage);
   refreshIcons();
 }
 

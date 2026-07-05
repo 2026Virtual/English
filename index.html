@@ -23,7 +23,18 @@
       </div>
     </div>
 
-    <div class="header-actions">
+    <nav class="main-nav" aria-label="主菜单">
+      <button id="nav-vocabulary" class="nav-button is-active" type="button" data-page="vocabulary" aria-current="page">
+        <i data-lucide="book-open"></i>
+        <span>背单词</span>
+      </button>
+      <button id="nav-reading" class="nav-button" type="button" data-page="reading">
+        <i data-lucide="newspaper"></i>
+        <span>快速阅读</span>
+      </button>
+    </nav>
+
+    <div id="vocab-actions" class="header-actions">
       <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
         <i data-lucide="settings"></i>
       </button>
@@ -40,30 +51,46 @@
   </header>
 
   <main class="app-main">
-    <section class="controls" aria-label="词表控制">
-      <label class="control-field">
-        <span>章节</span>
-        <select id="chapter-select"></select>
-      </label>
-      <label class="control-field search-field">
-        <span>搜索</span>
-        <input id="search-input" type="search" autocomplete="off" placeholder="word / 释义 / 例句">
-      </label>
-      <small class="field-hint">A类本：完全不知道的新词；B类本：知道但不熟的词</small>
-      <button id="clear-workspace" class="icon-button warn" type="button" aria-label="清空工作区" title="清空工作区">
-        <i data-lucide="trash-2"></i>
-      </button>
+    <section id="vocabulary-view" class="app-view" data-page="vocabulary">
+      <section class="controls" aria-label="词表控制">
+        <label class="control-field">
+          <span>章节</span>
+          <select id="chapter-select"></select>
+        </label>
+        <label class="control-field search-field">
+          <span>搜索</span>
+          <input id="search-input" type="search" autocomplete="off" placeholder="word / 释义 / 例句">
+        </label>
+        <small class="field-hint">A类本：完全不知道的新词；B类本：知道但不熟的词</small>
+        <button id="clear-workspace" class="icon-button warn" type="button" aria-label="清空工作区" title="清空工作区">
+          <i data-lucide="trash-2"></i>
+        </button>
+      </section>
+
+      <section class="chapter-strip" aria-live="polite">
+        <div>
+          <h2 id="chapter-title">加载中</h2>
+          <p id="chapter-meta">正在读取词表</p>
+        </div>
+        <div id="api-state" class="status-pill">Supabase 代理未配置</div>
+      </section>
+
+      <section id="word-list" class="word-list" aria-live="polite"></section>
     </section>
 
-    <section class="chapter-strip" aria-live="polite">
-      <div>
-        <h2 id="chapter-title">加载中</h2>
-        <p id="chapter-meta">正在读取词表</p>
+    <section id="reading-view" class="app-view" data-page="reading" hidden>
+      <div class="reading-head">
+        <div>
+          <h2>快速阅读</h2>
+          <p>雅思阅读题库</p>
+        </div>
+        <div class="status-pill">阅读</div>
       </div>
-      <div id="api-state" class="status-pill">Supabase 代理未配置</div>
-    </section>
 
-    <section id="word-list" class="word-list" aria-live="polite"></section>
+      <section class="reading-board">
+        <div class="empty-state">暂无阅读题目</div>
+      </section>
+    </section>
   </main>
 
   <aside id="workspace-panel" class="workspace-panel" aria-hidden="true" aria-label="本次学习工作区">

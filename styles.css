@@ -101,6 +101,45 @@ h1 {
   gap: 8px;
 }
 
+.header-actions.is-hidden {
+  display: none;
+}
+
+.main-nav {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+  min-height: 36px;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.nav-button.is-active {
+  color: #ffffff;
+  background: var(--teal);
+}
+
+.nav-button svg {
+  width: 17px;
+  height: 17px;
+}
+
 .tool-button,
 .icon-button,
 .action-button {
@@ -179,6 +218,10 @@ h1 {
   width: min(1180px, 100%);
   margin: 0 auto;
   padding: 18px clamp(14px, 4vw, 32px) 48px;
+}
+
+.app-view[hidden] {
+  display: none;
 }
 
 .controls {
@@ -638,6 +681,31 @@ h1 {
   text-align: center;
 }
 
+.reading-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.reading-head h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.reading-head p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.reading-board {
+  display: grid;
+  min-height: 320px;
+  align-items: start;
+}
+
 @media (max-width: 760px) {
   .app-header {
     align-items: flex-start;
@@ -655,6 +723,14 @@ h1 {
     width: 100%;
     display: grid;
     grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .main-nav {
+    width: 100%;
+  }
+
+  .nav-button {
+    min-width: 0;
   }
 
   .tool-button {
@@ -688,6 +764,12 @@ h1 {
   }
 
   .chapter-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .reading-head {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
