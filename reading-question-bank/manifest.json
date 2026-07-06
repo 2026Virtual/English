@@ -1,0 +1,448 @@
+{
+  "generated_at": "2026-07-06T04:14:33.578414+00:00",
+  "source": "local validation of generated JSON files",
+  "range": {
+    "start_cam": 10,
+    "end_cam": 21,
+    "tests": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "items": [
+    {
+      "id": "10-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-10-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/10-01.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "10-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-10-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/10-02.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "10-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-10-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/10-03.json",
+      "passages": 3,
+      "problem_groups": 10,
+      "warnings": []
+    },
+    {
+      "id": "10-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-10-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/10-04.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "11-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-11-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/11-01.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "11-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-11-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/11-02.json",
+      "passages": 3,
+      "problem_groups": 10,
+      "warnings": []
+    },
+    {
+      "id": "11-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-11-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/11-03.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "11-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-11-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/11-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "12-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-12-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/12-01.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "12-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-12-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/12-02.json",
+      "passages": 3,
+      "problem_groups": 10,
+      "warnings": []
+    },
+    {
+      "id": "12-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-12-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/12-03.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "12-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-12-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/12-04.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "13-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-13-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/13-01.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "13-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-13-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/13-02.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "13-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-13-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/13-03.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "13-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-13-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/13-04.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "14-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-14-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/14-01.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "14-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-14-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/14-02.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "14-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-14-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/14-03.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "14-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-14-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/14-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "15-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-15-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/15-01.json",
+      "passages": 3,
+      "problem_groups": 10,
+      "warnings": []
+    },
+    {
+      "id": "15-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-15-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/15-02.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "15-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-15-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/15-03.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "15-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-15-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/15-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "16-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-16-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/16-01.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "16-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-16-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/16-02.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "16-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-16-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/16-03.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "16-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-16-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/16-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "17-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-17-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/17-01.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "17-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-17-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/17-02.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "17-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-c-17-reading-test-01/",
+      "path": "outputs/reading-question-bank/17-03.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "17-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-17-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/17-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "18-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-18-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/18-01.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "18-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-18-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/18-02.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "18-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-18-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/18-03.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "18-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-18-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/18-04.json",
+      "passages": 3,
+      "problem_groups": 10,
+      "warnings": []
+    },
+    {
+      "id": "19-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-19-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/19-01.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "19-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-19-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/19-02.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "19-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-19-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/19-03.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "19-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-19-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/19-04.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "20-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-20-reading-test-01-with-answer/",
+      "path": "outputs/reading-question-bank/20-01.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "20-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-20-reading-test-02-with-answer/",
+      "path": "outputs/reading-question-bank/20-02.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "20-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-20-reading-test-03-with-answer/",
+      "path": "outputs/reading-question-bank/20-03.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "20-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-20-reading-test-04-with-answer/",
+      "path": "outputs/reading-question-bank/20-04.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "21-01",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-21-reading-test-01/",
+      "path": "outputs/reading-question-bank/21-01.json",
+      "passages": 3,
+      "problem_groups": 8,
+      "warnings": []
+    },
+    {
+      "id": "21-02",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-21-reading-test-02/",
+      "path": "outputs/reading-question-bank/21-02.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    },
+    {
+      "id": "21-03",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-21-reading-test-03/",
+      "path": "outputs/reading-question-bank/21-03.json",
+      "passages": 3,
+      "problem_groups": 7,
+      "warnings": []
+    },
+    {
+      "id": "21-04",
+      "status": "ok",
+      "source_url": "https://ieltstrainingonline.com/practice-cam-21-reading-test-04/",
+      "path": "outputs/reading-question-bank/21-04.json",
+      "passages": 3,
+      "problem_groups": 9,
+      "warnings": []
+    }
+  ]
+}

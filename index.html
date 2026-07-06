@@ -7,9 +7,11 @@
   <title>英语速提升系统</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20260706-controls">
+  <link rel="stylesheet" href="./styles.css?v=20260706-reading-chrome">
+  <link rel="stylesheet" href="./reading-styles.css?v=20260706-reader-fill">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js?v=20260706-scroll" defer></script>
+  <script src="./app.js?v=20260706-reading-chrome" defer></script>
+  <script src="./reading.js?v=20260706-reading-chrome" type="module"></script>
 </head>
 <body class="is-home">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -105,16 +107,7 @@
     </section>
 
     <section id="reading-view" class="app-view" data-page="reading" hidden>
-      <div class="reading-head">
-        <div>
-          <h2>快速阅读</h2>
-          <p>阅读训练入口</p>
-        </div>
-      </div>
-
-      <section class="reading-board">
-        <div class="empty-state">内容待添加</div>
-      </section>
+      <div id="reading-app"></div>
     </section>
   </main>
 

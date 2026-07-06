@@ -43,6 +43,10 @@ body.is-home {
   background: #ffffff;
 }
 
+body.is-reading {
+  background: #f6f4ef;
+}
+
 button,
 input,
 select {
@@ -214,6 +218,11 @@ body.is-home .app-main {
   min-height: 100vh;
   padding: 0;
   background: #ffffff;
+}
+
+body.is-reading .app-main {
+  width: 100%;
+  padding: 0;
 }
 
 .app-view[hidden] {

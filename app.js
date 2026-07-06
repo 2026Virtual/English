@@ -25,6 +25,7 @@ const state = {
   searchText: "",
   notes: [],
   mnemonics: new Map(),
+  readingSubView: "selector",
   api: {
     endpoint: DEFAULT_API_ENDPOINT,
     model: DEFAULT_MODEL,
@@ -101,6 +102,11 @@ function bindEvents() {
     switchPage(pageFromHash(), { updateHash: false });
   });
 
+  window.addEventListener("reading-route-change", (event) => {
+    state.readingSubView = event.detail?.view || "selector";
+    syncAppHeaderVisibility();
+  });
+
   window.addEventListener("scroll", handleScroll, { passive: true });
   els.scrollTop.addEventListener("click", scrollToTop);
 
@@ -150,7 +156,11 @@ function switchPage(page, options = {}) {
 
   state.activePage = nextPage;
   document.body.classList.toggle("is-home", isHome);
-  els.appHeader.hidden = isHome;
+  document.body.classList.toggle("is-reading", nextPage === "reading");
+  if (nextPage !== "reading") {
+    state.readingSubView = "selector";
+  }
+  syncAppHeaderVisibility();
   els.homeView.hidden = !isHome;
   els.vocabularyView.hidden = nextPage !== "vocabulary";
   els.readingView.hidden = nextPage !== "reading";
@@ -169,6 +179,10 @@ function switchPage(page, options = {}) {
     closeApiDialog();
   }
 
+  if (nextPage === "reading" && window.readingApp) {
+    window.readingApp.show();
+  }
+
   if (updateHash) {
     const nextUrl = isHome
       ? `${window.location.pathname}${window.location.search}`
@@ -180,6 +194,12 @@ function switchPage(page, options = {}) {
 
   refreshIcons();
   updateScrollUi();
+}
+
+function syncAppHeaderVisibility() {
+  const isHome = state.activePage === "home";
+  const isReadingInnerPage = state.activePage === "reading" && state.readingSubView !== "selector";
+  els.appHeader.hidden = isHome || isReadingInnerPage;
 }
 
 function getPageSubtitle(page) {
