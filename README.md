@@ -16,9 +16,12 @@
 
 1. 将仓库推送到 GitHub。
 2. 进入仓库 `Settings` -> `Pages`。
-3. `Build and deployment` 选择 `Deploy from a branch`。
-4. 分支选择 `main`，目录选择 `/ (root)`。
-5. 保存后访问 GitHub Pages 给出的地址。
+3. `Build and deployment` 选择 `Deploy from a branch`，不要选择 `GitHub Actions`。
+4. 分支选择 `gh-pages`，目录选择 `/ (root)`。
+5. 如果暂时看不到 `gh-pages`，先推送一次 `main`，等待 Actions 里的 `Publish GitHub Pages Branch` 跑完，它会自动生成 `gh-pages` 分支。
+6. 保存后访问 GitHub Pages 给出的地址。
+
+当前仓库的 workflow 会把 `main` 分支里的静态文件发布到 `gh-pages` 分支。它不使用 `actions/deploy-pages`，所以如果 Actions 日志里还出现 `Run actions/deploy-pages@v5`，说明 GitHub 正在跑旧 workflow 或 Pages 仍配置成了 `GitHub Actions` 模式。
 
 ## 本地预览
 
