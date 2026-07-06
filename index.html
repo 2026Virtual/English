@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f766e">
-  <title>个人背单词系统</title>
+  <title>英语速提升系统</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260706-controls">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=20260706-scroll" defer></script>
 </head>
 <body class="is-home">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -18,7 +18,7 @@
     <div class="brand">
       <img src="./favicon.svg" class="brand-mark" alt="">
       <div>
-        <h1>个人背单词系统</h1>
+        <h1 id="app-title">英语速提升系统</h1>
         <p id="app-subtitle">逻辑词群记忆</p>
       </div>
     </div>
@@ -132,6 +132,10 @@
   </aside>
 
   <div id="panel-backdrop" class="panel-backdrop" hidden></div>
+
+  <button id="scroll-top" class="scroll-top-button" type="button" aria-label="返回顶部" title="返回顶部" aria-hidden="true" tabindex="-1">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
   <dialog id="api-dialog" class="api-dialog">
     <form id="api-form" class="api-form">

@@ -4,6 +4,14 @@ const GROUP_COLORS = ["#ef4444", "#0f766e", "#2563eb", "#d97706", "#7c3aed", "#0
 const API_SETTINGS_STORAGE_KEY = "personal-vocab-supabase-settings";
 const WORKSPACE_STORAGE_KEY = "personal-vocab-workspace";
 const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
+const SCROLL_TOP_THRESHOLD = 280;
+const HEADER_HIDE_THRESHOLD = 120;
+const HEADER_SCROLL_DELTA = 3;
+const PAGE_TITLES = {
+  home: "英语速提升系统",
+  vocabulary: "个人背单词",
+  reading: "阅读提升",
+};
 const PAGE_COPY = {
   home: "个人学习入口",
   vocabulary: "逻辑词群记忆",
@@ -26,6 +34,9 @@ const state = {
   pendingMnemonic: null,
   prewarmTimer: null,
   currentAudio: null,
+  lastScrollY: 0,
+  scrollTicking: false,
+  headerHiddenByScroll: false,
 };
 
 const els = {};
@@ -45,12 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function cacheElements() {
   els.toast = document.getElementById("toast");
   els.appHeader = document.querySelector(".app-header");
+  els.title = document.getElementById("app-title");
   els.subtitle = document.getElementById("app-subtitle");
   els.homeView = document.getElementById("home-view");
   els.homeButton = document.getElementById("home-button");
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
   els.readingView = document.getElementById("reading-view");
+  els.scrollTop = document.getElementById("scroll-top");
   els.vocabActions = document.getElementById("vocab-actions");
   els.chapterSelect = document.getElementById("chapter-select");
   els.searchInput = document.getElementById("search-input");
@@ -87,6 +100,9 @@ function bindEvents() {
   window.addEventListener("hashchange", () => {
     switchPage(pageFromHash(), { updateHash: false });
   });
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  els.scrollTop.addEventListener("click", scrollToTop);
 
   els.chapterSelect.addEventListener("change", (event) => {
     state.chapterIndex = Number(event.target.value);
@@ -130,6 +146,7 @@ function switchPage(page, options = {}) {
   const nextPage = page === "vocabulary" || page === "reading" ? page : "home";
   const updateHash = options.updateHash !== false;
   const isHome = nextPage === "home";
+  const previousPage = state.activePage;
 
   state.activePage = nextPage;
   document.body.classList.toggle("is-home", isHome);
@@ -138,7 +155,14 @@ function switchPage(page, options = {}) {
   els.vocabularyView.hidden = nextPage !== "vocabulary";
   els.readingView.hidden = nextPage !== "reading";
   els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
+  document.title = PAGE_TITLES[nextPage];
+  els.title.textContent = PAGE_TITLES[nextPage];
   els.subtitle.textContent = getPageSubtitle(nextPage);
+  setHeaderHiddenByScroll(false);
+
+  if (previousPage !== nextPage) {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
 
   if (isHome || nextPage !== "vocabulary") {
     closeWorkspace();
@@ -155,6 +179,7 @@ function switchPage(page, options = {}) {
   }
 
   refreshIcons();
+  updateScrollUi();
 }
 
 function getPageSubtitle(page) {
@@ -162,6 +187,51 @@ function getPageSubtitle(page) {
     return `${state.chapters.length} 个章节`;
   }
   return PAGE_COPY[page] || PAGE_COPY.vocabulary;
+}
+
+function handleScroll() {
+  if (state.scrollTicking) return;
+
+  state.scrollTicking = true;
+  window.requestAnimationFrame(() => {
+    updateScrollUi();
+    state.scrollTicking = false;
+  });
+}
+
+function updateScrollUi() {
+  const scrollY = getScrollY();
+  const pageHasScrollTools = state.activePage === "vocabulary" || state.activePage === "reading";
+  const shouldShowScrollTop = pageHasScrollTools && scrollY > SCROLL_TOP_THRESHOLD;
+  const delta = scrollY - state.lastScrollY;
+
+  els.scrollTop.classList.toggle("is-visible", shouldShowScrollTop);
+  els.scrollTop.setAttribute("aria-hidden", shouldShowScrollTop ? "false" : "true");
+  els.scrollTop.tabIndex = shouldShowScrollTop ? 0 : -1;
+
+  if (!pageHasScrollTools || scrollY <= HEADER_HIDE_THRESHOLD || delta < -HEADER_SCROLL_DELTA) {
+    setHeaderHiddenByScroll(false);
+  } else if (delta > HEADER_SCROLL_DELTA) {
+    setHeaderHiddenByScroll(true);
+  }
+
+  state.lastScrollY = scrollY;
+}
+
+function getScrollY() {
+  return Math.max(window.scrollY || document.documentElement.scrollTop || 0, 0);
+}
+
+function setHeaderHiddenByScroll(isHidden) {
+  if (state.headerHiddenByScroll === isHidden) return;
+  state.headerHiddenByScroll = isHidden;
+  els.appHeader.classList.toggle("is-hidden-on-scroll", isHidden);
+}
+
+function scrollToTop() {
+  setHeaderHiddenByScroll(false);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  updateScrollUi();
 }
 
 async function loadData() {

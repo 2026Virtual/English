@@ -70,6 +70,14 @@ button:disabled {
   border-bottom: 1px solid rgba(216, 224, 230, 0.86);
   background: rgba(245, 247, 248, 0.92);
   backdrop-filter: blur(18px);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  will-change: transform;
+}
+
+.app-header.is-hidden-on-scroll {
+  border-color: transparent;
+  box-shadow: none;
+  transform: translateY(calc(-100% - 2px));
 }
 
 .brand {
@@ -348,6 +356,12 @@ body.is-home .app-main {
   padding-top: 2px;
 }
 
+.controls .warn {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: end;
+}
+
 .control-field input,
 .control-field select,
 .dialog-field input {
@@ -598,6 +612,47 @@ body.is-home .app-main {
   inset: 0;
   z-index: 40;
   background: rgba(15, 23, 42, 0.32);
+}
+
+.scroll-top-button {
+  position: fixed;
+  left: clamp(16px, 4vw, 32px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(15, 118, 110, 0.24);
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--teal);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.16s ease, transform 0.16s ease, background-color 0.16s ease;
+}
+
+.scroll-top-button.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-button:hover {
+  background: var(--teal-dark);
+}
+
+.scroll-top-button:active {
+  transform: translateY(1px);
+}
+
+.scroll-top-button svg {
+  width: 21px;
+  height: 21px;
 }
 
 .panel-head {
@@ -905,6 +960,12 @@ body.is-home .app-main {
   .workspace-panel {
     width: 100vw;
     padding: 14px;
+  }
+
+  .scroll-top-button {
+    left: 14px;
+    width: 44px;
+    height: 44px;
   }
 
   .dialog-actions {

@@ -1,6 +1,6 @@
 {
-  "name": "个人背单词系统",
-  "short_name": "English",
+  "name": "英语速提升系统",
+  "short_name": "英语提升",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f5f7f8",
