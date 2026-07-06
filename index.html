@@ -25,7 +25,7 @@
 
     <div class="header-tools">
       <button id="home-button" class="tool-button" type="button">
-        <i data-lucide="layout-grid"></i>
+        <i data-lucide="arrow-left"></i>
         <span>菜单</span>
       </button>
       <div id="vocab-actions" class="header-actions">
@@ -47,12 +47,12 @@
 
   <main class="app-main">
     <section id="home-view" class="app-view home-view" data-page="home">
-      <div class="home-card">
+      <div class="home-shell">
         <div class="home-brand">
           <img src="./favicon.svg" class="home-mark" alt="">
           <div>
-            <p>个人背单词系统</p>
-            <h2>选择学习模块</h2>
+            <p>English</p>
+            <h2>选择学习内容</h2>
           </div>
         </div>
 
@@ -61,15 +61,17 @@
             <i data-lucide="book-open"></i>
             <span>
               <strong>背单词</strong>
-              <small>词表、发音、助记、工作区</small>
+              <small>进入词表、发音、助记和工作区</small>
             </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
           </button>
           <button class="home-menu-button" type="button" data-page="reading">
             <i data-lucide="newspaper"></i>
             <span>
               <strong>快速阅读</strong>
-              <small>雅思阅读题库</small>
+              <small>阅读训练入口，内容待添加</small>
             </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
           </button>
         </div>
       </div>
@@ -106,13 +108,12 @@
       <div class="reading-head">
         <div>
           <h2>快速阅读</h2>
-          <p>雅思阅读题库</p>
+          <p>阅读训练入口</p>
         </div>
-        <div class="status-pill">阅读</div>
       </div>
 
       <section class="reading-board">
-        <div class="empty-state">暂无阅读题目</div>
+        <div class="empty-state">内容待添加</div>
       </section>
     </section>
   </main>
