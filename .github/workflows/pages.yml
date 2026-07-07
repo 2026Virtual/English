@@ -25,6 +25,7 @@ jobs:
           mkdir -p _site
           cp .nojekyll LICENSE README.md app.js favicon.svg index.html manifest.webmanifest mnemonics.json reading-styles.css reading.js styles.css vocabulary.txt _site/
           cp -R reading-question-bank _site/
+          cp -R zyz-question-bank _site/
 
       - name: Publish to gh-pages
         env:
