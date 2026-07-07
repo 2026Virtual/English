@@ -1,0 +1,231 @@
+{
+  "id": "p2-medium-209",
+  "source": "zyz",
+  "group": "p2-medium",
+  "category": "P2",
+  "frequency": "medium",
+  "title": "Decision Fatigue 决策疲劳",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "e",
+    "q2": "b",
+    "q3": "g",
+    "q4": "f",
+    "q5": "c",
+    "q6": "d",
+    "q7": "rational",
+    "q8": "tired",
+    "q9": "shortcuts",
+    "q10": "a",
+    "q11": "a",
+    "q12": "c",
+    "q13": "b"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "Decision Fatigue 决策疲劳",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14–19",
+          "question_range": {
+            "text": "Questions 14–19",
+            "start": 14,
+            "end": 19,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage 2 has seven sections, A–G .",
+            "Which section contains the following information?",
+            "Drag the correct section letter (A-G) to the box next to the statement.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "14 research in which two substances that tasted alike had different effects on the subjects",
+            "15 an instance where controlling emotions while viewing something upsetting led to a lack of perseverance in other activities",
+            "16 an explanation of why it is important to eat something before making a decision at the end of the day",
+            "17 a reference to a researcher who was not initially convinced of the effect of glucose",
+            "18 an account of research that mirrored an experience the researcher had in his personal life",
+            "19 an example of how the location of products in a shop can be used to take advantage of 'decision fatigue'"
+          ],
+          "instructions": [
+            "Reading Passage 2 has seven sections, A–G .",
+            "Which section contains the following information?",
+            "Drag the correct section letter (A-G) to the box next to the statement.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14–19</h4>\n      <p>Reading Passage 2 has seven sections, <strong>A–G</strong>.</p>\n      <p>Which section contains the following information?</p>\n      <p><em>Drag the correct section letter (A-G) to the box next to the statement.</em></p>\n\n      <!-- Draggable Options Pool (Cloneable because multiple items can come from same section) -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-sections\">\n        <div class=\"card\" draggable=\"true\" id=\"card-A\" data-value=\"A\" data-clone=\"true\"><strong>A</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-B\" data-value=\"B\" data-clone=\"true\"><strong>B</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-C\" data-value=\"C\" data-clone=\"true\"><strong>C</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-D\" data-value=\"D\" data-clone=\"true\"><strong>D</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-E\" data-value=\"E\" data-clone=\"true\"><strong>E</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-F\" data-value=\"F\" data-clone=\"true\"><strong>F</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"card-G\" data-value=\"G\" data-clone=\"true\"><strong>G</strong></div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q1-anchor\"></a><strong>14</strong> research in which two substances that tasted alike had different effects on the subjects</p>\n        <span class=\"match-dropzone\" data-question=\"q1\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q2-anchor\"></a><strong>15</strong> an instance where controlling emotions while viewing something upsetting led to a lack of perseverance in other activities</p>\n        <span class=\"match-dropzone\" data-question=\"q2\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q3-anchor\"></a><strong>16</strong> an explanation of why it is important to eat something before making a decision at the end of the day</p>\n        <span class=\"match-dropzone\" data-question=\"q3\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q4-anchor\"></a><strong>17</strong> a reference to a researcher who was not initially convinced of the effect of glucose</p>\n        <span class=\"match-dropzone\" data-question=\"q4\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q5-anchor\"></a><strong>18</strong> an account of research that mirrored an experience the researcher had in his personal life</p>\n        <span class=\"match-dropzone\" data-question=\"q5\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q6-anchor\"></a><strong>19</strong> an example of how the location of products in a shop can be used to take advantage of 'decision fatigue'</p>\n        <span class=\"match-dropzone\" data-question=\"q6\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 20–22",
+          "question_range": {
+            "text": "Questions 20–22",
+            "start": 20,
+            "end": 22,
+            "numbers": [
+              20,
+              21,
+              22
+            ]
+          },
+          "raw_lines": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "The biological price of decision-making",
+            "Even when people attempt to be 20 , they experience 'decision fatigue' if they make several decisions in a row. They are not aware of how 21 they are, but it is increasingly more difficult for their brains to make decisions as the day progresses. After making many decisions in one day, the brain seeks 22 in order to conserve energy. The person may fail to consider the consequences of their decision or not make a decision at all. Avoiding decisions reduces the immediate strain but can cause difficulties later."
+          ],
+          "instructions": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "The biological price of decision-making",
+            "Even when people attempt to be 20 , they experience 'decision fatigue' if they make several decisions in a row. They are not aware of how 21 they are, but it is increasingly more difficult for their brains to make decisions as the day progresses. After making many decisions in one day, the brain seeks 22 in order to conserve energy. The person may fail to consider the consequences of their decision or not make a decision at all. Avoiding decisions reduces the immediate strain but can cause difficulties later."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 20–22</h4>\n      <p>Complete the summary below.</p>\n      <p>Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.</p>\n      \n      <h3>The biological price of decision-making</h3>\n      <p>Even when people attempt to be <a id=\"q7-anchor\"></a><strong>20</strong> <input class=\"blank\" type=\"text\" name=\"q7\">, they experience 'decision fatigue' if they make several decisions in a row. They are not aware of how <a id=\"q8-anchor\"></a><strong>21</strong> <input class=\"blank\" type=\"text\" name=\"q8\"> they are, but it is increasingly more difficult for their brains to make decisions as the day progresses. After making many decisions in one day, the brain seeks <a id=\"q9-anchor\"></a><strong>22</strong> <input class=\"blank\" type=\"text\" name=\"q9\"> in order to conserve energy. The person may fail to consider the consequences of their decision or not make a decision at all. Avoiding decisions reduces the immediate strain but can cause difficulties later.</p>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q7",
+            "q8",
+            "q9"
+          ],
+          "kind": "summary_completion",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 23–26",
+          "question_range": {
+            "text": "Questions 23–26",
+            "start": 23,
+            "end": 26,
+            "numbers": [
+              23,
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Look at the following statements (Questions 23–26) and the list of researchers below.",
+            "Match each statement with the correct researcher, A, B or C .",
+            "Drag the correct researcher block to the box below each statement.",
+            "List of Researchers",
+            "A Roy F. Baumeister",
+            "B Jonathan Levav",
+            "C Todd Heatherton",
+            "A Roy F. Baumeister",
+            "B Jonathan Levav",
+            "C Todd Heatherton",
+            "23 The energy people have for exercising willpower is limited.",
+            "24 Even an unpleasant substance had a positive effect on willpower.",
+            "25 People's responses to images changed after having to exercise self-control.",
+            "26 The sequence of options presented to consumers could be used to the consumers' disadvantage."
+          ],
+          "instructions": [
+            "Look at the following statements (Questions 23–26) and the list of researchers below.",
+            "Match each statement with the correct researcher, A, B or C .",
+            "Drag the correct researcher block to the box below each statement.",
+            "List of Researchers",
+            "A Roy F. Baumeister",
+            "B Jonathan Levav",
+            "C Todd Heatherton",
+            "A Roy F. Baumeister",
+            "B Jonathan Levav",
+            "C Todd Heatherton"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 23–26</h4>\n      <p>Look at the following statements (Questions 23–26) and the list of researchers below.</p>\n      <p>Match each statement with the correct researcher, <strong>A, B or C</strong>.</p>\n      <p><em>Drag the correct researcher block to the box below each statement.</em></p>\n\n      <div class=\"info-box\">\n        <strong>List of Researchers</strong>\n        <ul style=\"list-style:none; padding-left:10px;\">\n          <li><strong>A</strong> Roy F. Baumeister</li>\n          <li><strong>B</strong> Jonathan Levav</li>\n          <li><strong>C</strong> Todd Heatherton</li>\n        </ul>\n      </div>\n\n      <!-- Draggable Options Pool (Cloneable) -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-researchers\">\n        <div class=\"card\" draggable=\"true\" id=\"res-A\" data-value=\"A\" data-clone=\"true\"><strong>A</strong> Roy F. Baumeister</div>\n        <div class=\"card\" draggable=\"true\" id=\"res-B\" data-value=\"B\" data-clone=\"true\"><strong>B</strong> Jonathan Levav</div>\n        <div class=\"card\" draggable=\"true\" id=\"res-C\" data-value=\"C\" data-clone=\"true\"><strong>C</strong> Todd Heatherton</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q10-anchor\"></a><strong>23</strong> The energy people have for exercising willpower is limited.</p>\n        <span class=\"match-dropzone\" data-question=\"q10\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q11-anchor\"></a><strong>24</strong> Even an unpleasant substance had a positive effect on willpower.</p>\n        <span class=\"match-dropzone\" data-question=\"q11\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q12-anchor\"></a><strong>25</strong> People's responses to images changed after having to exercise self-control.</p>\n        <span class=\"match-dropzone\" data-question=\"q12\"></span>\n      </div>\n      <div style=\"margin-bottom:10px;\">\n        <p><a id=\"q13-anchor\"></a><strong>26</strong> The sequence of options presented to consumers could be used to the consumers' disadvantage.</p>\n        <span class=\"match-dropzone\" data-question=\"q13\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

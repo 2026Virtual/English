@@ -1,0 +1,233 @@
+{
+  "id": "p2-high-201",
+  "source": "zyz",
+  "group": "p2-high",
+  "category": "P2",
+  "frequency": "high",
+  "title": "Multi-tasking and the brain 大脑与多任务处理",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "iv",
+    "q2": "iii",
+    "q3": "vi",
+    "q4": "v",
+    "q5": "i",
+    "q6": "vii",
+    "q7": "c",
+    "q8": "c",
+    "q9": "a",
+    "q10": "e",
+    "q11": "position",
+    "q12": "attention",
+    "q13": "structure"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "Multi-tasking and the brain 大脑与多任务处理",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14–19",
+          "question_range": {
+            "text": "Questions 14–19",
+            "start": 14,
+            "end": 19,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage 2 has six sections, A–F .",
+            "Choose the correct heading for each section from the list of headings below.",
+            "Drag the correct heading block to the box below each section label.",
+            "i Professions in which super-taskers are likely to be found",
+            "ii The effects of multi-tasking on neurological structure",
+            "iii A distinction between situations when people can and can’t multi-task",
+            "iv Real multi-tasking is nearly impossible",
+            "v Multi-tasking and gender",
+            "vi The neurological reasons for struggling to manage more things",
+            "vii The ability to multi-task is determined by people’s genes",
+            "viii Gender and the structure of the brain",
+            "14 Section A",
+            "15 Section B",
+            "16 Section C",
+            "17 Section D",
+            "18 Section E",
+            "19 Section F"
+          ],
+          "instructions": [
+            "Reading Passage 2 has six sections, A–F .",
+            "Choose the correct heading for each section from the list of headings below.",
+            "Drag the correct heading block to the box below each section label.",
+            "i Professions in which super-taskers are likely to be found",
+            "ii The effects of multi-tasking on neurological structure",
+            "iii A distinction between situations when people can and can’t multi-task",
+            "iv Real multi-tasking is nearly impossible",
+            "v Multi-tasking and gender",
+            "vi The neurological reasons for struggling to manage more things",
+            "vii The ability to multi-task is determined by people’s genes",
+            "viii Gender and the structure of the brain"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14–19</h4>\n      <p>Reading Passage 2 has six sections, <strong>A–F</strong>.</p>\n      <p>Choose the correct heading for each section from the list of headings below.</p>\n      <p><em>Drag the correct heading block to the box below each section label.</em></p>\n\n      <!-- Draggable Full Text Options -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-headings\">\n        <div class=\"card\" draggable=\"true\" id=\"c-i\" data-value=\"i\"><strong>i</strong> Professions in which super-taskers are likely to be found</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-ii\" data-value=\"ii\"><strong>ii</strong> The effects of multi-tasking on neurological structure</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-iii\" data-value=\"iii\"><strong>iii</strong> A distinction between situations when people can and can’t multi-task</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-iv\" data-value=\"iv\"><strong>iv</strong> Real multi-tasking is nearly impossible</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-v\" data-value=\"v\"><strong>v</strong> Multi-tasking and gender</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-vi\" data-value=\"vi\"><strong>vi</strong> The neurological reasons for struggling to manage more things</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-vii\" data-value=\"vii\"><strong>vii</strong> The ability to multi-task is determined by people’s genes</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-viii\" data-value=\"viii\"><strong>viii</strong> Gender and the structure of the brain</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q1-anchor\"></a>14 Section A</span>\n        <span class=\"match-dropzone\" data-question=\"q1\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q2-anchor\"></a>15 Section B</span>\n        <span class=\"match-dropzone\" data-question=\"q2\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q3-anchor\"></a>16 Section C</span>\n        <span class=\"match-dropzone\" data-question=\"q3\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q4-anchor\"></a>17 Section D</span>\n        <span class=\"match-dropzone\" data-question=\"q4\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q5-anchor\"></a>18 Section E</span>\n        <span class=\"match-dropzone\" data-question=\"q5\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q6-anchor\"></a>19 Section F</span>\n        <span class=\"match-dropzone\" data-question=\"q6\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 20–23",
+          "question_range": {
+            "text": "Questions 20–23",
+            "start": 20,
+            "end": 23,
+            "numbers": [
+              20,
+              21,
+              22,
+              23
+            ]
+          },
+          "raw_lines": [
+            "Look at the following statements (Questions 20–23) and the list of researchers below.",
+            "Match each statement with the correct researcher, A–E .",
+            "NB You may use any researcher more than once.",
+            "A Edward M Hallowell",
+            "B Paul E Dux",
+            "C David Strayer",
+            "D Etienne Koechlin",
+            "E Keith Laws",
+            "20 The brain of a good multi-tasker works differently from other people’s.",
+            "21 The rate of error is considerably higher when people multi-task.",
+            "22 People are mistaken in their assumption that they can multi-task.",
+            "23 One gender does not seem to pause to consider before taking action."
+          ],
+          "instructions": [
+            "Look at the following statements (Questions 20–23) and the list of researchers below.",
+            "Match each statement with the correct researcher, A–E .",
+            "NB You may use any researcher more than once.",
+            "A Edward M Hallowell",
+            "B Paul E Dux",
+            "C David Strayer",
+            "D Etienne Koechlin",
+            "E Keith Laws"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 20–23</h4>\n      <p>Look at the following statements (Questions 20–23) and the list of researchers below.</p>\n      <p>Match each statement with the correct researcher, <strong>A–E</strong>.</p>\n      <p><em>NB You may use any researcher more than once.</em></p>\n\n      <!-- Draggable Full Text Options (Cloneable) -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-researchers\">\n        <div class=\"card\" draggable=\"true\" id=\"card-A\" data-value=\"A\" data-clone=\"true\"><strong>A</strong> Edward M Hallowell</div>\n        <div class=\"card\" draggable=\"true\" id=\"card-B\" data-value=\"B\" data-clone=\"true\"><strong>B</strong> Paul E Dux</div>\n        <div class=\"card\" draggable=\"true\" id=\"card-C\" data-value=\"C\" data-clone=\"true\"><strong>C</strong> David Strayer</div>\n        <div class=\"card\" draggable=\"true\" id=\"card-D\" data-value=\"D\" data-clone=\"true\"><strong>D</strong> Etienne Koechlin</div>\n        <div class=\"card\" draggable=\"true\" id=\"card-E\" data-value=\"E\" data-clone=\"true\"><strong>E</strong> Keith Laws</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q7-anchor\"></a>20 The brain of a good multi-tasker works differently from other people’s.</span>\n        <span class=\"match-dropzone\" data-question=\"q7\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q8-anchor\"></a>21 The rate of error is considerably higher when people multi-task.</span>\n        <span class=\"match-dropzone\" data-question=\"q8\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q9-anchor\"></a>22 People are mistaken in their assumption that they can multi-task.</span>\n        <span class=\"match-dropzone\" data-question=\"q9\"></span>\n      </div>\n      <div class=\"match-row\">\n        <span class=\"label\"><a id=\"q10-anchor\"></a>23 One gender does not seem to pause to consider before taking action.</span>\n        <span class=\"match-dropzone\" data-question=\"q10\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q7",
+            "q8",
+            "q9",
+            "q10"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 24–26",
+          "question_range": {
+            "text": "Questions 24–26",
+            "start": 24,
+            "end": 26,
+            "numbers": [
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Super-taskers",
+            "Super-taskers are those of us who possess special multi-tasking ability. They can be found in all professions. People who are pilots, chefs and doctors are often super-taskers, and super-taskers are most likely to achieve a 24 that is high on the career ladder.",
+            "Super-taskers typically have to undertake many tasks simultaneously that need their 25 .",
+            "Genes play an important role in having this capability: these people have a special brain 26 , which helps them do what we cannot."
+          ],
+          "instructions": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Super-taskers",
+            "Super-taskers are those of us who possess special multi-tasking ability. They can be found in all professions. People who are pilots, chefs and doctors are often super-taskers, and super-taskers are most likely to achieve a 24 that is high on the career ladder.",
+            "Super-taskers typically have to undertake many tasks simultaneously that need their 25 .",
+            "Genes play an important role in having this capability: these people have a special brain 26 , which helps them do what we cannot."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 24–26</h4>\n      <p>Complete the summary below.</p>\n      <p>Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.</p>\n      \n      <h3>Super-taskers</h3>\n      <p>Super-taskers are those of us who possess special multi-tasking ability. They can be found in all professions. People who are pilots, chefs and doctors are often super-taskers, and super-taskers are most likely to achieve a <a id=\"q11-anchor\"></a><strong>24</strong> <input class=\"blank\" type=\"text\" name=\"q11\"> that is high on the career ladder.</p>\n      \n      <p>Super-taskers typically have to undertake many tasks simultaneously that need their <a id=\"q12-anchor\"></a><strong>25</strong> <input class=\"blank\" type=\"text\" name=\"q12\">.</p>\n      \n      <p>Genes play an important role in having this capability: these people have a special brain <a id=\"q13-anchor\"></a><strong>26</strong> <input class=\"blank\" type=\"text\" name=\"q13\">, which helps them do what we cannot.</p>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "summary_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

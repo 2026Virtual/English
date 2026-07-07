@@ -1,0 +1,258 @@
+{
+  "id": "p3-high-204",
+  "source": "zyz",
+  "group": "p3-high",
+  "category": "P3",
+  "frequency": "high",
+  "title": "When people are ‘deaf’ to music 失乐症【高】",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "d",
+    "q2": "b",
+    "q3": "a",
+    "q4": "c",
+    "q5": "b",
+    "q6": "no",
+    "q7": "not given",
+    "q8": "yes",
+    "q9": "not given",
+    "q10": "e",
+    "q11": "c",
+    "q12": "d",
+    "q13": "g",
+    "q14": "b"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14"
+  ],
+  "question_display_map": {
+    "q1": "27",
+    "q2": "28",
+    "q3": "29",
+    "q4": "30",
+    "q5": "31",
+    "q6": "32",
+    "q7": "33",
+    "q8": "34",
+    "q9": "35",
+    "q10": "36",
+    "q11": "37",
+    "q12": "38",
+    "q13": "39",
+    "q14": "40"
+  },
+  "passages": [
+    {
+      "passage_no": 3,
+      "question_range": {
+        "start": 27,
+        "end": 40
+      },
+      "title": "When people are ‘deaf’ to music 失乐症【高】",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 27-40."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 3,
+      "groups": [
+        {
+          "title": "Questions 27–31",
+          "question_range": {
+            "text": "Questions 27–31",
+            "start": 27,
+            "end": 31,
+            "numbers": [
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "raw_lines": [
+            "Choose the correct letter, A, B, C or D .",
+            "27 What does the writer tell us about people with tone deafness (amusia) in the first paragraph?",
+            "A. They usually have hearing problems",
+            "B. Some can play a musical instrument very well",
+            "C. Some may be able to sing well-known melodies",
+            "D. They have several inabilities in regard to music",
+            "28 What is the writer doing in the second paragraph?",
+            "A. outlining some of the factors that cause amusia",
+            "B. summarising some findings about people with amusia",
+            "C. suggesting that people with amusia are disadvantaged",
+            "D. comparing the singing ability of amusics with their sense",
+            "29 What does the writer say about the relationship between language ability and musical ability?",
+            "A. People who are unable to speak can sometimes sing",
+            "B. People with amusia usually have language problems too",
+            "C. Speakers of tonal languages like Chinese rarely have amusia",
+            "D. People with amusia have difficulty recognizing people by their voices",
+            "30 In the third paragraph, the writer notes that most amusics are able to",
+            "A. learn how to sing in tune",
+            "B. identify a song by its tune",
+            "C. distinguish a sad tone from a happy tune",
+            "D. recognise when a singer is not singing in tune",
+            "31 What is the writer doing in the fourth paragraph?",
+            "A. claiming that amusics have problems in the auditory cortex",
+            "B. outlining progress in understanding the brains of amusics",
+            "C. proving that amusia is located in the temporal lobes",
+            "D. explaining why studies of hearing are difficult"
+          ],
+          "instructions": [
+            "Choose the correct letter, A, B, C or D ."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 27–31</h4>\n      <p>Choose the correct letter, <strong>A, B, C or D</strong>.</p>\n      \n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q1-anchor\"></a><strong>27</strong> What does the writer tell us about people with tone deafness (amusia) in the first paragraph?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q1\" value=\"a\"> A. They usually have hearing problems</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"b\"> B. Some can play a musical instrument very well</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"c\"> C. Some may be able to sing well-known melodies</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"d\"> D. They have several inabilities in regard to music</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q2-anchor\"></a><strong>28</strong> What is the writer doing in the second paragraph?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q2\" value=\"a\"> A. outlining some of the factors that cause amusia</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"b\"> B. summarising some findings about people with amusia</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"c\"> C. suggesting that people with amusia are disadvantaged</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"d\"> D. comparing the singing ability of amusics with their sense</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q3-anchor\"></a><strong>29</strong> What does the writer say about the relationship between language ability and musical ability?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q3\" value=\"a\"> A. People who are unable to speak can sometimes sing</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"b\"> B. People with amusia usually have language problems too</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"c\"> C. Speakers of tonal languages like Chinese rarely have amusia</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"d\"> D. People with amusia have difficulty recognizing people by their voices</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q4-anchor\"></a><strong>30</strong> In the third paragraph, the writer notes that most amusics are able to</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q4\" value=\"a\"> A. learn how to sing in tune</label>\n          <label><input type=\"radio\" name=\"q4\" value=\"b\"> B. identify a song by its tune</label>\n          <label><input type=\"radio\" name=\"q4\" value=\"c\"> C. distinguish a sad tone from a happy tune</label>\n          <label><input type=\"radio\" name=\"q4\" value=\"d\"> D. recognise when a singer is not singing in tune</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q5-anchor\"></a><strong>31</strong> What is the writer doing in the fourth paragraph?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q5\" value=\"a\"> A. claiming that amusics have problems in the auditory cortex</label>\n          <label><input type=\"radio\" name=\"q5\" value=\"b\"> B. outlining progress in understanding the brains of amusics</label>\n          <label><input type=\"radio\" name=\"q5\" value=\"c\"> C. proving that amusia is located in the temporal lobes</label>\n          <label><input type=\"radio\" name=\"q5\" value=\"d\"> D. explaining why studies of hearing are difficult</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 32–36",
+          "question_range": {
+            "text": "Questions 32–36",
+            "start": 32,
+            "end": 36,
+            "numbers": [
+              32,
+              33,
+              34,
+              35,
+              36
+            ]
+          },
+          "raw_lines": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?",
+            "In boxes 32–36 on your answer sheet, write",
+            "YES if the statement agrees with the views of the writer",
+            "NO if the statement contradicts the views of the writer",
+            "NOT GIVEN if it is impossible to say what the writer thinks about this",
+            "32 Peretz’s research suggesting that amusia is a disorder is convincing.",
+            "Yes",
+            "No",
+            "NG",
+            "33 People with musical ability are happier than those without this ability.",
+            "Yes",
+            "No",
+            "NG",
+            "34 It is inappropriate to consider amusia as a real disorder.",
+            "Yes",
+            "No",
+            "NG",
+            "35 People with amusia often have bad handwriting.",
+            "Yes",
+            "No",
+            "NG"
+          ],
+          "instructions": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?",
+            "In boxes 32–36 on your answer sheet, write",
+            "YES if the statement agrees with the views of the writer",
+            "NO if the statement contradicts the views of the writer",
+            "NOT GIVEN if it is impossible to say what the writer thinks about this"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 32–36</h4>\n      <p>Do the following statements agree with the views of the writer in Reading Passage 3?</p>\n      <p><em>In boxes 32–36 on your answer sheet, write</em></p>\n      <ul style=\"list-style:none; padding-left:0; font-weight:bold; font-size:0.9em;\">\n        <li>YES <span style=\"font-weight:normal; margin-left:45px;\">if the statement agrees with the views of the writer</span></li>\n        <li>NO <span style=\"font-weight:normal; margin-left:52px;\">if the statement contradicts the views of the writer</span></li>\n        <li>NOT GIVEN <span style=\"font-weight:normal; margin-left:8px;\">if it is impossible to say what the writer thinks about this</span></li>\n      </ul>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q6-anchor\"></a><b>32</b> Peretz’s research suggesting that amusia is a disorder is convincing.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q6\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q6\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q6\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q7-anchor\"></a><b>33</b> People with musical ability are happier than those without this ability.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q7\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q7\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q7\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q8-anchor\"></a><b>34</b> It is inappropriate to consider amusia as a real disorder.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q8\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q8\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q8\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q9-anchor\"></a><b>35</b> People with amusia often have bad handwriting.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q9\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q9\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q9\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q6",
+            "q7",
+            "q8",
+            "q9",
+            "q10"
+          ],
+          "kind": "yes_no_not_given",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 36–40",
+          "question_range": {
+            "text": "Questions 36–40",
+            "start": 36,
+            "end": 40,
+            "numbers": [
+              36,
+              37,
+              38,
+              39,
+              40
+            ]
+          },
+          "raw_lines": [
+            "Complete each sentence with the correct ending, A–H , below.",
+            "Drag the correct ending block to the box below each sentence start.",
+            "A an inability to hear when spoken language rises and falls.",
+            "B considered to be desirable.",
+            "C an inability to follow the beat of music.",
+            "D not a problem.",
+            "E not yet well understood.",
+            "F a result of injury to the mother.",
+            "G more marked than with other people.",
+            "H associated with intelligence.",
+            "36 The reason why some people are born with amusia is",
+            "37 One of the difficulties amusics experience is",
+            "38 For amusics, discrimination of meaning in speech is",
+            "39 Certain reactions in the brain of an amusic are",
+            "40 In most cultures, musical ability is"
+          ],
+          "instructions": [
+            "Complete each sentence with the correct ending, A–H , below.",
+            "Drag the correct ending block to the box below each sentence start.",
+            "A an inability to hear when spoken language rises and falls.",
+            "B considered to be desirable.",
+            "C an inability to follow the beat of music.",
+            "D not a problem.",
+            "E not yet well understood.",
+            "F a result of injury to the mother.",
+            "G more marked than with other people.",
+            "H associated with intelligence."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 36–40</h4>\n      <p>Complete each sentence with the correct ending, <strong>A–H</strong>, below.</p>\n      <p><em>Drag the correct ending block to the box below each sentence start.</em></p>\n\n      <!-- Draggable Full Text Options -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-endings\">\n        <div class=\"card\" draggable=\"true\" id=\"c-a\" data-value=\"A\"><strong>A</strong> an inability to hear when spoken language rises and falls.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-b\" data-value=\"B\"><strong>B</strong> considered to be desirable.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-c\" data-value=\"C\"><strong>C</strong> an inability to follow the beat of music.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-d\" data-value=\"D\"><strong>D</strong> not a problem.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-e\" data-value=\"E\"><strong>E</strong> not yet well understood.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-f\" data-value=\"F\"><strong>F</strong> a result of injury to the mother.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-g\" data-value=\"G\"><strong>G</strong> more marked than with other people.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-h\" data-value=\"H\"><strong>H</strong> associated with intelligence.</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div>\n        <p><a id=\"q10-anchor\"></a><strong>36</strong> The reason why some people are born with amusia is</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q10\" data-question=\"q10\"></span>\n      </div>\n      <div>\n        <p><a id=\"q11-anchor\"></a><strong>37</strong> One of the difficulties amusics experience is</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q11\" data-question=\"q11\"></span>\n      </div>\n      <div>\n        <p><a id=\"q12-anchor\"></a><strong>38</strong> For amusics, discrimination of meaning in speech is</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q12\" data-question=\"q12\"></span>\n      </div>\n      <div>\n        <p><a id=\"q13-anchor\"></a><strong>39</strong> Certain reactions in the brain of an amusic are</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q13\" data-question=\"q13\"></span>\n      </div>\n      <div>\n        <p><a id=\"q14-anchor\"></a><strong>40</strong> In most cultures, musical ability is</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q14\" data-question=\"q14\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13",
+            "q14"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}
