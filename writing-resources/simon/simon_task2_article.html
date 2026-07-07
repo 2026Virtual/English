@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雅思写作笔记——Simon Task2</title>
+<style>
+:root {
+  --max: 900px;
+  --text: #1f2328;
+  --muted: #6b7280;
+  --border: #d8dee4;
+  --soft: #f6f8fa;
+  --link: #0969da;
+  --red: #b42318;
+  --red-soft: #fff1f0;
+  --note: #fff8e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.72;
+  font-size: 16px;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 42px 22px 18px;
+}
+h1 {
+  margin: 0 0 16px;
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.meta { margin: 0; color: var(--muted); font-size: 14px; }
+.toc {
+  max-width: var(--max);
+  margin: 10px auto 30px;
+  padding: 18px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--soft);
+}
+.toc-title { font-weight: 700; margin-bottom: 8px; }
+.toc ol { margin: 0; padding-left: 24px; column-count: 2; column-gap: 32px; }
+.toc li { break-inside: avoid; margin: 3px 0; }
+article {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 22px 64px;
+}
+h2 {
+  margin: 54px 0 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  font-size: 27px;
+  line-height: 1.3;
+}
+h2:first-child { margin-top: 20px; }
+h3 { margin: 32px 0 12px; font-size: 22px; line-height: 1.35; }
+h4 { margin: 26px 0 10px; font-size: 18px; line-height: 1.4; }
+p { margin: 10px 0 14px; }
+.prompt {
+  padding: 10px 14px;
+  border-left: 4px solid var(--border);
+  background: var(--soft);
+}
+.red-label { color: var(--red); }
+.label-line { margin-top: 18px; font-weight: 700; }
+.note {
+  padding: 9px 13px;
+  background: var(--note);
+  border-left: 4px solid #e5c066;
+}
+.red-note {
+  padding: 9px 13px;
+  color: var(--red);
+  background: var(--red-soft);
+  border-left: 4px solid #f04438;
+  font-style: italic;
+}
+.bullet {
+  position: relative;
+  margin: 7px 0 8px;
+  padding-left: 24px;
+}
+.bullet-2 { margin-left: 22px; }
+.bullet-dot {
+  position: absolute;
+  left: 0;
+  color: #374151;
+}
+table.vocab {
+  width: 100%;
+  margin: 14px 0 34px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.55;
+}
+table.vocab td {
+  vertical-align: top;
+  border: 1px solid var(--border);
+  padding: 9px 11px;
+}
+table.vocab td.term {
+  width: 30%;
+  font-family: "Times New Roman", Georgia, "Noto Serif SC", serif;
+  font-weight: 600;
+  background: #fafafa;
+}
+.cell-bullet { display: inline-block; width: 1.1em; }
+.cell-bullet.sub { color: #6b7280; }
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 23px; }
+  h3 { font-size: 19px; }
+  .toc ol { column-count: 1; }
+  table.vocab { font-size: 14px; }
+  table.vocab td, table.vocab tr, table.vocab tbody { display: block; width: 100% !important; }
+  table.vocab td.term { border-bottom: 0; }
+}
+@media print {
+  .toc { break-after: page; }
+  h2 { break-after: avoid; }
+  table.vocab { break-inside: avoid; }
+}
+.writing-float-menu {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 9999;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.writing-float-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-72px);
+}
+.writing-float-back {
+  min-height: 38px;
+  border: 1px solid rgba(31, 35, 40, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  box-shadow: 0 12px 28px rgba(31, 35, 40, 0.12);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  font: inherit;
+  font-weight: 700;
+}
+.writing-float-back:hover { background: #fff; }
+</style>
+</head>
+<body>
+<div class="writing-float-menu" id="writing-float-menu">
+  <button class="writing-float-back" type="button" id="writing-float-back">← 返回</button>
+</div>
+<header class="header" id="top">
+  <h1>雅思写作笔记——Simon Task2</h1>
+  <p class="meta">由 PDF 转换整理为连续文章版：文字可复制，表格已整理为 HTML，已去掉原 PDF 分页和逐页截图。</p>
+</header>
+<nav class="toc" aria-label="目录"><div class="toc-title">目录</div><ol><li><a href="#section-1">1. The tasks</a></li><li><a href="#section-2">2. Introductions</a></li><li><a href="#section-3">3. Main body paragraph</a></li><li><a href="#section-4">4. Conclusion</a></li><li><a href="#section-5">5. Planning</a></li><li><a href="#section-6">6. Opinion essay</a></li><li><a href="#section-7">7. Discussion Essay</a></li><li><a href="#section-8">8. Problem and Solution Essay</a></li><li><a href="#section-9">9. 2-part question</a></li><li><a href="#section-10">10. Extra help for “Agree or disagree”? questions/opinion questions.</a></li></ol></nav>
+<main>
+<article>
+<p class="red-note">免责声明：以下所有红色字体的都是我自己的想法总结，我的写作只考了 7 分（大作文小分 8787），说明我的有一定的局限性，如果目标分更高的同学可忽略这部分</p>
+<p>Simon 网课 B站可以免费看，随便搜都是同一个。</p>
+<h2 id="section-1">1. The tasks</h2>
+<p>1. Understand the task</p>
+<p>2. Break the task into parts</p>
+<p>3. Methods, techniques</p>
+<p>4. Lots of practice</p>
+<p>5. Feedback, measure progress</p>
+<h3>1) Understand the task</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>至少 250 words，40min</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>大作文涵盖 universal topics（普遍话题：如 family\health\education\work），主要有 4 种类型</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>4 个评分标准：专注于前三个最为重要，因为语法提升最慢；每个评分标准占据 25%的分值</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Task response 任务回应</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Coherence and Cohesion 连贯性与一致性</p>
+<p>组织 Well organized、逻辑 logically written、易于理解 easy to follow</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Lexical Resource 词汇</p>
+<p class="red-note">词汇这一点并不是说你用词高级复杂就对了，讲究的是用词的 variety，且要 precise。建议大家把握不准的单词别用。</p>
+<p class="red-note">我的考场 7 分文章大概单词拼写错误有 2-3 个，大家不用过于焦虑单词拼写。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Grammatical range and accuracy 语法范围和准确性</p>
+<h3>2) Break the task into parts</h3>
+<p>250 words</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>4 paragraphs</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>about 13 sentences</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Introduction: 2 sentences</p>
+<p class="note">不要写很长、很复杂的 intro，并不会对你的分数影响很大。如果想要高分，应该 focus 在中间的两个段落。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Two main paragraphs: 5 sentences each</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Conclusion: 1 sentence</p>
+<p>40 minutes</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Planning：10 minutes</p>
+<p class="red-note">Simon 非常强调打草稿的步骤，40 分钟的大作文 planning 就占了 10 分钟！</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction：5 minutes</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Two main paragraphs：10 minutes for each</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion：5 minutes（包括检查时间）</p>
+<h2 id="section-2">2. Introductions</h2>
+<p>本节主要讲大作文开头 Introductions 怎么写</p>
+<p class="red-note">不断地使用同一个方法/模式在练习写 intro，这样才会越来越快，也写得越来越自信。（这一点我深有体会，每次我都是用 simon 的框架在写 intro 和 conclusion，这两部分我写得很快，而且不担心会出错。一开始的 paraphrase 可能会慢一点，但是多加练习就会熟练起来。）</p>
+<h3>1) 写作有四类题型</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Discussion</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Opinion</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Problem and solution</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Two-part question</p>
+<h3>2) Introduction 回答模式</h3>
+<p class="red-note">Introduction 只需要写两句话（30-40 words），大家无需过于纠结于此。不同写作题型的 Introduction 有些微区别。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>第一句：introduce the topic.介绍文章的主题</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>第二句：give a general answer.对这个问题给出一个非常笼统的回答（机考的话我一般会把这句话的框架写出来，具体的等中间两段写完再填充进去，因为我认为这句话就是给考官看我接下来要说的内容，所以这句话要根据 body paragraphs 来写。）</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>不要在 introduction 里写太长，不然就是浪费时间，你不可能只靠 introduction 就得到高分！所以节省时间给后文吧！</p>
+<h3>3) Discussion</h3>
+<p class="red-note">两种观点都要讲，然后给出自己的偏好</p>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Some people think that it is more effective for students to study in groups, while others believe that it is better for them to study alone. Discuss both views and give your own opinion.</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - study in groups or alone</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - sometimes better alone, usually better in a group.</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - People have different views about the effectiveness of group study as opposed to working alone.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - While there are some benefits to studying independently, I believe that group work is usually more productive.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>需要在这句话中涵盖 both views and your own opinions</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>There are advantages to doing something</p>
+<p class="red-note"><strong>总结开头模板：</strong>People have different views about the … of A as opposed to B. While there are some benefits to A, I believe that B is usually more ….</p>
+<h3>4) Opinion: to what extent do you agree or disagree?(可以中立）</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>不可以写 some people think（别人的观点），必须写我们自己的观点 our own opinion，因为现在题目问的是我们自己的想法。</p>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Some people believe that unpaid community service should be a compulsory part of high school programs. To what extent do you agree or disagree?</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - community service for all teenagers</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer -我们有三种倾向的选择: agree, disagree, or balanced opinion (when possible)</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - It is sometimes argued that high school students should be made to do some work in their local communities.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Agree: I completely agree that this kind of scheme would be a good idea.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Disagree: In my opinion, it would be wrong to force teenagers to do any kind of unsalaried work.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>balanced opinion: While I disagree with the idea of making such programs compulsory, I do believe that voluntary community service could benefit young people.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>因为 compulsory 是一个有强烈感情色彩的词，要么就是强制性的，要么是非强制的，很难有中间立场。因此采用此种观点：会对年轻人有好处。</p>
+<p class="red-note"><strong>总结开头模板：</strong>It is sometimes argued that sb should ….</p>
+<p class="red-note">1. I completely agree that … would be a good idea.</p>
+<p class="red-note">2. In my opinion, it would be wrong to ….</p>
+<p class="red-note">3. While I disagree with the idea of A, I do believe that B could benefit sb.</p>
+<h3>5) Problem and solution</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Many criminals reoffend after they have been punished. Why do some people continue to commit crimes after they have been punished, and what measures can be taken to tackle this problem?</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - criminals reoffend</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - several reasons, a variety of measures (governments, communities)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>不需要在此给出具体的 reasons 和 measures，那是 body 段的内容</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - It is true that punishments do not always deter criminals from committing more crimes.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - There are various reasons why offenders repeatedly break the law, but governments could certainly take steps to address this issue.</p>
+<p class="red-note">在开头无需给出解决措施，那个是 main 部分的内容了。</p>
+<p class="red-note">有意思的是，在这篇开头中写明了解决问题的主体是政府，在最开始就限定缩小了我们要讨论的范围。很多人可能纠结于教育、父母、社会环境…以至于迷失方向。且本题只有一个段落能让你讨论解决措施，如果在开头就限定主体的话，我认为是很巧妙定下了后文的框架。值得学习：只讨论某个主体所受的影响、解决方案……</p>
+<h3>6) Two-part question</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>As most people spend a major part of their adult life at work, job satisfaction is an important element of individual well-being. What factors contribute to job satisfaction? How realistic is the expectation of job satisfaction for all workers?</p>
+<p class="note">这里有两个独立的问号，所以要在 main body 里一段回答一个问号</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic -job satisfaction</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer -several factors, unrealistic / impossible</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - Work plays a central role in our lives, and we would all like to feel fulfilled professionally.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - While a variety of factors may lead to job satisfaction, it would be unrealistic to expect everyone to be happy at work.</p>
+<h3>7) 总结</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>简短的介绍更好</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>5min 内写好 2 句话（topic+answer）</p>
+<p class="red-note">我想 Simon 在此想告诉我们的是，我们应该把重点放在后面的 main body paragraph 上，轻轻扫过 introduction 即可。</p>
+<h2 id="section-3">3. Main body paragraph</h2>
+<h3>1) Answer methods</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>2 main body paragraphs</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>5 sentences in each</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>90 to 100 words each</p>
+<h3>2) 中间段落有 2 种写作方式</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Firstly, Secondly, Finally</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>适用于：advantages/disadvantages/problems/solutions</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Idea, Explain, Example</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>适用于：One idea / a reason / an opinion</p>
+<p class="red-note">2 种写作方式，选其中之一即可。我一般都选用第二种方式，因为我认为这样才会有足够的空间让我 extend/解释我的观点。使用第一种的话，我也只会写两点，很少写三点。个人意见，仅供参考，目标分 7 分以上不要参考！因为我不了解！</p>
+<h3>3) Firstly, Secondly, Finally</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Some people believe that unpaid community service should be a compulsory part of high school programs. To what extent do you agree or disagree?</p>
+<p class="red-note">Plan(3-minute):</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>disagree for several reasons.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>school timetable is full, no time for community service.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>students’ work in other subjects would be affected.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>teenagers might not want to do it (reluctant, no motivation)</p>
+<p>当你头脑风暴结束后，要分清楚你现在所写的关键词是独立不同的点吗？还是其实都是同一个点，只是更详细地扩展开了。如果是前者，就是使用 Firstly, Secondly, Finally 结构。</p>
+<p class="red-note">Answer(4 sentences):</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>disagree for several reasons.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>There are several reasons why I would argue against having compulsory community service for secondary school students.</p>
+<p class="red-note">总起段落，说明我下面的句子主要是用于罗列 several reasons why</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>school timetable is full, no time for community service.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Firstly, the school curriculum is already full with important academic subjects, such as math, science and languages. For example, I remember having an extremely busy timetable when I was at high school, and it would not have been possible to add to it.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>students’ work in other subjects would be affected.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Secondly, students’ performance in other subjects would be affected if valuable study time were taken by charity work or neighborhood improvement schemes.</p>
+<p class="red-note">蓝色高亮部分相当于把题目中的 unpaid community service 更具体化了！同理第一句里的 math, science and languages 也是把 other important academic subjects 具象化了，学起来！</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>teenagers might not want to do it (reluctant, no motivation)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Finally, I believe that teenage students would be reluctant to take part in any program of obligatory work, and this could lead to poor motivation and even bad behavior.</p>
+<p class="red-note">To what extent 类型的题目，一定要表达自己的观点，要在文章中明显给出这些信号，段落最后一句话 I believe that 就是一个很好的方式。</p>
+<p class="red-note">Firstly, Secondly, Finally 总结:</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>写了五句话：主题句、Firstly（增加解释或者举一个例子）、Secondly、 Finally</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>连接词 linking words 并不能帮助提高词汇分数，考官想看到的是主题词 topic vocabulary（连接词就是类似 Firstly…，它的作用就是让你的文章更清晰，让你的想法易于理解，这就够了）</p>
+<p class="red-note">主题词：</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>compulsory community service、charity work or neighborhood improvement schemes、obligatory work</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>school curriculum、academic subjects</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>extremely busy timetable、valuable study time</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>students’ performance</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>reluctant to take part in</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>poor motivation</p>
+<h3>4) Idea, Explain，Example</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Some people believe that unpaid community service should be a compulsory part of high school programs. To what extent do you agree or disagree?</p>
+<p class="red-note">Plan (3-minute):</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>voluntary (not compulsory) community service is positive.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>students more motivated if they can choose.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>gain work experience, self confidence, skills.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>good for CVs, career, university admissions, employers</p>
+<p class="red-note">Answer (4 sentences):</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>voluntary (not compulsory) community service is positive.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>On the other hand, the opportunity to do voluntary community service could be extremely positive for high school students.</p>
+<p class="red-note">总起段落，表明观点：有参加社区服务的机会是好事。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>students more motivated if they can choose.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>By making these programs optional, schools would ensure that only motivated students took part.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>gain work experience, self confidence, skills.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>These young people would gain valuable experience in an adult working environment, which could help to build their self confidence and enhance their skills.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>good for CVs, career, university admissions, employers</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Having such experience and skills on their CVs could greatly improve school leavers’ career prospects. For example, a period of voluntary work experience might impress a university admissions officer or a future employer.</p>
+<p class="red-note">让社区服务成为可选项目→这样同学可以自愿参加→①获得工作经验、自信、技能②对简历有帮助、职业前景</p>
+<p class="red-note">Idea，Explain，Example 总结:</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>写 5 句话：想法、解释（2-3 句话）、案例</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>可以把 example 放在 explain 前面：idea、example、explain</p>
+<p class="red-note">主题词：</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Opportunity</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>voluntary community service</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>programs optional</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>ensure that only motivated students took part.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>gain valuable experience in an adult working environment.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>build their self confidence and enhance their skills.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>school leavers’ career prospects.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>impress a university admissions officer or a future employer.</p>
+<p class="red-note">在这篇文章里，simon 第一个 main body paragraph 用的是 first/second/third，第二个用的是 idea, explain, example。同一篇文章里，两种方法可以交替使用。</p>
+<h2 id="section-4">4. Conclusion</h2>
+<h3>1) Answer methods</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>不要写任何“新”的东西（要贯彻全文的观点）repeat</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>一句话就够了：重复/总结</p>
+<h3>2) Conclusion 技巧</h3>
+<p>将在 introduction 中给出的答案再 paraphrase 一下</p>
+<h3>3) Discussion（+opinion）</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>In many cities the use of video cameras in public places is being increased in order to reduce crime, but some people believe that these measures restrict our individual freedom.</p>
+<p>Do the benefits of increased security outweigh the drawbacks?</p>
+<p class="red-note">Introduction:</p>
+<p>It is true that video surveillance has become commonplace in many cities in recent years. While I understand that critics may see this as an invasion of privacy, I believe that there are more benefits than drawbacks.</p>
+<h4>Conclusion:</h4>
+<p>In conclusion, l would argue that the advantages of using video security systems in public places do outweigh the disadvantages.</p>
+<p class="red-note">总是使用 in conclusion 作为开头，句子里面没有什么新东西，只是单纯的在重复。</p>
+<p class="red-note"><strong>总结开头模板：</strong>It is true that A has become … in recent years. While I understand that … may see this as…, I believe that there are more benefits than drawbacks.</p>
+<p class="red-note"><strong>总结结尾模板：</strong>In conclusion, l would argue that the advantages of A do outweigh the disadvantages.</p>
+<h3>4) Opinion</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>Families who send their children to private schools should not be required to pay taxes that support the state education system. To what extent do you agree or disagree with this statement?</p>
+<p class="red-note">Introduction:</p>
+<p>Some people believe that parents of children who attend private schools should not need to contribute to state schools through taxes. Personally, I completely disagree with this view.</p>
+<h4>Conclusion:</h4>
+<p>In conclusion, I do not believe that any financial concessions should be made for people who choose private education.</p>
+<p class="red-note"><strong>总结开头模板：</strong>Some people believe that … should…. Personally, I completely disagree with this view.</p>
+<p class="red-note"><strong>总结结尾模板：</strong>In conclusion, I do not believe that… should …</p>
+<h3>5) Problem and solution</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>In the developed world, average life expectancy is increasing. What problems will this cause for individuals and society? Suggest some measures that could be taken to reduce the impact of aging populations.</p>
+<p class="red-note">Introduction:</p>
+<p>It is true that people in industrialized nations can expect to live longer than ever before. Although there will undoubtedly be some negative consequences of this trend, societies can take steps to mitigate these potential problems.</p>
+<h4>Conclusion:</h4>
+<p>In conclusion, various measures can be taken to tackle the problems that are certain to arise as the populations of countries grow older.</p>
+<p class="red-note"><strong>总结开头模板：</strong>It is true that …. Although there will undoubtedly be some negative consequences of this trend, … can take steps to mitigate these potential problems.</p>
+<p class="red-note"><strong>总结结尾模板：</strong>In conclusion, various measures can be taken to tackle the problems that are ….</p>
+<h3>6) 2-part question</h3>
+<p class="label-line"><strong>Prompt:</strong></p>
+<p>There are many different types of music in the world today. Why do we need music? Is the traditional music of a country more important than the international music that is heard everywhere nowadays?</p>
+<p class="red-note">Introduction:</p>
+<p>It is true that a rich variety of musical styles can be found around the world. Music is a vital part of all human cultures for a range of reasons, and I would argue that traditional music is more important than modern, international music.</p>
+<h4>Conclusion:</h4>
+<p>In conclusion, music is a necessary part of human existence, and I believe that traditional music should be given more importance than international music.</p>
+<h3>7) Conclusion 写作技巧总结</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>只写一个句子就够了</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>句子里不需要任何新的信息</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>通过使用意译的方式来展示自己词汇的多样性</p>
+<h2 id="section-5">5. Planning</h2>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Planning 大概花 10 分钟，你需要在 10 分钟内做以下三件事</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Read and understand the question</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Plan your essay structure (4 paragraphs)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Plan ideas for the two main paragraphs (6 minutes)</p>
+<p class="prompt"><strong class="red-label">Prompt:</strong> Some people think that it is more effective for students to study in groups, while others believe that it is better for them to study alone. Discuss both views and give your own opinion.</p>
+<h3>1) Read and understand the question.</h3>
+<p>Some people think that it is more effective for students to study in groups, while others believe that it is better for them to study alone. Discuss both views and give your own opinion.</p>
+<p class="red-note">看清楚题目很重要。首先要看清楚题目讨论的东西是什么、对应的主体是谁。很多人在这部分没有搞清楚就急匆匆往下想内容了，但是很有可能跑题。</p>
+<h3>2) Plan your essay structure (4 paragraphs)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction: topic + answer</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>study in groups or alone, sometimes better alone, usually better in a group</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Benefits of studying alone</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Benefits of group study (my view)</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion: repeat answer</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>both have benefits, but l prefer group</p>
+<p class="red-note">题目说的是“有人觉得 xx 更好，有人觉得 xx 更好”，那么我们在计划框架时，就可以选择“一段写 A 好、一段写 B 好”，而不是 “一段写 A 不好、一段写 B 好”。因为我们要做到 task response，题目让我们做的是 Discuss both views，那就要根据题目本身来讨论！</p>
+<h3>3) Plan ideas for the two main paragraphs (6 minutes)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>头脑风暴：写下所有你想到的东西</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>将 ideas 完善细节</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>不断问自己 why（非常重要！！！！）然后写下来</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>想出例子支持你的 ideas</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>最终尝试把 ideas 联系在一起</p>
+<p class="red-note">建议大家在接下来的 6-10 课中，每次都在 plan ideas for the two main paragraphs 部分看完 simon 的头脑风暴和排序号后，自己跟着做一遍自己的版本，要有主动性~~</p>
+<h2 id="section-6">6. Opinion essay</h2>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>题目一般为 Do you agree or disagree?</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>在开头一定要说 I agree/disagree OR in my opinion，直接回答问题，并且贯彻全文。观点要明确，不要说别人怎么样（比如 it’s agreed that…就不能用），不能只引用别人的观点。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>一定要说 I agree 或者 my 这类比较主观的词。</p>
+<p class="prompt"><strong class="red-label">Prompt:</strong> The money spent by governments on space programs would be better spent on vital public services such as schools and hospitals. To what extent do you agree or disagree?</p>
+<h3>1) Read and understand the question</h3>
+<p>The money spent by governments on space programs would be better spent on vital public services such as schools and hospitals. To what extent do you agree or disagree?</p>
+<p class="red-note">主体这里说的是政府的钱，如果反对的话，那么大家可以考虑说 space programs 应该由私人资助，私人资助那就可以想到 Elon Musk，Space X 这个例子。</p>
+<h3>2) Plan your essay structure (4 paragraphs)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction: government spending agree -public services instead of space projects</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>explain why &#x27;space&#x27; spending should be stopped</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>explain why public service spending is better</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion: spend on services that benefit us all</p>
+<p class="red-note">本文对比的对象是太空探索 vs 公共服务，那么结构就可以清晰分为一段反对 space，一段支持公共服务，结构和思路都比较简单清晰，在写作过程中也不容易出现车轱辘话讲来讲去的冗杂现象。</p>
+<h3>3) Plan ideas for the two main paragraphs (6 minutes)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why space spending should be stopped</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>4waste of money when projects fail,2expensive (scientists, facilities, equipment)3,no benefit to normal people, politicians showing power, risk of accidents4, deaths e.g. 5Challenger space shuttle</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why public service spending is better</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>2cheaper e.g. doctors, teachers, police instead of astronauts, 3public services</p>
+<p>impact on everyone,5reduce poverty, better quality of life,4we all use schools, hospitals, police, roads etc.</p>
+<h3>4) 正式写作</h3>
+<h4>Introduction</h4>
+<p class="prompt"><strong class="red-label">Prompt:</strong> The money spent by governments on space programs would be better spent on vital public services such as schools and hospitals. To what extent do you agree or disagree?</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - government spending</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - agree, public services instead of space projects</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - Governments in some countries spend large amounts of money on space exploration programs.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - I completely agree with the idea that these are a waste of money, and that the funds should be allocated to public services.</p>
+<h4>Main paragraphs</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>why space spending should be stopped.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>There are several reasons why space programs should be abandoned.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Firstly, it is extremely expensive to train scientists and other staff involved with space missions, and facilities and equipment also come at a huge cost to the government.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Secondly, these programs do not benefit normal people in our daily lives; they are simply vanity projects for politicians.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Finally, many missions to space fail completely, and the smallest technological error can cost astronauts their lives.</p>
+<p class="red-note">原因①：训练相关科学家和工作人员很贵、设备也很贵</p>
+<p class="red-note">原因②：太空项目无法受益于普通人的日常生活</p>
+<p class="red-note">原因③：很多项目都失败了、小错误也会危机生命</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>why public service spending is better.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>I believe that the money from space programs should go to vital public services instead.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>It is much cheaper to train doctors, teachers, police, and other public service workers than it is to train astronauts or the scientists and engineers who work</p>
+<p>on space exploration projects.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Furthermore, public servants do jobs that have a positive impact on every member of society. For example, we all use schools, hospitals, and roads, and we all need the security that the police provide.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>If governments reallocated the money spent on space travel and research, many thousands of people could be lifted out of poverty or given a better quality of life.</p>
+<h4>Conclusion</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>In conclusion, my view is that governments should spend money on services that benefit all members of society, and it is wrong to waste resources on projects that don’t improve our everyday lives.</p>
+<h3>5) 词汇总结</h3>
+<table class="vocab"><tbody><tr><td class="term">space programmes<br>exploration<br>missions<br>projects<br>travel<br>research</td><td><span class="cell-bullet">•</span> space programmes: 太空计划；航天项目 (指国家或<br>机构的整体太空探索规划)<br><span class="cell-bullet sub">o</span> space programmes: space initiatives, aerospace<br>programs, astronautic endeavors<br><span class="cell-bullet">•</span> exploration: 探索；勘探 (强调发现和认知未知领域)<br><span class="cell-bullet sub">o</span> exploration: space discovery, cosmic investigation,<br>extraterrestrial exploration<br><span class="cell-bullet">•</span> missions: (太空)任务 (指具体的飞行或探索任务)<br><span class="cell-bullet sub">o</span> missions: space flights, expeditions, voyages (to<br>space)<br><span class="cell-bullet">•</span> projects: (太空)项目 (指具体的、有目标和时间表的<br>太空研究或工程)<br><span class="cell-bullet sub">o</span> projects: space ventures, R&amp;D in space, space-<br>related initiatives<br><span class="cell-bullet">•</span> travel: (太空)旅行 (强调载人进入太空的活动)<br><span class="cell-bullet sub">o</span> travel: spaceflight, space tourism (if commercial),<br>manned space missions<br><span class="cell-bullet">•</span> research: (太空)研究 (强调科学调查和实验)<br><span class="cell-bullet sub">o</span> research: space science, scientific investigation in<br>space</td></tr>
+<tr><td class="term">funds should be<br>allocated</td><td>资金应该被分配到..<br><span class="cell-bullet">•</span> funding should be directed to/towards...<br><span class="cell-bullet">•</span> resources should be channeled into...<br><span class="cell-bullet">•</span> money should be earmarked for...<br><span class="cell-bullet">•</span> investment should be made in...<br><span class="cell-bullet">•</span> financial support should be provided for...</td></tr>
+<tr><td class="term">should be abandoned</td><td>应该被放弃<br><span class="cell-bullet">•</span> should be discontinued<br><span class="cell-bullet">•</span> should be scrapped<br><span class="cell-bullet">•</span> should be terminated<br><span class="cell-bullet">•</span> should be given up<br><span class="cell-bullet">•</span> ought to be ceased</td></tr>
+<tr><td class="term">facilities and equipment<br>come at a huge cost</td><td>设施和设备耗资巨大<br><span class="cell-bullet">•</span> infrastructure and apparatus are extremely expensive<br><span class="cell-bullet">•</span> the cost of facilities and gear is substantial/exorbitant<br><span class="cell-bullet">•</span> significant expenditure is required for facilities and<br>equipment<br><span class="cell-bullet">•</span> these entail enormous financial outlay for infrastructure<br>and tools</td></tr>
+<tr><td class="term">vanity projects for<br>politicians</td><td>面子工程 (通常指那些花费巨大但实际效益不大，主要<br>为提升政客形象而设的项目)<br><span class="cell-bullet">•</span> prestige projects for political figures<br><span class="cell-bullet">•</span> politically motivated showpieces<br><span class="cell-bullet">•</span> projects designed to boost a politician&#x27;s ego/image<br><span class="cell-bullet">•</span> extravagant undertakings for political gain</td></tr>
+<tr><td class="term">can cost astronauts their<br>lives</td><td>可能让宇航员付出生命代价<br><span class="cell-bullet">•</span> can be fatal for astronauts<br><span class="cell-bullet">•</span> may lead to the death of astronauts<br><span class="cell-bullet">•</span> pose a lethal risk to astronauts<br><span class="cell-bullet">•</span> astronauts&#x27; lives can be endangered/jeopardized</td></tr>
+<tr><td class="term">space shuttle disaster</td><td>航天飞机失事<br><span class="cell-bullet">•</span> space shuttle catastrophe<br><span class="cell-bullet">•</span> tragic space shuttle accident<br><span class="cell-bullet">•</span> the loss of a space shuttle</td></tr>
+<tr><td class="term">public servants</td><td>公职人员 (指为政府工作，服务公众的人)<br><span class="cell-bullet">•</span> government employees<br><span class="cell-bullet">•</span> civil servants<br><span class="cell-bullet">•</span> state officials (can sometimes imply higher rank)<br><span class="cell-bullet">•</span> those in public office</td></tr>
+<tr><td class="term">a positive impact on<br>every member of society</td><td>对社会每个成员都有积极影响<br><span class="cell-bullet">•</span> beneficial effects for all societal members<br><span class="cell-bullet">•</span> a positive influence on everyone in society<br><span class="cell-bullet">•</span> advantages for the entire populace<br><span class="cell-bullet">•</span> contributes positively to the well-being of all citizens</td></tr>
+<tr><td class="term">if governments<br>reallocated</td><td>如果政府重新分配 (资金/资源)<br><span class="cell-bullet">•</span> if governments redirected funds/resources<br><span class="cell-bullet">•</span> should governments shift their spending<br><span class="cell-bullet">•</span> if there were a reallocation of government resources<br><span class="cell-bullet">•</span> were governments to reapportion funding</td></tr>
+<tr><td class="term">could be lifted out of<br>poverty</td><td>可以摆脱贫困；能够脱贫<br><span class="cell-bullet">•</span> could escape poverty 的<br><span class="cell-bullet">•</span> could be helped out of impoverishment<br><span class="cell-bullet">•</span> their poverty could be alleviated<br><span class="cell-bullet">•</span> could be raised from destitution</td></tr>
+<tr><td class="term">given a better quality of<br>life</td><td>生活品质得到改善<br><span class="cell-bullet">•</span> provided with an improved standard of living<br><span class="cell-bullet">•</span> their living standards could be enhanced<br><span class="cell-bullet">•</span> could enjoy a higher quality of life<br><span class="cell-bullet">•</span> their well-being could be improved</td></tr></tbody></table>
+<h2 id="section-7">7. Discussion Essay</h2>
+<p class="prompt"><strong class="red-label">Prompt:</strong> Some people think that a sense of competition in children should be encouraged. Others believe that children who are taught to co-operate rather than compete become more useful adults. Discuss both these views and give your own opinion.</p>
+<h3>1) Read and understand the question.</h3>
+<p>Some people think that a sense of competition in children should be encouraged. Others believe that children who are taught to co-operate rather than compete become more useful adults. Discuss both these views and give your own opinion.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Highlight / underline key parts: both views、give your own opinion</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>当题目出现上述关键词，则必须在文章中给出我们自己（对于 competition、 co-operate）的意见，而不是单纯讨论题目中的观点。</p>
+<h3>2) Plan your essay structure (4 paragraphs).</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction: topic sentence + answer sentence. (competition or co-operation?)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>benefits of both, co-operation more important</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why encourage competition</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>反对/不那么同意的观点的原因/好处（竞争）</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why teach co-operation (my view)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>我同意的观点（合作）的原因/好处，在这段要明确表明这是我们的观点</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion: accept both views, co-operation better</p>
+<h3>3) Plan ideas for the two main paragraphs(6 minutes)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>一开始头脑风暴时，把自己想到的所有点都写下来，然后再合并同类项、分因果顺序，标序号。头脑风暴写出来的词组/想法不是简单、独立思想的堆砌和集合。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>不要写 first、second、third，这样的话每一个点只是一个个孤立的 idea。当我们标完序号后，就有了前因后果和主题词。头脑风暴的 idea 应该是 related 的，在我们的文章中应该是 step by step（使用逻辑连接词）呈现出来。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why encourage competition</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>1motivation to 2work harder, be better than other children, 3self confidence, independent work, faster progress, 4competitive situations when leave school, e.g. job interviews, 5prepared for adult life</p>
+<p>在这一段中，我们鼓励竞争的主要原因是 to motivate them to work harder。这就是一个基本的 leading sentence），放在段首，接下来的都围绕这句话写。</p>
+<p>头脑风暴时，在整个过程中不断问自己 why：2 为什么 children 会想要 work harder 呢？因为 they might want to be better than other children。这有什么结果/好处/坏处呢？会导致小孩更加 3self confidence、work independently、 progress faster…4What will happen after school？从另一个角度论述！they will have to compete with other people, like job interviews when leave school and finally that 5prepares them well for adult life.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why teach co-operation (my view)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>1co-operation even more important, 2e.g. at work (teams, follow boss&#x27;s instructions, help junior staff) 3collaboration more useful than winning, 4better attitude for young people, 5working together</p>
+<p>直接从 adult life 的角度论述为什么 cooperate 更重要，而不是 children，所以教小孩合作的态度很重要。</p>
+<h3>4) 正式写作</h3>
+<h4>Introduction</h4>
+<p class="prompt"><strong class="red-label">Prompt:</strong> Some people think that a sense of competition in children should be encouraged. Others believe that children who are taught to co-operate rather than compete become more useful adults. Discuss both these views and give your own opinion.</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - benefits of both, co-operation more important</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>前者 benefits of both 回答 Discuss both these views；后者 co-operation more important 回答 give your own opinion</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - co-operation better</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - People have different views about whether children should be taught to be competitive or co-operative.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - While spirit of competition can sometimes be useful in life, I believe that the ability to co-operate is more important.</p>
+<p class="red-note">此处 paraphrase 技巧可注意，这两个词都是比较难马上想到同义替换的，可以</p>
+<p class="red-note">通过“名词、动词、形容词、副词”等之间的转换来达到 paraphrase 的效果。</p>
+<h4>Main paragraphs</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why encourage competition</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>On the one hand, competition can be a great source of motivation for children.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>When teachers use games or prizes to introduce an element of competitiveness into lessons, it can encourage children to work harder to outdo the other pupils in the class.</p>
+<p class="red-note">肤色高亮：和第三节课 main body paragraph 的例文一样，将抽象名词具象化举例。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>This kind of healthy rivalry may help to build children&#x27;s self confidence, while pushing them to work independently and progress more quickly.</p>
+<p class="red-note">本段“总分总”中的“分”以 When 开头展开一个比较隐形的例子，举完例子后要继续“总”结一下，以例子来论证观点。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>When these children leave school, their confidence and determination will help them in competitive situations such as job interviews.</p>
+<p class="red-note">这句详细说明“为什么小孩需要竞争”</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>It can therefore be argued that competition should be encouraged in order to prepare children for adult life.</p>
+<p class="red-note">结尾句，说明竞争可以为小孩的承认生活做好准备。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Why teach co-operation (my view)</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>On the other hand, it is perhaps even more important to prepare children for the many aspects of adult life that require co-operation.</p>
+<p class="red-note">Perhaps 我觉得在这里用得很妙，我看过不少人的文章使用过于绝对的语言，但是我认为英语讲究的是委婉、渐进式说理，类似的说法还有 may/might、relatively……另外，比如青少年过早辍学，不要直接说这件事情 will lead to 犯罪，而应该说“可能”导致。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>In the workplace, adults are expected to work in teams, follow instructions given by their superiors, or supervise and support the more junior members of staff.</p>
+<p class="red-note">继续沿用第一个 body paragraph 的框架，通过具体的例子/场景来支持和解释这个观点。</p>
+<p class="red-note">把“合作”具象化为 work in teams，再进一步具象化这个 teams 里可以有 superiors 或者 team members。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Team collaboration skills are much more useful than a competitive determination to win.</p>
+<p class="red-note">总结例子，然后再转回题目上，在段落中起到了承上启下的作用。</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>This is the attitude that I believe schools should foster in young people. Instead of promoting the idea that people are either winners or losers, teachers could show children that they gain more from working together.</p>
+<p class="red-note">这就是 give your own opinion 的句子，给出“I believe”这种信号词可以一下子就被清楚地看出这句话的作用。</p>
+<h4>Conclusion: accept both views, cooperation better</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>In conclusion, I can understand why people might want to encourage competitiveness in children, but it seems to me that a co-operative attitude is much more desirable in adult life.</p>
+<h3>5) 词汇总结</h3>
+<table class="vocab"><tbody><tr><td class="term">competition / co-operation<br>competitive<br>co-operative<br>co-operate<br>competitiveness</td><td>竞争—合作<br><span class="cell-bullet">•</span> competition: rivalry, contest, contention<br><span class="cell-bullet">•</span> co-operation: collaboration, teamwork, partnership,<br>joint effort, synergy<br><span class="cell-bullet">•</span> competitive: rivalrous, ambitious (in a competitive<br>sense), vying<br><span class="cell-bullet">•</span> co-operative: collaborative, collective, supportive,<br>working together<br><span class="cell-bullet">•</span> co-operate: collaborate, work together, team up, join<br>forces<br><span class="cell-bullet">•</span> competitiveness: competitive spirit, drive to win,<br>ability to compete</td></tr>
+<tr><td class="term">a spirit of competition</td><td>竞争精神<br><span class="cell-bullet">•</span> a competitive spirit<br><span class="cell-bullet">•</span> an urge to compete<br><span class="cell-bullet">•</span> a desire to win/excel<br><span class="cell-bullet">•</span> a competitive drive</td></tr>
+<tr><td class="term">a source of motivation</td><td>动力来源<br><span class="cell-bullet">•</span> a motivating factor<br><span class="cell-bullet">•</span> an incentive<br><span class="cell-bullet">•</span> something that drives/encourages<br><span class="cell-bullet">•</span> a stimulus</td></tr>
+<tr><td class="term">introduce an element of<br>competitiveness</td><td>引入竞争因素<br><span class="cell-bullet">•</span> incorporate a competitive aspect<br><span class="cell-bullet">•</span> add a competitive edge<br><span class="cell-bullet">•</span> foster a degree of rivalry<br><span class="cell-bullet">•</span> create a competitive environment</td></tr>
+<tr><td class="term">outdo other pupils, healthy<br>rivalry</td><td><span class="cell-bullet">•</span> outdo other pupils: 超越其他学生；胜过其他同学<br><span class="cell-bullet sub">o</span> surpass classmates, perform better than peers,<br>excel over others<br><span class="cell-bullet">•</span> healthy rivalry: 良性竞争；健康的竞争关系<br><span class="cell-bullet sub">o</span> constructive competition, positive rivalry,<br>productive competition</td></tr>
+<tr><td class="term">build self confidence,<br>determination</td><td><span class="cell-bullet">•</span> build self confidence: 建立自信<br><span class="cell-bullet sub">o</span> foster self-assurance, develop self-belief, boost<br>one&#x27;s confidence<br><span class="cell-bullet">•</span> determination: 决心；毅力<br><span class="cell-bullet sub">o</span> resolve, perseverance, tenacity, willpower, drive</td></tr>
+<tr><td class="term">aspects of adult life</td><td>成年生活的方方面面<br><span class="cell-bullet">•</span> facets of adulthood<br><span class="cell-bullet">•</span> elements of grown-up life<br><span class="cell-bullet">•</span> realities of the adult world<br><span class="cell-bullet">•</span> dimensions of being an adult</td></tr>
+<tr><td class="term">superiors, junior members<br>of staff</td><td><span class="cell-bullet">•</span> superiors: 上级；上司<br><span class="cell-bullet sub">o</span> managers, bosses, supervisors, senior staff<br><span class="cell-bullet">•</span> junior members of staff: 下级员工；资历较浅的职<br>员<br><span class="cell-bullet sub">o</span> subordinates (can sound a bit harsh), junior<br>colleagues, entry-level employees, less<br>experienced staff</td></tr>
+<tr><td class="term">team collaboration skills</td><td>团队合作技巧<br><span class="cell-bullet">•</span> teamwork skills<br><span class="cell-bullet">•</span> ability to collaborate in a team<br><span class="cell-bullet">•</span> cooperative working skills<br><span class="cell-bullet">•</span> group collaboration abilities</td></tr>
+<tr><td class="term">attitude that schools should<br>foster</td><td>学校应该培养的态度<br><span class="cell-bullet">•</span> mindset schools should cultivate/nurture<br><span class="cell-bullet">•</span> disposition schools should encourage<br><span class="cell-bullet">•</span> approach schools should instill in students</td></tr>
+<tr><td class="term">promoting the idea</td><td>推广这种理念<br><span class="cell-bullet">•</span> advocating the concept<br><span class="cell-bullet">•</span> advancing the notion<br><span class="cell-bullet">•</span> encouraging the belief<br><span class="cell-bullet">•</span> championing the idea</td></tr>
+<tr><td class="term">a co-operative attitude is<br>more desirable</td><td>合作的态度更可取<br><span class="cell-bullet">•</span> a collaborative mindset is preferable<br><span class="cell-bullet">•</span> a willingness to co-operate is more<br>beneficial/advantageous<br><span class="cell-bullet">•</span> it is better to foster a spirit of co-operation<br><span class="cell-bullet">•</span> a cooperative approach is more valuable</td></tr></tbody></table>
+<h2 id="section-8">8. Problem and Solution Essay</h2>
+<p class="prompt"><strong class="red-label">Prompt:</strong> In many countries, schools have severe problems with student behavior. What do you think are the causes of this? What solutions can you suggest?</p>
+<h3>1) Read and understand the question</h3>
+<p>In many countries schools have severe problems with student behavior. What do you think are the causes of this? What solutions can you suggest?</p>
+<h3>2) Plan your essay structure (4 paragraphs)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction: student behavior in schools, variety of reasons, steps can be taken to tackle</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Causes of bad student behavior</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>My suggested solutions</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion: summarize the problem and steps</p>
+<h3>3) Plan ideas for the two main paragraphs (6 minutes)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Causes of bad student behavior</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>2parents not strict (too lenient), 3children don&#x27;t accept teachers&#x27; instructions or school rules, 4teachers fault, no control, bad classroom management, 5influence of celebrities who are a bad example</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>My suggested solutions</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>2parents set rules for children, 3use punishments. actions have consequences, 4schools train teachers and parents, discipline techniques, better communication, 5famous people act as role models</p>
+<h3>4) 正式写作</h3>
+<h4>Introduction</h4>
+<p class="prompt"><strong class="red-label">Prompt:</strong> In many countries, schools have severe problems with student behavior. What do you think are the causes of this? What solutions can you suggest?</p>
+<p class="label-line"><strong>Plan:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - schools, student behavior</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer – causes, solutions</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - It is true that the behavior of school pupils in some parts of the world has been getting worse in recent years.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - There are a variety of possible reasons for this, but steps can definitely be taken to tackle the problem.</p>
+<p class="red-note"><strong>总结开头模板：</strong>It is true that … has been getting worse in recent years. There are a variety of possible reasons for this, but steps can definitely be taken to tackle the problem.</p>
+<h4>Main paragraphs</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Causes of bad student behavior</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>In my opinion, three main factors are to blame for the way young people behave at school nowadays.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Firstly, modern parents tend to be too lenient or permissive. Many children become accustomed to getting whatever they want, and they find it difficult to accept the demands of teachers or the limits imposed on them by school rules.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Secondly, if teachers cannot control their students, there must be an issue with the quality of classroom management training or support within schools.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Finally, children are influenced by the behavior of celebrities, many of whom set the example that success can be achieved without finishing school.</p>
+<p class="red-note">原因①父母太松→小孩习惯松→难以接受学校的制度</p>
+<p class="red-note">原因②如果老师无法控制学生→学校内部的课堂管理培训或支持的质量会有问题</p>
+<p class="red-note">第二点实际上和第一点有所联系，在这种列举 123 观点的框架内，尽量能做到这种结构，会让行文更加 concise</p>
+<p class="red-note">原因③→学生受到名人的影响，觉得不完成学业也能成功</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>my suggested solutions</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Student behavior can certainly be improved.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>I believe that the change must start with parents, who need to be persuaded that it is important to set firm rules for their children.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>When children misbehave or break the rules, parents should use reasonable punishments to demonstrate that actions have consequences.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Also, schools could play an important role in training both teachers and parents to use effective disciplinary techniques, and in improving the communication between both groups.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>At the same time, famous people, such as musicians and football players, need to understand the responsibility that they have to act as role models to</p>
+<p>children.</p>
+<p class="red-note">解决方法要根据上文 causes 进行点对点分析。</p>
+<p class="red-note">方法①父母：设定规则→要是打破规则，要惩罚</p>
+<p class="red-note">方法②学校：训练老师和父母惩戒方法、沟通</p>
+<p class="red-note">方法③名人：有责任为学生树立榜样</p>
+<h4>Conclusion: summarize the problem and steps</h4>
+<p>In conclusion, schools will continue to face discipline problems unless parents, teachers and public figures set clear rules and demonstrate the right behavior themselves.</p>
+<h3>5) 词汇总结</h3>
+<table class="vocab"><tbody><tr><td class="term">steps can be taken to<br>tackle the problem</td><td>可以采取措施来解决这个问题<br><span class="cell-bullet">•</span> measures can be implemented to address the issue<br><span class="cell-bullet">•</span> actions can be initiated to combat the problem<br><span class="cell-bullet">•</span> strategies can be employed to deal with the challenge<br><span class="cell-bullet">•</span> solutions can be sought to overcome the difficulty</td></tr>
+<tr><td class="term">three main factors are to<br>blame</td><td>三个主要因素应负责任<br><span class="cell-bullet">•</span> three primary causes are responsible<br><span class="cell-bullet">•</span> the problem can be attributed to three key factors<br><span class="cell-bullet">•</span> three major contributing factors exist<br><span class="cell-bullet">•</span> the blame lies with three principal elements</td></tr>
+<tr><td class="term">parents tend to be too<br>lenient or permissive</td><td>父母往往过于宽容或放任<br><span class="cell-bullet">•</span> parents are often overly indulgent or lax<br><span class="cell-bullet">•</span> a tendency for parents to be too easygoing or<br>unrestrained<br><span class="cell-bullet">•</span> parents may lack strictness or be too tolerant<br><span class="cell-bullet">•</span> there is often an absence of firm parenting</td></tr>
+<tr><td class="term">children become<br>accustomed to</td><td>孩子们习惯于...<br><span class="cell-bullet">•</span> children get used to...<br><span class="cell-bullet">•</span> children grow familiar with...<br><span class="cell-bullet">•</span> children adapt to...<br><span class="cell-bullet">•</span> it becomes normal for children to...</td></tr>
+<tr><td class="term">limits imposed on them</td><td>施加在他们身上的约束<br><span class="cell-bullet">•</span> boundaries set for them<br><span class="cell-bullet">•</span> restrictions placed upon them<br><span class="cell-bullet">•</span> constraints they face<br><span class="cell-bullet">•</span> rules they are expected to follow</td></tr>
+<tr><td class="term">quality of classroom<br>management</td><td>课堂管理质量<br><span class="cell-bullet">•</span> effectiveness of classroom discipline<br><span class="cell-bullet">•</span> standard of student conduct supervision in class<br><span class="cell-bullet">•</span> how well classrooms are controlled/organized<br><span class="cell-bullet">•</span> classroom discipline practices</td></tr>
+<tr><td class="term">Celebrities<br>famous people<br>public figures</td><td>名人 (通常指娱乐、体育等领域)、公众人物 (指在社会<br>上有一定影响力，其行为受到公众关注的人)<br><span class="cell-bullet">•</span> well-known personalities<br><span class="cell-bullet">•</span> prominent individuals<br><span class="cell-bullet">•</span> notable figures<br><span class="cell-bullet">•</span> icons (if very famous and admired)<br><span class="cell-bullet">•</span> role models (if their influence is positive)</td></tr>
+<tr><td class="term">set an example</td><td>树立榜样<br><span class="cell-bullet">•</span> serve as a model<br><span class="cell-bullet">•</span> lead by example<br><span class="cell-bullet">•</span> provide a good precedent<br><span class="cell-bullet">•</span> act as a benchmark</td></tr>
+<tr><td class="term">set firm rules<br>reasonable punishments</td><td><span class="cell-bullet">•</span> set firm rules: 制定严格的规定<br><span class="cell-bullet sub">o</span> establish clear boundaries, implement strict<br>guidelines, enforce strong regulations<br><span class="cell-bullet">•</span> reasonable punishments: 合理的惩罚<br><span class="cell-bullet sub">o</span> appropriate consequences, fair penalties, sensible<br>disciplinary actions</td></tr>
+<tr><td class="term">play an important role in</td><td>在...中起重要作用<br><span class="cell-bullet">•</span> have a significant part in<br><span class="cell-bullet">•</span> be instrumental in<br><span class="cell-bullet">•</span> make a vital contribution to<br><span class="cell-bullet">•</span> be a key factor in</td></tr>
+<tr><td class="term">effective disciplinary<br>techniques</td><td>行之有效的管教方法<br><span class="cell-bullet">•</span> successful methods of discipline<br><span class="cell-bullet">•</span> impactful disciplinary approaches<br><span class="cell-bullet">•</span> proven strategies for managing behavior<br><span class="cell-bullet">•</span> constructive disciplinary measures</td></tr>
+<tr><td class="term">responsibility to act as<br>role models</td><td>作为行为模范的义务<br><span class="cell-bullet">•</span> duty to set a positive example<br><span class="cell-bullet">•</span> obligation to be good exemplars<br><span class="cell-bullet">•</span> the onus of being a role model<br><span class="cell-bullet">•</span> accountability for influencing others positively</td></tr>
+<tr><td class="term">face discipline problems</td><td>面临纪律问题<br><span class="cell-bullet">•</span> encounter behavioral issues<br><span class="cell-bullet">•</span> deal with disciplinary challenges<br><span class="cell-bullet">•</span> confront problems with discipline<br><span class="cell-bullet">•</span> struggle with unruly behavior</td></tr></tbody></table>
+<h2 id="section-9">9. 2-part question</h2>
+<p class="prompt"><strong class="red-label">Prompt:</strong> News editors decide what to broadcast on television and what to print in newspapers. What factors do you think influence these decisions? Do we become used to bad news, and would it be better if more good news was reported?</p>
+<h3>1) Read and understand the question</h3>
+<p>News editors decide what to broadcast on television and what to print in newspapers. What factors do you think influence these decisions? Do we become used to bad news, and would it be better if more good news was reported?</p>
+<h3>2) Plan your essay structure (4 paragraphs)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction: decisions about news stories variety of factors, yes too much bad news</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Factors that influence news editors</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Too much bad news, should report more good</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion: difficult news choices, more positive</p>
+<h3>3) Plan ideas for the two main paragraphs (6 minutes)</h3>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>1Factors that influence news editors</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>2interest or attract viewers /readers</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>3inform the public, important issues and events, in the public interest</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>4pressure from owners, promote political views</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>1Too much bad news, should report more good</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>1 accustomed to bad news, 2war, crime, natural disasters, human suffering, 3desensitizes us, cynical about the world, 4prefer positive news, e.g. medical workers, volunteers, kindness, 5news to inspire us</p>
+<h3>4) 正式写作</h3>
+<h4>Introduction</h4>
+<p class="prompt"><strong class="red-label">Prompt:</strong> News editors decide what to broadcast on television and what to print in newspapers. What factors do you think influence these decisions? Do we become used to bad news, and would it be better if more good news was reported?</p>
+<p class="red-note">这题的重点在于 what to，而不是对比两个媒介！</p>
+<p class="label-line"><strong>Answer:</strong></p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Topic - It is true that editors have to make difficult decisions about which news stories they broadcast or publish, and their choices are no doubt influenced by a variety of factors.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Answer - In my opinion, we are exposed to too much bad news, and I would welcome a greater emphasis on good news.</p>
+<h4>Main paragraphs</h4>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>variety of factors that influence news editors</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Editors face a range of considerations when deciding what news stories to focus on.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Firstly, I imagine that they have to consider whether viewers or readers will be interested enough to choose their television channel or their newspaper over competing providers.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Secondly, news editors have a responsibility to inform the public about important events and issues, and they should therefore prioritize stories that are in the public interest.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Finally, editors are probably under some pressure from the owners who employ them. For example, a newspaper owner might have particular political views that he or she wants to promote.</p>
+<p class="red-note">原因①：编辑应该考虑的是观众是否对他们的内容感兴趣；</p>
+<p class="red-note">原因②：编辑有责任让公众了解重要事件→应优先考虑符合公众利益的报道；</p>
+<p class="red-note">原因③：编辑可能会受到来自老板的一些压力。例如，雇主可能有自己想要宣传的政治观点（换个角度，从外部因素考虑。新闻和政治是永远连在一起的，因为政治人物需要靠媒体宣传而获得他们的选票，所以可以从这点切入。）。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>accustomed to bad news</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>It seems to me that people do become accustomed to negative news.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>We are exposed on a daily basis to stories about war, crime, natural disasters and tragic human suffering around the world.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>I believe that such repeated exposure gradually desensitizes people, and we become more cynical about the world and more skeptical that we can do anything to change it.</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>I would prefer to see more positive news stories, such as reports of the work of medical staff after a natural disaster, or the kindness of volunteers who help in their communities. This kind of news might inspire us all to lead better lives.</p>
+<p class="red-note">巧用 such、in this way、this、these、there、这些连词来连接起句子。</p>
+<p class="red-note">现象：我们每天都接触到坏新闻（然后可以提一下大概有哪些坏新闻，具象化）→坏处：我们对此不再敏感、变得愤世嫉俗、怀疑该做什么才能有所改变→做法：报道更多正面的新闻（又可以具象化一下有哪些正面的新闻）→好处：激励大家更好的生活/有更多的希望。</p>
+<h4>Conclusion: difficult news choice, more positive</h4>
+<p>In conclusion, it must be extremely difficult for editors to choose which news stories to present, but I would like to see a more positive approach to this vital public service.</p>
+<h3>5) 词汇总结</h3>
+<table class="vocab"><tbody><tr><td class="term">exposed to bad news</td><td>接触到坏消息<br><span class="cell-bullet">•</span> subjected to negative news<br><span class="cell-bullet">•</span> confronted with bad news<br><span class="cell-bullet">•</span> encountering unfavorable news stories<br><span class="cell-bullet">•</span> being in contact with pessimistic information</td></tr>
+<tr><td class="term">welcome a greater<br>emphasis on good news</td><td>乐见对正面新闻的更多强调<br><span class="cell-bullet">•</span> appreciate a stronger focus on positive news<br><span class="cell-bullet">•</span> would be pleased with more attention to good news<br><span class="cell-bullet">•</span> favor an increased highlighting of uplifting stories<br><span class="cell-bullet">•</span> support a shift towards more positive reporting</td></tr>
+<tr><td class="term">Editors face a range of<br>considerations</td><td>编辑面临一系列需要考虑的因素<br><span class="cell-bullet">•</span> Editors must weigh various factors<br><span class="cell-bullet">•</span> There are multiple aspects for editors to consider<br><span class="cell-bullet">•</span> Editors deal with a spectrum of considerations<br><span class="cell-bullet">•</span> A number of elements influence editors&#x27; decisions</td></tr>
+<tr><td class="term">prioritize stories that are<br>in the public interest</td><td>优先报道符合公众利益的新闻<br><span class="cell-bullet">•</span> give precedence to news that serves the public<br><span class="cell-bullet">•</span> focus on stories of public concern<br><span class="cell-bullet">•</span> place importance on reporting matters relevant to<br>society<br><span class="cell-bullet">•</span> highlight narratives that benefit the community</td></tr>
+<tr><td class="term">under some pressure<br>from the owners</td><td>受到来自所有者的一些压力<br><span class="cell-bullet">•</span> facing pressure from proprietors/media owners<br><span class="cell-bullet">•</span> subject to influence from the ownership<br><span class="cell-bullet">•</span> experiencing some coercion from those who own the<br>media outlet<br><span class="cell-bullet">•</span> owners may exert some influence</td></tr>
+<tr><td class="term">promote particular<br>political views</td><td>宣传特定的政治观点<br><span class="cell-bullet">•</span> advocate for specific political ideologies<br><span class="cell-bullet">•</span> advance certain political perspectives<br><span class="cell-bullet">•</span> champion particular political stances<br><span class="cell-bullet">•</span> push a specific political agenda</td></tr>
+<tr><td class="term">become accustomed to<br>negative news</td><td>对坏消息习以为常<br><span class="cell-bullet">•</span> get used to pessimistic reporting<br><span class="cell-bullet">•</span> grow familiar with bad news<br><span class="cell-bullet">•</span> become desensitized to negative information (often a<br>consequence)<br><span class="cell-bullet">•</span> negative news becomes the norm</td></tr>
+<tr><td class="term">natural disasters and<br>tragic human suffering</td><td>自然灾害和不幸的人类苦难<br><span class="cell-bullet">•</span> calamities and human tragedies<br><span class="cell-bullet">•</span> environmental catastrophes and heartbreaking human<br>pain<br><span class="cell-bullet">•</span> devastating natural events and sorrowful human<br>experiences</td></tr>
+<tr><td class="term">exposure gradually<br>desensitizes people</td><td>接触（负面新闻）逐渐使人麻木<br><span class="cell-bullet">•</span> repeated exposure leads to desensitization<br><span class="cell-bullet">•</span> people become less sensitive over time due to exposure<br><span class="cell-bullet">•</span> continuous contact gradually makes people<br>apathetic/numb<br><span class="cell-bullet">•</span> familiarity can breed indifference</td></tr>
+<tr><td class="term">cynical and skeptical<br>(skeptical)</td><td><span class="cell-bullet">•</span> cynical: 愤世嫉俗的 (不相信他人动机的真诚和善良)<br><span class="cell-bullet sub">o</span> distrustful, pessimistic, jaded, disillusioned<br><span class="cell-bullet">•</span> skeptical (skeptical): 怀疑的 (对事物真实性、有效性<br>等表示怀疑)<br><span class="cell-bullet sub">o</span> doubtful, questioning, disbelieving, unconvinced</td></tr>
+<tr><td class="term">inspire us all to lead<br>better lives</td><td>激励我们所有人过上更好的生活<br><span class="cell-bullet">•</span> motivate everyone to improve their lives<br><span class="cell-bullet">•</span> encourage us to live more meaningfully/positively<br><span class="cell-bullet">•</span> galvanize us towards a better way of living<br><span class="cell-bullet">•</span> uplift and spur us to enhance our existence</td></tr>
+<tr><td class="term">a more positive<br>approach</td><td>一种更积极的方法/态度<br><span class="cell-bullet">•</span> a more optimistic outlook/strategy<br><span class="cell-bullet">•</span> a constructive methodology<br><span class="cell-bullet">•</span> a more hopeful perspective<br><span class="cell-bullet">•</span> an encouraging way of dealing with things</td></tr>
+<tr><td class="term">vital public service</td><td>至关重要的公共服务<br><span class="cell-bullet">•</span> essential public utility/provision<br><span class="cell-bullet">•</span> crucial service for the community<br><span class="cell-bullet">•</span> indispensable public function<br><span class="cell-bullet">•</span> a key service to society</td></tr></tbody></table>
+<h2 id="section-10">10. Extra help for “Agree or disagree”? questions/opinion questions.</h2>
+<h3>1) Agree</h3>
+<p>请看 6. Opinion essay</p>
+<h3>2) Disagree</h3>
+<p class="prompt"><strong class="red-label">Prompt:</strong> Some people believe that hobbies need to be difficult to be enjoyable. To what extent do you agree or disagree?</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>Some hobbies are relatively easy, while others present more of a challenge. Personally, I believe that both types of hobby can be fun, and I therefore disagree with the statement that hobbies need to be difficult in order to be enjoyable.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>explain why easy hobbies can be enjoyable</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>explain why difficult hobbies can be fun</p>
+<p class="red-note">结构一边倒：完全反对。topic 是 hobbies 是难的才好玩，所以就有对立面： easy。所以就可以 easy 好玩为一段，难的好玩为另一段。</p>
+<p class="red-note">我觉得能想到这一层还是需要拐个弯，可能这就是我写作分数没有更高的原因之一，我一开始看到这个题目，以一边倒反对的思路想，就只会写出 easy 的也好玩的原因 1 和原因 2 各为一段。但是 simon 指出 easy 这一层面，然后分两个角度论述，才更加完整。</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>disagree that difficult hobbies are better</p>
+<h3>3) Partly disagree</h3>
+<p class="prompt"><strong class="red-label">Prompt:</strong> Many people say that we now live in “consumer societies” where money and possessions are given too much importance. To what extent do you agree or disagree?</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>It is true that many people criticize modern society because it seems to be too materialistic. I agree with this to some extent, but I do not think it is the case that everyone is a victim of consumer culture.</p>
+<p class="red-note">题目是一个观点类，然后问是否同意。可以采用让步手法 It is true that…</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>believe many people do focus too much on money</p>
+<p class="red-note">部分同意，让步段</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>However, many others are not money oriented</p>
+<p class="red-note">我真正的观点</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>partly agree</p>
+<h3>4) Partly agree</h3>
+<p class="prompt"><strong class="red-label">Prompt:</strong> In the last century, the first man to walk on the moon said it was “a giant leap for mankind”. However, some people think it has made little difference to our daily lives. To what extent do you agree or disagree?</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Introduction</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>It is often argued that the act of sending a man to the moon has been of no benefit to normal people. While I agree that this is true in practical terms, I believe that the psychological impact of this great achievement should not be underestimated.</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>no benefit in practical terms (standard of living, health)</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>but it was an inspiring achievement</p>
+<p class="red-note">部分同意“没有好处”，但确实有哪些角度是对人类有好处的</p>
+<p class="bullet bullet-1"><span class="bullet-dot">•</span>Conclusion</p>
+<p class="bullet bullet-2"><span class="bullet-dot">o</span>partly agree</p>
+</article>
+</main>
+<script>
+(() => {
+  const menu = document.getElementById("writing-float-menu");
+  const back = document.getElementById("writing-float-back");
+  if (!menu || !back) return;
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const fallbackHref = "../../#writing";
+
+  back.addEventListener("click", () => {
+    if (document.referrer && new URL(document.referrer).origin === window.location.origin) {
+      window.history.back();
+    } else {
+      window.location.href = fallbackHref;
+    }
+  });
+
+  const updateMenu = () => {
+    const current = window.scrollY;
+    const delta = current - lastScrollY;
+    if (current <= 20 || delta < -4) {
+      menu.classList.remove("is-hidden");
+    } else if (delta > 4) {
+      menu.classList.add("is-hidden");
+    }
+    lastScrollY = current;
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateMenu);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

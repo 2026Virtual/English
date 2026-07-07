@@ -12,6 +12,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <script src="./app.js?v=20260706-reading-chrome" defer></script>
   <script src="./reading.js?v=20260706-reading-chrome" type="module"></script>
+  <script src="./writing.js?v=20260707-writing" defer></script>
 </head>
 <body class="is-home">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -75,6 +76,14 @@
             </span>
             <i data-lucide="chevron-right" class="home-menu-arrow"></i>
           </button>
+          <button class="home-menu-button" type="button" data-page="writing">
+            <i data-lucide="pen-line"></i>
+            <span>
+              <strong>写作积累</strong>
+              <small>整理 Simon 写作资料和表达素材</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -108,6 +117,10 @@
 
     <section id="reading-view" class="app-view" data-page="reading" hidden>
       <div id="reading-app"></div>
+    </section>
+
+    <section id="writing-view" class="app-view" data-page="writing" hidden>
+      <div id="writing-app"></div>
     </section>
   </main>
 

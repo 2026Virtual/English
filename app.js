@@ -11,11 +11,13 @@ const PAGE_TITLES = {
   home: "英语速提升系统",
   vocabulary: "个人背单词",
   reading: "阅读提升",
+  writing: "写作积累",
 };
 const PAGE_COPY = {
   home: "个人学习入口",
   vocabulary: "逻辑词群记忆",
   reading: "雅思阅读训练",
+  writing: "雅思写作素材",
 };
 
 const state = {
@@ -64,6 +66,7 @@ function cacheElements() {
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
   els.readingView = document.getElementById("reading-view");
+  els.writingView = document.getElementById("writing-view");
   els.scrollTop = document.getElementById("scroll-top");
   els.vocabActions = document.getElementById("vocab-actions");
   els.chapterSelect = document.getElementById("chapter-select");
@@ -145,11 +148,12 @@ function bindEvents() {
 function pageFromHash() {
   if (window.location.hash === "#vocabulary") return "vocabulary";
   if (window.location.hash === "#reading") return "reading";
+  if (window.location.hash === "#writing") return "writing";
   return "home";
 }
 
 function switchPage(page, options = {}) {
-  const nextPage = page === "vocabulary" || page === "reading" ? page : "home";
+  const nextPage = page === "vocabulary" || page === "reading" || page === "writing" ? page : "home";
   const updateHash = options.updateHash !== false;
   const isHome = nextPage === "home";
   const previousPage = state.activePage;
@@ -164,6 +168,7 @@ function switchPage(page, options = {}) {
   els.homeView.hidden = !isHome;
   els.vocabularyView.hidden = nextPage !== "vocabulary";
   els.readingView.hidden = nextPage !== "reading";
+  els.writingView.hidden = nextPage !== "writing";
   els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
   document.title = PAGE_TITLES[nextPage];
   els.title.textContent = PAGE_TITLES[nextPage];
@@ -181,6 +186,9 @@ function switchPage(page, options = {}) {
 
   if (nextPage === "reading" && window.readingApp) {
     window.readingApp.show();
+  }
+  if (nextPage === "writing" && window.writingApp) {
+    window.writingApp.show();
   }
 
   if (updateHash) {
@@ -221,7 +229,7 @@ function handleScroll() {
 
 function updateScrollUi() {
   const scrollY = getScrollY();
-  const pageHasScrollTools = state.activePage === "vocabulary" || state.activePage === "reading";
+  const pageHasScrollTools = state.activePage === "vocabulary" || state.activePage === "reading" || state.activePage === "writing";
   const shouldShowScrollTop = pageHasScrollTools && scrollY > SCROLL_TOP_THRESHOLD;
   const delta = scrollY - state.lastScrollY;
 

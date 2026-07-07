@@ -23,9 +23,10 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp .nojekyll LICENSE README.md app.js favicon.svg index.html manifest.webmanifest mnemonics.json reading-styles.css reading.js styles.css vocabulary.txt _site/
+          cp .nojekyll LICENSE README.md app.js favicon.svg index.html manifest.webmanifest mnemonics.json reading-styles.css reading.js styles.css vocabulary.txt writing.js _site/
           cp -R reading-question-bank _site/
           cp -R zyz-question-bank _site/
+          cp -R writing-resources _site/
 
       - name: Publish to gh-pages
         env:

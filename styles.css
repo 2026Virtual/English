@@ -275,7 +275,7 @@ body.is-reading .app-main {
 
 .home-menu {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -865,6 +865,111 @@ body.is-reading .app-main {
   align-items: start;
 }
 
+.writing-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.writing-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.writing-head h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.writing-head p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.writing-source-grid,
+.writing-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.writing-card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  min-height: 112px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  text-align: left;
+  transition: border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.writing-card:hover {
+  border-color: rgba(15, 118, 110, 0.36);
+  background: #f8fbfb;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.writing-resource-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.writing-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #e7f3ee;
+  color: var(--teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.18rem;
+}
+
+.writing-card > span:not(.writing-card-icon) {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+}
+
+.writing-card strong {
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.writing-card small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.writing-button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  padding: 0 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.writing-button:hover {
+  border-color: rgba(15, 118, 110, 0.36);
+  background: #f8fbfb;
+}
+
 @media (max-width: 760px) {
   .app-header {
     align-items: flex-start;
@@ -1000,6 +1105,21 @@ body.is-reading .app-main {
   }
 
   .home-menu-button {
+    min-height: 96px;
+    padding: 18px 16px;
+  }
+
+  .writing-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .writing-source-grid,
+  .writing-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-card {
     min-height: 96px;
     padding: 18px 16px;
   }

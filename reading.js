@@ -33,6 +33,7 @@ const state = {
   currentData: null,
   dataCache: new Map(),
   lastReaderRoute: null,
+  selectionDoubtCleanup: null,
   route: { view: "library" },
   initialized: false,
   loadingPromise: null,
@@ -158,6 +159,7 @@ function emitReadingRouteChange(route = state.route) {
 
 async function renderRoute() {
   const route = parseRoute();
+  teardownArticleDoubtSelection();
   emitReadingRouteChange(route);
   if (route.view === "test") {
     await renderTest(route.id, route.passage, route.collection || "cambridge");
@@ -530,6 +532,11 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
             ${renderQuestions(data, activePassageNo, problems)}
           </div>
         </section>
+        <div class="selection-doubt-menu" id="selection-doubt-menu" hidden>
+          <button type="button" id="add-selection-doubt" aria-label="加入疑难" title="加入疑难">
+            <span aria-hidden="true">+</span>
+          </button>
+        </div>
       </main>
     </div>
   `;
@@ -599,6 +606,7 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
   }
   setupSplitResizer(data.id, activePassageNo);
   setupReaderAutoHide();
+  setupArticleDoubtSelection(data.id, activePassageNo);
 }
 
 function renderArticle(passage) {
@@ -838,6 +846,138 @@ function zyzDisplayNumber(data, qid) {
   if (Number.isFinite(mapped) && mapped > 0) return mapped;
   const fallback = Number(String(qid || "").replace(/\D/g, ""));
   return Number.isFinite(fallback) && fallback > 0 ? fallback : null;
+}
+
+function setupArticleDoubtSelection(testId, passageNo) {
+  teardownArticleDoubtSelection();
+
+  const articlePanel = document.querySelector(".article-pane .reader-panel");
+  const menu = document.querySelector("#selection-doubt-menu");
+  const addButton = document.querySelector("#add-selection-doubt");
+  if (!articlePanel || !menu || !addButton) return;
+
+  let selectedText = "";
+  let pendingFrame = 0;
+
+  const hideMenu = () => {
+    menu.hidden = true;
+    selectedText = "";
+  };
+
+  const readArticleSelection = () => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0 || selection.isCollapsed) return null;
+    if (!articlePanel.contains(selection.anchorNode) || !articlePanel.contains(selection.focusNode)) return null;
+
+    const text = normalizeDoubtSelectionText(selection.toString());
+    if (!text) return null;
+
+    const range = selection.getRangeAt(0);
+    const rect = getSelectionMenuRect(range);
+    if (!rect) return null;
+
+    return { text, rect };
+  };
+
+  const positionMenu = ({ text, rect }) => {
+    selectedText = text;
+    menu.hidden = false;
+
+    const menuRect = menu.getBoundingClientRect();
+    const maxLeft = Math.max(12, window.innerWidth - menuRect.width - 12);
+    const left = clampRatio(rect.left + rect.width / 2 - menuRect.width / 2, 12, maxLeft);
+    const preferredTop = rect.top - menuRect.height - 10;
+    const top = preferredTop >= 12 ? preferredTop : rect.bottom + 10;
+    const maxTop = Math.max(12, window.innerHeight - menuRect.height - 12);
+
+    menu.style.left = `${left}px`;
+    menu.style.top = `${clampRatio(top, 12, maxTop)}px`;
+  };
+
+  const scheduleSelectionCheck = () => {
+    if (pendingFrame) {
+      window.cancelAnimationFrame(pendingFrame);
+    }
+    pendingFrame = window.requestAnimationFrame(() => {
+      pendingFrame = 0;
+      const selectionInfo = readArticleSelection();
+      if (selectionInfo) {
+        positionMenu(selectionInfo);
+      } else {
+        hideMenu();
+      }
+    });
+  };
+
+  const handleDocumentPointerDown = (event) => {
+    if (menu.contains(event.target)) return;
+    if (!articlePanel.contains(event.target)) {
+      hideMenu();
+    }
+  };
+
+  const handleAddSelection = () => {
+    const selectionInfo = selectedText ? { text: selectedText } : readArticleSelection();
+    const text = selectionInfo?.text || "";
+    if (!text) {
+      hideMenu();
+      return;
+    }
+
+    appendPassageDoubt(testId, passageNo, text);
+    window.getSelection()?.removeAllRanges();
+    hideMenu();
+    notifyReadingWorkspace("已加入疑");
+  };
+
+  document.addEventListener("selectionchange", scheduleSelectionCheck);
+  document.addEventListener("pointerdown", handleDocumentPointerDown);
+  articlePanel.addEventListener("mouseup", scheduleSelectionCheck);
+  articlePanel.addEventListener("keyup", scheduleSelectionCheck);
+  articlePanel.addEventListener("scroll", hideMenu, { passive: true });
+  window.addEventListener("resize", hideMenu);
+  menu.addEventListener("mousedown", (event) => event.preventDefault());
+  addButton.addEventListener("click", handleAddSelection);
+
+  state.selectionDoubtCleanup = () => {
+    if (pendingFrame) {
+      window.cancelAnimationFrame(pendingFrame);
+      pendingFrame = 0;
+    }
+    document.removeEventListener("selectionchange", scheduleSelectionCheck);
+    document.removeEventListener("pointerdown", handleDocumentPointerDown);
+    articlePanel.removeEventListener("mouseup", scheduleSelectionCheck);
+    articlePanel.removeEventListener("keyup", scheduleSelectionCheck);
+    articlePanel.removeEventListener("scroll", hideMenu);
+    window.removeEventListener("resize", hideMenu);
+    hideMenu();
+  };
+}
+
+function teardownArticleDoubtSelection() {
+  if (!state.selectionDoubtCleanup) return;
+  state.selectionDoubtCleanup();
+  state.selectionDoubtCleanup = null;
+}
+
+function getSelectionMenuRect(range) {
+  const rects = Array.from(range.getClientRects()).filter((rect) => rect.width > 0 && rect.height > 0);
+  const rect = rects[rects.length - 1] || range.getBoundingClientRect();
+  if (!rect || (!rect.width && !rect.height)) return null;
+  return rect;
+}
+
+function normalizeDoubtSelectionText(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function appendPassageDoubt(testId, passageNo, text) {
+  const key = passageDoubtStorageKey(testId, passageNo);
+  const existing = localStorage.getItem(key) || "";
+  const next = existing.trim() ? `${existing.trim()}\n\n${text}` : text;
+  writeStoredPassageDoubt(key, next);
 }
 
 async function renderWorkspace() {
