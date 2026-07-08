@@ -49,6 +49,7 @@ const state = {
 
 window.readingApp = {
   show: initReadingApp,
+  openWorkspace: openReadingWorkspace,
 };
 
 if (document.readyState === "loading") {
@@ -77,6 +78,11 @@ async function initReadingApp() {
   renderLoading();
   state.loadingPromise = loadReadingManifest();
   await state.loadingPromise;
+}
+
+async function openReadingWorkspace() {
+  await initReadingApp();
+  navigateReading({ view: "workspace" });
 }
 
 async function loadReadingManifest() {

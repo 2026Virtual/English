@@ -245,6 +245,14 @@ h1 {
   color: var(--red);
 }
 
+.reading-workspace-shortcut {
+  color: var(--teal);
+}
+
+body:not(.is-reading) .reading-workspace-shortcut {
+  display: none;
+}
+
 .icon-button svg,
 .tool-button svg,
 .action-button svg {
@@ -1179,6 +1187,11 @@ body.is-meaning-hidden .cloud-note-item {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+  }
+
+  body.is-reading .header-tools {
+    grid-template-columns: auto auto;
+    justify-content: start;
   }
 
   #home-button {

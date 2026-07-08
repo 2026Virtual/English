@@ -95,6 +95,7 @@ function cacheElements() {
   els.subtitle = document.getElementById("app-subtitle");
   els.homeView = document.getElementById("home-view");
   els.homeButton = document.getElementById("home-button");
+  els.openReadingWorkspace = document.getElementById("open-reading-workspace");
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
   els.readingView = document.getElementById("reading-view");
@@ -160,6 +161,7 @@ function cacheElements() {
 
 function bindEvents() {
   els.homeButton.addEventListener("click", () => switchPage("home"));
+  els.openReadingWorkspace.addEventListener("click", openReadingWorkspace);
 
   els.homeMenuButtons.forEach((button) => {
     button.addEventListener("click", () => switchPage(button.dataset.page));
@@ -275,6 +277,7 @@ function switchPage(page, options = {}) {
   els.listeningView.hidden = nextPage !== "listening";
   els.writingView.hidden = nextPage !== "writing";
   els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
+  els.openReadingWorkspace.hidden = nextPage !== "reading";
   document.title = PAGE_TITLES[nextPage];
   els.title.textContent = PAGE_TITLES[nextPage];
   els.subtitle.textContent = getPageSubtitle(nextPage);
@@ -318,6 +321,13 @@ function syncAppHeaderVisibility() {
   const isReadingInnerPage = state.activePage === "reading" && state.readingSubView !== "selector";
   const isListeningInnerPage = state.activePage === "listening" && state.listeningSubView !== "selector";
   els.appHeader.hidden = isHome || isReadingInnerPage || isListeningInnerPage;
+}
+
+function openReadingWorkspace() {
+  if (state.activePage !== "reading") return;
+  if (window.readingApp?.openWorkspace) {
+    window.readingApp.openWorkspace();
+  }
 }
 
 function getPageSubtitle(page) {
