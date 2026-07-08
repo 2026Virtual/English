@@ -1,5 +1,6 @@
 const DATA_ROOT = new URL("./reading-question-bank/", window.location.href);
 const ZYZ_DATA_ROOT = new URL("./zyz-question-bank/", window.location.href);
+const TZX_DATA_ROOT = new URL("./tzx-reading/", window.location.href);
 const READING_COLLECTIONS = {
   cambridge: {
     id: "cambridge",
@@ -10,6 +11,11 @@ const READING_COLLECTIONS = {
     id: "zyz",
     label: "zyz",
     root: ZYZ_DATA_ROOT,
+  },
+  tzx: {
+    id: "tzx",
+    label: "躺着学",
+    root: TZX_DATA_ROOT,
   },
 };
 const ZYZ_CATEGORY_ORDER = [
@@ -23,12 +29,14 @@ const ZYZ_CATEGORY_ORDER = [
   "p3-medium",
   "p3-high",
 ];
+const TZX_CATEGORY_ORDER = ["p1", "p2", "p3"];
 const app = document.querySelector("#reading-app");
 
 const state = {
   manifests: {
     cambridge: null,
     zyz: null,
+    tzx: null,
   },
   currentData: null,
   dataCache: new Map(),
@@ -73,12 +81,14 @@ async function initReadingApp() {
 
 async function loadReadingManifest() {
   try {
-    const [cambridgeManifest, zyzManifest] = await Promise.all([
+    const [cambridgeManifest, zyzManifest, tzxManifest] = await Promise.all([
       fetchJson(new URL("manifest.json", DATA_ROOT)),
       fetchJson(new URL("manifest.json", ZYZ_DATA_ROOT)),
+      fetchJson(new URL("manifest.json", TZX_DATA_ROOT)),
     ]);
     state.manifests.cambridge = normalizeCambridgeManifest(cambridgeManifest);
     state.manifests.zyz = normalizeZyzManifest(zyzManifest);
+    state.manifests.tzx = normalizeTzxManifest(tzxManifest);
     state.initialized = true;
     renderRoute();
   } catch (error) {
@@ -139,6 +149,23 @@ function normalizeZyzManifest(manifest) {
   return { ...manifest, categories, items };
 }
 
+function normalizeTzxManifest(manifest) {
+  const categories = (manifest.categories || [])
+    .map((category) => ({
+      ...category,
+      sortIndex: TZX_CATEGORY_ORDER.indexOf(category.id),
+    }))
+    .sort((a, b) => a.sortIndex - b.sortIndex);
+  const items = (manifest.items || [])
+    .filter((item) => item.status === "ok")
+    .map((item) => ({
+      ...item,
+      sortIndex: TZX_CATEGORY_ORDER.indexOf(item.group),
+    }))
+    .sort((a, b) => a.sortIndex - b.sortIndex || a.order - b.order || a.id.localeCompare(b.id));
+  return { ...manifest, categories, items };
+}
+
 function parseRoute() {
   return state.route;
 }
@@ -174,6 +201,12 @@ async function renderRoute() {
   } else if (route.view === "zyz-list") {
     state.currentData = null;
     renderZyzList(route.group);
+  } else if (route.view === "tzx-categories") {
+    state.currentData = null;
+    renderTzxCategories();
+  } else if (route.view === "tzx-list") {
+    state.currentData = null;
+    renderTzxList(route.group);
   } else {
     state.currentData = null;
     renderLibrarySelector();
@@ -183,6 +216,7 @@ async function renderRoute() {
 function renderLibrarySelector() {
   const cambridgeCount = state.manifests.cambridge?.items?.length || 0;
   const zyzCount = state.manifests.zyz?.items?.length || 0;
+  const tzxCount = state.manifests.tzx?.items?.length || 0;
 
   app.innerHTML = `
     <div class="reading-module">
@@ -205,6 +239,10 @@ function renderLibrarySelector() {
             <strong>zyz</strong>
             <span>${zyzCount} passages</span>
           </button>
+          <button class="library-card" type="button" data-library="tzx">
+            <strong>躺着学阅读</strong>
+            <span>${tzxCount} passages</span>
+          </button>
         </section>
       </main>
     </div>
@@ -214,6 +252,8 @@ function renderLibrarySelector() {
     button.addEventListener("click", () => {
       if (button.dataset.library === "zyz") {
         navigateReading({ view: "zyz-categories" });
+      } else if (button.dataset.library === "tzx") {
+        navigateReading({ view: "tzx-categories" });
       } else {
         navigateReading({ view: "cambridge-selector" });
       }
@@ -372,6 +412,100 @@ function renderZyzList(groupId) {
   draw();
 }
 
+function renderTzxCategories() {
+  const manifest = state.manifests.tzx;
+  app.innerHTML = `
+    <div class="reading-module">
+      <main class="shell">
+        <header class="topbar">
+          <div class="brand">
+            <div class="mark" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h1>躺着学阅读</h1>
+              <p>${manifest.items.length} passages · ${manifest.categories.length} groups</p>
+            </div>
+          </div>
+          <div class="toolbar">
+            <button class="button ghost-button" type="button" id="back-to-library">题库</button>
+          </div>
+        </header>
+        <section class="selector-panel">
+          <div class="test-grid zyz-category-grid">
+            ${manifest.categories
+              .map(
+                (category) => `
+                  <button class="test-card zyz-category-card" type="button" data-tzx-group="${escapeAttr(category.id)}">
+                    <strong>${escapeHtml(category.label)}</strong>
+                    <span>${category.count} passages</span>
+                  </button>
+                `,
+              )
+              .join("")}
+          </div>
+        </section>
+      </main>
+    </div>
+  `;
+
+  document.querySelector("#back-to-library").addEventListener("click", () => navigateReading({ view: "library" }));
+  document.querySelectorAll("[data-tzx-group]").forEach((button) => {
+    button.addEventListener("click", () => navigateReading({ view: "tzx-list", group: button.dataset.tzxGroup }));
+  });
+}
+
+function renderTzxList(groupId) {
+  const manifest = state.manifests.tzx;
+  const group = manifest.categories.find((item) => item.id === groupId) || manifest.categories[0];
+  const items = manifest.items.filter((item) => item.group === group.id);
+
+  app.innerHTML = `
+    <div class="reading-module">
+      <main class="shell">
+        <header class="topbar">
+          <div class="brand">
+            <div class="mark" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h1>躺着学阅读 · ${escapeHtml(group.label)}</h1>
+              <p>${items.length} passages</p>
+            </div>
+          </div>
+          <div class="toolbar">
+            <button class="button ghost-button" type="button" id="back-to-tzx-categories">分类</button>
+            <input class="field" id="tzx-search" type="search" placeholder="搜索题目" aria-label="搜索躺着学题目" />
+          </div>
+        </header>
+        <section class="selector-panel" id="tzx-list"></section>
+      </main>
+    </div>
+  `;
+
+  const list = document.querySelector("#tzx-list");
+  const search = document.querySelector("#tzx-search");
+  const draw = () => {
+    const keyword = search.value.trim().toLowerCase();
+    const filtered = items.filter((item) => {
+      const text = `${item.id} ${item.title} ${item.originalFilename || ""}`.toLowerCase();
+      return !keyword || text.includes(keyword);
+    });
+    list.innerHTML = renderTzxTestGrid(filtered);
+  };
+
+  document.querySelector("#back-to-tzx-categories").addEventListener("click", () => navigateReading({ view: "tzx-categories" }));
+  list.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-tzx-test]");
+    if (!button) return;
+    navigateReading({
+      view: "test",
+      collection: "tzx",
+      id: button.dataset.tzxTest,
+      passage: Number(button.dataset.passage || 1),
+      group: group.id,
+    });
+  });
+  search.addEventListener("input", draw);
+  draw();
+}
+
 function renderTestGrid(items) {
   if (!items.length) {
     return `<div class="empty">没有匹配的套题</div>`;
@@ -431,6 +565,32 @@ function renderZyzTestGrid(items) {
   `;
 }
 
+function renderTzxTestGrid(items) {
+  if (!items.length) {
+    return `<div class="empty">没有匹配的题目</div>`;
+  }
+
+  return `
+    <div class="test-grid zyz-test-grid">
+      ${items
+        .map(
+          (item) => `
+            <button
+              class="test-card zyz-test-card"
+              type="button"
+              data-tzx-test="${escapeAttr(item.id)}"
+              data-passage="${escapeAttr(item.passage_no || 1)}"
+            >
+              <strong>${escapeHtml(item.title || item.id)}</strong>
+              <span>${escapeHtml(item.id)} · ${escapeHtml(item.originalFilename || "")}</span>
+            </button>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 async function renderTest(id, passageNo, collection = "cambridge") {
   try {
     renderReader(await loadTestData(id, collection), passageNo, collection);
@@ -460,7 +620,7 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
   const activePassageNo = passage.passage_no;
   const problems = data.problems.find((item) => item.passage_no === activePassageNo);
   const savedSplit = getSavedSplitRatio(data.id, activePassageNo);
-  const isZyz = collection === "zyz" || data.source === "zyz";
+  const isHtmlSource = isHtmlReadingSource(collection, data);
   state.lastReaderRoute = {
     view: "test",
     collection,
@@ -472,12 +632,12 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
   app.innerHTML = `
     <div class="reading-module">
       <main class="shell reader-shell">
-        <header class="reader-controls ${isZyz ? "zyz-reader-controls" : ""}">
+        <header class="reader-controls ${isHtmlSource ? "zyz-reader-controls" : ""}">
           ${
-            isZyz
+            isHtmlSource
               ? `<div class="reader-controls-left zyz-reader-title">
                   <strong>${escapeHtml(data.title || data.id)}</strong>
-                  <span>${escapeHtml(data.group || "zyz")}</span>
+                  <span>${escapeHtml(htmlSourceSubtitle(collection, data))}</span>
                 </div>`
               : `<div class="reader-controls-left">
                   <select class="field test-picker-compact" id="test-picker" aria-label="切换套题">
@@ -587,8 +747,8 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
   });
 
   document.querySelector("#go-home").addEventListener("click", () => {
-    if (isZyz) {
-      navigateReading({ view: "zyz-list", group: data.group });
+    if (isHtmlSource) {
+      navigateReading({ view: `${collection}-list`, group: data.group });
     } else {
       navigateReading({ view: "cambridge-selector" });
     }
@@ -601,8 +761,9 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
     });
   }
 
-  if (isZyz) {
+  if (isHtmlSource) {
     setupZyzAnswers(data, activePassageNo);
+    setupHtmlSourceControls();
   }
   setupSplitResizer(data.id, activePassageNo);
   setupReaderAutoHide();
@@ -663,7 +824,7 @@ function renderQuestions(data, passageNo, problems) {
 }
 
 function renderGroup(testId, passageNo, group) {
-  if (group.source_kind === "zyz-html" && group.source_html) {
+  if (isHtmlSourceGroup(group) && group.source_html) {
     return renderZyzHtmlGroup(group);
   }
   if (shouldRenderClozeFromRawLines(group)) {
@@ -707,6 +868,58 @@ function renderZyzHtmlGroup(group) {
       ${group.source_html}
     </section>
   `;
+}
+
+function isHtmlReadingSource(collection, data = {}) {
+  return collection === "zyz" || collection === "tzx" || data.source === "zyz" || data.source === "tzx";
+}
+
+function isHtmlSourceGroup(group) {
+  return group.source_kind === "zyz-html" || group.source_kind === "tzx-html";
+}
+
+function htmlSourceSubtitle(collection, data) {
+  const label = READING_COLLECTIONS[collection]?.label || data.source || collection;
+  return [label, data.group || data.category].filter(Boolean).join(" · ");
+}
+
+function setupHtmlSourceControls() {
+  document.querySelectorAll(".question-pane .zyz-html-group .btn-toggle").forEach((button) => {
+    button.addEventListener("click", () => toggleHtmlAnswerBox(button));
+  });
+
+  document.querySelectorAll(".question-pane .zyz-html-group .mini-btn").forEach((button) => {
+    button.addEventListener("click", () => toggleHtmlMatrixAnswer(button));
+  });
+
+  document.querySelectorAll(".question-pane .zyz-html-group .radio-cell").forEach((cell) => {
+    cell.addEventListener("click", (event) => {
+      if (event.target.matches("input")) return;
+      const input = cell.querySelector("input");
+      if (!input) return;
+      input.click();
+    });
+  });
+}
+
+function toggleHtmlAnswerBox(button) {
+  const box = button.nextElementSibling;
+  if (!box) return;
+  const shouldOpen = box.style.display === "none" || box.hidden;
+  box.hidden = false;
+  box.style.display = shouldOpen ? "block" : "none";
+  button.textContent = shouldOpen ? "收起解析" : "显示解析";
+  button.classList.toggle("active", shouldOpen);
+}
+
+function toggleHtmlMatrixAnswer(button) {
+  const row = button.closest("tr")?.nextElementSibling;
+  if (!row) return;
+  const shouldOpen = row.style.display === "none" || row.hidden;
+  row.hidden = false;
+  row.style.display = shouldOpen ? "table-row" : "none";
+  button.textContent = shouldOpen ? "×" : "析";
+  button.classList.toggle("active", shouldOpen);
 }
 
 function setupZyzAnswers(data, passageNo) {
@@ -1527,7 +1740,7 @@ function renderAnswerKey(answerSection) {
 }
 
 function collectPassageResponses(data, passageNo, collection = data.collection || "cambridge") {
-  if (collection === "zyz" || data.source === "zyz") {
+  if (isHtmlReadingSource(collection, data)) {
     return collectZyzPassageResponses(data, passageNo);
   }
 
@@ -1783,6 +1996,9 @@ function getWorkspaceEntries() {
   (state.manifests.zyz?.items || []).forEach((item) => {
     knownEntries.set(item.id, { id: item.id, collection: "zyz", item });
   });
+  (state.manifests.tzx?.items || []).forEach((item) => {
+    knownEntries.set(item.id, { id: item.id, collection: "tzx", item });
+  });
 
   const found = new Map();
   for (let index = 0; index < localStorage.length; index += 1) {
@@ -1799,7 +2015,7 @@ function getWorkspaceEntries() {
 }
 
 function compareWorkspaceEntries(a, b) {
-  const collectionOrder = { cambridge: 0, zyz: 1 };
+  const collectionOrder = { cambridge: 0, zyz: 1, tzx: 2 };
   const collectionDiff = (collectionOrder[a.collection] ?? 99) - (collectionOrder[b.collection] ?? 99);
   if (collectionDiff) return collectionDiff;
 
@@ -1807,13 +2023,23 @@ function compareWorkspaceEntries(a, b) {
     return compareTestIds(a.id, b.id);
   }
 
-  const groupDiff = zyzCategorySortIndex(a.item?.group) - zyzCategorySortIndex(b.item?.group);
+  const groupDiff = categorySortIndex(a.collection, a.item?.group) - categorySortIndex(b.collection, b.item?.group);
   if (groupDiff) return groupDiff;
   return Number(a.item?.order || 0) - Number(b.item?.order || 0) || a.id.localeCompare(b.id);
 }
 
+function categorySortIndex(collection, group) {
+  if (collection === "tzx") return tzxCategorySortIndex(group);
+  return zyzCategorySortIndex(group);
+}
+
 function zyzCategorySortIndex(group) {
   const index = ZYZ_CATEGORY_ORDER.indexOf(group);
+  return index === -1 ? 999 : index;
+}
+
+function tzxCategorySortIndex(group) {
+  const index = TZX_CATEGORY_ORDER.indexOf(group);
   return index === -1 ? 999 : index;
 }
 

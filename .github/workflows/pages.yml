@@ -22,10 +22,12 @@ jobs:
 
       - name: Prepare static site
         run: |
+          rm -rf _site
           mkdir -p _site
           cp .nojekyll LICENSE README.md app.js favicon.svg index.html manifest.webmanifest mnemonics.json reading-styles.css reading.js listening-styles.css listening.js styles.css vocabulary.txt writing.js _site/
           cp -R listening-question-bank _site/
           cp -R reading-question-bank _site/
+          cp -R tzx-reading _site/
           cp -R zyz-question-bank _site/
           cp -R writing-resources _site/
 
