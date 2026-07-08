@@ -47,6 +47,10 @@ body.is-reading {
   background: #f6f4ef;
 }
 
+body.is-listening {
+  background: #f4f7fb;
+}
+
 button,
 input,
 select {
@@ -262,7 +266,8 @@ body.is-home .app-main {
   background: #ffffff;
 }
 
-body.is-reading .app-main {
+body.is-reading .app-main,
+body.is-listening .app-main {
   width: 100%;
   padding: 0;
 }
@@ -282,7 +287,7 @@ body.is-reading .app-main {
 
 .home-shell {
   display: grid;
-  width: min(760px, 100%);
+  width: min(980px, 100%);
   gap: 32px;
 }
 
@@ -317,7 +322,7 @@ body.is-reading .app-main {
 
 .home-menu {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 14px;
 }
 

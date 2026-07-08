@@ -9,9 +9,11 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./styles.css?v=20260708-cloud-upload-split">
   <link rel="stylesheet" href="./reading-styles.css?v=20260706-reader-fill">
+  <link rel="stylesheet" href="./listening-styles.css?v=20260708-listening-workspace">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js?v=20260708-cloud-cache" defer></script>
+  <script src="./app.js?v=20260708-listening-topbar" defer></script>
   <script src="./reading.js?v=20260706-reading-chrome" type="module"></script>
+  <script src="./listening.js?v=20260708-listening-workspace" defer></script>
   <script src="./writing.js?v=20260708-writing-direct" defer></script>
 </head>
 <body class="is-home">
@@ -93,6 +95,14 @@
             </span>
             <i data-lucide="chevron-right" class="home-menu-arrow"></i>
           </button>
+          <button class="home-menu-button" type="button" data-page="listening">
+            <i data-lucide="headphones"></i>
+            <span>
+              <strong>随身听力</strong>
+              <small>剑桥雅思 4-21 听力真题练习</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -130,6 +140,10 @@
 
     <section id="writing-view" class="app-view" data-page="writing" hidden>
       <div id="writing-app"></div>
+    </section>
+
+    <section id="listening-view" class="app-view" data-page="listening" hidden>
+      <div id="listening-app"></div>
     </section>
   </main>
 

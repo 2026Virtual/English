@@ -20,12 +20,14 @@ const PAGE_TITLES = {
   home: "英语速提升系统",
   vocabulary: "个人背单词",
   reading: "阅读提升",
+  listening: "随身听力",
   writing: "写作积累",
 };
 const PAGE_COPY = {
   home: "个人学习入口",
   vocabulary: "逻辑词群记忆",
   reading: "雅思阅读训练",
+  listening: "剑桥雅思听力真题",
   writing: "雅思写作素材",
 };
 
@@ -37,6 +39,7 @@ const state = {
   notes: [],
   mnemonics: new Map(),
   readingSubView: "selector",
+  listeningSubView: "selector",
   api: {
     endpoint: DEFAULT_API_ENDPOINT,
     model: DEFAULT_MODEL,
@@ -95,6 +98,7 @@ function cacheElements() {
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
   els.readingView = document.getElementById("reading-view");
+  els.listeningView = document.getElementById("listening-view");
   els.writingView = document.getElementById("writing-view");
   els.scrollTop = document.getElementById("scroll-top");
   els.vocabActions = document.getElementById("vocab-actions");
@@ -170,6 +174,11 @@ function bindEvents() {
     syncAppHeaderVisibility();
   });
 
+  window.addEventListener("listening-route-change", (event) => {
+    state.listeningSubView = event.detail?.view || "selector";
+    syncAppHeaderVisibility();
+  });
+
   window.addEventListener("scroll", handleScroll, { passive: true });
   els.scrollTop.addEventListener("click", scrollToTop);
 
@@ -238,12 +247,13 @@ function bindEvents() {
 function pageFromHash() {
   if (window.location.hash === "#vocabulary") return "vocabulary";
   if (window.location.hash === "#reading") return "reading";
+  if (window.location.hash === "#listening") return "listening";
   if (window.location.hash === "#writing") return "writing";
   return "home";
 }
 
 function switchPage(page, options = {}) {
-  const nextPage = page === "vocabulary" || page === "reading" || page === "writing" ? page : "home";
+  const nextPage = page === "vocabulary" || page === "reading" || page === "listening" || page === "writing" ? page : "home";
   const updateHash = options.updateHash !== false;
   const isHome = nextPage === "home";
   const previousPage = state.activePage;
@@ -251,13 +261,18 @@ function switchPage(page, options = {}) {
   state.activePage = nextPage;
   document.body.classList.toggle("is-home", isHome);
   document.body.classList.toggle("is-reading", nextPage === "reading");
+  document.body.classList.toggle("is-listening", nextPage === "listening");
   if (nextPage !== "reading") {
     state.readingSubView = "selector";
+  }
+  if (nextPage !== "listening") {
+    state.listeningSubView = "selector";
   }
   syncAppHeaderVisibility();
   els.homeView.hidden = !isHome;
   els.vocabularyView.hidden = nextPage !== "vocabulary";
   els.readingView.hidden = nextPage !== "reading";
+  els.listeningView.hidden = nextPage !== "listening";
   els.writingView.hidden = nextPage !== "writing";
   els.vocabActions.classList.toggle("is-hidden", nextPage !== "vocabulary");
   document.title = PAGE_TITLES[nextPage];
@@ -277,6 +292,9 @@ function switchPage(page, options = {}) {
 
   if (nextPage === "reading" && window.readingApp) {
     window.readingApp.show();
+  }
+  if (nextPage === "listening" && window.listeningApp) {
+    window.listeningApp.show();
   }
   if (nextPage === "writing" && window.writingApp) {
     window.writingApp.show();
@@ -298,7 +316,8 @@ function switchPage(page, options = {}) {
 function syncAppHeaderVisibility() {
   const isHome = state.activePage === "home";
   const isReadingInnerPage = state.activePage === "reading" && state.readingSubView !== "selector";
-  els.appHeader.hidden = isHome || isReadingInnerPage;
+  const isListeningInnerPage = state.activePage === "listening" && state.listeningSubView !== "selector";
+  els.appHeader.hidden = isHome || isReadingInnerPage || isListeningInnerPage;
 }
 
 function getPageSubtitle(page) {
@@ -320,7 +339,7 @@ function handleScroll() {
 
 function updateScrollUi() {
   const scrollY = getScrollY();
-  const pageHasScrollTools = state.activePage === "vocabulary" || state.activePage === "reading" || state.activePage === "writing";
+  const pageHasScrollTools = state.activePage === "vocabulary" || state.activePage === "reading" || state.activePage === "listening" || state.activePage === "writing";
   const shouldShowScrollTop = pageHasScrollTools && scrollY > SCROLL_TOP_THRESHOLD;
   const delta = scrollY - state.lastScrollY;
 
