@@ -7,12 +7,12 @@
   <title>英语速提升系统</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20260706-reading-chrome">
+  <link rel="stylesheet" href="./styles.css?v=20260708-cloud-upload-split">
   <link rel="stylesheet" href="./reading-styles.css?v=20260706-reader-fill">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js?v=20260706-reading-chrome" defer></script>
+  <script src="./app.js?v=20260708-cloud-cache" defer></script>
   <script src="./reading.js?v=20260706-reading-chrome" type="module"></script>
-  <script src="./writing.js?v=20260707-writing" defer></script>
+  <script src="./writing.js?v=20260708-writing-direct" defer></script>
 </head>
 <body class="is-home">
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -35,10 +35,19 @@
         <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
           <i data-lucide="settings"></i>
         </button>
+        <button id="toggle-meaning" class="tool-button meaning-toggle" type="button" aria-label="隐藏中文意思" title="隐藏中文意思">
+          <span class="meaning-toggle-letter" aria-hidden="true">E</span>
+          <span>隐藏中文</span>
+        </button>
         <button id="open-workspace" class="tool-button" type="button">
           <i data-lucide="notebook-tabs"></i>
           <span>工作区</span>
           <strong id="note-count">0</strong>
+        </button>
+        <button id="open-cloud-notebook" class="tool-button" type="button">
+          <i data-lucide="cloud"></i>
+          <span>笔记本</span>
+          <strong id="cloud-note-count">0</strong>
         </button>
         <button id="export-notes" class="tool-button primary" type="button">
           <i data-lucide="download"></i>
@@ -137,6 +146,67 @@
     <ol id="workspace-list" class="workspace-list"></ol>
   </aside>
 
+  <aside id="cloud-panel" class="workspace-panel cloud-panel" aria-hidden="true" aria-label="云端笔记本">
+    <div class="panel-head">
+      <div>
+        <h2>云端笔记本</h2>
+        <p id="cloud-meta">未连接 Supabase</p>
+      </div>
+      <button id="close-cloud-notebook" class="icon-button" type="button" aria-label="关闭云端笔记本" title="关闭云端笔记本">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="cloud-actions">
+      <button id="cloud-config" class="tool-button" type="button">
+        <i data-lucide="settings"></i>
+        <span>配置</span>
+      </button>
+      <button id="cloud-toggle-meaning" class="tool-button meaning-toggle" type="button">
+        <span class="meaning-toggle-letter" aria-hidden="true">E</span>
+        <span>隐藏中文</span>
+      </button>
+      <button id="cloud-sync" class="tool-button" type="button">
+        <i data-lucide="refresh-cw"></i>
+        <span>同步</span>
+      </button>
+      <button id="cloud-import" class="tool-button primary" type="button">
+        <i data-lucide="upload"></i>
+        <span>导入笔记</span>
+      </button>
+      <button id="cloud-save-workspace" class="tool-button" type="button">
+        <i data-lucide="cloud-upload"></i>
+        <span>上传专属区</span>
+        <strong id="cloud-workspace-count" hidden>0</strong>
+      </button>
+      <button id="cloud-clear-workspace" class="tool-button" type="button">
+        <i data-lucide="eraser"></i>
+        <span>清除专属区</span>
+      </button>
+      <button id="cloud-save-main-workspace" class="tool-button" type="button">
+        <i data-lucide="upload"></i>
+        <span>上传外层区</span>
+        <strong id="cloud-main-workspace-count" hidden>0</strong>
+      </button>
+      <button id="cloud-download" class="tool-button" type="button">
+        <i data-lucide="download"></i>
+        <span>下载笔记本</span>
+      </button>
+      <button id="cloud-delete-notebook" class="tool-button danger" type="button">
+        <i data-lucide="trash-2"></i>
+        <span>删除笔记本</span>
+      </button>
+    </div>
+
+    <label id="cloud-notebook-picker" class="cloud-notebook-picker" hidden>
+      <span>选择笔记本</span>
+      <select id="cloud-notebook-select"></select>
+    </label>
+
+    <input id="cloud-file-input" type="file" accept=".md,text/markdown,text/plain" multiple hidden>
+    <ol id="cloud-list" class="workspace-list cloud-list"></ol>
+  </aside>
+
   <div id="panel-backdrop" class="panel-backdrop" hidden></div>
 
   <button id="scroll-top" class="scroll-top-button" type="button" aria-label="返回顶部" title="返回顶部" aria-hidden="true" tabindex="-1">
@@ -175,6 +245,55 @@
         <button class="tool-button primary" type="submit">
           <i data-lucide="check"></i>
           <span>保存</span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="cloud-dialog" class="api-dialog">
+    <form id="cloud-form" class="api-form">
+      <div class="dialog-head">
+        <h2>云端笔记本</h2>
+        <button class="icon-button" type="button" id="close-cloud-dialog" aria-label="关闭云端配置" title="关闭云端配置">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <label class="dialog-field">
+        <span>Supabase Project URL</span>
+        <input id="cloud-url" type="url" inputmode="url" autocomplete="off" placeholder="https://<project-ref>.supabase.co" required>
+      </label>
+      <label class="dialog-field">
+        <span>Supabase anon key</span>
+        <input id="cloud-anon-key" type="password" autocomplete="off" placeholder="eyJ..." required>
+      </label>
+      <label class="dialog-field">
+        <span>邮箱</span>
+        <input id="cloud-email" type="email" autocomplete="username" required>
+      </label>
+      <label class="dialog-field">
+        <span>密码</span>
+        <input id="cloud-password" type="password" autocomplete="current-password" required>
+      </label>
+
+      <p class="dialog-note">只填写 Supabase anon key，不要把 service role key 放进网页。数据访问权限由 Supabase Auth 和 RLS 控制。</p>
+
+      <div class="dialog-actions">
+        <button class="tool-button" type="button" id="clear-cloud-settings">
+          <i data-lucide="eraser"></i>
+          <span>清除</span>
+        </button>
+        <button class="tool-button" type="button" id="cloud-signup">
+          <i data-lucide="user-plus"></i>
+          <span>注册</span>
+        </button>
+        <button class="tool-button" type="button" id="cloud-signout">
+          <i data-lucide="log-out"></i>
+          <span>退出</span>
+        </button>
+        <button class="tool-button primary" type="submit">
+          <i data-lucide="log-in"></i>
+          <span>登录</span>
         </button>
       </div>
     </form>

@@ -170,10 +170,20 @@ h1 {
   line-height: 1.25;
 }
 
+.tool-button strong[hidden] {
+  display: none;
+}
+
 .tool-button.primary {
   color: #ffffff;
   background: var(--teal);
   border-color: var(--teal);
+}
+
+.tool-button.danger {
+  color: var(--red);
+  border-color: rgba(220, 38, 38, 0.22);
+  background: #fff1f2;
 }
 
 .tool-button:hover,
@@ -185,6 +195,38 @@ h1 {
 .tool-button.primary:hover {
   background: var(--teal-dark);
   border-color: var(--teal-dark);
+}
+
+.tool-button.danger:hover {
+  color: #991b1b;
+  border-color: rgba(220, 38, 38, 0.42);
+  background: #fee2e2;
+}
+
+.meaning-toggle {
+  gap: 8px;
+  font-weight: 800;
+}
+
+.meaning-toggle span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meaning-toggle.is-active {
+  color: #ffffff;
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.tool-button.meaning-toggle.is-active {
+  color: #ffffff;
+}
+
+.meaning-toggle-letter {
+  min-width: 18px;
+  font-weight: 900;
 }
 
 .icon-button {
@@ -510,6 +552,16 @@ body.is-reading .app-main {
   line-height: 1.55;
 }
 
+body.is-meaning-hidden .word-card:not(.is-meaning-peek) .meaning,
+body.is-meaning-hidden .cloud-note-item:not(.is-meaning-peek) .cloud-note-meaning {
+  display: none;
+}
+
+body.is-meaning-hidden .word-card,
+body.is-meaning-hidden .cloud-note-item {
+  -webkit-touch-callout: none;
+}
+
 .sentence,
 .extra {
   margin-top: 7px;
@@ -616,6 +668,101 @@ body.is-reading .app-main {
   transform: translateX(0);
 }
 
+.cloud-panel {
+  width: min(480px, 100vw);
+}
+
+.cloud-panel.is-cloud-tools-hidden .cloud-actions,
+.cloud-panel.is-cloud-tools-hidden .cloud-notebook-picker {
+  display: none;
+}
+
+.cloud-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0 0;
+}
+
+.cloud-actions .tool-button {
+  min-height: 34px;
+  min-width: 0;
+  flex: 0 0 auto;
+  gap: 6px;
+  padding: 0 9px;
+  font-size: 0.9rem;
+}
+
+.cloud-actions .tool-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cloud-actions .tool-button strong {
+  min-width: 20px;
+  padding: 1px 6px;
+  font-size: 0.72rem;
+}
+
+.cloud-list {
+  flex: 1;
+  min-height: 0;
+  align-content: start;
+}
+
+.cloud-notebook-picker {
+  display: grid;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.cloud-notebook-picker[hidden] {
+  display: none;
+}
+
+.cloud-notebook-picker span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cloud-notebook-picker select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 10px;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+}
+
+.cloud-notebook-picker select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.16);
+}
+
+.cloud-open-notebook {
+  width: 34px;
+  height: 34px;
+  color: var(--teal);
+  border-color: rgba(15, 118, 110, 0.2);
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.cloud-open-notebook:hover {
+  border-color: rgba(15, 118, 110, 0.36);
+  background: rgba(15, 118, 110, 0.12);
+}
+
+.cloud-section-title {
+  padding: 8px 2px 2px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
 .panel-backdrop {
   position: fixed;
   inset: 0;
@@ -703,7 +850,7 @@ body.is-reading .app-main {
 }
 
 .workspace-item {
-  grid-template-columns: minmax(0, 1fr) 34px;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
 }
 
@@ -726,6 +873,29 @@ body.is-reading .app-main {
 .workspace-remove:hover {
   border-color: rgba(220, 38, 38, 0.42);
   background: #fee2e2;
+}
+
+.cloud-note-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.cloud-workspace-add {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 8px;
+  color: var(--teal);
+  background: rgba(15, 118, 110, 0.08);
+  cursor: pointer;
+}
+
+.cloud-workspace-add:hover,
+.cloud-workspace-add.is-added {
+  border-color: rgba(15, 118, 110, 0.34);
+  background: rgba(15, 118, 110, 0.14);
 }
 
 .workspace-remove svg {
@@ -986,14 +1156,28 @@ body.is-reading .app-main {
   .header-actions {
     width: 100%;
     display: grid;
-    grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .header-actions .icon-button {
+    width: 100%;
+    min-height: 40px;
+    gap: 8px;
+  }
+
+  #api-settings::after {
+    content: "设置";
   }
 
   .header-tools {
     width: 100%;
     display: grid;
-    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
+  }
+
+  #home-button {
+    justify-self: start;
   }
 
   .tool-button {
@@ -1076,6 +1260,11 @@ body.is-reading .app-main {
     padding: 14px;
   }
 
+  .cloud-actions {
+    gap: 6px;
+    padding-top: 12px;
+  }
+
   .scroll-top-button {
     left: 14px;
     width: 44px;
@@ -1131,11 +1320,7 @@ body.is-reading .app-main {
   }
 
   .header-actions {
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
-
-  #export-notes {
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .actions {

@@ -3,6 +3,7 @@ const WRITING_SOURCES = [
     id: "simon",
     title: "simon",
     subtitle: "Task 1 / Task 2 写作资料",
+    icon: "S",
     resources: [
       {
         id: "simon-task1",
@@ -15,6 +16,21 @@ const WRITING_SOURCES = [
         title: "Simon Task 2",
         subtitle: "大作文写作笔记",
         url: "./writing-resources/simon/simon_task2_article.html",
+      },
+    ],
+  },
+  {
+    id: "ielts-fast",
+    title: "雅思作文10小时速成秘籍",
+    subtitle: "合集资料",
+    icon: "10",
+    directOpen: true,
+    resources: [
+      {
+        id: "ielts-fast-collection",
+        title: "雅思作文10小时速成秘籍（合集）",
+        subtitle: "PDF转HTML，可能存在问题，260708版本",
+        url: "./writing-resources/ielts_fast.html",
       },
     ],
   },
@@ -86,6 +102,11 @@ function renderWritingSources() {
 
   writingApp.querySelectorAll("[data-writing-source]").forEach((button) => {
     button.addEventListener("click", () => {
+      const source = findWritingSource(button.dataset.writingSource);
+      if (source?.directOpen && source.resources.length === 1) {
+        window.location.href = source.resources[0].url;
+        return;
+      }
       navigateWriting({ view: "source", source: button.dataset.writingSource });
     });
   });
@@ -94,7 +115,7 @@ function renderWritingSources() {
 function renderWritingSourceCard(source) {
   return `
     <button class="writing-card writing-source-card" type="button" data-writing-source="${escapeWritingAttr(source.id)}">
-      <span class="writing-card-icon" aria-hidden="true">S</span>
+      <span class="writing-card-icon" aria-hidden="true">${escapeWritingHtml(source.icon ?? source.title.slice(0, 1).toUpperCase())}</span>
       <span>
         <strong>${escapeWritingHtml(source.title)}</strong>
         <small>${escapeWritingHtml(source.subtitle)}</small>
