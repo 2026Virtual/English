@@ -30,6 +30,9 @@ jobs:
           cp -R tzx-reading _site/
           cp -R zyz-question-bank _site/
           cp -R writing-resources _site/
+          test -f _site/writing-resources/tzx-writing-manifest.json
+          test -d _site/writing-resources/tzx-task1
+          test -d _site/writing-resources/tzx-task2
 
       - name: Publish to gh-pages
         env:

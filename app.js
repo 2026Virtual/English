@@ -266,6 +266,7 @@ function switchPage(page, options = {}) {
   document.body.classList.toggle("is-listening", nextPage === "listening");
   if (nextPage !== "reading") {
     state.readingSubView = "selector";
+    window.readingApp?.hide?.();
   }
   if (nextPage !== "listening") {
     state.listeningSubView = "selector";

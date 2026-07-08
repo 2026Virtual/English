@@ -1,0 +1,215 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>澳大利亚线上与线下购物 · 躺着学写作 Task 1</title>
+        <style>
+            body { font-family: "Microsoft YaHei", sans-serif; padding: 40px; background: #eee; }
+            .paper { width: 95%; max-width: 1800px; min-height: 90vh; background: white; margin: 0 auto; padding: 50px; box-sizing: border-box; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .header { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; }
+            .h-left h1 { font-size: 24px; margin: 0; }
+            .h-right { text-align: right; color: #666; font-size: 14px; }
+            .tag { display: inline-block; background: #007bff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+            
+            .content-grid { display: flex; gap: 30px; }
+            .col-left { flex: 1; border-right: 1px dashed #ccc; padding-right: 20px; }
+            .col-right { flex: 1; padding-left: 10px; }
+            
+            .section-title { font-weight: bold; font-size: 16px; margin-bottom: 10px; border-left: 4px solid #007bff; padding-left: 8px; background: #f9f9f9; padding: 5px 8px; }
+            .q-text { font-size: 14px; color: #444; line-height: 1.5; margin-bottom: 15px; }
+            .q-img { width: 100%; border: 1px solid #ddd; margin-top: 10px; }
+            .ans-text { font-size: 15px; line-height: 1.8; color: #222; text-align: justify; }
+            
+            /* 打印控制：强制分页 */
+            @media print { body { background: none; } .paper { box-shadow: none; margin: 0; width: 100%; } }
+        </style>
+    
+<style id="tzx-writing-adapt">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    padding: 22px 14px 34px;
+    background: #f6f4ef;
+    color: #1f2a2a;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .paper {
+    width: min(1180px, 100%) !important;
+    max-width: 1180px !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: clamp(18px, 4vw, 42px) !important;
+    border: 1px solid #d9dfdc;
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(31, 42, 42, 0.09) !important;
+  }
+  .header {
+    gap: 12px;
+    border-bottom-color: #d9dfdc !important;
+    flex-wrap: wrap;
+  }
+  .h-left h1 { line-height: 1.25; }
+  .tag {
+    background: #0b7a75 !important;
+    border-radius: 999px !important;
+    padding: 3px 9px !important;
+  }
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+    gap: 24px !important;
+  }
+  .col-left {
+    min-width: 0;
+    border-right: 1px dashed #d9dfdc !important;
+    padding-right: 20px !important;
+  }
+  .col-right {
+    min-width: 0;
+    padding-left: 0 !important;
+  }
+  .section-title {
+    border-left-color: #0b7a75 !important;
+    background: #f8faf9 !important;
+    color: #1f2a2a;
+  }
+  .q-text,
+  .ans-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .ans-text p,
+  .ans-text span,
+  .q-text p,
+  .q-text span {
+    max-width: 100%;
+  }
+  .q-img,
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .writing-float-menu {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 10000;
+    opacity: 0.88;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .writing-float-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+  .writing-float-back {
+    min-height: 38px;
+    border: 1px solid rgba(31, 42, 42, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1f2a2a;
+    padding: 0 13px;
+    font: 700 14px/1.2 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: 0 10px 28px rgba(31, 42, 42, 0.14);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+  }
+  .writing-float-back:hover { background: #fff; }
+  @media (max-width: 820px) {
+    body { padding: 10px 8px 26px !important; }
+    .paper { padding: 16px !important; }
+    .header {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr);
+      margin-bottom: 18px !important;
+    }
+    .h-right {
+      text-align: left !important;
+      font-size: 13px !important;
+    }
+    .content-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px !important;
+    }
+    .col-left {
+      border-right: 0 !important;
+      border-bottom: 1px dashed #d9dfdc;
+      padding-right: 0 !important;
+      padding-bottom: 16px;
+    }
+    .q-text,
+    .ans-text {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+    .writing-float-menu {
+      top: 10px;
+      left: 10px;
+    }
+  }
+</style>
+</head>
+    <body>
+
+<div class="writing-float-menu" id="writing-float-menu">
+  <button class="writing-float-back" type="button" id="writing-float-back">← 返回</button>
+</div>
+        <div class="paper">
+            <div class="header">
+                <div class="h-left">
+                    <h1>澳大利亚线上与线下购物</h1>
+                    <div style="margin-top:5px;"><span class="tag">表格</span></div>
+                </div>
+                <div class="h-right">
+                    ID: 7741<br>
+                    命中: 2025-11-14
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <div class="section-title">Question</div>
+                    <div class="q-text"><p><em><strong><span style="font-size: 14px;">The table shows information about department stores and online stores in Australia in 2011.&nbsp;</span></strong></em></p><p><br/></p><p class="2" style="font-family: Arial; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51); font-size: 17.7778px; text-wrap-mode: wrap; background-color: rgb(255, 255, 255);"><span style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px;">Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</span></p><p class="3" style="font-family: Arial; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51); font-size: 17.7778px; text-wrap-mode: wrap; background-color: rgb(255, 255, 255);"><br style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/></p><p class="4" style="font-family: Arial; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin-top: 0px; margin-bottom: 0px; padding: 0px; color: rgb(51, 51, 51); font-size: 17.7778px; text-wrap-mode: wrap; background-color: rgb(255, 255, 255);"><span style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px;">Write at least 150 words.</span></p><p><br/></p></div>
+                    <img src="images/7741.webp" class="q-img" loading="lazy" decoding="async">
+                </div>
+
+                <div class="col-right">
+                    <div class="section-title" style="border-color:#28a745;">Sample Answer</div>
+                    <div class="ans-text"><p><span style="font-size: 14px;">The table provides information on the performance of department stores and online stores in Australia in 2011, covering the number of businesses, profit, sales revenue, and growth rate.</span></p><p><span style="font-size: 14px;"><br/></span></p><p><span style="font-size: 14px;">Overall, online stores outperformed department stores in most categories, with higher profits, sales revenue, and growth rates. However, department stores had a significantly smaller number of businesses.</span></p><p><span style="font-size: 14px;"><br/></span></p><p><span style="font-size: 14px;">In 2011, there were 67 department stores in Australia, which was much fewer than the 368 online stores. Despite having fewer businesses, department stores generated a sales revenue of 12,700 million AUD, accounting for a substantial portion of the total retail market. In contrast, online stores had a higher sales revenue of 13,400 million AUD, although they had significantly more businesses.</span></p><p><span style="font-size: 14px;"><br/></span></p><p><span style="font-size: 14px;">In terms of profit, online stores again led with 863 million AUD, surpassing the 807 million AUD earned by department stores. The growth rates of both sectors were relatively modest, but online stores had a slightly higher growth rate of 0.6%, compared to the 0.4% growth rate of department stores.</span></p><p><span style="font-size: 14px;">In summary, while department stores had fewer businesses, they were still able to generate significant revenue and profit. Online stores, on the other hand, had a larger number of businesses and a slightly higher performance in terms of profit, sales revenue, and growth.</span></p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+(function(){
+  const menu = document.getElementById("writing-float-menu");
+  const back = document.getElementById("writing-float-back");
+  if (!menu || !back) return;
+  let lastY = window.scrollY;
+  back.addEventListener("click", function(){
+    const ref = document.referrer;
+    try {
+      if (ref && new URL(ref).origin === window.location.origin) {
+        history.back();
+        return;
+      }
+    } catch (error) {}
+    window.location.href = "../../#writing";
+  });
+  window.addEventListener("scroll", function(){
+    const y = window.scrollY;
+    if (y > lastY && y > 80) {
+      menu.classList.add("is-hidden");
+    } else {
+      menu.classList.remove("is-hidden");
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+</script>
+</body>
+    </html>
+    

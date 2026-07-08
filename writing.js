@@ -1,4 +1,6 @@
-const WRITING_SOURCES = [
+const TZX_WRITING_MANIFEST_URL = "./writing-resources/tzx-writing-manifest.json";
+
+const BASE_WRITING_SOURCES = [
   {
     id: "simon",
     title: "simon",
@@ -36,11 +38,15 @@ const WRITING_SOURCES = [
   },
 ];
 
+let WRITING_SOURCES = [...BASE_WRITING_SOURCES];
+
 const writingApp = document.querySelector("#writing-app");
 
 const writingState = {
   route: { view: "sources" },
+  sourceFilters: {},
   initialized: false,
+  loadingPromise: null,
 };
 
 window.writingApp = {
@@ -59,12 +65,45 @@ function initIfWritingVisible() {
   }
 }
 
-function initWritingApp() {
+async function initWritingApp() {
   if (!writingApp) return;
   if (!writingState.initialized) {
     writingState.initialized = true;
   }
+  if (!writingState.loadingPromise) {
+    writingState.loadingPromise = loadWritingSources();
+  }
+  await writingState.loadingPromise;
   renderWritingRoute();
+}
+
+async function loadWritingSources() {
+  try {
+    const response = await fetch(TZX_WRITING_MANIFEST_URL);
+    if (!response.ok) return;
+    const manifest = await response.json();
+    mergeTzxWritingSources(manifest);
+  } catch (error) {
+    console.warn("躺着学写作资料加载失败", error);
+  }
+}
+
+function mergeTzxWritingSources(manifest) {
+  const groups = Array.isArray(manifest?.groups) ? manifest.groups : [];
+  const importedSources = groups
+    .filter((group) => Array.isArray(group.resources) && group.resources.length)
+    .map((group) => ({
+      id: group.id,
+      title: group.title,
+      subtitle: group.subtitle,
+      icon: group.icon,
+      tags: group.tags || [],
+      resources: group.resources,
+    }));
+  if (!importedSources.length) return;
+
+  const importedIds = new Set(importedSources.map((source) => source.id));
+  WRITING_SOURCES = [...BASE_WRITING_SOURCES.filter((source) => !importedIds.has(source.id)), ...importedSources];
 }
 
 function navigateWriting(route) {
@@ -131,6 +170,10 @@ function renderWritingSource(sourceId) {
     return;
   }
 
+  const hasFilters = source.resources.length > 20;
+  const filters = getWritingSourceFilters(source.id);
+  const filteredResources = filterWritingResources(source, filters);
+
   writingApp.innerHTML = `
     <section class="writing-shell">
       <header class="writing-head">
@@ -140,8 +183,26 @@ function renderWritingSource(sourceId) {
         </div>
         <button class="writing-button" type="button" id="back-to-writing-sources">资源</button>
       </header>
-      <div class="writing-resource-grid">
-        ${source.resources.map((resource) => renderWritingResourceCard(source.id, resource)).join("")}
+      ${
+        hasFilters
+          ? `<div class="writing-resource-controls">
+              <input
+                class="writing-filter-input"
+                id="writing-resource-search"
+                type="search"
+                placeholder="搜索题目 / ID / 类型"
+                value="${escapeWritingAttr(filters.keyword)}"
+                aria-label="搜索写作资料"
+              />
+              <select class="writing-filter-select" id="writing-resource-tag" aria-label="筛选写作类型">
+                ${renderWritingTagOptions(source, filters.tag)}
+              </select>
+              <span class="writing-resource-count" id="writing-resource-count">${filteredResources.length}/${source.resources.length}</span>
+            </div>`
+          : ""
+      }
+      <div class="writing-resource-grid" id="writing-resource-grid">
+        ${renderWritingResourceGrid(source.id, filteredResources)}
       </div>
     </section>
   `;
@@ -149,15 +210,23 @@ function renderWritingSource(sourceId) {
   writingApp.querySelector("#back-to-writing-sources").addEventListener("click", () => {
     navigateWriting({ view: "sources" });
   });
-  writingApp.querySelectorAll("[data-writing-resource]").forEach((button) => {
-    button.addEventListener("click", () => {
-      navigateWriting({
-        view: "reader",
-        source: source.id,
-        resource: button.dataset.writingResource,
-      });
+
+  const search = writingApp.querySelector("#writing-resource-search");
+  const tag = writingApp.querySelector("#writing-resource-tag");
+  if (search) {
+    search.addEventListener("input", () => {
+      updateWritingSourceFilter(source.id, { keyword: search.value });
+      drawWritingResourceGrid(source);
     });
-  });
+  }
+  if (tag) {
+    tag.addEventListener("change", () => {
+      updateWritingSourceFilter(source.id, { tag: tag.value });
+      drawWritingResourceGrid(source);
+    });
+  }
+
+  bindWritingResourceCards(source.id);
 }
 
 function renderWritingResourceCard(sourceId, resource) {
@@ -174,6 +243,82 @@ function renderWritingResourceCard(sourceId, resource) {
       </span>
     </button>
   `;
+}
+
+function renderWritingResourceGrid(sourceId, resources) {
+  if (!resources.length) {
+    return `<div class="empty-state">没有匹配的资料</div>`;
+  }
+  return resources.map((resource) => renderWritingResourceCard(sourceId, resource)).join("");
+}
+
+function bindWritingResourceCards(sourceId) {
+  writingApp.querySelectorAll("[data-writing-resource]").forEach((button) => {
+    button.addEventListener("click", () => {
+      navigateWriting({
+        view: "reader",
+        source: sourceId,
+        resource: button.dataset.writingResource,
+      });
+    });
+  });
+}
+
+function drawWritingResourceGrid(source) {
+  const grid = writingApp.querySelector("#writing-resource-grid");
+  const count = writingApp.querySelector("#writing-resource-count");
+  if (!grid) return;
+
+  const filters = getWritingSourceFilters(source.id);
+  const filteredResources = filterWritingResources(source, filters);
+  grid.innerHTML = renderWritingResourceGrid(source.id, filteredResources);
+  if (count) {
+    count.textContent = `${filteredResources.length}/${source.resources.length}`;
+  }
+  bindWritingResourceCards(source.id);
+}
+
+function getWritingSourceFilters(sourceId) {
+  const current = writingState.sourceFilters[sourceId] || {};
+  return {
+    keyword: current.keyword || "",
+    tag: current.tag || "all",
+  };
+}
+
+function updateWritingSourceFilter(sourceId, nextFilter) {
+  writingState.sourceFilters[sourceId] = {
+    ...getWritingSourceFilters(sourceId),
+    ...nextFilter,
+  };
+}
+
+function filterWritingResources(source, filters) {
+  const keyword = filters.keyword.trim().toLowerCase();
+  return source.resources.filter((resource) => {
+    const tagOk = filters.tag === "all" || resource.tag === filters.tag;
+    const text = `${resource.id} ${resource.title} ${resource.subtitle} ${resource.tag || ""}`.toLowerCase();
+    const keywordOk = !keyword || text.includes(keyword);
+    return tagOk && keywordOk;
+  });
+}
+
+function renderWritingTagOptions(source, selectedTag) {
+  const counts = new Map();
+  for (const resource of source.resources) {
+    if (!resource.tag) continue;
+    counts.set(resource.tag, (counts.get(resource.tag) || 0) + 1);
+  }
+  const tags = source.tags?.length
+    ? source.tags.map((item) => [item.tag, item.count])
+    : [...counts.entries()];
+  const options = [`<option value="all"${selectedTag === "all" ? " selected" : ""}>全部类型</option>`];
+  for (const [tag, count] of tags) {
+    options.push(
+      `<option value="${escapeWritingAttr(tag)}"${selectedTag === tag ? " selected" : ""}>${escapeWritingHtml(tag)} · ${count}</option>`,
+    );
+  }
+  return options.join("");
 }
 
 function renderWritingReader(sourceId, resourceId) {

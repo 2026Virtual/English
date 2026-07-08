@@ -42,6 +42,7 @@ const state = {
   dataCache: new Map(),
   lastReaderRoute: null,
   selectionDoubtCleanup: null,
+  readerTimerId: null,
   route: { view: "library" },
   initialized: false,
   loadingPromise: null,
@@ -49,6 +50,7 @@ const state = {
 
 window.readingApp = {
   show: initReadingApp,
+  hide: hideReadingApp,
   openWorkspace: openReadingWorkspace,
 };
 
@@ -83,6 +85,11 @@ async function initReadingApp() {
 async function openReadingWorkspace() {
   await initReadingApp();
   navigateReading({ view: "workspace" });
+}
+
+function hideReadingApp() {
+  teardownArticleDoubtSelection();
+  teardownReaderTimer();
 }
 
 async function loadReadingManifest() {
@@ -193,6 +200,7 @@ function emitReadingRouteChange(route = state.route) {
 async function renderRoute() {
   const route = parseRoute();
   teardownArticleDoubtSelection();
+  teardownReaderTimer();
   emitReadingRouteChange(route);
   if (route.view === "test") {
     await renderTest(route.id, route.passage, route.collection || "cambridge");
@@ -627,6 +635,7 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
   const problems = data.problems.find((item) => item.passage_no === activePassageNo);
   const savedSplit = getSavedSplitRatio(data.id, activePassageNo);
   const isHtmlSource = isHtmlReadingSource(collection, data);
+  const hasAnswerComparison = hasComparableAnswerKey(data, activePassageNo, collection);
   state.lastReaderRoute = {
     view: "test",
     collection,
@@ -669,6 +678,21 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
                 </nav>`
           }
           <div class="reader-actions">
+            <div class="reader-timer" aria-label="用时 0分0秒">
+              <span class="reader-timer-icon" aria-hidden="true"></span>
+              <span id="reader-timer">0:00</span>
+            </div>
+            ${
+              hasAnswerComparison
+                ? `<button
+                    class="action-button answer-key-button"
+                    type="button"
+                    id="open-answer-compare"
+                    aria-label="核对答案"
+                    title="核对答案"
+                  >A</button>`
+                : ""
+            }
             <button class="action-button home-button" type="button" id="go-home" aria-label="返回主页" title="返回主页">
               <span class="home-icon" aria-hidden="true"></span>
             </button>
@@ -702,6 +726,31 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
           <button type="button" id="add-selection-doubt" aria-label="加入疑难" title="加入疑难">
             <span aria-hidden="true">+</span>
           </button>
+        </div>
+        <div class="answer-compare-backdrop" id="answer-compare-backdrop" hidden>
+          <section
+            class="answer-compare-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="answer-compare-title"
+          >
+            <header class="answer-compare-head">
+              <div>
+                <p class="eyebrow">Answer Check</p>
+                <h2 id="answer-compare-title">答案核对</h2>
+                <p id="answer-compare-subtitle"></p>
+              </div>
+              <button
+                class="action-button answer-compare-close"
+                type="button"
+                aria-label="关闭答案核对"
+                title="关闭"
+                data-answer-compare-close
+              >×</button>
+            </header>
+            <div class="answer-compare-summary" id="answer-compare-summary"></div>
+            <div class="answer-compare-list" id="answer-compare-list"></div>
+          </section>
         </div>
       </main>
     </div>
@@ -766,6 +815,15 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
       navigateReading({ view: "workspace" });
     });
   }
+
+  const answerCompareButton = document.querySelector("#open-answer-compare");
+  if (answerCompareButton) {
+    answerCompareButton.addEventListener("click", () => {
+      openAnswerComparePanel(data, activePassageNo, collection);
+    });
+  }
+  setupAnswerComparePanel();
+  setupReaderTimer();
 
   if (isHtmlSource) {
     setupZyzAnswers(data, activePassageNo);
@@ -1743,6 +1801,240 @@ function renderAnswerKey(answerSection) {
       </div>
     </div>
   `;
+}
+
+function hasComparableAnswerKey(data, passageNo, collection = data.collection || "cambridge") {
+  return getComparableAnswerRows(data, passageNo, collection).length > 0;
+}
+
+function openAnswerComparePanel(data, passageNo, collection = data.collection || "cambridge") {
+  const backdrop = document.querySelector("#answer-compare-backdrop");
+  const subtitle = document.querySelector("#answer-compare-subtitle");
+  const summary = document.querySelector("#answer-compare-summary");
+  const list = document.querySelector("#answer-compare-list");
+  if (!backdrop || !subtitle || !summary || !list) return;
+
+  const rows = buildAnswerComparisonRows(data, passageNo, collection);
+  if (!rows.length) {
+    notifyReadingWorkspace("当前题源没有可核对的答案", true);
+    return;
+  }
+
+  const answered = rows.filter((row) => row.status !== "blank").length;
+  const correct = rows.filter((row) => row.status === "correct").length;
+  const wrong = rows.filter((row) => row.status === "wrong").length;
+  const collectionLabel = READING_COLLECTIONS[collection]?.label || data.source || collection || "题库";
+
+  subtitle.textContent = `${collectionLabel} · ${data.id || data.title || ""} · Passage ${passageNo}`;
+  summary.innerHTML = `
+    <span><strong>${correct}</strong> 正确</span>
+    <span><strong>${wrong}</strong> 错误</span>
+    <span><strong>${answered}/${rows.length}</strong> 已作答</span>
+  `;
+  list.innerHTML = renderAnswerComparisonRows(rows);
+  backdrop.hidden = false;
+  backdrop.querySelector("[data-answer-compare-close]")?.focus();
+}
+
+function setupAnswerComparePanel() {
+  const backdrop = document.querySelector("#answer-compare-backdrop");
+  if (!backdrop) return;
+
+  const close = () => {
+    backdrop.hidden = true;
+  };
+
+  backdrop.querySelectorAll("[data-answer-compare-close]").forEach((button) => {
+    button.addEventListener("click", close);
+  });
+  backdrop.addEventListener("click", (event) => {
+    if (event.target === backdrop) close();
+  });
+  backdrop.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") close();
+  });
+}
+
+function buildAnswerComparisonRows(data, passageNo, collection = data.collection || "cambridge") {
+  return getComparableAnswerRows(data, passageNo, collection).map((row) => {
+    const userAnswer = readStoredAnswerForQuestion(data.id, passageNo, row.number);
+    const status = compareAnswer(userAnswer, row.correctAnswer);
+    return {
+      ...row,
+      userAnswer,
+      status,
+    };
+  });
+}
+
+function renderAnswerComparisonRows(rows) {
+  return rows
+    .map((row) => {
+      const userAnswer = row.userAnswer || "未作答";
+      return `
+        <article class="answer-compare-row ${row.status}">
+          <div class="answer-compare-question">
+            <strong>${escapeHtml(row.label)}</strong>
+          </div>
+          <div class="answer-compare-values">
+            <div>
+              <span>我的答案</span>
+              <b>${escapeHtml(userAnswer)}</b>
+            </div>
+            <div>
+              <span>正确答案</span>
+              <b>${escapeHtml(row.correctAnswer)}</b>
+            </div>
+          </div>
+          <span class="answer-compare-status">${escapeHtml(answerCompareStatusLabel(row.status))}</span>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function getComparableAnswerRows(data, passageNo, collection = data.collection || "cambridge") {
+  if (!data?.answer_key) return [];
+  if (collection === "tzx" || data.source === "tzx") return [];
+
+  if (Array.isArray(data.answer_key)) {
+    const answerSection = data.answer_key.find((item) => Number(item.passage_no) === Number(passageNo));
+    const answers = answerSection?.answers || [];
+    return answers
+      .map((item) => {
+        const number = Number(String(item.question || "").match(/\d+/)?.[0]);
+        if (!Number.isFinite(number) || number <= 0) return null;
+        return {
+          number,
+          label: `Q${item.question}`,
+          correctAnswer: formatAnswerValue(item.answer),
+        };
+      })
+      .filter((item) => item && item.correctAnswer)
+      .sort((a, b) => a.number - b.number);
+  }
+
+  if (collection !== "zyz" && data.source !== "zyz") return [];
+  const answerEntries = data.answer_key && typeof data.answer_key === "object" ? data.answer_key : {};
+  const orderedIds = (data.question_order?.length ? data.question_order : Object.keys(answerEntries))
+    .map(normalizeZyzQuestionId)
+    .filter(Boolean);
+
+  return [...new Set(orderedIds)]
+    .map((qid) => {
+      const correctAnswer = formatAnswerValue(answerEntries[qid]);
+      const number = zyzDisplayNumber(data, qid);
+      if (!correctAnswer || !number) return null;
+      return {
+        number,
+        label: `Q${number}`,
+        correctAnswer,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.number - b.number);
+}
+
+function readStoredAnswerForQuestion(testId, passageNo, number) {
+  const direct = (localStorage.getItem(answerStorageKey(testId, passageNo, number)) || "").trim();
+  if (direct) return direct;
+
+  const prefix = `ielts-reader:${testId}:p${passageNo}:q`;
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const key = localStorage.key(index);
+    if (!key?.startsWith(prefix)) continue;
+    const numbers = key
+      .slice(prefix.length)
+      .split("-")
+      .map((value) => Number(value))
+      .filter((value) => Number.isFinite(value) && value > 0);
+    if (!numbers.includes(number)) continue;
+    const value = (localStorage.getItem(key) || "").trim();
+    if (value) return value;
+  }
+
+  return "";
+}
+
+function compareAnswer(userAnswer, correctAnswer) {
+  const normalizedUser = normalizeAnswerForCompare(userAnswer);
+  if (!normalizedUser) return "blank";
+
+  const userItems = splitAnswerList(userAnswer).map(normalizeAnswerForCompare).filter(Boolean);
+  const correctItems = splitAnswerList(correctAnswer).map(normalizeAnswerForCompare).filter(Boolean);
+  if (userItems.length > 1 && correctItems.length > 1 && sameAnswerSet(userItems, correctItems)) {
+    return "correct";
+  }
+
+  const alternatives = answerAlternatives(correctAnswer).map(normalizeAnswerForCompare).filter(Boolean);
+  if (alternatives.includes(normalizedUser)) return "correct";
+  if (userItems.length > 1 && alternatives.some((item) => userItems.includes(item))) return "correct";
+  return "wrong";
+}
+
+function answerAlternatives(answer) {
+  return String(answer ?? "")
+    .split(/\s*(?:\/|;|\bor\b)\s*/i)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function splitAnswerList(answer) {
+  return String(answer ?? "")
+    .split(/\s*,\s*/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function sameAnswerSet(left, right) {
+  if (left.length !== right.length) return false;
+  const rightSet = new Set(right);
+  return left.every((item) => rightSet.has(item));
+}
+
+function normalizeAnswerForCompare(answer) {
+  return String(answer ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/\s+/g, " ")
+    .replace(/\s*([,;:/])\s*/g, "$1");
+}
+
+function formatAnswerValue(answer) {
+  if (Array.isArray(answer)) return answer.map(formatAnswerValue).filter(Boolean).join(", ");
+  return String(answer ?? "").trim();
+}
+
+function answerCompareStatusLabel(status) {
+  if (status === "correct") return "正确";
+  if (status === "wrong") return "错误";
+  return "未作答";
+}
+
+function setupReaderTimer() {
+  const timer = document.querySelector("#reader-timer");
+  const timerWrap = timer?.closest(".reader-timer");
+  if (!timer || !timerWrap) return;
+
+  const startedAt = Date.now();
+  const update = () => {
+    const elapsedSeconds = Math.max(0, Math.floor((Date.now() - startedAt) / 1000));
+    const minutes = Math.floor(elapsedSeconds / 60);
+    const seconds = elapsedSeconds % 60;
+    timer.textContent = `${minutes}:${String(seconds).padStart(2, "0")}`;
+    timerWrap.setAttribute("aria-label", `用时 ${minutes}分${seconds}秒`);
+  };
+
+  update();
+  state.readerTimerId = window.setInterval(update, 1000);
+}
+
+function teardownReaderTimer() {
+  if (!state.readerTimerId) return;
+  window.clearInterval(state.readerTimerId);
+  state.readerTimerId = null;
 }
 
 function collectPassageResponses(data, passageNo, collection = data.collection || "cambridge") {

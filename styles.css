@@ -1078,6 +1078,45 @@ body.is-meaning-hidden .cloud-note-item {
   gap: 14px;
 }
 
+.writing-resource-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.writing-filter-input,
+.writing-filter-select {
+  min-height: 42px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  padding: 0 12px;
+  font: inherit;
+}
+
+.writing-filter-input:focus,
+.writing-filter-select:focus {
+  border-color: rgba(15, 118, 110, 0.48);
+  outline: 3px solid rgba(15, 118, 110, 0.12);
+}
+
+.writing-resource-count {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  padding: 0 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .writing-card {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
@@ -1323,6 +1362,10 @@ body.is-meaning-hidden .cloud-note-item {
 
   .writing-source-grid,
   .writing-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-resource-controls {
     grid-template-columns: 1fr;
   }
 

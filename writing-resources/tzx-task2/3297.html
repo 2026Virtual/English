@@ -1,0 +1,222 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>噪音问题 · 躺着学写作 Task 2</title>
+        <style>
+            body { font-family: "Microsoft YaHei", sans-serif; padding: 40px; background: #eee; }
+            /* 保持宽屏布局 */
+            .paper { width: 95%; max-width: 1800px; min-height: 90vh; background: white; margin: 0 auto; padding: 50px; box-sizing: border-box; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .header { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; }
+            .h-left h1 { font-size: 24px; margin: 0; }
+            .h-right { text-align: right; color: #666; font-size: 14px; }
+            .tag { display: inline-block; background: #007bff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+            
+            .content-grid { display: flex; gap: 30px; }
+            .col-left { flex: 1; border-right: 1px dashed #ccc; padding-right: 20px; }
+            .col-right { flex: 1; padding-left: 10px; }
+            
+            .section-title { font-weight: bold; font-size: 16px; margin-bottom: 10px; border-left: 4px solid #007bff; padding-left: 8px; background: #f9f9f9; padding: 5px 8px; }
+            .q-text { font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px; }
+            .q-img { width: 100%; border: 1px solid #ddd; margin-top: 10px; }
+            .ans-text { font-size: 16px; line-height: 1.8; color: #222; text-align: justify; }
+            
+            @media print { body { background: none; } .paper { box-shadow: none; margin: 0; width: 100%; } }
+        </style>
+    
+<style id="tzx-writing-adapt">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    padding: 22px 14px 34px;
+    background: #f6f4ef;
+    color: #1f2a2a;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .paper {
+    width: min(1180px, 100%) !important;
+    max-width: 1180px !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: clamp(18px, 4vw, 42px) !important;
+    border: 1px solid #d9dfdc;
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(31, 42, 42, 0.09) !important;
+  }
+  .header {
+    gap: 12px;
+    border-bottom-color: #d9dfdc !important;
+    flex-wrap: wrap;
+  }
+  .h-left h1 { line-height: 1.25; }
+  .tag {
+    background: #0b7a75 !important;
+    border-radius: 999px !important;
+    padding: 3px 9px !important;
+  }
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+    gap: 24px !important;
+  }
+  .col-left {
+    min-width: 0;
+    border-right: 1px dashed #d9dfdc !important;
+    padding-right: 20px !important;
+  }
+  .col-right {
+    min-width: 0;
+    padding-left: 0 !important;
+  }
+  .section-title {
+    border-left-color: #0b7a75 !important;
+    background: #f8faf9 !important;
+    color: #1f2a2a;
+  }
+  .q-text,
+  .ans-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .ans-text p,
+  .ans-text span,
+  .q-text p,
+  .q-text span {
+    max-width: 100%;
+  }
+  .q-img,
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .writing-float-menu {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 10000;
+    opacity: 0.88;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .writing-float-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+  .writing-float-back {
+    min-height: 38px;
+    border: 1px solid rgba(31, 42, 42, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1f2a2a;
+    padding: 0 13px;
+    font: 700 14px/1.2 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: 0 10px 28px rgba(31, 42, 42, 0.14);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+  }
+  .writing-float-back:hover { background: #fff; }
+  @media (max-width: 820px) {
+    body { padding: 10px 8px 26px !important; }
+    .paper { padding: 16px !important; }
+    .header {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr);
+      margin-bottom: 18px !important;
+    }
+    .h-right {
+      text-align: left !important;
+      font-size: 13px !important;
+    }
+    .content-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px !important;
+    }
+    .col-left {
+      border-right: 0 !important;
+      border-bottom: 1px dashed #d9dfdc;
+      padding-right: 0 !important;
+      padding-bottom: 16px;
+    }
+    .q-text,
+    .ans-text {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+    .writing-float-menu {
+      top: 10px;
+      left: 10px;
+    }
+  }
+</style>
+</head>
+    <body>
+
+<div class="writing-float-menu" id="writing-float-menu">
+  <button class="writing-float-back" type="button" id="writing-float-back">← 返回</button>
+</div>
+        <div class="paper">
+            <div class="header">
+                <div class="h-left">
+                    <h1>噪音问题</h1>
+                    <div style="margin-top:5px;"><span class="tag">报告类</span></div>
+                </div>
+                <div class="h-right">
+                    ID: 3297<br>
+                    命中: 2022-10-22
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <div class="section-title">Question</div>
+                    <div class="q-text"><p><br/></p><p>The level of noise around us is constantly increasing, and is affecting the quality of our lives. What cause the noise? What should be done about it?</p><p><br/></p>
+    <p style="margin-top: 20px; color: #555;">
+        Give reasons for your answer and include any relevant examples from your knowledge and experience.
+    </p>
+    <p style="margin-top: 10px; color: #555;">
+        Write at least 250 words.
+    </p>
+    </div>
+                    
+                </div>
+
+                <div class="col-right">
+                    <div class="section-title" style="border-color:#28a745;">Sample Answer</div>
+                    <div class="ans-text"><p><melo-data data-src="{&quot;mainAtext&quot;:&quot;{\&quot;atext\&quot;:{\&quot;attribs\&quot;:\&quot;*0*1+87*2*0*1+2*0*1+ot*2*0*1+2*0*1+mv*2*0*1+2*0*1+7j*2*0*1+1\&quot;,\&quot;text\&quot;:\&quot;Unpleasant sound that disturbs the life of animals and the human beings is called as “Noise Pollution”. Lately, surged noise levels in the surroundings are creating unbalance in the lives of the individuals. This essay will discuss the reasons and put forth the measures to tackle these menaces.\\n\\nFirst and foremost, one of the prime causes is the industrial activities. To delve into this, the rate at which the population has increased is proportionally linked to the rise in manufacturing of products, which is the main culprit behind the dramatic surge in the amount of noise caused by factories. Furthermore, the growing vehicle on roads produces a huge amount of sounds. This is due to the increased traffic on-roads and have become a pressing issue for both the environment and the Homo sapiens. In addition to this, the sound created by the large loudspeakers in occasions: parties and marriage functions disrupt the lives of the individuals. For instance, a survey conducted recently in Asian countries showed that a staggering eighty percent of the noises are due the human activities. Thus, the reasons for the surged noise proportion are running factories and vehicular traffic.\\n\\nAlthough, there are multitudinous causes for the rising commotion, this problem can be alleviated by the government if certain measures are taken judiciously. Firstly, the stringent enforcement of the laws against producing sound up to the set levels by the authorities against the lawbreaker. Secondly, the soundproof barriers should be installed in the industries to lower the intensity; the industries should be allowed to set up only in remote areas far off from the housings. Thirdly, the trees should be planted in a row in the traffic prone places to mitigate the levels of commotion. This has shown to work in Africa, where such measures were strictly followed resulted in the decline in decibels. Hence, the authorities can play a role of paramount significance in solving the problem of up surged noise intensity.\\n\\nTo conclude, this essay discussed that rise in factory activities coupled with commotion due to traffic are the causes for the expanded noise pollution. It was also justifies that implementing strict laws and installing noise barriers can lower the extent of the problem.\\n\&quot;},\&quot;apool\&quot;:{\&quot;numToAttrib\&quot;:{\&quot;0\&quot;:[\&quot;author\&quot;,\&quot;p.13102700132785205\&quot;],\&quot;1\&quot;:[\&quot;underline\&quot;,\&quot;false\&quot;],\&quot;2\&quot;:[\&quot;pap-stylesheet-name\&quot;,\&quot;normal\&quot;]},\&quot;nextNum\&quot;:3}}&quot;,&quot;storyAtexts&quot;:[],&quot;srcGlobalPadId&quot;:&quot;w3_AAUACwbjABcpRmkGuyrQIyFxz003I&quot;}" data-version="2.1.0"></melo-data></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">Unpleasant sound that disturbs the life of animals and the human beings is called as “Noise Pollution”. Lately, </span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"><strong>surged </strong></span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">noise levels in the surroundings are creating unbalance in the lives of the individuals. This essay will discuss the reasons and put forth the measures to tackle these menaces.</span></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><br/></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">First and foremost, one of the prime causes is the industrial activities. To </span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"><strong>delve into</strong></span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;"> this, the rate at which the population has increased is proportionally linked to the rise in manufacturing of products, which is the main </span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"><strong>culprit </strong></span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">behind the dramatic surge in the amount of noise caused by factories. Furthermore, the growing vehicle on roads produces a huge amount of sounds. This is due to the increased traffic on-roads and have become a pressing issue for both the environment and the Homo sapiens. In addition to this, the sound created by the large loudspeakers in occasions: parties and marriage functions disrupt the lives of the individuals. For instance, a survey conducted recently in Asian countries showed that a </span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"><strong>staggering </strong></span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">eighty percent of the noises are due the human activities. Thus, the reasons for the surged noise proportion are running factories and vehicular traffic.</span></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><br/></p><p><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">Although, there are </span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"><strong>multitudinous </strong></span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">causes for the rising </span><strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;">commotion</span></strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">, this problem can be </span><strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;">alleviated </span></strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">by the government if certain measures are taken judiciously. Firstly, </span><strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;">the stringent enforcement of the laws </span></strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">against producing sound up to the set levels by the authorities against the lawbreaker. Secondly, the soundproof barriers should be installed in the industries to lower the intensity; the industries should be allowed to set up only in remote areas far off from the housings. Thirdly, the trees should be planted in a row in the traffic prone places to mitigate the levels of </span>commotion<span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">. This has shown to work in Africa, where such measures were strictly followed resulted in the decline in decibels. Hence, the authorities can</span><strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline; text-decoration: underline;"> play a role of paramount significance</span></strong><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;"> in solving the problem of up surged noise intensity.</span></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><br/></p><p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt" style="line-height: 1.3; margin-top: 4px; margin-bottom: 4px;"><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;">To conclude, this essay discussed that rise in factory activities coupled with commotion due to traffic are the causes for the expanded noise pollution. It was also justifies that implementing strict laws and installing noise barriers can lower the extent of the problem.</span><span style="font-size: 11pt; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; color: #333333; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; letter-spacing: 0pt; vertical-align: baseline;"></span></p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+(function(){
+  const menu = document.getElementById("writing-float-menu");
+  const back = document.getElementById("writing-float-back");
+  if (!menu || !back) return;
+  let lastY = window.scrollY;
+  back.addEventListener("click", function(){
+    const ref = document.referrer;
+    try {
+      if (ref && new URL(ref).origin === window.location.origin) {
+        history.back();
+        return;
+      }
+    } catch (error) {}
+    window.location.href = "../../#writing";
+  });
+  window.addEventListener("scroll", function(){
+    const y = window.scrollY;
+    if (y > lastY && y > 80) {
+      menu.classList.add("is-hidden");
+    } else {
+      menu.classList.remove("is-hidden");
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+</script>
+</body>
+    </html>
+    
