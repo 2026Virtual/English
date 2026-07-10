@@ -185,6 +185,7 @@ function parseRoute() {
 
 function navigateReading(route) {
   state.route = route;
+  window.scrollTo({ top: 0, behavior: "auto" });
   renderRoute();
 }
 

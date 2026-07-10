@@ -2133,8 +2133,30 @@ body.reading-split-dragging {
 
 @media (max-width: 860px) {
   .reading-module .reader-shell {
-    height: 100vh;
-    height: 100dvh;
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 0;
+  }
+
+  .reading-module .reader-shell .split-reader {
+    height: auto;
+  }
+
+  .reading-module .article-pane,
+  .reading-module .question-pane {
+    flex: none;
+  }
+
+  .reading-module .split-pane,
+  .reading-module .article-pane .reader-panel,
+  .reading-module .question-pane .question-panel {
+    height: auto;
+    overflow: visible;
+  }
+
+  .reading-module .split-resizer {
+    display: none;
   }
 }
