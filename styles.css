@@ -316,17 +316,22 @@ body.is-listening .app-main {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.theme-toggle {
+.home-quick-actions {
   position: absolute;
   top: max(18px, env(safe-area-inset-top, 0px));
   right: max(18px, env(safe-area-inset-right, 0px));
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle,
+.offline-download-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
   height: 40px;
-  padding: 0;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--text);
@@ -336,18 +341,56 @@ body.is-listening .app-main {
   transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle {
+  width: 40px;
+  padding: 0;
+}
+
+.offline-download-button {
+  min-width: 108px;
+  gap: 7px;
+  padding: 0 12px;
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.offline-download-button svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+}
+
+.theme-toggle:hover,
+.offline-download-button:hover {
   border-color: rgba(15, 118, 110, 0.62);
   background: var(--home-hover);
 }
 
-.theme-toggle:focus-visible {
+.theme-toggle:focus-visible,
+.offline-download-button:focus-visible {
   outline: 3px solid rgba(15, 118, 110, 0.28);
   outline-offset: 3px;
 }
 
-.theme-toggle:active {
+.theme-toggle:active,
+.offline-download-button:active {
   transform: translateY(1px);
+}
+
+.offline-download-button.is-downloading {
+  color: var(--teal);
+  border-color: rgba(15, 118, 110, 0.48);
+}
+
+.offline-download-button.is-complete {
+  color: #ffffff;
+  border-color: var(--teal);
+  background: var(--teal);
+}
+
+.offline-download-button.is-error {
+  color: var(--red);
+  border-color: rgba(220, 38, 38, 0.38);
 }
 
 .theme-toggle-icon {
@@ -1409,7 +1452,7 @@ body.is-meaning-hidden .cloud-note-item {
 
   .home-view {
     align-items: flex-start;
-    padding: 36px 16px;
+    padding: 84px 16px 36px;
   }
 
   .home-shell {

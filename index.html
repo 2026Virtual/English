@@ -24,11 +24,11 @@
   <title>英语速提升系统</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20260710-global-theme">
+  <link rel="stylesheet" href="./styles.css?v=20260710-offline-download">
   <link rel="stylesheet" href="./reading-styles.css?v=20260710-reading-head-dark">
   <link rel="stylesheet" href="./listening-styles.css?v=20260710-global-theme">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js?v=20260710-theme-toggle" defer></script>
+  <script src="./app.js?v=20260710-offline-download" defer></script>
   <script src="./reading.js?v=20260708-reading-timer" type="module"></script>
   <script src="./listening.js?v=20260708-listening-workspace" defer></script>
   <script src="./writing.js?v=20260708-writing-tzx" defer></script>
@@ -81,10 +81,16 @@
 
   <main class="app-main">
     <section id="home-view" class="app-view home-view" data-page="home">
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到夜间模式" title="切换到夜间模式" aria-pressed="false">
-        <i data-lucide="moon" class="theme-toggle-icon theme-toggle-moon" aria-hidden="true"></i>
-        <i data-lucide="sun" class="theme-toggle-icon theme-toggle-sun" aria-hidden="true"></i>
-      </button>
+      <div class="home-quick-actions">
+        <button id="offline-download" class="offline-download-button" type="button" aria-label="下载离线内容" title="缓存全部阅读、听力和写作资料">
+          <i data-lucide="download" aria-hidden="true"></i>
+          <span id="offline-download-label">离线下载</span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到夜间模式" title="切换到夜间模式" aria-pressed="false">
+          <i data-lucide="moon" class="theme-toggle-icon theme-toggle-moon" aria-hidden="true"></i>
+          <i data-lucide="sun" class="theme-toggle-icon theme-toggle-sun" aria-hidden="true"></i>
+        </button>
+      </div>
 
       <div class="home-shell">
         <div class="home-brand">

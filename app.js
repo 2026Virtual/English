@@ -17,6 +17,7 @@ const CLOUD_TOOLS_HIDE_THRESHOLD = 36;
 const CLOUD_TOOLS_SCROLL_DELTA = 3;
 const CLOUD_TOOLS_TOGGLE_LOCK_MS = 450;
 const CLOUD_FETCH_PAGE_SIZE = 1000;
+const OFFLINE_SERVICE_WORKER_URL = "./sw.js";
 const PAGE_TITLES = {
   home: "英语速提升系统",
   vocabulary: "个人背单词",
@@ -69,6 +70,13 @@ const state = {
   lastScrollY: 0,
   scrollTicking: false,
   headerHiddenByScroll: false,
+  offline: {
+    registration: null,
+    status: "idle",
+    busy: false,
+    total: 0,
+    completed: 0,
+  },
 };
 
 const els = {};
@@ -86,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateApiState();
   updateMeaningModeUi();
   renderCloudNotebook();
+  initializeOfflineSupport();
   startPrewarmLoop();
   initVoices();
   loadData();
@@ -99,6 +108,8 @@ function cacheElements() {
   els.homeView = document.getElementById("home-view");
   els.homeButton = document.getElementById("home-button");
   els.themeToggle = document.getElementById("theme-toggle");
+  els.offlineDownload = document.getElementById("offline-download");
+  els.offlineDownloadLabel = document.getElementById("offline-download-label");
   els.themeColor = document.querySelector('meta[name="theme-color"]');
   els.openReadingWorkspace = document.getElementById("open-reading-workspace");
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
@@ -167,6 +178,7 @@ function cacheElements() {
 function bindEvents() {
   els.homeButton.addEventListener("click", () => switchPage("home"));
   els.themeToggle.addEventListener("click", toggleTheme);
+  els.offlineDownload?.addEventListener("click", downloadOfflineContent);
   els.openReadingWorkspace.addEventListener("click", openReadingWorkspace);
 
   els.homeMenuButtons.forEach((button) => {
@@ -286,6 +298,191 @@ function applyTheme(theme, options = {}) {
   } catch (error) {
     // The visual switch still works when storage is unavailable.
   }
+}
+
+async function initializeOfflineSupport() {
+  if (!("serviceWorker" in navigator) || !els.offlineDownload) {
+    state.offline.status = "unavailable";
+    renderOfflineDownloadButton();
+    return;
+  }
+
+  navigator.serviceWorker.addEventListener("message", handleOfflineServiceWorkerMessage);
+  navigator.serviceWorker.addEventListener("controllerchange", () => requestOfflineStatus());
+
+  try {
+    state.offline.registration = await navigator.serviceWorker.register(OFFLINE_SERVICE_WORKER_URL);
+    await navigator.serviceWorker.ready;
+    await requestOfflineStatus();
+  } catch (error) {
+    console.warn("Offline service worker registration failed", error);
+    state.offline.status = "unavailable";
+    renderOfflineDownloadButton();
+  }
+}
+
+async function getOfflineServiceWorker() {
+  const registration = state.offline.registration || (await navigator.serviceWorker.ready);
+  return navigator.serviceWorker.controller || registration.active || registration.waiting;
+}
+
+async function requestOfflineStatus() {
+  try {
+    const worker = await getOfflineServiceWorker();
+    worker?.postMessage({ type: "GET_OFFLINE_STATUS" });
+  } catch (error) {
+    console.warn("Offline status request failed", error);
+  }
+}
+
+async function downloadOfflineContent() {
+  if (state.offline.busy) return;
+  if (state.offline.status === "complete") {
+    showToast("阅读、听力和写作资料已经可以离线使用");
+    return;
+  }
+  if (!navigator.onLine) {
+    showToast("请连接网络后再下载离线内容", true);
+    return;
+  }
+
+  state.offline.busy = true;
+  state.offline.status = "downloading";
+  state.offline.completed = 0;
+  renderOfflineDownloadButton();
+
+  if (navigator.storage?.persist) {
+    navigator.storage.persist().catch(() => false);
+  }
+
+  try {
+    const worker = await getOfflineServiceWorker();
+    if (!worker) throw new Error("离线服务尚未准备好");
+    worker.postMessage({ type: "DOWNLOAD_OFFLINE_CONTENT" });
+  } catch (error) {
+    state.offline.busy = false;
+    state.offline.status = "error";
+    renderOfflineDownloadButton();
+    showToast(error.message || "离线下载启动失败", true);
+  }
+}
+
+function handleOfflineServiceWorkerMessage(event) {
+  const data = event.data || {};
+
+  if (data.type === "OFFLINE_STATUS") {
+    state.offline.status = data.status || "idle";
+    state.offline.total = Number(data.total || 0);
+    state.offline.busy = false;
+    renderOfflineDownloadButton();
+    return;
+  }
+
+  if (data.type === "OFFLINE_DOWNLOAD_START") {
+    state.offline.status = "downloading";
+    state.offline.busy = true;
+    state.offline.total = Number(data.total || 0);
+    state.offline.completed = 0;
+    renderOfflineDownloadButton();
+    return;
+  }
+
+  if (data.type === "OFFLINE_DOWNLOAD_PROGRESS") {
+    state.offline.status = "downloading";
+    state.offline.busy = true;
+    state.offline.total = Number(data.total || 0);
+    state.offline.completed = Number(data.completed || 0);
+    renderOfflineDownloadButton(Number(data.percent || 0));
+    return;
+  }
+
+  if (data.type === "OFFLINE_DOWNLOAD_COMPLETE") {
+    state.offline.status = "complete";
+    state.offline.busy = false;
+    state.offline.total = Number(data.total || 0);
+    state.offline.completed = state.offline.total;
+    renderOfflineDownloadButton();
+    showToast(`离线内容下载完成${formatOfflineSize(data.totalBytes)}`);
+    return;
+  }
+
+  if (data.type === "OFFLINE_DOWNLOAD_ERROR") {
+    state.offline.status = "error";
+    state.offline.busy = false;
+    renderOfflineDownloadButton();
+    const failed = Number(data.failed || 0);
+    showToast(failed > 1 ? `有 ${failed} 个文件下载失败，请重试` : data.message || "离线下载失败，请重试", true);
+    return;
+  }
+
+  if (data.type === "OFFLINE_DOWNLOAD_BUSY") {
+    state.offline.status = "downloading";
+    state.offline.busy = true;
+    renderOfflineDownloadButton();
+  }
+}
+
+function renderOfflineDownloadButton(percent = null) {
+  const button = els.offlineDownload;
+  const label = els.offlineDownloadLabel;
+  if (!button || !label) return;
+
+  const status = state.offline.status;
+  const isDownloading = state.offline.busy || status === "downloading";
+  const isComplete = status === "complete";
+  const isError = status === "error" || status === "unavailable";
+  const computedPercent =
+    percent ??
+    (state.offline.total ? Math.floor((state.offline.completed / state.offline.total) * 100) : 0);
+
+  button.classList.toggle("is-downloading", isDownloading);
+  button.classList.toggle("is-complete", isComplete);
+  button.classList.toggle("is-error", isError);
+  button.disabled = isDownloading || status === "unavailable";
+  button.setAttribute("aria-busy", String(isDownloading));
+
+  if (isDownloading) {
+    label.textContent = state.offline.total ? `${computedPercent}%` : "准备中";
+    button.setAttribute(
+      "aria-label",
+      state.offline.total ? `正在下载离线内容 ${computedPercent}%` : "正在准备离线下载",
+    );
+    button.title = state.offline.total
+      ? `正在缓存 ${state.offline.completed}/${state.offline.total}`
+      : "正在读取离线资源清单";
+    return;
+  }
+
+  if (isComplete) {
+    label.textContent = "已离线";
+    button.setAttribute("aria-label", "离线内容已下载");
+    button.title = "阅读、听力和写作资料已可离线使用";
+    return;
+  }
+
+  if (status === "outdated") {
+    label.textContent = "更新离线包";
+    button.setAttribute("aria-label", "更新离线内容");
+    button.title = "题库或写作资料有更新，点击重新缓存";
+    return;
+  }
+
+  if (status === "unavailable") {
+    label.textContent = "暂不支持";
+    button.setAttribute("aria-label", "当前浏览器不支持离线下载");
+    button.title = "当前浏览器或浏览模式不支持 Service Worker";
+    return;
+  }
+
+  label.textContent = status === "error" ? "重新下载" : "离线下载";
+  button.setAttribute("aria-label", status === "error" ? "重新下载离线内容" : "下载离线内容");
+  button.title = "缓存全部阅读、听力和写作资料";
+}
+
+function formatOfflineSize(bytes) {
+  const size = Number(bytes || 0);
+  if (!size) return "";
+  return `（约 ${Math.ceil(size / 1024 / 1024)} MB）`;
 }
 
 function pageFromHash() {
