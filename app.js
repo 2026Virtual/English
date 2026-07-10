@@ -6,6 +6,7 @@ const WORKSPACE_STORAGE_KEY = "personal-vocab-workspace";
 const CLOUD_SETTINGS_STORAGE_KEY = "personal-vocab-cloud-settings";
 const CLOUD_SESSION_STORAGE_KEY = "personal-vocab-cloud-session";
 const CLOUD_CACHE_STORAGE_KEY = "personal-vocab-cloud-cache";
+const THEME_STORAGE_KEY = "english-learning-theme";
 const CLOUD_TABLE_NAME = "vocabulary_mistakes";
 const PREWARM_INTERVAL_MS = 10 * 60 * 1000;
 const SCROLL_TOP_THRESHOLD = 280;
@@ -33,6 +34,7 @@ const PAGE_COPY = {
 
 const state = {
   activePage: "home",
+  theme: "light",
   chapters: [],
   chapterIndex: 0,
   searchText: "",
@@ -73,6 +75,7 @@ const els = {};
 
 document.addEventListener("DOMContentLoaded", () => {
   cacheElements();
+  initializeTheme();
   bindEvents();
   switchPage(pageFromHash(), { updateHash: false });
   loadApiSettings();
@@ -95,6 +98,8 @@ function cacheElements() {
   els.subtitle = document.getElementById("app-subtitle");
   els.homeView = document.getElementById("home-view");
   els.homeButton = document.getElementById("home-button");
+  els.themeToggle = document.getElementById("theme-toggle");
+  els.themeColor = document.querySelector('meta[name="theme-color"]');
   els.openReadingWorkspace = document.getElementById("open-reading-workspace");
   els.homeMenuButtons = Array.from(document.querySelectorAll(".home-menu-button"));
   els.vocabularyView = document.getElementById("vocabulary-view");
@@ -161,6 +166,7 @@ function cacheElements() {
 
 function bindEvents() {
   els.homeButton.addEventListener("click", () => switchPage("home"));
+  els.themeToggle.addEventListener("click", toggleTheme);
   els.openReadingWorkspace.addEventListener("click", openReadingWorkspace);
 
   els.homeMenuButtons.forEach((button) => {
@@ -244,6 +250,42 @@ function bindEvents() {
       closeCloudDialog();
     }
   });
+}
+
+function initializeTheme() {
+  let storedTheme = "light";
+
+  try {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (savedTheme === "dark" || savedTheme === "light") storedTheme = savedTheme;
+  } catch (error) {
+    // Keep the default theme when storage is unavailable.
+  }
+
+  applyTheme(storedTheme, { persist: false });
+}
+
+function toggleTheme() {
+  applyTheme(state.theme === "dark" ? "light" : "dark");
+}
+
+function applyTheme(theme, options = {}) {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  const isDark = nextTheme === "dark";
+  state.theme = nextTheme;
+  document.documentElement.dataset.theme = nextTheme;
+  els.themeColor?.setAttribute("content", isDark ? "#000000" : "#0f766e");
+  els.themeToggle?.setAttribute("aria-pressed", String(isDark));
+  els.themeToggle?.setAttribute("aria-label", isDark ? "切换到白天模式" : "切换到夜间模式");
+  els.themeToggle?.setAttribute("title", isDark ? "切换到白天模式" : "切换到夜间模式");
+
+  if (options.persist === false) return;
+
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+  } catch (error) {
+    // The visual switch still works when storage is unavailable.
+  }
 }
 
 function pageFromHash() {

@@ -30,6 +30,8 @@ jobs:
           cp -R tzx-reading _site/
           cp -R zyz-question-bank _site/
           cp -R writing-resources _site/
+          test -f _site/writing-resources/theme-sync.css
+          test -f _site/writing-resources/theme-sync.js
           test -f _site/writing-resources/tzx-writing-manifest.json
           test -d _site/writing-resources/tzx-task1
           test -d _site/writing-resources/tzx-task2

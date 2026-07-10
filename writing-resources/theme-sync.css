@@ -1,0 +1,106 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #ffffff;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --line: #343a44;
+  --border: #343a44;
+  --bg: #000000;
+  --card: #0d0f12;
+  --soft: #171a1f;
+  --link: #5eead4;
+}
+
+:root[data-theme="dark"],
+:root[data-theme="dark"] body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="dark"] .paper,
+:root[data-theme="dark"] .article,
+:root[data-theme="dark"] article,
+:root[data-theme="dark"] .toc,
+:root[data-theme="dark"] .source-toc,
+:root[data-theme="dark"] .embedded,
+:root[data-theme="dark"] .corpus-grid .vocab,
+:root[data-theme="dark"] .corpus-grid .material,
+:root[data-theme="dark"] .source-note,
+:root[data-theme="dark"] .note,
+:root[data-theme="dark"] .section-title {
+  color: #ffffff !important;
+  border-color: #343a44 !important;
+  background: #0d0f12 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme="dark"] .h-right,
+:root[data-theme="dark"] .q-text,
+:root[data-theme="dark"] .q-text *,
+:root[data-theme="dark"] .ans-text,
+:root[data-theme="dark"] .ans-text *,
+:root[data-theme="dark"] .subtle,
+:root[data-theme="dark"] .meta,
+:root[data-theme="dark"] .clean-note,
+:root[data-theme="dark"] .source-note,
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4 {
+  color: #ffffff !important;
+}
+
+:root[data-theme="dark"] a {
+  color: #5eead4;
+}
+
+:root[data-theme="dark"] td,
+:root[data-theme="dark"] th {
+  border-color: #343a44 !important;
+}
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] button:not(.tag) {
+  color: #ffffff;
+  border-color: #343a44;
+  background: #171a1f;
+}
+
+:root[data-theme="dark"] .writing-float-back,
+:root[data-theme="dark"] .writing-float-back:hover {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(13, 15, 18, 0.9) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+@media print {
+  :root[data-theme="dark"],
+  :root[data-theme="dark"] body,
+  :root[data-theme="dark"] .paper,
+  :root[data-theme="dark"] .article,
+  :root[data-theme="dark"] article,
+  :root[data-theme="dark"] .section-title,
+  :root[data-theme="dark"] .toc,
+  :root[data-theme="dark"] .source-toc {
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+
+  :root[data-theme="dark"] .h-right,
+  :root[data-theme="dark"] .q-text,
+  :root[data-theme="dark"] .q-text *,
+  :root[data-theme="dark"] .ans-text,
+  :root[data-theme="dark"] .ans-text *,
+  :root[data-theme="dark"] .subtle,
+  :root[data-theme="dark"] .meta,
+  :root[data-theme="dark"] .clean-note,
+  :root[data-theme="dark"] h1,
+  :root[data-theme="dark"] h2,
+  :root[data-theme="dark"] h3,
+  :root[data-theme="dark"] h4 {
+    color: #000000 !important;
+  }
+}

@@ -14,6 +14,20 @@
   --shadow: 0 12px 34px rgba(31, 42, 42, 0.09);
 }
 
+:root[data-theme="dark"] .reading-module {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0d0f12;
+  --surface-soft: #171a1f;
+  --ink: #ffffff;
+  --muted: #ffffff;
+  --line: #343a44;
+  --accent: #0f766e;
+  --accent-dark: #5eead4;
+  --answer: #111d1c;
+  --shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+
 .reading-module * {
   box-sizing: border-box;
 }
@@ -1940,6 +1954,133 @@ body.reading-split-dragging {
   .reading-module .item {
     grid-template-columns: 1fr;
   }
+}
+
+/* Dark theme for every reading selector, reader, review and answer surface. */
+:root[data-theme="dark"] .reading-module {
+  background: #000000;
+}
+
+:root[data-theme="dark"] .reading-module .article-head {
+  background: #000000;
+}
+
+:root[data-theme="dark"] .reading-module .action-button:hover,
+:root[data-theme="dark"] .reading-module .home-button:hover,
+:root[data-theme="dark"] .reading-module .button:hover,
+:root[data-theme="dark"] .reading-module .library-card:hover,
+:root[data-theme="dark"] .reading-module .library-card:focus-visible,
+:root[data-theme="dark"] .reading-module .test-card:hover,
+:root[data-theme="dark"] .reading-module .test-card:focus-visible,
+:root[data-theme="dark"] .reading-module .review-passage-jump:hover {
+  color: #ffffff;
+  background: #171a1f;
+  border-color: #5eead4;
+}
+
+:root[data-theme="dark"] .reading-module .clear-button,
+:root[data-theme="dark"] .reading-module .clear-button:hover {
+  color: #ffffff;
+  border-color: rgba(248, 113, 113, 0.56);
+  background: rgba(127, 29, 29, 0.42);
+}
+
+:root[data-theme="dark"] .reading-module .export-button,
+:root[data-theme="dark"] .reading-module .export-button:hover {
+  color: #ffffff;
+  border-color: rgba(45, 212, 191, 0.54);
+  background: rgba(15, 118, 110, 0.42);
+}
+
+:root[data-theme="dark"] .reading-module .answer-key-button,
+:root[data-theme="dark"] .reading-module .answer-key-button:hover,
+:root[data-theme="dark"] .reading-module .doubt-button.has-note,
+:root[data-theme="dark"] .reading-module .doubt-button.active {
+  color: #ffffff;
+  border-color: rgba(251, 191, 36, 0.58);
+  background: rgba(146, 64, 14, 0.42);
+}
+
+:root[data-theme="dark"] .reading-module .answer-button.active,
+:root[data-theme="dark"] .reading-module .answer-button:hover,
+:root[data-theme="dark"] .reading-module .selection-doubt-menu button:hover,
+:root[data-theme="dark"] .reading-module .button.primary:hover {
+  color: #ffffff;
+  border-color: #0f766e;
+  background: #0f766e;
+}
+
+:root[data-theme="dark"] .reading-module .answer-compare-head,
+:root[data-theme="dark"] .reading-module .answer-compare-summary,
+:root[data-theme="dark"] .reading-module .answer-compare-row,
+:root[data-theme="dark"] .reading-module .review-response,
+:root[data-theme="dark"] .reading-module .item {
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] .reading-module .answer-compare-summary,
+:root[data-theme="dark"] .reading-module .answer-compare-status,
+:root[data-theme="dark"] .reading-module .doubt-input,
+:root[data-theme="dark"] .reading-module .chip,
+:root[data-theme="dark"] .reading-module .zyz-html-group .question-item,
+:root[data-theme="dark"] .reading-module .zyz-html-group .match-question-item,
+:root[data-theme="dark"] .reading-module .zyz-html-group .question-row,
+:root[data-theme="dark"] .reading-module .zyz-html-group .question-block,
+:root[data-theme="dark"] .reading-module .zyz-html-group .q-block,
+:root[data-theme="dark"] .reading-module .zyz-html-group .summary-completion,
+:root[data-theme="dark"] .reading-module .zyz-html-group .notes-completion,
+:root[data-theme="dark"] .reading-module .zyz-html-group .flowchart-box,
+:root[data-theme="dark"] .reading-module .zyz-html-group .big-section,
+:root[data-theme="dark"] .reading-module .zyz-html-group .wb-item,
+:root[data-theme="dark"] .reading-module .zyz-html-group .btn-toggle,
+:root[data-theme="dark"] .reading-module .zyz-html-group .mini-btn,
+:root[data-theme="dark"] .reading-module .zyz-html-group input[type="text"],
+:root[data-theme="dark"] .reading-module .zyz-html-group textarea,
+:root[data-theme="dark"] .reading-module .zyz-html-group select,
+:root[data-theme="dark"] .reading-module .zyz-html-group .drag-item,
+:root[data-theme="dark"] .reading-module .zyz-html-group .draggable-word,
+:root[data-theme="dark"] .reading-module .zyz-html-group .heading-option,
+:root[data-theme="dark"] .reading-module .zyz-html-group .choice-item,
+:root[data-theme="dark"] .reading-module .zyz-html-group .mc-option,
+:root[data-theme="dark"] .reading-module .zyz-html-group .mcq-option,
+:root[data-theme="dark"] .reading-module .zyz-html-group .card,
+:root[data-theme="dark"] .reading-module .inline-answer:focus,
+:root[data-theme="dark"] .reading-module .answer-input,
+:root[data-theme="dark"] .reading-module .answer-cell {
+  color: #ffffff;
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .reading-module .zyz-html-group .group-instruction,
+:root[data-theme="dark"] .reading-module .zyz-html-group .word-bank-container,
+:root[data-theme="dark"] .reading-module .zyz-html-group .radio-cell:hover,
+:root[data-theme="dark"] .reading-module .zyz-html-group .ans-box,
+:root[data-theme="dark"] .reading-module .zyz-html-group .matrix-analysis,
+:root[data-theme="dark"] .reading-module .zyz-html-group th,
+:root[data-theme="dark"] .reading-module .zyz-html-group .dropzone,
+:root[data-theme="dark"] .reading-module .zyz-html-group .match-dropzone,
+:root[data-theme="dark"] .reading-module .zyz-html-group .drop-target-summary,
+:root[data-theme="dark"] .reading-module .cloze-card {
+  color: #ffffff;
+  border-color: var(--line);
+  background: var(--surface-soft);
+}
+
+:root[data-theme="dark"] .reading-module .answer-compare-row.correct .answer-compare-status,
+:root[data-theme="dark"] .reading-module .answer-compare-row.wrong .answer-compare-status,
+:root[data-theme="dark"] .reading-module .zyz-html-group .ans-row,
+:root[data-theme="dark"] .reading-module .zyz-html-group .ans-key,
+:root[data-theme="dark"] .reading-module .zyz-html-group .ans-tag {
+  color: #ffffff;
+}
+
+:root[data-theme="dark"] .reading-module .answer-compare-row.correct .answer-compare-status,
+:root[data-theme="dark"] .reading-module .zyz-html-group .ans-tag {
+  background: rgba(15, 118, 110, 0.5);
+}
+
+:root[data-theme="dark"] .reading-module .answer-compare-row.wrong .answer-compare-status {
+  background: rgba(153, 27, 27, 0.52);
 }
 
 @media (max-width: 520px) {

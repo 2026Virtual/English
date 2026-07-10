@@ -4,14 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f766e">
+  <script>
+    (() => {
+      const storageKey = "english-learning-theme";
+      let theme = "light";
+
+      try {
+        const storedTheme = localStorage.getItem(storageKey);
+        if (storedTheme === "dark" || storedTheme === "light") theme = storedTheme;
+      } catch (error) {
+        // Keep the default theme when storage is unavailable.
+      }
+
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", theme === "dark" ? "#000000" : "#0f766e");
+    })();
+  </script>
   <title>英语速提升系统</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=20260708-writing-tzx">
-  <link rel="stylesheet" href="./reading-styles.css?v=20260708-reading-timer">
-  <link rel="stylesheet" href="./listening-styles.css?v=20260708-listening-workspace">
+  <link rel="stylesheet" href="./styles.css?v=20260710-global-theme">
+  <link rel="stylesheet" href="./reading-styles.css?v=20260710-reading-head-dark">
+  <link rel="stylesheet" href="./listening-styles.css?v=20260710-global-theme">
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-  <script src="./app.js?v=20260708-reading-timer" defer></script>
+  <script src="./app.js?v=20260710-theme-toggle" defer></script>
   <script src="./reading.js?v=20260708-reading-timer" type="module"></script>
   <script src="./listening.js?v=20260708-listening-workspace" defer></script>
   <script src="./writing.js?v=20260708-writing-tzx" defer></script>
@@ -64,6 +81,11 @@
 
   <main class="app-main">
     <section id="home-view" class="app-view home-view" data-page="home">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到夜间模式" title="切换到夜间模式" aria-pressed="false">
+        <i data-lucide="moon" class="theme-toggle-icon theme-toggle-moon" aria-hidden="true"></i>
+        <i data-lucide="sun" class="theme-toggle-icon theme-toggle-sun" aria-hidden="true"></i>
+      </button>
+
       <div class="home-shell">
         <div class="home-brand">
           <img src="./favicon.svg" class="home-mark" alt="">

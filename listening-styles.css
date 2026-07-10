@@ -21,6 +21,22 @@
   line-height: 1.55;
 }
 
+:root[data-theme="dark"] .listening-module {
+  color-scheme: dark;
+  --listening-bg: #000000;
+  --listening-surface: #0d0f12;
+  --listening-soft: #171a1f;
+  --listening-ink: #ffffff;
+  --listening-muted: #ffffff;
+  --listening-line: #343a44;
+  --listening-accent: #0f766e;
+  --listening-accent-dark: #115e59;
+  --listening-blue: #60a5fa;
+  --listening-red: #f87171;
+  --listening-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+  background: #000000;
+}
+
 .listening-module * {
   box-sizing: border-box;
 }
@@ -829,4 +845,55 @@
   .dnd-cards-container {
     grid-template-columns: 1fr;
   }
+}
+
+/* Dark theme for every listening selector, workspace and question surface. */
+:root[data-theme="dark"] .listening-reader-controls {
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.92);
+}
+
+:root[data-theme="dark"] .listening-button.danger {
+  color: #ffffff;
+  border-color: rgba(248, 113, 113, 0.48);
+  background: rgba(127, 29, 29, 0.42);
+}
+
+:root[data-theme="dark"] .listening-part-button,
+:root[data-theme="dark"] .listening-workspace-jump,
+:root[data-theme="dark"] .listening-part-content th,
+:root[data-theme="dark"] .listening-part-content input[type="text"],
+:root[data-theme="dark"] .listening-part-content .ielts-listening-question-number,
+:root[data-theme="dark"] .options-drop-zone,
+:root[data-theme="dark"] .dnd-clear-zone,
+:root[data-theme="dark"] .dnd-panel,
+:root[data-theme="dark"] .dnd-card {
+  color: #ffffff;
+  border-color: var(--listening-line);
+  background: var(--listening-surface);
+}
+
+:root[data-theme="dark"] .listening-part-content .ielts-listening-option:hover,
+:root[data-theme="dark"] .listening-part-content .ielts-listening-option.is-selected,
+:root[data-theme="dark"] .options-drop-zone.is-drag-over,
+:root[data-theme="dark"] .options-drop-zone.has-value,
+:root[data-theme="dark"] .dnd-card:hover,
+:root[data-theme="dark"] .dnd-card.is-selected,
+:root[data-theme="dark"] .dnd-card.is-pointer-dragging {
+  color: #ffffff;
+  background: var(--listening-soft);
+}
+
+@keyframes listening-limit-hit-dark {
+  0%,
+  100% {
+    background: transparent;
+  }
+  30% {
+    background: rgba(153, 27, 27, 0.52);
+  }
+}
+
+:root[data-theme="dark"] .is-limit-hit {
+  animation-name: listening-limit-hit-dark;
 }
