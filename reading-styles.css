@@ -2133,7 +2133,7 @@ body.reading-split-dragging {
 
 @media (max-width: 860px) {
   .reading-module .reader-shell {
-    --mobile-question-height: 36dvh;
+    --mobile-question-height: 35dvh;
     display: block;
     height: auto;
     min-height: 100vh;
@@ -2176,10 +2176,24 @@ body.reading-split-dragging {
   }
 
   .reading-module .split-resizer {
-    display: none;
+    position: fixed;
+    right: 0;
+    bottom: var(--mobile-question-height);
+    left: 0;
+    z-index: 16;
+    height: 18px;
+    display: flex;
+    transform: translateY(50%);
   }
 
-  body.is-reading .scroll-top-button {
-    bottom: calc(36dvh + 14px);
+  .reading-module .split-resizer span {
+    width: 76px;
+    height: 5px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--surface);
+  }
+
+  body.is-reading.is-reading-test .scroll-top-button {
+    bottom: calc(var(--reading-mobile-question-height, 35dvh) + 14px);
   }
 }

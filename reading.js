@@ -90,6 +90,7 @@ async function openReadingWorkspace() {
 function hideReadingApp() {
   teardownArticleDoubtSelection();
   teardownReaderTimer();
+  document.body.classList.remove("is-reading-test");
 }
 
 async function loadReadingManifest() {
@@ -191,6 +192,7 @@ function navigateReading(route) {
 
 function emitReadingRouteChange(route = state.route) {
   const outerView = route.view === "test" || route.view === "workspace" ? route.view : "selector";
+  document.body.classList.toggle("is-reading-test", route.view === "test");
   window.dispatchEvent(
     new CustomEvent("reading-route-change", {
       detail: { view: outerView },
@@ -2430,8 +2432,11 @@ function setupSplitResizer(testId, passageNo) {
   const resizerHeight = splitResizer.getBoundingClientRect().height || 14;
 
   const ratioBounds = () => {
-    const containerHeight = splitReader.getBoundingClientRect().height - resizerHeight;
-    const minPanePx = window.innerWidth <= 860 ? 120 : 170;
+    const isMobile = window.innerWidth <= 860;
+    const containerHeight = isMobile
+      ? window.innerHeight - resizerHeight
+      : splitReader.getBoundingClientRect().height - resizerHeight;
+    const minPanePx = isMobile ? 120 : 170;
     if (containerHeight <= 0) {
       return { min: 25, max: 80 };
     }
@@ -2446,7 +2451,13 @@ function setupSplitResizer(testId, passageNo) {
   const setRatio = (ratio, persist = false) => {
     const { min, max } = ratioBounds();
     const next = clampRatio(ratio, min, max);
+    const mobileQuestionHeight = 100 - next;
     splitReader.style.setProperty("--article-size", `${next}%`);
+    splitReader.style.setProperty("--mobile-question-height", `${mobileQuestionHeight}dvh`);
+    document.documentElement.style.setProperty(
+      "--reading-mobile-question-height",
+      `${mobileQuestionHeight}dvh`,
+    );
     splitResizer.setAttribute("aria-valuemin", String(Math.round(min)));
     splitResizer.setAttribute("aria-valuemax", String(Math.round(max)));
     splitResizer.setAttribute("aria-valuenow", String(Math.round(next)));
@@ -2455,6 +2466,9 @@ function setupSplitResizer(testId, passageNo) {
   };
 
   const ratioFromPointer = (clientY) => {
+    if (window.innerWidth <= 860) {
+      return (clientY / window.innerHeight) * 100;
+    }
     const rect = splitReader.getBoundingClientRect();
     const usableHeight = rect.height - resizerHeight;
     if (usableHeight <= 0) return 65;
