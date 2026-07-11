@@ -2133,6 +2133,7 @@ body.reading-split-dragging {
 
 @media (max-width: 860px) {
   .reading-module .reader-shell {
+    --mobile-question-height: 36dvh;
     display: block;
     height: auto;
     min-height: 100vh;
@@ -2144,19 +2145,41 @@ body.reading-split-dragging {
     height: auto;
   }
 
-  .reading-module .article-pane,
-  .reading-module .question-pane {
+  .reading-module .article-pane {
     flex: none;
+    overflow: visible;
+    padding-bottom: var(--mobile-question-height);
   }
 
-  .reading-module .split-pane,
-  .reading-module .article-pane .reader-panel,
-  .reading-module .question-pane .question-panel {
+  .reading-module .article-pane .reader-panel {
     height: auto;
     overflow: visible;
   }
 
+  .reading-module .question-pane {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    height: var(--mobile-question-height);
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .reading-module .question-pane .question-panel {
+    height: 100%;
+    overflow: auto;
+    overscroll-behavior-y: contain;
+    padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+    -webkit-overflow-scrolling: touch;
+  }
+
   .reading-module .split-resizer {
     display: none;
+  }
+
+  body.is-reading .scroll-top-button {
+    bottom: calc(36dvh + 14px);
   }
 }
