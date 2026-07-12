@@ -1248,8 +1248,9 @@ function setupQuestionKeyboardScrollLock() {
   teardownQuestionKeyboardScrollLock();
 
   const questionPane = document.querySelector(".question-pane");
+  const articlePane = document.querySelector(".article-pane");
   const isMobile = window.matchMedia("(max-width: 860px)").matches;
-  if (!questionPane || !isMobile) return;
+  if (!questionPane || !articlePane || !isMobile) return;
 
   const fieldSelector = 'input, textarea, select, [contenteditable="true"]';
   const visualViewport = window.visualViewport;
@@ -1258,10 +1259,25 @@ function setupQuestionKeyboardScrollLock() {
   let keyboardWasOpen = false;
   let baselineViewportHeight = visualViewport?.height || window.innerHeight;
   let releaseTimer = 0;
+  let safetyTimer = 0;
   let restoreFrame = 0;
 
   const isQuestionField = (target) =>
     target instanceof Element && Boolean(target.closest(fieldSelector)) && questionPane.contains(target);
+
+  const clearSafetyUnlock = () => {
+    if (!safetyTimer) return;
+    window.clearTimeout(safetyTimer);
+    safetyTimer = 0;
+  };
+
+  const scheduleSafetyUnlock = (delay = 700) => {
+    clearSafetyUnlock();
+    safetyTimer = window.setTimeout(() => {
+      safetyTimer = 0;
+      unlockArticlePosition();
+    }, delay);
+  };
 
   const lockArticlePosition = () => {
     if (releaseTimer) {
@@ -1279,20 +1295,32 @@ function setupQuestionKeyboardScrollLock() {
     lockedScrollY = window.scrollY;
     document.documentElement.style.setProperty("--reading-keyboard-scroll-offset", `${-lockedScrollY}px`);
     document.body.classList.add("is-reading-question-input-active");
+    scheduleSafetyUnlock();
   };
 
-  const unlockArticlePosition = () => {
+  const unlockArticlePosition = (confirmOnNextFrame = true) => {
     if (!locked) return;
 
     const restoreScrollY = lockedScrollY;
     locked = false;
+    clearSafetyUnlock();
+    if (releaseTimer) {
+      window.clearTimeout(releaseTimer);
+      releaseTimer = 0;
+    }
+    if (restoreFrame) {
+      window.cancelAnimationFrame(restoreFrame);
+      restoreFrame = 0;
+    }
     document.body.classList.remove("is-reading-question-input-active");
     document.documentElement.style.removeProperty("--reading-keyboard-scroll-offset");
     window.scrollTo({ top: restoreScrollY, behavior: "auto" });
-    restoreFrame = window.requestAnimationFrame(() => {
-      restoreFrame = 0;
-      window.scrollTo({ top: restoreScrollY, behavior: "auto" });
-    });
+    if (confirmOnNextFrame) {
+      restoreFrame = window.requestAnimationFrame(() => {
+        restoreFrame = 0;
+        window.scrollTo({ top: restoreScrollY, behavior: "auto" });
+      });
+    }
   };
 
   const handleFocusIn = (event) => {
@@ -1305,6 +1333,14 @@ function setupQuestionKeyboardScrollLock() {
     if (isQuestionField(event.target)) {
       lockArticlePosition();
     }
+  };
+
+  const handleArticlePointerDown = () => {
+    const activeElement = document.activeElement;
+    if (isQuestionField(activeElement) && typeof activeElement.blur === "function") {
+      activeElement.blur();
+    }
+    unlockArticlePosition(false);
   };
 
   const handleFocusOut = () => {
@@ -1328,24 +1364,29 @@ function setupQuestionKeyboardScrollLock() {
     const heightReduction = baselineViewportHeight - currentHeight;
     if (heightReduction >= 120) {
       keyboardWasOpen = true;
+      scheduleSafetyUnlock(300);
     } else if (keyboardWasOpen && heightReduction <= 60) {
       unlockArticlePosition();
     }
   };
 
+  articlePane.addEventListener("pointerdown", handleArticlePointerDown);
   questionPane.addEventListener("pointerdown", handlePointerDown, { passive: true });
   questionPane.addEventListener("focusin", handleFocusIn);
   questionPane.addEventListener("focusout", handleFocusOut);
   (visualViewport || window).addEventListener("resize", handleViewportResize, { passive: true });
 
   state.questionKeyboardCleanup = () => {
+    articlePane.removeEventListener("pointerdown", handleArticlePointerDown);
     questionPane.removeEventListener("pointerdown", handlePointerDown);
     questionPane.removeEventListener("focusin", handleFocusIn);
     questionPane.removeEventListener("focusout", handleFocusOut);
     (visualViewport || window).removeEventListener("resize", handleViewportResize);
     if (releaseTimer) window.clearTimeout(releaseTimer);
+    clearSafetyUnlock();
     if (restoreFrame) window.cancelAnimationFrame(restoreFrame);
     releaseTimer = 0;
+    safetyTimer = 0;
     restoreFrame = 0;
     unlockArticlePosition();
   };
