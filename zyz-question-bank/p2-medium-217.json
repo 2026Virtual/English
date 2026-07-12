@@ -1,0 +1,228 @@
+{
+  "id": "p2-medium-217",
+  "source": "zyz",
+  "group": "p2-medium",
+  "category": "P2",
+  "frequency": "medium",
+  "title": "A mechanical friend for children 孩子的机器人朋友【次】",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "d",
+    "q2": "f",
+    "q3": "d",
+    "q4": "a",
+    "q5": "c",
+    "q6": "b",
+    "q7": "c",
+    "q8": "a",
+    "q9": "d",
+    "q10": "a",
+    "q11": "storytellers",
+    "q12": "peer",
+    "q13": "affection"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "A mechanical friend for children 孩子的机器人朋友【次】",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14–18",
+          "question_range": {
+            "text": "Questions 14–18",
+            "start": 14,
+            "end": 18,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage 2 has seven paragraphs, A–G .",
+            "Which paragraph contains the following information?",
+            "NB You may use any letter more than once.",
+            "Drag the correct paragraph letter (A-G) to the box next to the statement.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "14 a comparison of children’s reactions towards different robots",
+            "15 a speculation about ways robots may be able to communicate",
+            "16 a description of changes in the way the children physically handled a robot",
+            "17 a comparison between people’s connections with animals and their connections with robots",
+            "18 an account of the way one robot was programmed"
+          ],
+          "instructions": [
+            "Reading Passage 2 has seven paragraphs, A–G .",
+            "Which paragraph contains the following information?",
+            "NB You may use any letter more than once.",
+            "Drag the correct paragraph letter (A-G) to the box next to the statement.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14–18</h4>\n      <p>Reading Passage 2 has seven paragraphs, <strong>A–G</strong>.</p>\n      <p>Which paragraph contains the following information?</p>\n      <p><em>NB You may use any letter more than once.</em></p>\n      <p><em>Drag the correct paragraph letter (A-G) to the box next to the statement.</em></p>\n\n      <!-- Draggable Options Pool (Cloneable) -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-paragraphs\">\n        <div class=\"card\" draggable=\"true\" id=\"c-a\" data-value=\"A\" data-clone=\"true\"><strong>A</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-b\" data-value=\"B\" data-clone=\"true\"><strong>B</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-c\" data-value=\"C\" data-clone=\"true\"><strong>C</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-d\" data-value=\"D\" data-clone=\"true\"><strong>D</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-e\" data-value=\"E\" data-clone=\"true\"><strong>E</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-f\" data-value=\"F\" data-clone=\"true\"><strong>F</strong></div>\n        <div class=\"card\" draggable=\"true\" id=\"c-g\" data-value=\"G\" data-clone=\"true\"><strong>G</strong></div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div class=\"question-block\">\n        <p><a id=\"q1-anchor\"></a><strong>14</strong> a comparison of children’s reactions towards different robots</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q1\" data-question=\"q1\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q2-anchor\"></a><strong>15</strong> a speculation about ways robots may be able to communicate</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q2\" data-question=\"q2\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q3-anchor\"></a><strong>16</strong> a description of changes in the way the children physically handled a robot</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q3\" data-question=\"q3\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q4-anchor\"></a><strong>17</strong> a comparison between people’s connections with animals and their connections with robots</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q4\" data-question=\"q4\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q5-anchor\"></a><strong>18</strong> an account of the way one robot was programmed</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q5\" data-question=\"q5\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": true
+        },
+        {
+          "title": "Questions 19–23",
+          "question_range": {
+            "text": "Questions 19–23",
+            "start": 19,
+            "end": 23,
+            "numbers": [
+              19,
+              20,
+              21,
+              22,
+              23
+            ]
+          },
+          "raw_lines": [
+            "Look at the following statements (Questions 19–23) and the list of people below.",
+            "Match each statement with the correct person, A-D .",
+            "NB You may use any letter more than once.",
+            "Drag the correct person block to the box below each statement.",
+            "A Fumihide Tanaka",
+            "B Javier R. Movellan",
+            "C Ronald Arkin",
+            "D David Powers",
+            "19 In future, robots will not only have to think, but also to show feelings.",
+            "20 It is uncertain whether more contact between people and robots will be beneficial.",
+            "21 Very young children have not yet developed ideas about robots.",
+            "22 Robots need to perform a wide variety of actions for people to relate to them.",
+            "23 Using robots as an aid in schools may have many benefits."
+          ],
+          "instructions": [
+            "Look at the following statements (Questions 19–23) and the list of people below.",
+            "Match each statement with the correct person, A-D .",
+            "NB You may use any letter more than once.",
+            "Drag the correct person block to the box below each statement.",
+            "A Fumihide Tanaka",
+            "B Javier R. Movellan",
+            "C Ronald Arkin",
+            "D David Powers"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 19–23</h4>\n      <p>Look at the following statements (Questions 19–23) and the list of people below.</p>\n      <p>Match each statement with the correct person, <strong>A-D</strong>.</p>\n      <p><em>NB You may use any letter more than once.</em></p>\n      <p><em>Drag the correct person block to the box below each statement.</em></p>\n\n      <!-- Draggable Options Pool (Cloneable) -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-people\">\n        <div class=\"card\" draggable=\"true\" id=\"res-A\" data-value=\"A\" data-clone=\"true\"><strong>A</strong> Fumihide Tanaka</div>\n        <div class=\"card\" draggable=\"true\" id=\"res-B\" data-value=\"B\" data-clone=\"true\"><strong>B</strong> Javier R. Movellan</div>\n        <div class=\"card\" draggable=\"true\" id=\"res-C\" data-value=\"C\" data-clone=\"true\"><strong>C</strong> Ronald Arkin</div>\n        <div class=\"card\" draggable=\"true\" id=\"res-D\" data-value=\"D\" data-clone=\"true\"><strong>D</strong> David Powers</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div class=\"question-block\">\n        <p><a id=\"q6-anchor\"></a><strong>19</strong> In future, robots will not only have to think, but also to show feelings.</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q6\" data-question=\"q6\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q7-anchor\"></a><strong>20</strong> It is uncertain whether more contact between people and robots will be beneficial.</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q7\" data-question=\"q7\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q8-anchor\"></a><strong>21</strong> Very young children have not yet developed ideas about robots.</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q8\" data-question=\"q8\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q9-anchor\"></a><strong>22</strong> Robots need to perform a wide variety of actions for people to relate to them.</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q9\" data-question=\"q9\"></span>\n      </div>\n      <div class=\"question-block\">\n        <p><a id=\"q10-anchor\"></a><strong>23</strong> Using robots as an aid in schools may have many benefits.</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q10\" data-question=\"q10\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q6",
+            "q7",
+            "q8",
+            "q9",
+            "q10"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": true
+        },
+        {
+          "title": "Questions 24–26",
+          "question_range": {
+            "text": "Questions 24–26",
+            "start": 24,
+            "end": 26,
+            "numbers": [
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Complete the sentences below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "24 Until recently, robots that were best at holding people’s attention were those that acted as .",
+            "25 The children responded to the QRIO robot as a friend or a rather than as a toy.",
+            "26 Arkin expected that the children would show towards the QRIO robot."
+          ],
+          "instructions": [
+            "Complete the sentences below.",
+            "Choose ONE WORD ONLY from the passage for each answer."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 24–26</h4>\n      <p>Complete the sentences below.</p>\n      <p>Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.</p>\n      \n      <p>24 Until recently, robots that were best at holding people’s attention were those that acted as <a id=\"q11-anchor\"></a><input class=\"blank\" type=\"text\" name=\"q11\">.</p>\n      <p>25 The children responded to the QRIO robot as a friend or a <a id=\"q12-anchor\"></a><input class=\"blank\" type=\"text\" name=\"q12\"> rather than as a toy.</p>\n      <p>26 Arkin expected that the children would show <a id=\"q13-anchor\"></a><input class=\"blank\" type=\"text\" name=\"q13\"> towards the QRIO robot.</p>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "sentence_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

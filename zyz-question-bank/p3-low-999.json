@@ -1,0 +1,245 @@
+{
+  "id": "p3-low-999",
+  "source": "zyz",
+  "group": "p3-low",
+  "category": "P3",
+  "frequency": "low",
+  "title": "Risk taking",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "E",
+    "q2": "F",
+    "q3": "D",
+    "q4": "A",
+    "q5": "B",
+    "q6": "F",
+    "q7": "C",
+    "q8": "A",
+    "q9": "B",
+    "q10": "E",
+    "q11": "H",
+    "q12": "D",
+    "q13": "C",
+    "q14": "B"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14"
+  ],
+  "question_display_map": {
+    "q1": "27",
+    "q2": "28",
+    "q3": "29",
+    "q4": "30",
+    "q5": "31",
+    "q6": "32",
+    "q7": "33",
+    "q8": "34",
+    "q9": "35",
+    "q10": "36",
+    "q11": "37",
+    "q12": "38",
+    "q13": "39",
+    "q14": "40"
+  },
+  "passages": [
+    {
+      "passage_no": 3,
+      "question_range": {
+        "start": 27,
+        "end": 40
+      },
+      "title": "Risk taking",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 27-40."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 3,
+      "groups": [
+        {
+          "title": "Questions 27–30",
+          "question_range": {
+            "text": "Questions 27–30",
+            "start": 27,
+            "end": 30,
+            "numbers": [
+              27,
+              28,
+              29,
+              30
+            ]
+          },
+          "raw_lines": [
+            "Complete each sentence with the correct ending, A–G, below.",
+            "Write the correct letter, A–G, in boxes 27–30 on your answer sheet.",
+            "List of endings:",
+            "A planning for the future.",
+            "B predicting their errors.",
+            "C continuing in the present situation.",
+            "D recent findings on the most effective solutions to problems.",
+            "E achieving a gain.",
+            "F changes occurring externally.",
+            "G a high level of agreement.",
+            "27. K. C. Cole points out that avoiding a loss seems more important to people than ______.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "28. According to Andrew S. Grove, it can be very dangerous for companies to ignore ______.",
+            "A B C D E F G",
+            "29. Reid J. Lifset argues that environmental agencies can benefit from ______.",
+            "A B C D E F G",
+            "30. The writer suggests that government leaders need to focus more on ______.",
+            "A B C D E F G"
+          ],
+          "instructions": [
+            "Complete each sentence with the correct ending, A–G, below.",
+            "Write the correct letter, A–G, in boxes 27–30 on your answer sheet.",
+            "List of endings:",
+            "A planning for the future.",
+            "B predicting their errors.",
+            "C continuing in the present situation.",
+            "D recent findings on the most effective solutions to problems.",
+            "E achieving a gain.",
+            "F changes occurring externally.",
+            "G a high level of agreement."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n        <h4>Questions 27–30</h4>\n        <p>Complete each sentence with the correct ending, A–G, below.</p>\n        <p>Write the correct letter, A–G, in boxes 27–30 on your answer sheet.</p>\n        <div class=\"option-pool\">\n          <strong>List of endings:</strong>\n          <ul style=\"margin:5px 0 0; padding-left:20px;\">\n            <li>A planning for the future.</li>\n            <li>B predicting their errors.</li>\n            <li>C continuing in the present situation.</li>\n            <li>D recent findings on the most effective solutions to problems.</li>\n            <li>E achieving a gain.</li>\n            <li>F changes occurring externally.</li>\n            <li>G a high level of agreement.</li>\n          </ul>\n        </div>\n\n        <a id=\"q1-anchor\"></a>\n        <div style=\"padding:8px 0; border-top:1px dashed var(--line);\">\n          <p>27. K. C. Cole points out that avoiding a loss seems more important to people than ______.</p>\n          <div class=\"match-option\" style=\"gap:6px;\">\n            <label><input type=\"radio\" name=\"q1\" value=\"A\"> A</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"B\"> B</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"C\"> C</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"D\"> D</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"E\"> E</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"F\"> F</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"G\"> G</label>\n          </div>\n        </div>\n        <a id=\"q2-anchor\"></a>\n        <div style=\"padding:8px 0; border-top:1px dashed var(--line);\">\n          <p>28. According to Andrew S. Grove, it can be very dangerous for companies to ignore ______.</p>\n          <div class=\"match-option\" style=\"gap:6px;\">\n            <label><input type=\"radio\" name=\"q2\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q2\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q2\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q2\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q2\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q2\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q2\" value=\"G\"> G</label>\n          </div>\n        </div>\n        <a id=\"q3-anchor\"></a>\n        <div style=\"padding:8px 0; border-top:1px dashed var(--line);\">\n          <p>29. Reid J. Lifset argues that environmental agencies can benefit from ______.</p>\n          <div class=\"match-option\" style=\"gap:6px;\">\n            <label><input type=\"radio\" name=\"q3\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q3\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q3\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q3\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q3\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q3\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q3\" value=\"G\"> G</label>\n          </div>\n        </div>\n        <a id=\"q4-anchor\"></a>\n        <div style=\"padding:8px 0; border-top:1px dashed var(--line);\">\n          <p>30. The writer suggests that government leaders need to focus more on ______.</p>\n          <div class=\"match-option\" style=\"gap:6px;\">\n            <label><input type=\"radio\" name=\"q4\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q4\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q4\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q4\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q4\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q4\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q4\" value=\"G\"> G</label>\n          </div>\n        </div>\n      </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 31–39",
+          "question_range": {
+            "text": "Questions 31–39",
+            "start": 31,
+            "end": 39,
+            "numbers": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          "raw_lines": [
+            "The reading passage has eight paragraphs, A–H .",
+            "Which paragraph contains the following information?",
+            "Write the correct letter, A–H , in boxes 31–39 on your answer sheet.",
+            "NB You may use any letter more than once.",
+            "31. the areas of study that help us understand risk",
+            "A B C D E F G H",
+            "32. reference to key actions that might benefit the world",
+            "A B C D E F G H",
+            "33. examples of statistical predictions that the majority of the public react to in the same way",
+            "A B C D E F G H",
+            "34. the variety of contexts in which risk occurs",
+            "A B C D E F G H",
+            "35. mention of a habit that has been proved to be very risky",
+            "A B C D E F G H",
+            "36. reference to market forces motivating change",
+            "A B C D E F G H",
+            "37. the writer's current attitude towards risk",
+            "A B C D E F G H",
+            "38. a reason why some individuals avoid making a career change",
+            "A B C D E F G H",
+            "39. how some people over-react to information about risk",
+            "A B C D E F G H"
+          ],
+          "instructions": [
+            "The reading passage has eight paragraphs, A–H .",
+            "Which paragraph contains the following information?",
+            "Write the correct letter, A–H , in boxes 31–39 on your answer sheet.",
+            "NB You may use any letter more than once."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n        <h4>Questions 31–39</h4>\n        <p>The reading passage has eight paragraphs, <strong>A–H</strong>.</p>\n        <p>Which paragraph contains the following information?</p>\n        <p>Write the correct letter, <strong>A–H</strong>, in boxes 31–39 on your answer sheet.</p>\n        <p><em>NB You may use any letter more than once.</em></p>\n\n        <a id=\"q5-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">31.</span> the areas of study that help us understand risk\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q5\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q5\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q5\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q5\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q5\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q5\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q5\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q5\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q6-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">32.</span> reference to key actions that might benefit the world\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q6\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q6\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q6\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q6\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q6\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q6\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q6\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q6\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q7-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">33.</span> examples of statistical predictions that the majority of the public react to in the same way\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q7\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q7\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q7\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q7\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q7\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q7\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q7\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q7\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q8-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">34.</span> the variety of contexts in which risk occurs\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q8\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q8\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q8\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q8\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q8\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q8\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q8\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q8\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q9-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">35.</span> mention of a habit that has been proved to be very risky\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q9\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q9\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q9\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q9\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q9\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q9\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q9\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q9\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q10-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">36.</span> reference to market forces motivating change\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q10\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q10\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q10\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q10\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q10\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q10\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q10\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q10\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q11-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">37.</span> the writer's current attitude towards risk\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q11\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q11\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q11\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q11\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q11\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q11\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q11\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q11\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q12-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">38.</span> a reason why some individuals avoid making a career change\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q12\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q12\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q12\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q12\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q12\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q12\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q12\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q12\" value=\"H\"></label></div>\n        </div>\n        <a id=\"q13-anchor\"></a><div style=\"padding:6px 0;\"><span class=\"question-number\">39.</span> how some people over-react to information about risk\n          <div class=\"match-option\"><label>A<input type=\"radio\" name=\"q13\" value=\"A\"></label><label>B<input type=\"radio\" name=\"q13\" value=\"B\"></label><label>C<input type=\"radio\" name=\"q13\" value=\"C\"></label><label>D<input type=\"radio\" name=\"q13\" value=\"D\"></label><label>E<input type=\"radio\" name=\"q13\" value=\"E\"></label><label>F<input type=\"radio\" name=\"q13\" value=\"F\"></label><label>G<input type=\"radio\" name=\"q13\" value=\"G\"></label><label>H<input type=\"radio\" name=\"q13\" value=\"H\"></label></div>\n        </div>\n      </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q9",
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Question 40",
+          "question_range": {
+            "text": "Question 40",
+            "start": 40,
+            "end": 40,
+            "numbers": [
+              40
+            ]
+          },
+          "raw_lines": [
+            "Choose the correct letter, A, B, C or D.",
+            "40. At the end of the passage the writer concludes that",
+            "A. risk is something we must try to avoid.",
+            "B. experts should be truthful about risk to the public.",
+            "C. optimists are better able to deal with risk than pessimists.",
+            "D. it is important to take risks in order to fulfil social obligations."
+          ],
+          "instructions": [
+            "Choose the correct letter, A, B, C or D."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n        <h4>Question 40</h4>\n        <p>Choose the correct letter, A, B, C or D.</p>\n        <a id=\"q14-anchor\"></a>\n        <div><p>40. At the end of the passage the writer concludes that</p>\n          <div class=\"mcq-options\">\n            <div class=\"mcq-option\"><label><input type=\"radio\" name=\"q14\" value=\"A\"> A. risk is something we must try to avoid.</label></div>\n            <div class=\"mcq-option\"><label><input type=\"radio\" name=\"q14\" value=\"B\"> B. experts should be truthful about risk to the public.</label></div>\n            <div class=\"mcq-option\"><label><input type=\"radio\" name=\"q14\" value=\"C\"> C. optimists are better able to deal with risk than pessimists.</label></div>\n            <div class=\"mcq-option\"><label><input type=\"radio\" name=\"q14\" value=\"D\"> D. it is important to take risks in order to fulfil social obligations.</label></div>\n          </div>\n        </div>\n      </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q14"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

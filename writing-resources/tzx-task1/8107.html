@@ -1,0 +1,217 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>超市购买食物的比例 · 躺着学写作 Task 1</title>
+        <style>
+            body { font-family: "Microsoft YaHei", sans-serif; padding: 40px; background: #eee; }
+            .paper { width: 95%; max-width: 1800px; min-height: 90vh; background: white; margin: 0 auto; padding: 50px; box-sizing: border-box; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .header { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; }
+            .h-left h1 { font-size: 24px; margin: 0; }
+            .h-right { text-align: right; color: #666; font-size: 14px; }
+            .tag { display: inline-block; background: #007bff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+            
+            .content-grid { display: flex; gap: 30px; }
+            .col-left { flex: 1; border-right: 1px dashed #ccc; padding-right: 20px; }
+            .col-right { flex: 1; padding-left: 10px; }
+            
+            .section-title { font-weight: bold; font-size: 16px; margin-bottom: 10px; border-left: 4px solid #007bff; padding-left: 8px; background: #f9f9f9; padding: 5px 8px; }
+            .q-text { font-size: 14px; color: #444; line-height: 1.5; margin-bottom: 15px; }
+            .q-img { width: 100%; border: 1px solid #ddd; margin-top: 10px; }
+            .ans-text { font-size: 15px; line-height: 1.8; color: #222; text-align: justify; }
+            
+            /* 打印控制：强制分页 */
+            @media print { body { background: none; } .paper { box-shadow: none; margin: 0; width: 100%; } }
+        </style>
+    
+<style id="tzx-writing-adapt">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    padding: 22px 14px 34px;
+    background: #f6f4ef;
+    color: #1f2a2a;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .paper {
+    width: min(1180px, 100%) !important;
+    max-width: 1180px !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: clamp(18px, 4vw, 42px) !important;
+    border: 1px solid #d9dfdc;
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(31, 42, 42, 0.09) !important;
+  }
+  .header {
+    gap: 12px;
+    border-bottom-color: #d9dfdc !important;
+    flex-wrap: wrap;
+  }
+  .h-left h1 { line-height: 1.25; }
+  .tag {
+    background: #0b7a75 !important;
+    border-radius: 999px !important;
+    padding: 3px 9px !important;
+  }
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+    gap: 24px !important;
+  }
+  .col-left {
+    min-width: 0;
+    border-right: 1px dashed #d9dfdc !important;
+    padding-right: 20px !important;
+  }
+  .col-right {
+    min-width: 0;
+    padding-left: 0 !important;
+  }
+  .section-title {
+    border-left-color: #0b7a75 !important;
+    background: #f8faf9 !important;
+    color: #1f2a2a;
+  }
+  .q-text,
+  .ans-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .ans-text p,
+  .ans-text span,
+  .q-text p,
+  .q-text span {
+    max-width: 100%;
+  }
+  .q-img,
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .writing-float-menu {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 10000;
+    opacity: 0.88;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .writing-float-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+  .writing-float-back {
+    min-height: 38px;
+    border: 1px solid rgba(31, 42, 42, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1f2a2a;
+    padding: 0 13px;
+    font: 700 14px/1.2 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: 0 10px 28px rgba(31, 42, 42, 0.14);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+  }
+  .writing-float-back:hover { background: #fff; }
+  @media (max-width: 820px) {
+    body { padding: 10px 8px 26px !important; }
+    .paper { padding: 16px !important; }
+    .header {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr);
+      margin-bottom: 18px !important;
+    }
+    .h-right {
+      text-align: left !important;
+      font-size: 13px !important;
+    }
+    .content-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px !important;
+    }
+    .col-left {
+      border-right: 0 !important;
+      border-bottom: 1px dashed #d9dfdc;
+      padding-right: 0 !important;
+      padding-bottom: 16px;
+    }
+    .q-text,
+    .ans-text {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+    .writing-float-menu {
+      top: 10px;
+      left: 10px;
+    }
+  }
+</style>
+<script data-writing-theme src="../theme-sync.js?v=20260710-global-theme"></script>
+<link data-writing-theme rel="stylesheet" href="../theme-sync.css?v=20260710-global-theme">
+</head>
+    <body>
+
+<div class="writing-float-menu" id="writing-float-menu">
+  <button class="writing-float-back" type="button" id="writing-float-back">← 返回</button>
+</div>
+        <div class="paper">
+            <div class="header">
+                <div class="h-left">
+                    <h1>超市购买食物的比例</h1>
+                    <div style="margin-top:5px;"><span class="tag">饼状图</span></div>
+                </div>
+                <div class="h-right">
+                    ID: 8107<br>
+                    命中: 2025-09-22
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <div class="section-title">Question</div>
+                    <div class="q-text"><p>The charts below show the percentage of food and goods bought in supermarkets in European countries in 1998 and 2008.</p><p><br/></p><p>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p><p><br/></p><p>Write at least 150 words.</p></div>
+                    <img src="images/8107.webp" class="q-img" loading="lazy" decoding="async">
+                </div>
+
+                <div class="col-right">
+                    <div class="section-title" style="border-color:#28a745;">Sample Answer</div>
+                    <div class="ans-text"><p>The two bar charts compare the percentages of food and other goods purchased from supermarkets in three European countries—Country 1, Country 2, and Country 3—in 1998 and 2008.</p><p><br/></p><p>Overall, the proportion of both food and other goods bought in supermarkets increased across all three countries over the ten-year period. While Country 2 recorded the highest figures in 1998, Country 1 surpassed the others by 2008, achieving the highest percentages in both categories.</p><p><br/></p><p>Regarding food purchases, Country 1 experienced a substantial rise, increasing from around 10% in 1998 to 35% in 2008, representing the largest growth among the three nations. Country 2 also witnessed a moderate increase, with the figure rising from approximately 23% to 28%. In contrast, Country 3 saw only a slight growth, climbing from 6% to just under 10% over the same period.</p><p><br/></p><p>In terms of other goods, Country 1 started at about less than 5% in 1998 and rose sharply to nearly 40% in 2008, marking the most significant increase in this category. Country 2 experienced a gradual growth, from 24% to 26% over the decade. Although Country 3 recorded a considerable rise from just 1% to around 15%, it remained the lowest among the three countries in both years.</p><p><br/></p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+(function(){
+  const menu = document.getElementById("writing-float-menu");
+  const back = document.getElementById("writing-float-back");
+  if (!menu || !back) return;
+  let lastY = window.scrollY;
+  back.addEventListener("click", function(){
+    const ref = document.referrer;
+    try {
+      if (ref && new URL(ref).origin === window.location.origin) {
+        history.back();
+        return;
+      }
+    } catch (error) {}
+    window.location.href = "../../#writing";
+  });
+  window.addEventListener("scroll", function(){
+    const y = window.scrollY;
+    if (y > lastY && y > 80) {
+      menu.classList.add("is-hidden");
+    } else {
+      menu.classList.remove("is-hidden");
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+</script>
+</body>
+    </html>
+    

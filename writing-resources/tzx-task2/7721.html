@@ -1,0 +1,224 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>孩子的自由 · 躺着学写作 Task 2</title>
+        <style>
+            body { font-family: "Microsoft YaHei", sans-serif; padding: 40px; background: #eee; }
+            /* 保持宽屏布局 */
+            .paper { width: 95%; max-width: 1800px; min-height: 90vh; background: white; margin: 0 auto; padding: 50px; box-sizing: border-box; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .header { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; }
+            .h-left h1 { font-size: 24px; margin: 0; }
+            .h-right { text-align: right; color: #666; font-size: 14px; }
+            .tag { display: inline-block; background: #007bff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+            
+            .content-grid { display: flex; gap: 30px; }
+            .col-left { flex: 1; border-right: 1px dashed #ccc; padding-right: 20px; }
+            .col-right { flex: 1; padding-left: 10px; }
+            
+            .section-title { font-weight: bold; font-size: 16px; margin-bottom: 10px; border-left: 4px solid #007bff; padding-left: 8px; background: #f9f9f9; padding: 5px 8px; }
+            .q-text { font-size: 16px; color: #333; line-height: 1.6; margin-bottom: 15px; }
+            .q-img { width: 100%; border: 1px solid #ddd; margin-top: 10px; }
+            .ans-text { font-size: 16px; line-height: 1.8; color: #222; text-align: justify; }
+            
+            @media print { body { background: none; } .paper { box-shadow: none; margin: 0; width: 100%; } }
+        </style>
+    
+<style id="tzx-writing-adapt">
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    padding: 22px 14px 34px;
+    background: #f6f4ef;
+    color: #1f2a2a;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .paper {
+    width: min(1180px, 100%) !important;
+    max-width: 1180px !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: clamp(18px, 4vw, 42px) !important;
+    border: 1px solid #d9dfdc;
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(31, 42, 42, 0.09) !important;
+  }
+  .header {
+    gap: 12px;
+    border-bottom-color: #d9dfdc !important;
+    flex-wrap: wrap;
+  }
+  .h-left h1 { line-height: 1.25; }
+  .tag {
+    background: #0b7a75 !important;
+    border-radius: 999px !important;
+    padding: 3px 9px !important;
+  }
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+    gap: 24px !important;
+  }
+  .col-left {
+    min-width: 0;
+    border-right: 1px dashed #d9dfdc !important;
+    padding-right: 20px !important;
+  }
+  .col-right {
+    min-width: 0;
+    padding-left: 0 !important;
+  }
+  .section-title {
+    border-left-color: #0b7a75 !important;
+    background: #f8faf9 !important;
+    color: #1f2a2a;
+  }
+  .q-text,
+  .ans-text {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .ans-text p,
+  .ans-text span,
+  .q-text p,
+  .q-text span {
+    max-width: 100%;
+  }
+  .q-img,
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .writing-float-menu {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 10000;
+    opacity: 0.88;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .writing-float-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+  .writing-float-back {
+    min-height: 38px;
+    border: 1px solid rgba(31, 42, 42, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #1f2a2a;
+    padding: 0 13px;
+    font: 700 14px/1.2 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: 0 10px 28px rgba(31, 42, 42, 0.14);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+  }
+  .writing-float-back:hover { background: #fff; }
+  @media (max-width: 820px) {
+    body { padding: 10px 8px 26px !important; }
+    .paper { padding: 16px !important; }
+    .header {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr);
+      margin-bottom: 18px !important;
+    }
+    .h-right {
+      text-align: left !important;
+      font-size: 13px !important;
+    }
+    .content-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px !important;
+    }
+    .col-left {
+      border-right: 0 !important;
+      border-bottom: 1px dashed #d9dfdc;
+      padding-right: 0 !important;
+      padding-bottom: 16px;
+    }
+    .q-text,
+    .ans-text {
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+    .writing-float-menu {
+      top: 10px;
+      left: 10px;
+    }
+  }
+</style>
+<script data-writing-theme src="../theme-sync.js?v=20260710-global-theme"></script>
+<link data-writing-theme rel="stylesheet" href="../theme-sync.css?v=20260710-global-theme">
+</head>
+    <body>
+
+<div class="writing-float-menu" id="writing-float-menu">
+  <button class="writing-float-back" type="button" id="writing-float-back">← 返回</button>
+</div>
+        <div class="paper">
+            <div class="header">
+                <div class="h-left">
+                    <h1>孩子的自由</h1>
+                    <div style="margin-top:5px;"><span class="tag">利弊类</span></div>
+                </div>
+                <div class="h-right">
+                    ID: 7721<br>
+                    命中: 2025-11-11
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <div class="section-title">Question</div>
+                    <div class="q-text"><p><span style="font-size: 16px;"><em><strong>Nowadays parents in many countries give their children more freedom than in the past.</strong></em></span></p><p><br/></p><p><span style="font-size: 16px;"><em><strong>Is this a positive or a negative trend?</strong></em></span></p>
+    <p style="margin-top: 20px; color: #555;">
+        Give reasons for your answer and include any relevant examples from your knowledge and experience.
+    </p>
+    <p style="margin-top: 10px; color: #555;">
+        Write at least 250 words.
+    </p>
+    </div>
+                    
+                </div>
+
+                <div class="col-right">
+                    <div class="section-title" style="border-color:#28a745;">Sample Answer</div>
+                    <div class="ans-text"><p data-start="19" data-end="362" class="">In recent decades, <span style="text-decoration: underline;"><strong data-start="38" data-end="58">parenting styles</strong></span> in many societies have shifted to allow children more independence compared to previous generations. While some argue that this trend may lead to irresponsible behavior, I believe it is largely positive as it fosters essential life skills and <span style="text-decoration: underline;"><strong data-start="302" data-end="326">emotional resilience</strong></span> when balanced with proper guidance.</p><p data-start="19" data-end="362" class=""><br/></p><p data-start="364" data-end="999" class="">One significant advantage of this approach is that it helps children develop problem-solving abilities and <span style="text-decoration: underline;"><strong data-start="471" data-end="488">self-reliance</strong></span>. When allowed to make <span style="text-decoration: underline;"><strong data-start="511" data-end="530">age-appropriate</strong></span> decisions—such as managing pocket money or choosing <span style="text-decoration: underline;"><strong data-start="583" data-end="613">extracurricular activities</strong></span>—young people learn to analyze consequences and take responsibility. For instance, Scandinavian countries that emphasize independent play report higher levels of creativity and adaptability in children. Moreover, experiencing minor failures in a controlled environment, like forgetting homework, teaches valuable lessons without severe consequences, preparing them for adult challenges.</p><p data-start="364" data-end="999" class=""><br/></p><p data-start="1001" data-end="1576" class="">However, critics contend that excessive freedom may result in poor decision-making or safety risks, especially with modern dangers like internet misuse. While these concerns are valid, the solution lies not in restriction but in <span style="text-decoration: underline;"><strong data-start="1230" data-end="1253">gradual empowerment</strong></span> with parental support. Studies show that children whose parents combine freedom with <span style="text-decoration: underline;"><strong data-start="1339" data-end="1361">open communication</strong></span>—discussing online safety rather than banning devices—develop better judgment than those under strict control. The key is providing a <span style="text-decoration: underline;"><strong data-start="1495" data-end="1520">scaffolding structure</strong></span> where freedom expands as children demonstrate maturity.</p><p data-start="1001" data-end="1576" class=""><br/></p><p data-start="1578" data-end="1867" class="">In conclusion, the trend toward increased childhood freedom is beneficial overall, cultivating capable and confident future adults. Parents should continue granting <span style="text-decoration: underline;"><strong data-start="1743" data-end="1762">age-appropriate</strong></span> autonomy while maintaining emotional support and <span style="text-decoration: underline;"><strong data-start="1812" data-end="1832">clear boundaries</strong> </span>to ensure <span style="text-decoration: underline;"><strong data-start="1843" data-end="1866">healthy development</strong></span>.</p><p><br/></p></div>
+                </div>
+            </div>
+        </div>
+    
+<script>
+(function(){
+  const menu = document.getElementById("writing-float-menu");
+  const back = document.getElementById("writing-float-back");
+  if (!menu || !back) return;
+  let lastY = window.scrollY;
+  back.addEventListener("click", function(){
+    const ref = document.referrer;
+    try {
+      if (ref && new URL(ref).origin === window.location.origin) {
+        history.back();
+        return;
+      }
+    } catch (error) {}
+    window.location.href = "../../#writing";
+  });
+  window.addEventListener("scroll", function(){
+    const y = window.scrollY;
+    if (y > lastY && y > 80) {
+      menu.classList.add("is-hidden");
+    } else {
+      menu.classList.remove("is-hidden");
+    }
+    lastY = y;
+  }, { passive: true });
+})();
+</script>
+</body>
+    </html>
+    

@@ -1,0 +1,245 @@
+{
+  "id": "p1-high-211",
+  "source": "zyz",
+  "group": "p1-high",
+  "category": "P1",
+  "frequency": "high",
+  "title": "Ahead of its time 新西兰头骨",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "true",
+    "q2": "true",
+    "q3": "false",
+    "q4": "not given",
+    "q5": "police",
+    "q6": "european",
+    "q7": "radiocarbon dating",
+    "q8": "sample",
+    "q9": "296",
+    "q10": "race",
+    "q11": "archaeologists",
+    "q12": "australia",
+    "q13": "shipwreck"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "1",
+    "q2": "2",
+    "q3": "3",
+    "q4": "4",
+    "q5": "5",
+    "q6": "6",
+    "q7": "7",
+    "q8": "8",
+    "q9": "9",
+    "q10": "10",
+    "q11": "11",
+    "q12": "12",
+    "q13": "13"
+  },
+  "passages": [
+    {
+      "passage_no": 1,
+      "question_range": {
+        "start": 1,
+        "end": 13
+      },
+      "title": "Ahead of its time 新西兰头骨",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 1-13."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 1,
+      "groups": [
+        {
+          "title": "Questions 1–4",
+          "question_range": {
+            "text": "Questions 1–4",
+            "start": 1,
+            "end": 4,
+            "numbers": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "raw_lines": [
+            "Do the following statements agree with the information given in Reading Passage 1?",
+            "In boxes 1–4 on your answer sheet, write",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this",
+            "1 The Ruamahanga River often floods.",
+            "True",
+            "False",
+            "NG",
+            "2 When Tobin first found the object in the river, he mistook it for something else.",
+            "True",
+            "False",
+            "NG",
+            "3 Tobin could not decide what part of the body the bone came from.",
+            "True",
+            "False",
+            "NG",
+            "4 Tobin's mother was surprised that the skull caused debate among specialists.",
+            "True",
+            "False",
+            "NG"
+          ],
+          "instructions": [
+            "Do the following statements agree with the information given in Reading Passage 1?",
+            "In boxes 1–4 on your answer sheet, write",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 1–4</h4>\n      <p>Do the following statements agree with the information given in Reading Passage 1?</p>\n      <p><em>In boxes 1–4 on your answer sheet, write</em></p>\n      <ul style=\"list-style:none; padding-left:0; font-weight:bold; font-size:0.9em;\">\n        <li>TRUE <span style=\"font-weight:normal; margin-left:45px;\">if the statement agrees with the information</span></li>\n        <li>FALSE <span style=\"font-weight:normal; margin-left:38px;\">if the statement contradicts the information</span></li>\n        <li>NOT GIVEN <span style=\"font-weight:normal; margin-left:8px;\">if there is no information on this</span></li>\n      </ul>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q1-anchor\"></a><b>1</b> The Ruamahanga River often floods.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q1\" value=\"true\"> True</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"false\"> False</label>\n            <label><input type=\"radio\" name=\"q1\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q2-anchor\"></a><b>2</b> When Tobin first found the object in the river, he mistook it for something else.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q2\" value=\"true\"> True</label>\n            <label><input type=\"radio\" name=\"q2\" value=\"false\"> False</label>\n            <label><input type=\"radio\" name=\"q2\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q3-anchor\"></a><b>3</b> Tobin could not decide what part of the body the bone came from.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q3\" value=\"true\"> True</label>\n            <label><input type=\"radio\" name=\"q3\" value=\"false\"> False</label>\n            <label><input type=\"radio\" name=\"q3\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q4-anchor\"></a><b>4</b> Tobin's mother was surprised that the skull caused debate among specialists.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q4\" value=\"true\"> True</label>\n            <label><input type=\"radio\" name=\"q4\" value=\"false\"> False</label>\n            <label><input type=\"radio\" name=\"q4\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "kind": "true_false_not_given",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 5–9",
+          "question_range": {
+            "text": "Questions 5–9",
+            "start": 5,
+            "end": 9,
+            "numbers": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "raw_lines": [
+            "Complete the flow-chart below.",
+            "Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.",
+            "The events after the river flooded",
+            "Tobin found a human skull.",
+            "⬇",
+            "The 5 were initially involved in trying to explain the presence of the skull.",
+            "⬇",
+            "Dr Ferris believed the skull belonged to a female.",
+            "⬇",
+            "Dr Koelmeyer suggested it was a 6 skull.",
+            "⬇",
+            "Dr Watt recommended 7 to establish the skull's age.",
+            "⬇",
+            "A bone 8 was sent to the GNS.",
+            "⬇",
+            "The age of the skull was about 9 years."
+          ],
+          "instructions": [
+            "Complete the flow-chart below.",
+            "Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.",
+            "The events after the river flooded",
+            "Tobin found a human skull.",
+            "⬇",
+            "The 5 were initially involved in trying to explain the presence of the skull."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 5–9</h4>\n      <p>Complete the flow-chart below.</p>\n      <p>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p>\n      \n      <h3 style=\"text-align:center;\">The events after the river flooded</h3>\n      <div class=\"flow-chart\">\n        <div class=\"flow-box\">Tobin found a human skull.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">The <a id=\"q5-anchor\"></a><b>5</b> <input class=\"blank\" type=\"text\" name=\"q5\"> were initially involved in trying to explain the presence of the skull.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">Dr Ferris believed the skull belonged to a female.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">Dr Koelmeyer suggested it was a <a id=\"q6-anchor\"></a><b>6</b> <input class=\"blank\" type=\"text\" name=\"q6\"> skull.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">Dr Watt recommended <a id=\"q7-anchor\"></a><b>7</b> <input class=\"blank\" type=\"text\" name=\"q7\"> to establish the skull's age.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">A bone <a id=\"q8-anchor\"></a><b>8</b> <input class=\"blank\" type=\"text\" name=\"q8\"> was sent to the GNS.</div>\n        <div class=\"flow-arrow\">⬇</div>\n        <div class=\"flow-box\">The age of the skull was about <a id=\"q9-anchor\"></a><b>9</b> <input class=\"blank\" type=\"text\" name=\"q9\"> years.</div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q5",
+            "q6",
+            "q7",
+            "q8",
+            "q9"
+          ],
+          "kind": "diagram_completion",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 10–13",
+          "question_range": {
+            "text": "Questions 10–13",
+            "start": 10,
+            "end": 13,
+            "numbers": [
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "raw_lines": [
+            "Complete the notes below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Problem of the skull's origins",
+            "old bones common in New Zealand",
+            "Maori living there for 800 years",
+            "Ruamahanga skull surprising because of its",
+            "– age",
+            "– 10",
+            "– gender",
+            "Mendana expedition",
+            "possible source of skull",
+            "but probably did not visit New Zealand",
+            "evidence of this expedition found elsewhere by 11",
+            "New Zealand",
+            "first European explorer arrived in 1642",
+            "Hagerty and Edgar arrived in 1806 from 12 , where they had been imprisoned",
+            "Possible solution",
+            "Ruamahanga skull may have reached New Zealand in 17th century after a 13"
+          ],
+          "instructions": [
+            "Complete the notes below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Problem of the skull's origins",
+            "old bones common in New Zealand",
+            "Maori living there for 800 years",
+            "Ruamahanga skull surprising because of its"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 10–13</h4>\n      <p>Complete the notes below.</p>\n      <p>Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.</p>\n      \n      <h5>Problem of the skull's origins</h5>\n      <ul class=\"notes-list\">\n        <li>old bones common in New Zealand</li>\n        <li>Maori living there for 800 years</li>\n        <li>Ruamahanga skull surprising because of its\n          <ul style=\"list-style:none; padding-left:15px;\">\n            <li>– age</li>\n            <li>– <a id=\"q10-anchor\"></a><b>10</b> <input class=\"blank\" type=\"text\" name=\"q10\"></li>\n            <li>– gender</li>\n          </ul>\n        </li>\n      </ul>\n\n      <h5>Mendana expedition</h5>\n      <ul class=\"notes-list\">\n        <li>possible source of skull</li>\n        <li>but probably did not visit New Zealand</li>\n        <li>evidence of this expedition found elsewhere by <a id=\"q11-anchor\"></a><b>11</b> <input class=\"blank\" type=\"text\" name=\"q11\"></li>\n      </ul>\n\n      <h5>New Zealand</h5>\n      <ul class=\"notes-list\">\n        <li>first European explorer arrived in 1642</li>\n        <li>Hagerty and Edgar arrived in 1806 from <a id=\"q12-anchor\"></a><b>12</b> <input class=\"blank\" type=\"text\" name=\"q12\">, where they had been imprisoned</li>\n      </ul>\n\n      <h5>Possible solution</h5>\n      <ul class=\"notes-list\">\n        <li>Ruamahanga skull may have reached New Zealand in 17th century after a <a id=\"q13-anchor\"></a><b>13</b> <input class=\"blank\" type=\"text\" name=\"q13\"></li>\n      </ul>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "sentence_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

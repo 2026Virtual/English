@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <script>
+    (() => {
+      const storageKey = "english-learning-theme";
+      let theme = "light";
+
+      try {
+        const storedTheme = localStorage.getItem(storageKey);
+        if (storedTheme === "dark" || storedTheme === "light") theme = storedTheme;
+      } catch (error) {
+        // Keep the default theme when storage is unavailable.
+      }
+
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]')
+        ?.setAttribute("content", theme === "dark" ? "#000000" : "#0f766e");
+    })();
+  </script>
+  <title>英语速提升系统</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css?v=20260710-offline-download">
+  <link rel="stylesheet" href="./reading-styles.css?v=20260712-keyboard-scroll-lock">
+  <link rel="stylesheet" href="./listening-styles.css?v=20260710-global-theme">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="./app.js?v=20260710-offline-download" defer></script>
+  <script src="./reading.js?v=20260712-keyboard-scroll-release" type="module"></script>
+  <script src="./listening.js?v=20260708-listening-workspace" defer></script>
+  <script src="./writing.js?v=20260708-writing-tzx" defer></script>
+</head>
+<body class="is-home">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="app-header" hidden>
+    <div class="brand">
+      <img src="./favicon.svg" class="brand-mark" alt="">
+      <div>
+        <h1 id="app-title">英语速提升系统</h1>
+        <p id="app-subtitle">逻辑词群记忆</p>
+      </div>
+    </div>
+
+    <div class="header-tools">
+      <button id="home-button" class="tool-button" type="button">
+        <i data-lucide="arrow-left"></i>
+        <span>菜单</span>
+      </button>
+      <button id="open-reading-workspace" class="icon-button reading-workspace-shortcut" type="button" aria-label="阅读作答情况" title="阅读作答情况" hidden>
+        <i data-lucide="clipboard-list"></i>
+      </button>
+      <div id="vocab-actions" class="header-actions">
+        <button id="api-settings" class="icon-button" type="button" aria-label="助记 API 设置" title="助记 API 设置">
+          <i data-lucide="settings"></i>
+        </button>
+        <button id="toggle-meaning" class="tool-button meaning-toggle" type="button" aria-label="隐藏中文意思" title="隐藏中文意思">
+          <span class="meaning-toggle-letter" aria-hidden="true">E</span>
+          <span>隐藏中文</span>
+        </button>
+        <button id="open-workspace" class="tool-button" type="button">
+          <i data-lucide="notebook-tabs"></i>
+          <span>工作区</span>
+          <strong id="note-count">0</strong>
+        </button>
+        <button id="open-cloud-notebook" class="tool-button" type="button">
+          <i data-lucide="cloud"></i>
+          <span>笔记本</span>
+          <strong id="cloud-note-count">0</strong>
+        </button>
+        <button id="export-notes" class="tool-button primary" type="button">
+          <i data-lucide="download"></i>
+          <span>导出笔记</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section id="home-view" class="app-view home-view" data-page="home">
+      <div class="home-quick-actions">
+        <button id="offline-download" class="offline-download-button" type="button" aria-label="下载离线内容" title="缓存全部阅读、听力和写作资料">
+          <i data-lucide="download" aria-hidden="true"></i>
+          <span id="offline-download-label">离线下载</span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到夜间模式" title="切换到夜间模式" aria-pressed="false">
+          <i data-lucide="moon" class="theme-toggle-icon theme-toggle-moon" aria-hidden="true"></i>
+          <i data-lucide="sun" class="theme-toggle-icon theme-toggle-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="home-shell">
+        <div class="home-brand">
+          <img src="./favicon.svg" class="home-mark" alt="">
+          <div>
+            <p>English</p>
+            <h2>选择学习内容</h2>
+          </div>
+        </div>
+
+        <div class="home-menu" aria-label="学习模块">
+          <button class="home-menu-button" type="button" data-page="vocabulary">
+            <i data-lucide="book-open"></i>
+            <span>
+              <strong>背单词</strong>
+              <small>进入词表、发音、助记和工作区</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
+          <button class="home-menu-button" type="button" data-page="reading">
+            <i data-lucide="newspaper"></i>
+            <span>
+              <strong>快速阅读</strong>
+              <small>阅读训练入口，内容待添加</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
+          <button class="home-menu-button" type="button" data-page="writing">
+            <i data-lucide="pen-line"></i>
+            <span>
+              <strong>写作积累</strong>
+              <small>整理 Simon 写作资料和表达素材</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
+          <button class="home-menu-button" type="button" data-page="listening">
+            <i data-lucide="headphones"></i>
+            <span>
+              <strong>随身听力</strong>
+              <small>剑桥雅思 4-21 听力真题练习</small>
+            </span>
+            <i data-lucide="chevron-right" class="home-menu-arrow"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="vocabulary-view" class="app-view" data-page="vocabulary" hidden>
+      <section class="controls" aria-label="词表控制">
+        <label class="control-field">
+          <span>章节</span>
+          <select id="chapter-select"></select>
+        </label>
+        <label class="control-field search-field">
+          <span>搜索</span>
+          <input id="search-input" type="search" autocomplete="off" placeholder="word / 释义 / 例句">
+        </label>
+        <small class="field-hint">A类本：完全不知道的新词；B类本：知道但不熟的词</small>
+        <button id="clear-workspace" class="icon-button warn" type="button" aria-label="清空工作区" title="清空工作区">
+          <i data-lucide="trash-2"></i>
+        </button>
+      </section>
+
+      <section class="chapter-strip" aria-live="polite">
+        <div>
+          <h2 id="chapter-title">加载中</h2>
+          <p id="chapter-meta">正在读取词表</p>
+        </div>
+        <div id="api-state" class="status-pill">Supabase 代理未配置</div>
+      </section>
+
+      <section id="word-list" class="word-list" aria-live="polite"></section>
+    </section>
+
+    <section id="reading-view" class="app-view" data-page="reading" hidden>
+      <div id="reading-app"></div>
+    </section>
+
+    <section id="writing-view" class="app-view" data-page="writing" hidden>
+      <div id="writing-app"></div>
+    </section>
+
+    <section id="listening-view" class="app-view" data-page="listening" hidden>
+      <div id="listening-app"></div>
+    </section>
+  </main>
+
+  <aside id="workspace-panel" class="workspace-panel" aria-hidden="true" aria-label="本次学习工作区">
+    <div class="panel-head">
+      <div>
+        <h2>工作区</h2>
+        <p id="workspace-meta">本次访问 0 条</p>
+      </div>
+      <button id="close-workspace" class="icon-button" type="button" aria-label="关闭工作区" title="关闭工作区">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <ol id="workspace-list" class="workspace-list"></ol>
+  </aside>
+
+  <aside id="cloud-panel" class="workspace-panel cloud-panel" aria-hidden="true" aria-label="云端笔记本">
+    <div class="panel-head">
+      <div>
+        <h2>云端笔记本</h2>
+        <p id="cloud-meta">未连接 Supabase</p>
+      </div>
+      <button id="close-cloud-notebook" class="icon-button" type="button" aria-label="关闭云端笔记本" title="关闭云端笔记本">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="cloud-actions">
+      <button id="cloud-config" class="tool-button" type="button">
+        <i data-lucide="settings"></i>
+        <span>配置</span>
+      </button>
+      <button id="cloud-toggle-meaning" class="tool-button meaning-toggle" type="button">
+        <span class="meaning-toggle-letter" aria-hidden="true">E</span>
+        <span>隐藏中文</span>
+      </button>
+      <button id="cloud-sync" class="tool-button" type="button">
+        <i data-lucide="refresh-cw"></i>
+        <span>同步</span>
+      </button>
+      <button id="cloud-import" class="tool-button primary" type="button">
+        <i data-lucide="upload"></i>
+        <span>导入笔记</span>
+      </button>
+      <button id="cloud-save-workspace" class="tool-button" type="button">
+        <i data-lucide="cloud-upload"></i>
+        <span>上传专属区</span>
+        <strong id="cloud-workspace-count" hidden>0</strong>
+      </button>
+      <button id="cloud-clear-workspace" class="tool-button" type="button">
+        <i data-lucide="eraser"></i>
+        <span>清除专属区</span>
+      </button>
+      <button id="cloud-save-main-workspace" class="tool-button" type="button">
+        <i data-lucide="upload"></i>
+        <span>上传外层区</span>
+        <strong id="cloud-main-workspace-count" hidden>0</strong>
+      </button>
+      <button id="cloud-download" class="tool-button" type="button">
+        <i data-lucide="download"></i>
+        <span>下载笔记本</span>
+      </button>
+      <button id="cloud-delete-notebook" class="tool-button danger" type="button">
+        <i data-lucide="trash-2"></i>
+        <span>删除笔记本</span>
+      </button>
+    </div>
+
+    <label id="cloud-notebook-picker" class="cloud-notebook-picker" hidden>
+      <span>选择笔记本</span>
+      <select id="cloud-notebook-select"></select>
+    </label>
+
+    <input id="cloud-file-input" type="file" accept=".md,text/markdown,text/plain" multiple hidden>
+    <ol id="cloud-list" class="workspace-list cloud-list"></ol>
+  </aside>
+
+  <div id="panel-backdrop" class="panel-backdrop" hidden></div>
+
+  <button id="scroll-top" class="scroll-top-button" type="button" aria-label="返回顶部" title="返回顶部" aria-hidden="true" tabindex="-1">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <dialog id="api-dialog" class="api-dialog">
+    <form id="api-form" class="api-form">
+      <div class="dialog-head">
+        <h2>助记 API</h2>
+        <button class="icon-button" type="button" id="close-api-dialog" aria-label="关闭设置" title="关闭设置">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <label class="dialog-field">
+        <span>Supabase Function URL</span>
+        <input id="api-endpoint" type="url" inputmode="url" autocomplete="off" placeholder="https://<project-ref>.supabase.co/functions/v1/mnemonic-proxy">
+      </label>
+      <label class="dialog-field">
+        <span>模型</span>
+        <input id="api-model" type="text" autocomplete="off">
+      </label>
+      <label class="dialog-field">
+        <span>Supabase anon key</span>
+        <input id="api-key" type="password" autocomplete="off" placeholder="eyJ...">
+      </label>
+
+      <p class="dialog-note">这里填写的是 Supabase 项目的 anon key，可以公开放在浏览器里。真实大模型密钥放到 Supabase Edge Function 的 Secrets 中。</p>
+
+      <div class="dialog-actions">
+        <button class="tool-button" type="button" id="clear-api">
+          <i data-lucide="eraser"></i>
+          <span>清除</span>
+        </button>
+        <button class="tool-button primary" type="submit">
+          <i data-lucide="check"></i>
+          <span>保存</span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="cloud-dialog" class="api-dialog">
+    <form id="cloud-form" class="api-form">
+      <div class="dialog-head">
+        <h2>云端笔记本</h2>
+        <button class="icon-button" type="button" id="close-cloud-dialog" aria-label="关闭云端配置" title="关闭云端配置">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <label class="dialog-field">
+        <span>Supabase Project URL</span>
+        <input id="cloud-url" type="url" inputmode="url" autocomplete="off" placeholder="https://<project-ref>.supabase.co" required>
+      </label>
+      <label class="dialog-field">
+        <span>Supabase anon key</span>
+        <input id="cloud-anon-key" type="password" autocomplete="off" placeholder="eyJ..." required>
+      </label>
+      <label class="dialog-field">
+        <span>邮箱</span>
+        <input id="cloud-email" type="email" autocomplete="username" required>
+      </label>
+      <label class="dialog-field">
+        <span>密码</span>
+        <input id="cloud-password" type="password" autocomplete="current-password" required>
+      </label>
+
+      <p class="dialog-note">只填写 Supabase anon key，不要把 service role key 放进网页。数据访问权限由 Supabase Auth 和 RLS 控制。</p>
+
+      <div class="dialog-actions">
+        <button class="tool-button" type="button" id="clear-cloud-settings">
+          <i data-lucide="eraser"></i>
+          <span>清除</span>
+        </button>
+        <button class="tool-button" type="button" id="cloud-signup">
+          <i data-lucide="user-plus"></i>
+          <span>注册</span>
+        </button>
+        <button class="tool-button" type="button" id="cloud-signout">
+          <i data-lucide="log-out"></i>
+          <span>退出</span>
+        </button>
+        <button class="tool-button primary" type="submit">
+          <i data-lucide="log-in"></i>
+          <span>登录</span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

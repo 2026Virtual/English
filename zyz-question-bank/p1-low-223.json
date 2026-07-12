@@ -1,0 +1,199 @@
+{
+  "id": "p1-low-223",
+  "source": "zyz",
+  "group": "p1-low",
+  "category": "P1",
+  "frequency": "low",
+  "title": "Effect and Cause 湖泊海啸研究",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "TRUE",
+    "q2": "FALSE",
+    "q3": "TRUE",
+    "q4": "NOT GIVEN",
+    "q5": "NOT GIVEN",
+    "q6": "FALSE",
+    "q7": "TRUE",
+    "q8": "floods",
+    "q9": "leaves",
+    "q10": "seventh",
+    "q11": "estimated",
+    "q12": "height",
+    "q13": "earthquake"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "1",
+    "q2": "2",
+    "q3": "3",
+    "q4": "4",
+    "q5": "5",
+    "q6": "6",
+    "q7": "7",
+    "q8": "8",
+    "q9": "9",
+    "q10": "10",
+    "q11": "11",
+    "q12": "12",
+    "q13": "13"
+  },
+  "passages": [
+    {
+      "passage_no": 1,
+      "question_range": {
+        "start": 1,
+        "end": 13
+      },
+      "title": "Effect and Cause 湖泊海啸研究",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 1-13."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 1,
+      "groups": [
+        {
+          "title": "Questions 1–7",
+          "question_range": {
+            "text": "Questions 1–7",
+            "start": 1,
+            "end": 7,
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "raw_lines": [
+            "Do the following statements agree with the information given in Reading Passage 1? In boxes 1–7 write TRUE, FALSE or NOT GIVEN .",
+            "1. According to Gregory of Tours, the landslide which caused the flood happened near Tauredunum.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "2. The city of Geneva was undamaged by the tsunami that Gregory described.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "3. The work of Marius of Avenches supported the idea that there was a tsunami.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "4. The rocks which fell into the delta were very hard and dense.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "5. Richard Schweickert has published studies on lake tsunamis that have occurred in several countries.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "6. The shoreline of Lake Tahoe has remained unchanged for 20,000 years.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN",
+            "7. Parts of the population of Geneva now live closer to the lake than was the case in the sixth century.",
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "instructions": [
+            "Do the following statements agree with the information given in Reading Passage 1? In boxes 1–7 write TRUE, FALSE or NOT GIVEN ."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n            <h4>Questions 1–7</h4>\n            <p>Do the following statements agree with the information given in Reading Passage 1? In boxes 1–7 write <strong>TRUE, FALSE or NOT GIVEN</strong>.</p>\n\n            <div id=\"q1-anchor\" class=\"question-block\">\n                <p class=\"question-text\">1. According to Gregory of Tours, the landslide which caused the flood happened near Tauredunum.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q1\" value=\"TRUE\" onchange=\"markAnswered(1)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q1\" value=\"FALSE\" onchange=\"markAnswered(1)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q1\" value=\"NOT GIVEN\" onchange=\"markAnswered(1)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q2-anchor\" class=\"question-block\">\n                <p class=\"question-text\">2. The city of Geneva was undamaged by the tsunami that Gregory described.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q2\" value=\"TRUE\" onchange=\"markAnswered(2)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q2\" value=\"FALSE\" onchange=\"markAnswered(2)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q2\" value=\"NOT GIVEN\" onchange=\"markAnswered(2)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q3-anchor\" class=\"question-block\">\n                <p class=\"question-text\">3. The work of Marius of Avenches supported the idea that there was a tsunami.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q3\" value=\"TRUE\" onchange=\"markAnswered(3)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q3\" value=\"FALSE\" onchange=\"markAnswered(3)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q3\" value=\"NOT GIVEN\" onchange=\"markAnswered(3)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q4-anchor\" class=\"question-block\">\n                <p class=\"question-text\">4. The rocks which fell into the delta were very hard and dense.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q4\" value=\"TRUE\" onchange=\"markAnswered(4)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q4\" value=\"FALSE\" onchange=\"markAnswered(4)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q4\" value=\"NOT GIVEN\" onchange=\"markAnswered(4)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q5-anchor\" class=\"question-block\">\n                <p class=\"question-text\">5. Richard Schweickert has published studies on lake tsunamis that have occurred in several countries.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q5\" value=\"TRUE\" onchange=\"markAnswered(5)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q5\" value=\"FALSE\" onchange=\"markAnswered(5)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q5\" value=\"NOT GIVEN\" onchange=\"markAnswered(5)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q6-anchor\" class=\"question-block\">\n                <p class=\"question-text\">6. The shoreline of Lake Tahoe has remained unchanged for 20,000 years.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q6\" value=\"TRUE\" onchange=\"markAnswered(6)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q6\" value=\"FALSE\" onchange=\"markAnswered(6)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q6\" value=\"NOT GIVEN\" onchange=\"markAnswered(6)\"> NOT GIVEN</label>\n                </div>\n            </div>\n            <div id=\"q7-anchor\" class=\"question-block\">\n                <p class=\"question-text\">7. Parts of the population of Geneva now live closer to the lake than was the case in the sixth century.</p>\n                <div class=\"yesno-group\">\n                    <label><input type=\"radio\" name=\"q7\" value=\"TRUE\" onchange=\"markAnswered(7)\"> TRUE</label>\n                    <label><input type=\"radio\" name=\"q7\" value=\"FALSE\" onchange=\"markAnswered(7)\"> FALSE</label>\n                    <label><input type=\"radio\" name=\"q7\" value=\"NOT GIVEN\" onchange=\"markAnswered(7)\"> NOT GIVEN</label>\n                </div>\n            </div>\n        </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7"
+          ],
+          "kind": "true_false_not_given",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 8–13",
+          "question_range": {
+            "text": "Questions 8–13",
+            "start": 8,
+            "end": 13,
+            "numbers": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "raw_lines": [
+            "Complete the flow-chart below. Choose ONE WORD AND/OR A NUMBER from the passage for each answer.",
+            "The evidence for a tsunami in Lake Geneva",
+            "Katrina Kremer was looking for indications of prehistoric",
+            "that had occurred before the sixth-century event.",
+            "Instead her research team found a large lens-shaped deposit.",
+            "Researchers extracted samples from the deposit and dated organic material such as",
+            "Carbon-dating confirmed that the deposit was present in the lake by the beginning of the",
+            "century.",
+            "The volume of the deposit was then",
+            "by the scientists.",
+            "The researchers established the approximate",
+            "and speed of the tsunami through extensive computer modelling.",
+            "A likely cause of the rockfall was a significant"
+          ],
+          "instructions": [
+            "Complete the flow-chart below. Choose ONE WORD AND/OR A NUMBER from the passage for each answer.",
+            "The evidence for a tsunami in Lake Geneva",
+            "Katrina Kremer was looking for indications of prehistoric",
+            "that had occurred before the sixth-century event.",
+            "Instead her research team found a large lens-shaped deposit.",
+            "Researchers extracted samples from the deposit and dated organic material such as"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n            <h4>Questions 8–13</h4>\n            <p>Complete the flow-chart below. Choose <strong>ONE WORD AND/OR A NUMBER</strong> from the passage for each answer.</p>\n            <p><strong>The evidence for a tsunami in Lake Geneva</strong></p>\n\n            <div id=\"q8-anchor\" class=\"flowchart-item\">\n                <span class=\"flowchart-text\">Katrina Kremer was looking for indications of prehistoric</span>\n                <input type=\"text\" id=\"q8\" placeholder=\"(one word)\" oninput=\"markAnswered(8)\" name=\"q8\">\n                <span>that had occurred before the sixth-century event.</span>\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">Instead her research team found a large lens-shaped deposit.</span>\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">Researchers extracted samples from the deposit and dated organic material such as</span>\n                <input type=\"text\" id=\"q9\" placeholder=\"(one word)\" oninput=\"markAnswered(9)\" name=\"q9\">\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">Carbon-dating confirmed that the deposit was present in the lake by the beginning of the</span>\n                <input type=\"text\" id=\"q10\" placeholder=\"(e.g. fifth)\" oninput=\"markAnswered(10)\" name=\"q10\">\n                <span>century.</span>\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">The volume of the deposit was then</span>\n                <input type=\"text\" id=\"q11\" placeholder=\"(one word)\" oninput=\"markAnswered(11)\" name=\"q11\">\n                <span>by the scientists.</span>\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">The researchers established the approximate</span>\n                <input type=\"text\" id=\"q12\" placeholder=\"(one word)\" oninput=\"markAnswered(12)\" name=\"q12\">\n                <span>and speed of the tsunami through extensive computer modelling.</span>\n            </div>\n            <div class=\"flowchart-item\">\n                <span class=\"flowchart-text\">A likely cause of the rockfall was a significant</span>\n                <input type=\"text\" id=\"q13\" placeholder=\"(one word)\" oninput=\"markAnswered(13)\" name=\"q13\">\n            </div>\n        </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q8",
+            "q9",
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "diagram_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

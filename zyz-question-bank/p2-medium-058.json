@@ -1,0 +1,281 @@
+{
+  "id": "p2-medium-058",
+  "source": "zyz",
+  "group": "p2-medium",
+  "category": "P2",
+  "frequency": "medium",
+  "title": "Who wrote Shakespeare's plays 莎士比亚",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "C",
+    "q2": "A",
+    "q3": "C",
+    "q4": "B",
+    "q5": "G",
+    "q6": "A",
+    "q7": "collaboration",
+    "q8": "computers",
+    "q9": "fingerprint",
+    "q10": "C",
+    "q11": "A",
+    "q12": "E",
+    "q13": "B"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "Who wrote Shakespeare's plays 莎士比亚",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14–19",
+          "question_range": {
+            "text": "Questions 14–19",
+            "start": 14,
+            "end": 19,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage 2 has seven paragraphs, A–G.",
+            "Which paragraph contains the following information?",
+            "Write the correct letter A–G in boxes 14–19 on your answer sheet.",
+            "14. uncertainty why an author would wish to remain anonymous",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "15. a reference to the continuing popularity of Shakespeare's work",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "16. the reasons why a particular researcher's approach proved unsatisfactory",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "17. mention of the time when the use of stylometry was first proposed",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "18. support for the opinion that Shakespeare became more skillful as he grew older",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "19. a similarity between Shakespeare and a scientist with exceptional ability",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "instructions": [
+            "Reading Passage 2 has seven paragraphs, A–G.",
+            "Which paragraph contains the following information?",
+            "Write the correct letter A–G in boxes 14–19 on your answer sheet."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14–19</h4>\n      <p>Reading Passage 2 has seven paragraphs, A–G.</p>\n      <p>Which paragraph contains the following information?</p>\n      <p>Write the correct letter A–G in boxes 14–19 on your answer sheet.</p>\n      \n      <a id=\"q1-anchor\"></a>\n      <div id=\"q1-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">14.</span> uncertainty why an author would wish to remain anonymous</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q1\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q1\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n      \n      <a id=\"q2-anchor\"></a>\n      <div id=\"q2-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">15.</span> a reference to the continuing popularity of Shakespeare's work</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q2\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q2\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n      \n      <a id=\"q3-anchor\"></a>\n      <div id=\"q3-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">16.</span> the reasons why a particular researcher's approach proved unsatisfactory</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q3\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q3\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n      \n      <a id=\"q4-anchor\"></a>\n      <div id=\"q4-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">17.</span> mention of the time when the use of stylometry was first proposed</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q4\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q4\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n      \n      <a id=\"q5-anchor\"></a>\n      <div id=\"q5-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">18.</span> support for the opinion that Shakespeare became more skillful as he grew older</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q5\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q5\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n      \n      <a id=\"q6-anchor\"></a>\n      <div id=\"q6-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">19.</span> a similarity between Shakespeare and a scientist with exceptional ability</p>\n        <div class=\"para-match-option\">\n          <label><input name=\"q6\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"D\"> D</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"E\"> E</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"F\"> F</label>\n          <label><input name=\"q6\" type=\"radio\" value=\"G\"> G</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 20–22",
+          "question_range": {
+            "text": "Questions 20–22",
+            "start": 20,
+            "end": 22,
+            "numbers": [
+              20,
+              21,
+              22
+            ]
+          },
+          "raw_lines": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Write your answers in boxes 20–22 on your answer sheet.",
+            "Stylometry",
+            "A key controversy is Shakespeare's relationships with other writers. It has always been uncertain whether he worked in with others or not. To investigate this issue, literary experts traditionally looked at stylistic features such as the writer's choice of metaphor, although it was recognised that this choice may have been influenced by cultural factors.",
+            "Current stylometric analysis has been made possible by the invention of . These can identify different features of writing such as the frequency with which particular letters, words or phrases are used by different writers. By using stylometric analysis of particular characteristics and pattern recognition systems, a so-called of a writer can be identified."
+          ],
+          "instructions": [
+            "Complete the summary below.",
+            "Choose ONE WORD ONLY from the passage for each answer.",
+            "Write your answers in boxes 20–22 on your answer sheet.",
+            "Stylometry",
+            "A key controversy is Shakespeare's relationships with other writers. It has always been uncertain whether he worked in with others or not. To investigate this issue, literary experts traditionally looked at stylistic features such as the writer's choice of metaphor, although it was recognised that this choice may have been influenced by cultural factors.",
+            "Current stylometric analysis has been made possible by the invention of . These can identify different features of writing such as the frequency with which particular letters, words or phrases are used by different writers. By using stylometric analysis of particular characteristics and pattern recognition systems, a so-called of a writer can be identified."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 20–22</h4>\n      <p>Complete the summary below.</p>\n      <p>Choose ONE WORD ONLY from the passage for each answer.</p>\n      <p>Write your answers in boxes 20–22 on your answer sheet.</p>\n      \n      <div class=\"summary-text\">\n        <h4>Stylometry</h4>\n        <p>A key controversy is Shakespeare's relationships with other writers. It has always been uncertain whether he worked in <input name=\"q7\" type=\"text\" class=\"blank\" id=\"q7\"> with others or not. To investigate this issue, literary experts traditionally looked at stylistic features such as the writer's choice of metaphor, although it was recognised that this choice may have been influenced by cultural factors.</p>\n        \n        <p>Current stylometric analysis has been made possible by the invention of <input name=\"q8\" type=\"text\" class=\"blank\" id=\"q8\">. These can identify different features of writing such as the frequency with which particular letters, words or phrases are used by different writers. By using stylometric analysis of particular characteristics and pattern recognition systems, a so-called <input name=\"q9\" type=\"text\" class=\"blank\" id=\"q9\"> of a writer can be identified.</p>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q7",
+            "q8",
+            "q9"
+          ],
+          "kind": "summary_completion",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 23–26",
+          "question_range": {
+            "text": "Questions 23–26",
+            "start": 23,
+            "end": 26,
+            "numbers": [
+              23,
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Look at the following statements and the list of people below.",
+            "Match each statement with the correct person, A–E.",
+            "Write the correct letter, A–E, in boxes 23–26 on your answer sheet.",
+            "List of People",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl",
+            "23. People search for a more distinguished author because they cannot accept that a normal individual could write such brilliant plays.",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl",
+            "24. It should be possible to recognise writers by examining the number of letters in the words they use.",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl",
+            "25. The fact that Shakespeare's works are likely to have been altered over the years raises doubts about any stylometric analysis.",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl",
+            "26. Analysis proves that Shakespeare's style differs from those of writers who have been suggested as the authors of the plays.",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl"
+          ],
+          "instructions": [
+            "Look at the following statements and the list of people below.",
+            "Match each statement with the correct person, A–E.",
+            "Write the correct letter, A–E, in boxes 23–26 on your answer sheet.",
+            "List of People",
+            "A. Thomas Mendenhall",
+            "B. Ward Elliott and Robert Valenza",
+            "C. Professor Kate McCluskey",
+            "D. Dr Thomas Merriam",
+            "E. Dr Markus Dahl"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 23–26</h4>\n      <p>Look at the following statements and the list of people below.</p>\n      <p>Match each statement with the correct person, A–E.</p>\n      <p>Write the correct letter, A–E, in boxes 23–26 on your answer sheet.</p>\n      \n      <div style=\"margin-bottom: 12px; padding: 8px; background: #f8f9fa; border-radius: 6px;\">\n        <p style=\"margin: 0; font-weight: 500;\">List of People</p>\n        <p style=\"margin: 4px 0;\">A. Thomas Mendenhall</p>\n        <p style=\"margin: 4px 0;\">B. Ward Elliott and Robert Valenza</p>\n        <p style=\"margin: 4px 0;\">C. Professor Kate McCluskey</p>\n        <p style=\"margin: 4px 0;\">D. Dr Thomas Merriam</p>\n        <p style=\"margin: 4px 0;\">E. Dr Markus Dahl</p>\n      </div>\n      \n      <a id=\"q10-anchor\"></a>\n      <div id=\"q10-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">23.</span> People search for a more distinguished author because they cannot accept that a normal individual could write such brilliant plays.</p>\n        <div class=\"person-match-option\">\n          <label><input name=\"q10\" type=\"radio\" value=\"A\"> A. Thomas Mendenhall</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"B\"> B. Ward Elliott and Robert Valenza</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"C\"> C. Professor Kate McCluskey</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"D\"> D. Dr Thomas Merriam</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"E\"> E. Dr Markus Dahl</label>\n        </div>\n      </div>\n      \n      <a id=\"q11-anchor\"></a>\n      <div id=\"q11-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">24.</span> It should be possible to recognise writers by examining the number of letters in the words they use.</p>\n        <div class=\"person-match-option\">\n          <label><input name=\"q11\" type=\"radio\" value=\"A\"> A. Thomas Mendenhall</label>\n          <label><input name=\"q11\" type=\"radio\" value=\"B\"> B. Ward Elliott and Robert Valenza</label>\n          <label><input name=\"q11\" type=\"radio\" value=\"C\"> C. Professor Kate McCluskey</label>\n          <label><input name=\"q11\" type=\"radio\" value=\"D\"> D. Dr Thomas Merriam</label>\n          <label><input name=\"q11\" type=\"radio\" value=\"E\"> E. Dr Markus Dahl</label>\n        </div>\n      </div>\n      \n      <a id=\"q12-anchor\"></a>\n      <div id=\"q12-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">25.</span> The fact that Shakespeare's works are likely to have been altered over the years raises doubts about any stylometric analysis.</p>\n        <div class=\"person-match-option\">\n          <label><input name=\"q12\" type=\"radio\" value=\"A\"> A. Thomas Mendenhall</label>\n          <label><input name=\"q12\" type=\"radio\" value=\"B\"> B. Ward Elliott and Robert Valenza</label>\n          <label><input name=\"q12\" type=\"radio\" value=\"C\"> C. Professor Kate McCluskey</label>\n          <label><input name=\"q12\" type=\"radio\" value=\"D\"> D. Dr Thomas Merriam</label>\n          <label><input name=\"q12\" type=\"radio\" value=\"E\"> E. Dr Markus Dahl</label>\n        </div>\n      </div>\n      \n      <a id=\"q13-anchor\"></a>\n      <div id=\"q13-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <p><span class=\"question-number\">26.</span> Analysis proves that Shakespeare's style differs from those of writers who have been suggested as the authors of the plays.</p>\n        <div class=\"person-match-option\">\n          <label><input name=\"q13\" type=\"radio\" value=\"A\"> A. Thomas Mendenhall</label>\n          <label><input name=\"q13\" type=\"radio\" value=\"B\"> B. Ward Elliott and Robert Valenza</label>\n          <label><input name=\"q13\" type=\"radio\" value=\"C\"> C. Professor Kate McCluskey</label>\n          <label><input name=\"q13\" type=\"radio\" value=\"D\"> D. Dr Thomas Merriam</label>\n          <label><input name=\"q13\" type=\"radio\" value=\"E\"> E. Dr Markus Dahl</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

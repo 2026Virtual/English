@@ -1,0 +1,282 @@
+{
+  "id": "p2-low-051",
+  "source": "zyz",
+  "group": "p2-low",
+  "category": "P2",
+  "frequency": "low",
+  "title": "The dingo debate 澳洲野犬_澳洲野狗",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "E",
+    "q2": "D",
+    "q3": "C",
+    "q4": "B",
+    "q5": "F",
+    "q6": "A",
+    "q7": "D",
+    "q8": "D",
+    "q9": "A",
+    "q10": "B",
+    "q11": "Tasmanian tiger",
+    "q12": "rabbits",
+    "q13": "overpopulation"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "The dingo debate 澳洲野犬_澳洲野狗",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14-20",
+          "question_range": {
+            "text": "Questions 14-20",
+            "start": 14,
+            "end": 20,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage has eight sections, A-H.",
+            "Which section contains the following information?",
+            "Write the correct letter, A-H, in boxes 14-20 on your answer sheet.",
+            "NB You may use any letter more than once.",
+            "14. a description of a barrier designed to stop dingoes, which also divides two kinds of non-native animals",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "15. how dingoes ensure that rival species do not dominate",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "16. a reference to a widespread non-native species that other animals feed on",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "17. a mention of the dingo's arrival in Australia",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "18. research which has proved that dingoes have resorted to eating young livestock",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "19. a description of a method used to kill dingoes",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "20. the way that the structure of dingo groups affects how quickly their numbers grow",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "instructions": [
+            "Reading Passage has eight sections, A-H.",
+            "Which section contains the following information?",
+            "Write the correct letter, A-H, in boxes 14-20 on your answer sheet.",
+            "NB You may use any letter more than once."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14-20</h4>\n      <p>Reading Passage has eight sections, A-H.</p>\n      <p>Which section contains the following information?</p>\n      <p>Write the correct letter, A-H, in boxes 14-20 on your answer sheet.</p>\n      <p><strong>NB You may use any letter more than once.</strong></p>\n      \n      <a id=\"q1-anchor\"></a>\n      <div id=\"q1-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">14.</span> a description of a barrier designed to stop dingoes, which also divides two kinds of non-native animals\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q1\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q2-anchor\"></a>\n      <div id=\"q2-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">15.</span> how dingoes ensure that rival species do not dominate\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q2\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q3-anchor\"></a>\n      <div id=\"q3-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">16.</span> a reference to a widespread non-native species that other animals feed on\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q3\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q4-anchor\"></a>\n      <div id=\"q4-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">17.</span> a mention of the dingo's arrival in Australia\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q4\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q5-anchor\"></a>\n      <div id=\"q5-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">18.</span> research which has proved that dingoes have resorted to eating young livestock\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q5\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q6-anchor\"></a>\n      <div id=\"q6-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">19.</span> a description of a method used to kill dingoes\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q6\" value=\"H\"> H</div>\n        </div>\n      </div>\n      \n      <a id=\"q7-anchor\"></a>\n      <div id=\"q7-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">20.</span> the way that the structure of dingo groups affects how quickly their numbers grow\n        <div class=\"heading-options\">\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"A\"> A</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"B\"> B</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"C\"> C</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"D\"> D</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"E\"> E</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"F\"> F</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"G\"> G</div>\n          <div class=\"heading-option\"><input type=\"radio\" name=\"q7\" value=\"H\"> H</div>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 21-23",
+          "question_range": {
+            "text": "Questions 21-23",
+            "start": 21,
+            "end": 23,
+            "numbers": [
+              21,
+              22,
+              23
+            ]
+          },
+          "raw_lines": [
+            "Look at the following statements (Questions 21-23) and the list of people below.",
+            "Match each statement with the correct person, A, B, C or D.",
+            "Write the correct letter, A, B, C or D, in boxes 21-23 on your answer sheet.",
+            "21 Dingoes tend to hunt native animals rather than hunting other non-native predators.",
+            "22 The presence of dingoes puts the income of some people at risk.",
+            "23 Dingoes have had little impact on the dying out of animal species in Australia.",
+            "List of People",
+            "A Stuart McKechnie",
+            "B Chris Johnson",
+            "C Lee Allen",
+            "D Mark Clifford",
+            "21. Dingoes tend to hunt native animals rather than hunting other non-native predators.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "22. The presence of dingoes puts the income of some people at risk.",
+            "A",
+            "B",
+            "C",
+            "D",
+            "23. Dingoes have had little impact on the dying out of animal species in Australia.",
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "instructions": [
+            "Look at the following statements (Questions 21-23) and the list of people below.",
+            "Match each statement with the correct person, A, B, C or D.",
+            "Write the correct letter, A, B, C or D, in boxes 21-23 on your answer sheet."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 21-23</h4>\n      <p>Look at the following statements (Questions 21-23) and the list of people below.</p>\n      <p>Match each statement with the correct person, A, B, C or D.</p>\n      <p>Write the correct letter, A, B, C or D, in boxes 21-23 on your answer sheet.</p>\n      \n      <p><strong>21</strong> Dingoes tend to hunt native animals rather than hunting other non-native predators.</p>\n      <p><strong>22</strong> The presence of dingoes puts the income of some people at risk.</p>\n      <p><strong>23</strong> Dingoes have had little impact on the dying out of animal species in Australia.</p>\n      \n      <p><strong>List of People</strong></p>\n      <ul>\n        <li>A Stuart McKechnie</li>\n        <li>B Chris Johnson</li>\n        <li>C Lee Allen</li>\n        <li>D Mark Clifford</li>\n      </ul>\n      \n      <a id=\"q8-anchor\"></a>\n      <div id=\"q8-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">21.</span> Dingoes tend to hunt native animals rather than hunting other non-native predators.\n        <div class=\"researcher-option\">\n          <label><input name=\"q8\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q8\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q8\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q8\" type=\"radio\" value=\"D\"> D</label>\n        </div>\n      </div>\n      \n      <a id=\"q9-anchor\"></a>\n      <div id=\"q9-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">22.</span> The presence of dingoes puts the income of some people at risk.\n        <div class=\"researcher-option\">\n          <label><input name=\"q9\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q9\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q9\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q9\" type=\"radio\" value=\"D\"> D</label>\n        </div>\n      </div>\n      \n      <a id=\"q10-anchor\"></a>\n      <div id=\"q10-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">23.</span> Dingoes have had little impact on the dying out of animal species in Australia.\n        <div class=\"researcher-option\">\n          <label><input name=\"q10\" type=\"radio\" value=\"A\"> A</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"B\"> B</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"C\"> C</label>\n          <label><input name=\"q10\" type=\"radio\" value=\"D\"> D</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q8",
+            "q9",
+            "q10"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 24-26",
+          "question_range": {
+            "text": "Questions 24-26",
+            "start": 24,
+            "end": 26,
+            "numbers": [
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Complete the sentences below.",
+            "Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "Write your answers in boxes 24-26 on your answer sheet.",
+            "24. The dingo replaced the as the main predatory animal in Australia.",
+            "25. Foxes and cats are more likely to hunt native animals when there are fewer .",
+            "26. Australian animals reproduce at a slow rate as a natural way of avoiding ."
+          ],
+          "instructions": [
+            "Complete the sentences below.",
+            "Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "Write your answers in boxes 24-26 on your answer sheet."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 24-26</h4>\n      <p>Complete the sentences below.</p>\n      <p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>\n      <p>Write your answers in boxes 24-26 on your answer sheet.</p>\n      \n      <a id=\"q11-anchor\"></a>\n      <div id=\"q11-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">24.</span> The dingo replaced the <input type=\"text\" class=\"blank\" id=\"q11\" name=\"q11\"> as the main predatory animal in Australia.\n      </div>\n      \n      <a id=\"q12-anchor\"></a>\n      <div id=\"q12-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">25.</span> Foxes and cats are more likely to hunt native animals when there are fewer <input type=\"text\" class=\"blank\" id=\"q12\" name=\"q12\">.\n      </div>\n      \n      <a id=\"q13-anchor\"></a>\n      <div id=\"q13-section\" style=\"padding:8px 0;border-top:1px dashed var(--line);\">\n        <span class=\"question-number\">26.</span> Australian animals reproduce at a slow rate as a natural way of avoiding <input type=\"text\" class=\"blank\" id=\"q13\" name=\"q13\">.\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "sentence_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

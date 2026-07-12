@@ -1,0 +1,218 @@
+{
+  "id": "p3-low-198",
+  "source": "zyz",
+  "group": "p3-low",
+  "category": "P3",
+  "frequency": "low",
+  "title": "Child’s Play in Medieval England 中世纪的游戏",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "d",
+    "q2": "g",
+    "q3": "e",
+    "q4": "f",
+    "q5": "b",
+    "q6": "i",
+    "q7": "j",
+    "q8": "f",
+    "q9": "c",
+    "q10": "no",
+    "q11": "not given",
+    "q12": "yes",
+    "q13": "not given",
+    "q14": "yes"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14"
+  ],
+  "question_display_map": {
+    "q1": "27",
+    "q2": "28",
+    "q3": "29",
+    "q4": "30",
+    "q5": "31",
+    "q6": "32",
+    "q7": "33",
+    "q8": "34",
+    "q9": "35",
+    "q10": "36",
+    "q11": "37",
+    "q12": "38",
+    "q13": "39",
+    "q14": "40"
+  },
+  "passages": [
+    {
+      "passage_no": 3,
+      "question_range": {
+        "start": 27,
+        "end": 40
+      },
+      "title": "Child’s Play in Medieval England 中世纪的游戏",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 27-40."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 3,
+      "groups": [
+        {
+          "title": "Questions 27–31",
+          "question_range": {
+            "text": "Questions 27–31",
+            "start": 27,
+            "end": 31,
+            "numbers": [
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "raw_lines": [
+            "Which paragraph contains the following information?",
+            "27 economic evidence for play in medieval England",
+            "A B C D E F G H",
+            "28 an example of how children created their own toys",
+            "A B C D E F G H",
+            "29 an example of warlike play approved by grown-ups",
+            "A B C D E F G H",
+            "30 a political event mirrored in children's play",
+            "A B C D E F G H",
+            "31 the origin of an academic debate about medieval life",
+            "A B C D E F G H"
+          ],
+          "instructions": [
+            "Which paragraph contains the following information?"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <a id=\"q1-anchor\"></a>\n      <h4>Questions 27–31</h4>\n      <p>Which paragraph contains the following information?</p>\n      <div class=\"q-block\"><p><strong>27</strong> economic evidence for play in medieval England</p><div class=\"options\"><label><input type=\"radio\" name=\"q1\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q1\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q1\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q1\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q1\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q1\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q1\" value=\"G\"> G</label><label><input type=\"radio\" name=\"q1\" value=\"H\"> H</label></div></div>\n      <div class=\"q-block\"><p><strong>28</strong> an example of how children created their own toys</p><div class=\"options\"><label><input type=\"radio\" name=\"q2\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q2\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q2\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q2\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q2\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q2\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q2\" value=\"G\"> G</label><label><input type=\"radio\" name=\"q2\" value=\"H\"> H</label></div></div>\n      <div class=\"q-block\"><p><strong>29</strong> an example of warlike play approved by grown-ups</p><div class=\"options\"><label><input type=\"radio\" name=\"q3\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q3\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q3\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q3\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q3\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q3\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q3\" value=\"G\"> G</label><label><input type=\"radio\" name=\"q3\" value=\"H\"> H</label></div></div>\n      <div class=\"q-block\"><p><strong>30</strong> a political event mirrored in children's play</p><div class=\"options\"><label><input type=\"radio\" name=\"q4\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q4\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q4\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q4\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q4\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q4\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q4\" value=\"G\"> G</label><label><input type=\"radio\" name=\"q4\" value=\"H\"> H</label></div></div>\n      <div class=\"q-block\"><p><strong>31</strong> the origin of an academic debate about medieval life</p><div class=\"options\"><label><input type=\"radio\" name=\"q5\" value=\"A\"> A</label><label><input type=\"radio\" name=\"q5\" value=\"B\"> B</label><label><input type=\"radio\" name=\"q5\" value=\"C\"> C</label><label><input type=\"radio\" name=\"q5\" value=\"D\"> D</label><label><input type=\"radio\" name=\"q5\" value=\"E\"> E</label><label><input type=\"radio\" name=\"q5\" value=\"F\"> F</label><label><input type=\"radio\" name=\"q5\" value=\"G\"> G</label><label><input type=\"radio\" name=\"q5\" value=\"H\"> H</label></div></div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 32–35",
+          "question_range": {
+            "text": "Questions 32–35",
+            "start": 32,
+            "end": 35,
+            "numbers": [
+              32,
+              33,
+              34,
+              35
+            ]
+          },
+          "raw_lines": [
+            "Match each date with the correct event, A–J.",
+            "32 1400",
+            "33 1518",
+            "34 1582",
+            "35 1908",
+            "A invention of cricket",
+            "B children picking grapes",
+            "C poem about value of games",
+            "D early toy manufacturing in England",
+            "E puppets first imported into England",
+            "F dolls taxed in England",
+            "G death of Adam of Usk",
+            "H children playing tennis",
+            "I children's gang warfare",
+            "J a description of seasonal activities"
+          ],
+          "instructions": [
+            "Match each date with the correct event, A–J."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <a id=\"q6-anchor\"></a>\n      <h4>Questions 32–35</h4>\n      <p>Match each date with the correct event, A–J.</p>\n      <div class=\"q-match-item\"><span class=\"q-text\"><strong>32</strong> 1400</span><span class=\"dropzone match-dropzone\" data-target=\"q6\" data-question=\"q6\"></span></div>\n      <div class=\"q-match-item\"><span class=\"q-text\"><strong>33</strong> 1518</span><span class=\"dropzone match-dropzone\" data-target=\"q7\" data-question=\"q7\"></span></div>\n      <div class=\"q-match-item\"><span class=\"q-text\"><strong>34</strong> 1582</span><span class=\"dropzone match-dropzone\" data-target=\"q8\" data-question=\"q8\"></span></div>\n      <div class=\"q-match-item\"><span class=\"q-text\"><strong>35</strong> 1908</span><span class=\"dropzone match-dropzone\" data-target=\"q9\" data-question=\"q9\"></span></div>\n      <div class=\"option-pool\" id=\"pool-events\">\n        <div class=\"card\" draggable=\"true\" data-value=\"A\"><strong>A</strong> invention of cricket</div><div class=\"card\" draggable=\"true\" data-value=\"B\"><strong>B</strong> children picking grapes</div><div class=\"card\" draggable=\"true\" data-value=\"C\"><strong>C</strong> poem about value of games</div><div class=\"card\" draggable=\"true\" data-value=\"D\"><strong>D</strong> early toy manufacturing in England</div><div class=\"card\" draggable=\"true\" data-value=\"E\"><strong>E</strong> puppets first imported into England</div><div class=\"card\" draggable=\"true\" data-value=\"F\"><strong>F</strong> dolls taxed in England</div><div class=\"card\" draggable=\"true\" data-value=\"G\"><strong>G</strong> death of Adam of Usk</div><div class=\"card\" draggable=\"true\" data-value=\"H\"><strong>H</strong> children playing tennis</div><div class=\"card\" draggable=\"true\" data-value=\"I\"><strong>I</strong> children's gang warfare</div><div class=\"card\" draggable=\"true\" data-value=\"J\"><strong>J</strong> a description of seasonal activities</div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q6",
+            "q7",
+            "q8",
+            "q9"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 36–40",
+          "question_range": {
+            "text": "Questions 36–40",
+            "start": 36,
+            "end": 40,
+            "numbers": [
+              36,
+              37,
+              38,
+              39,
+              40
+            ]
+          },
+          "raw_lines": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?",
+            "36 Little is known about adult attitudes to children's play in the Middle Ages.",
+            "YES NO NOT GIVEN",
+            "37 Most toys were imported into England before 1300.",
+            "YES NO NOT GIVEN",
+            "38 Medieval children celebrated the seasons in their own ways.",
+            "YES NO NOT GIVEN",
+            "39 Medieval children made presents for their parents on special occasions.",
+            "YES NO NOT GIVEN",
+            "40 Parents and children in the Middle Ages behaved much as they do today.",
+            "YES NO NOT GIVEN"
+          ],
+          "instructions": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <a id=\"q10-anchor\"></a>\n      <h4>Questions 36–40</h4>\n      <p>Do the following statements agree with the views of the writer in Reading Passage 3?</p>\n      <div class=\"q-block\"><p><strong>36</strong> Little is known about adult attitudes to children's play in the Middle Ages.</p><div class=\"options-col\"><label><input type=\"radio\" name=\"q10\" value=\"yes\"> YES</label><label><input type=\"radio\" name=\"q10\" value=\"no\"> NO</label><label><input type=\"radio\" name=\"q10\" value=\"not given\"> NOT GIVEN</label></div></div>\n      <div class=\"q-block\"><p><strong>37</strong> Most toys were imported into England before 1300.</p><div class=\"options-col\"><label><input type=\"radio\" name=\"q11\" value=\"yes\"> YES</label><label><input type=\"radio\" name=\"q11\" value=\"no\"> NO</label><label><input type=\"radio\" name=\"q11\" value=\"not given\"> NOT GIVEN</label></div></div>\n      <div class=\"q-block\"><p><strong>38</strong> Medieval children celebrated the seasons in their own ways.</p><div class=\"options-col\"><label><input type=\"radio\" name=\"q12\" value=\"yes\"> YES</label><label><input type=\"radio\" name=\"q12\" value=\"no\"> NO</label><label><input type=\"radio\" name=\"q12\" value=\"not given\"> NOT GIVEN</label></div></div>\n      <div class=\"q-block\"><p><strong>39</strong> Medieval children made presents for their parents on special occasions.</p><div class=\"options-col\"><label><input type=\"radio\" name=\"q13\" value=\"yes\"> YES</label><label><input type=\"radio\" name=\"q13\" value=\"no\"> NO</label><label><input type=\"radio\" name=\"q13\" value=\"not given\"> NOT GIVEN</label></div></div>\n      <div class=\"q-block\"><p><strong>40</strong> Parents and children in the Middle Ages behaved much as they do today.</p><div class=\"options-col\"><label><input type=\"radio\" name=\"q14\" value=\"yes\"> YES</label><label><input type=\"radio\" name=\"q14\" value=\"no\"> NO</label><label><input type=\"radio\" name=\"q14\" value=\"not given\"> NOT GIVEN</label></div></div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13",
+            "q14"
+          ],
+          "kind": "yes_no_not_given",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

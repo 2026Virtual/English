@@ -1,0 +1,280 @@
+{
+  "id": "p3-high-212",
+  "source": "zyz",
+  "group": "p3-high",
+  "category": "P3",
+  "frequency": "high",
+  "title": "Children’s literature studies today 儿童文学【高】",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "a",
+    "q2": "c",
+    "q3": "b",
+    "q4": "no",
+    "q5": "no",
+    "q6": "not given",
+    "q7": "yes",
+    "q8": "not given",
+    "q9": "f",
+    "q10": "c",
+    "q11": "h",
+    "q12": "a",
+    "q13": "e",
+    "q14": "c"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14"
+  ],
+  "question_display_map": {
+    "q1": "27",
+    "q2": "28",
+    "q3": "29",
+    "q4": "30",
+    "q5": "31",
+    "q6": "32",
+    "q7": "33",
+    "q8": "34",
+    "q9": "35",
+    "q10": "36",
+    "q11": "37",
+    "q12": "38",
+    "q13": "39",
+    "q14": "40"
+  },
+  "passages": [
+    {
+      "passage_no": 3,
+      "question_range": {
+        "start": 27,
+        "end": 40
+      },
+      "title": "Children’s literature studies today 儿童文学【高】",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 27-40."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 3,
+      "groups": [
+        {
+          "title": "Questions 27–29",
+          "question_range": {
+            "text": "Questions 27–29",
+            "start": 27,
+            "end": 29,
+            "numbers": [
+              27,
+              28,
+              29
+            ]
+          },
+          "raw_lines": [
+            "Choose the correct letter, A, B, C or D .",
+            "27 Which of the following best summarises the writer's argument in the second paragraph?",
+            "A. Children are portrayed as adults see them.",
+            "B. Children are unable to write their own stories.",
+            "C. Adults fail to stimulate children's imaginations.",
+            "D. Adult literature is too difficult for children.",
+            "28 In the third paragraph, what does the writer say is the main interest of some people who study children's literature?",
+            "A. the quality of the writing",
+            "B. the imaginative content of stories",
+            "C. the instructive nature of children's books",
+            "D. the way children are written about in stories",
+            "29 The main point of the writer's argument in the fifth paragraph is to",
+            "A. demonstrate that academics consider computer games to be a logical extension of children's literature.",
+            "B. explore the impact of computers on the boundaries of children's literature.",
+            "C. illustrate that literature and computer games have different origins.",
+            "D. prove that children are using computers more than they are reading literature."
+          ],
+          "instructions": [
+            "Choose the correct letter, A, B, C or D ."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 27–29</h4>\n      <p>Choose the correct letter, <strong>A, B, C or D</strong>.</p>\n      \n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q1-anchor\"></a><strong>27</strong> Which of the following best summarises the writer's argument in the second paragraph?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q1\" value=\"a\"> A. Children are portrayed as adults see them.</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"b\"> B. Children are unable to write their own stories.</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"c\"> C. Adults fail to stimulate children's imaginations.</label>\n          <label><input type=\"radio\" name=\"q1\" value=\"d\"> D. Adult literature is too difficult for children.</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q2-anchor\"></a><strong>28</strong> In the third paragraph, what does the writer say is the main interest of some people who study children's literature?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q2\" value=\"a\"> A. the quality of the writing</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"b\"> B. the imaginative content of stories</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"c\"> C. the instructive nature of children's books</label>\n          <label><input type=\"radio\" name=\"q2\" value=\"d\"> D. the way children are written about in stories</label>\n        </div>\n      </div>\n\n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q3-anchor\"></a><strong>29</strong> The main point of the writer's argument in the fifth paragraph is to</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q3\" value=\"a\"> A. demonstrate that academics consider computer games to be a logical extension of children's literature.</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"b\"> B. explore the impact of computers on the boundaries of children's literature.</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"c\"> C. illustrate that literature and computer games have different origins.</label>\n          <label><input type=\"radio\" name=\"q3\" value=\"d\"> D. prove that children are using computers more than they are reading literature.</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 30–34",
+          "question_range": {
+            "text": "Questions 30–34",
+            "start": 30,
+            "end": 34,
+            "numbers": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          },
+          "raw_lines": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?",
+            "In boxes 30–34 on your answer sheet, write",
+            "YES if the statement agrees with the views of the writer",
+            "NO if the statement contradicts the views of the writer",
+            "NOT GIVEN if it is impossible to say what the writer thinks about this",
+            "30 Children tend to make a clear distinction between print literature and electronic media.",
+            "Yes",
+            "No",
+            "NG",
+            "31 The study of children's literature at higher education institutions is restricted to one subject area.",
+            "Yes",
+            "No",
+            "NG",
+            "32 Exploring children's perceptions of reading will assist parents to choose suitable books for children.",
+            "Yes",
+            "No",
+            "NG",
+            "33 Adults may appreciate the appeal of illustrated stories better, if they have more information on how children read.",
+            "Yes",
+            "No",
+            "NG",
+            "34 Children should be asked what features they would like digital games to include.",
+            "Yes",
+            "No",
+            "NG"
+          ],
+          "instructions": [
+            "Do the following statements agree with the views of the writer in Reading Passage 3?",
+            "In boxes 30–34 on your answer sheet, write",
+            "YES if the statement agrees with the views of the writer",
+            "NO if the statement contradicts the views of the writer",
+            "NOT GIVEN if it is impossible to say what the writer thinks about this"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 30–34</h4>\n      <p>Do the following statements agree with the views of the writer in Reading Passage 3?</p>\n      <p><em>In boxes 30–34 on your answer sheet, write</em></p>\n      <ul style=\"list-style:none; padding-left:0; font-weight:bold; font-size:0.9em;\">\n        <li>YES <span style=\"font-weight:normal; margin-left:45px;\">if the statement agrees with the views of the writer</span></li>\n        <li>NO <span style=\"font-weight:normal; margin-left:52px;\">if the statement contradicts the views of the writer</span></li>\n        <li>NOT GIVEN <span style=\"font-weight:normal; margin-left:8px;\">if it is impossible to say what the writer thinks about this</span></li>\n      </ul>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q4-anchor\"></a><b>30</b> Children tend to make a clear distinction between print literature and electronic media.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q4\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q4\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q4\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q5-anchor\"></a><b>31</b> The study of children's literature at higher education institutions is restricted to one subject area.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q5\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q5\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q5\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q6-anchor\"></a><b>32</b> Exploring children's perceptions of reading will assist parents to choose suitable books for children.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q6\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q6\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q6\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q7-anchor\"></a><b>33</b> Adults may appreciate the appeal of illustrated stories better, if they have more information on how children read.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q7\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q7\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q7\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n\n      <div class=\"question-row\">\n        <div class=\"question-text\"><a id=\"q8-anchor\"></a><b>34</b> Children should be asked what features they would like digital games to include.</div>\n        <div class=\"radio-group\">\n            <label><input type=\"radio\" name=\"q8\" value=\"yes\"> Yes</label>\n            <label><input type=\"radio\" name=\"q8\" value=\"no\"> No</label>\n            <label><input type=\"radio\" name=\"q8\" value=\"not given\"> NG</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q4",
+            "q5",
+            "q6",
+            "q7",
+            "q8"
+          ],
+          "kind": "yes_no_not_given",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 35–39",
+          "question_range": {
+            "text": "Questions 35–39",
+            "start": 35,
+            "end": 39,
+            "numbers": [
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          "raw_lines": [
+            "Complete each sentence with the correct ending, A–H , below.",
+            "Drag the correct ending block to the box below each sentence start.",
+            "A accepting that literature exists in a variety of forms today.",
+            "B verbalising the words in their heads.",
+            "C discovering the reading techniques used by others.",
+            "D the style of written stories changing over time.",
+            "E the lack of some specific abilities.",
+            "F a deeper knowledge of the intricacies of reading.",
+            "G children teaching adults to play computer games.",
+            "H creating a variety of images in their minds.",
+            "35 Young people's accounts of how they read lead to",
+            "36 The risk of solipsism is reduced by",
+            "37 Strong visualisers judge books on the basis that they are",
+            "38 Children's insights are important in",
+            "39 When adults read a book more easily than they play a digital game, it simply suggests"
+          ],
+          "instructions": [
+            "Complete each sentence with the correct ending, A–H , below.",
+            "Drag the correct ending block to the box below each sentence start.",
+            "A accepting that literature exists in a variety of forms today.",
+            "B verbalising the words in their heads.",
+            "C discovering the reading techniques used by others.",
+            "D the style of written stories changing over time.",
+            "E the lack of some specific abilities.",
+            "F a deeper knowledge of the intricacies of reading.",
+            "G children teaching adults to play computer games.",
+            "H creating a variety of images in their minds."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 35–39</h4>\n      <p>Complete each sentence with the correct ending, <strong>A–H</strong>, below.</p>\n      <p><em>Drag the correct ending block to the box below each sentence start.</em></p>\n\n      <!-- Draggable Full Text Options -->\n      <div class=\"cardpool pool-vertical\" id=\"pool-endings\">\n        <div class=\"card\" draggable=\"true\" id=\"c-a\" data-value=\"A\"><strong>A</strong> accepting that literature exists in a variety of forms today.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-b\" data-value=\"B\"><strong>B</strong> verbalising the words in their heads.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-c\" data-value=\"C\"><strong>C</strong> discovering the reading techniques used by others.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-d\" data-value=\"D\"><strong>D</strong> the style of written stories changing over time.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-e\" data-value=\"E\"><strong>E</strong> the lack of some specific abilities.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-f\" data-value=\"F\"><strong>F</strong> a deeper knowledge of the intricacies of reading.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-g\" data-value=\"G\"><strong>G</strong> children teaching adults to play computer games.</div>\n        <div class=\"card\" draggable=\"true\" id=\"c-h\" data-value=\"H\"><strong>H</strong> creating a variety of images in their minds.</div>\n      </div>\n\n      <hr style=\"border:0; border-top:1px dashed var(--line); margin:20px 0;\">\n\n      <div>\n        <p><a id=\"q9-anchor\"></a><strong>35</strong> Young people's accounts of how they read lead to</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q9\" data-question=\"q9\"></span>\n      </div>\n      <div>\n        <p><a id=\"q10-anchor\"></a><strong>36</strong> The risk of solipsism is reduced by</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q10\" data-question=\"q10\"></span>\n      </div>\n      <div>\n        <p><a id=\"q11-anchor\"></a><strong>37</strong> Strong visualisers judge books on the basis that they are</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q11\" data-question=\"q11\"></span>\n      </div>\n      <div>\n        <p><a id=\"q12-anchor\"></a><strong>38</strong> Children's insights are important in</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q12\" data-question=\"q12\"></span>\n      </div>\n      <div>\n        <p><a id=\"q13-anchor\"></a><strong>39</strong> When adults read a book more easily than they play a digital game, it simply suggests</p>\n        <span class=\"dropzone match-dropzone\" data-target=\"q13\" data-question=\"q13\"></span>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q9",
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "short_answer",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Question 40",
+          "question_range": {
+            "text": "Question 40",
+            "start": 40,
+            "end": 40,
+            "numbers": [
+              40
+            ]
+          },
+          "raw_lines": [
+            "Choose the correct letter A, B, C or D .",
+            "40 What was the writer's main purpose in writing this article?",
+            "A. to evaluate how the process of reading fits into children's literature studies",
+            "B. to discuss the impact of the increasing commercial influence on children's literature studies",
+            "C. to review the challenges in the field of children's literature studies and suggest how to proceed",
+            "D. to provide arguments in favor of including computerized forms in children's literature studies"
+          ],
+          "instructions": [
+            "Choose the correct letter A, B, C or D ."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Question 40</h4>\n      <p>Choose the correct letter <strong>A, B, C or D</strong>.</p>\n      \n      <div style=\"margin-bottom:16px;\">\n        <p><a id=\"q14-anchor\"></a><strong>40</strong> What was the writer's main purpose in writing this article?</p>\n        <div class=\"mcq-group\">\n          <label><input type=\"radio\" name=\"q14\" value=\"a\"> A. to evaluate how the process of reading fits into children's literature studies</label>\n          <label><input type=\"radio\" name=\"q14\" value=\"b\"> B. to discuss the impact of the increasing commercial influence on children's literature studies</label>\n          <label><input type=\"radio\" name=\"q14\" value=\"c\"> C. to review the challenges in the field of children's literature studies and suggest how to proceed</label>\n          <label><input type=\"radio\" name=\"q14\" value=\"d\"> D. to provide arguments in favor of including computerized forms in children's literature studies</label>\n        </div>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q14"
+          ],
+          "kind": "single_choice",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

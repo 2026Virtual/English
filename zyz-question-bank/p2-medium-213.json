@@ -1,0 +1,215 @@
+{
+  "id": "p2-medium-213",
+  "source": "zyz",
+  "group": "p2-medium",
+  "category": "P2",
+  "frequency": "medium",
+  "title": "Growing more for less 卫星农业",
+  "pdfFilename": "",
+  "source_refs": {},
+  "answer_key": {
+    "q1": "C",
+    "q2": "D",
+    "q3": "E",
+    "q4": "G",
+    "q5": "D",
+    "q6": "F",
+    "q7": "B",
+    "q8": "B",
+    "q9": "D",
+    "q10": "electromagnetic radiation",
+    "q11": "Henri Douche",
+    "q12": "crop failure",
+    "q13": "nutrients"
+  },
+  "question_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13"
+  ],
+  "question_display_map": {
+    "q1": "14",
+    "q2": "15",
+    "q3": "16",
+    "q4": "17",
+    "q5": "18",
+    "q6": "19",
+    "q7": "20",
+    "q8": "21",
+    "q9": "22",
+    "q10": "23",
+    "q11": "24",
+    "q12": "25",
+    "q13": "26"
+  },
+  "passages": [
+    {
+      "passage_no": 2,
+      "question_range": {
+        "start": 14,
+        "end": 26
+      },
+      "title": "Growing more for less 卫星农业",
+      "subtitle": "",
+      "intro": [
+        "You should spend about 20 minutes on Questions 14-26."
+      ],
+      "paragraphs": [],
+      "source_html": ""
+    }
+  ],
+  "problems": [
+    {
+      "passage_no": 2,
+      "groups": [
+        {
+          "title": "Questions 14-20",
+          "question_range": {
+            "text": "Questions 14-20",
+            "start": 14,
+            "end": 20,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          "raw_lines": [
+            "Reading Passage 2 has seven paragraphs, A-G .",
+            "Which paragraph contains the following information?",
+            "Write the correct letter, A-G, in boxes 14-20 on your answer sheet.",
+            "NB You may use any letter more than once.",
+            "A B C D E F G",
+            "14 an example of how farmers in one country are now using satellite data to determine fertiliser use",
+            "15 a reference to climate change and its effects",
+            "16 a reference to the effect on the soil of using too much fertiliser",
+            "17 an example of information that will be shared between different countries",
+            "18 a mention of the country which is the leader in agricultural technology",
+            "19 a description of an innovation in satellite imaging which requires further study",
+            "20 evidence of the cost effectiveness of using satellite technology in agriculture"
+          ],
+          "instructions": [
+            "Reading Passage 2 has seven paragraphs, A-G .",
+            "Which paragraph contains the following information?",
+            "Write the correct letter, A-G, in boxes 14-20 on your answer sheet.",
+            "NB You may use any letter more than once.",
+            "A B C D E F G"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 14-20</h4>\n      <p>Reading Passage 2 has seven paragraphs, <strong>A-G</strong>.</p>\n      <p>Which paragraph contains the following information?</p>\n      <p><em>Write the correct letter, A-G, in boxes 14-20 on your answer sheet.</em></p>\n      <p><strong>NB</strong> You may use any letter more than once.</p>\n      <div style=\"overflow-x: auto;\">\n        <table class=\"matching-table\">\n          <thead>\n            <tr>\n              <th></th>\n              <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td><a id=\"q1-anchor\"></a><strong>14</strong> an example of how farmers in one country are now using satellite data to determine fertiliser use</td>\n              <td><input type=\"radio\" name=\"q1\" value=\"A\"></td><td><input type=\"radio\" name=\"q1\" value=\"B\"></td><td><input type=\"radio\" name=\"q1\" value=\"C\"></td><td><input type=\"radio\" name=\"q1\" value=\"D\"></td><td><input type=\"radio\" name=\"q1\" value=\"E\"></td><td><input type=\"radio\" name=\"q1\" value=\"F\"></td><td><input type=\"radio\" name=\"q1\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q2-anchor\"></a><strong>15</strong> a reference to climate change and its effects</td>\n              <td><input type=\"radio\" name=\"q2\" value=\"A\"></td><td><input type=\"radio\" name=\"q2\" value=\"B\"></td><td><input type=\"radio\" name=\"q2\" value=\"C\"></td><td><input type=\"radio\" name=\"q2\" value=\"D\"></td><td><input type=\"radio\" name=\"q2\" value=\"E\"></td><td><input type=\"radio\" name=\"q2\" value=\"F\"></td><td><input type=\"radio\" name=\"q2\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q3-anchor\"></a><strong>16</strong> a reference to the effect on the soil of using too much fertiliser</td>\n              <td><input type=\"radio\" name=\"q3\" value=\"A\"></td><td><input type=\"radio\" name=\"q3\" value=\"B\"></td><td><input type=\"radio\" name=\"q3\" value=\"C\"></td><td><input type=\"radio\" name=\"q3\" value=\"D\"></td><td><input type=\"radio\" name=\"q3\" value=\"E\"></td><td><input type=\"radio\" name=\"q3\" value=\"F\"></td><td><input type=\"radio\" name=\"q3\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q4-anchor\"></a><strong>17</strong> an example of information that will be shared between different countries</td>\n              <td><input type=\"radio\" name=\"q4\" value=\"A\"></td><td><input type=\"radio\" name=\"q4\" value=\"B\"></td><td><input type=\"radio\" name=\"q4\" value=\"C\"></td><td><input type=\"radio\" name=\"q4\" value=\"D\"></td><td><input type=\"radio\" name=\"q4\" value=\"E\"></td><td><input type=\"radio\" name=\"q4\" value=\"F\"></td><td><input type=\"radio\" name=\"q4\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q5-anchor\"></a><strong>18</strong> a mention of the country which is the leader in agricultural technology</td>\n              <td><input type=\"radio\" name=\"q5\" value=\"A\"></td><td><input type=\"radio\" name=\"q5\" value=\"B\"></td><td><input type=\"radio\" name=\"q5\" value=\"C\"></td><td><input type=\"radio\" name=\"q5\" value=\"D\"></td><td><input type=\"radio\" name=\"q5\" value=\"E\"></td><td><input type=\"radio\" name=\"q5\" value=\"F\"></td><td><input type=\"radio\" name=\"q5\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q6-anchor\"></a><strong>19</strong> a description of an innovation in satellite imaging which requires further study</td>\n              <td><input type=\"radio\" name=\"q6\" value=\"A\"></td><td><input type=\"radio\" name=\"q6\" value=\"B\"></td><td><input type=\"radio\" name=\"q6\" value=\"C\"></td><td><input type=\"radio\" name=\"q6\" value=\"D\"></td><td><input type=\"radio\" name=\"q6\" value=\"E\"></td><td><input type=\"radio\" name=\"q6\" value=\"F\"></td><td><input type=\"radio\" name=\"q6\" value=\"G\"></td>\n            </tr>\n            <tr>\n              <td><a id=\"q7-anchor\"></a><strong>20</strong> evidence of the cost effectiveness of using satellite technology in agriculture</td>\n              <td><input type=\"radio\" name=\"q7\" value=\"A\"></td><td><input type=\"radio\" name=\"q7\" value=\"B\"></td><td><input type=\"radio\" name=\"q7\" value=\"C\"></td><td><input type=\"radio\" name=\"q7\" value=\"D\"></td><td><input type=\"radio\" name=\"q7\" value=\"E\"></td><td><input type=\"radio\" name=\"q7\" value=\"F\"></td><td><input type=\"radio\" name=\"q7\" value=\"G\"></td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5",
+            "q6",
+            "q7"
+          ],
+          "kind": "table_completion",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 21 and 22",
+          "question_range": {
+            "text": "Questions 21 and 22",
+            "start": 21,
+            "end": 22,
+            "numbers": [
+              21,
+              22
+            ]
+          },
+          "raw_lines": [
+            "Choose TWO letters, A-E .",
+            "Write the correct letters in boxes 21 and 22 on your answer sheet.",
+            "Which TWO companies obtain information directly from satellites?",
+            "A. Sevepi",
+            "B. Infoterra",
+            "C. Agriculture and Agri-Food Canada",
+            "D. RapidEye",
+            "E. World Agroforestry Centre",
+            "Note: Select exactly TWO options"
+          ],
+          "instructions": [
+            "Choose TWO letters, A-E .",
+            "Write the correct letters in boxes 21 and 22 on your answer sheet.",
+            "Which TWO companies obtain information directly from satellites?",
+            "A. Sevepi",
+            "B. Infoterra",
+            "C. Agriculture and Agri-Food Canada"
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 21 and 22</h4>\n      <p>Choose <strong>TWO</strong> letters, <strong>A-E</strong>.</p>\n      <p>Write the correct letters in boxes 21 and 22 on your answer sheet.</p>\n      <p>Which <strong>TWO</strong> companies obtain information directly from satellites?</p>\n      \n      <div class=\"mcq-group\">\n        <label><input type=\"checkbox\" name=\"q8_9\" value=\"A\"> A. Sevepi</label>\n        <label><input type=\"checkbox\" name=\"q8_9\" value=\"B\"> B. Infoterra</label>\n        <label><input type=\"checkbox\" name=\"q8_9\" value=\"C\"> C. Agriculture and Agri-Food Canada</label>\n        <label><input type=\"checkbox\" name=\"q8_9\" value=\"D\"> D. RapidEye</label>\n        <label><input type=\"checkbox\" name=\"q8_9\" value=\"E\"> E. World Agroforestry Centre</label>\n      </div>\n      <p style=\"font-size: 0.9em; color: var(--muted); margin-top: 8px;\"><em>Note: Select exactly TWO options</em></p>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q8",
+            "q9"
+          ],
+          "kind": "multi_choice",
+          "allow_option_reuse": false
+        },
+        {
+          "title": "Questions 23-26",
+          "question_range": {
+            "text": "Questions 23-26",
+            "start": 23,
+            "end": 26,
+            "numbers": [
+              23,
+              24,
+              25,
+              26
+            ]
+          },
+          "raw_lines": [
+            "Complete the sentences below.",
+            "Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "Write your answers in boxes 23-26 on your answer sheet.",
+            "23 Initially, orbiting satellites are used to measure coming from farmland.",
+            "24 believes that confusion about irregular weather will cause more farmers to use satellite technology.",
+            "25 As a result of satellite technology, it may become possible to insure against the risk of .",
+            "26 In Africa, much of the soil suffers from the loss of ."
+          ],
+          "instructions": [
+            "Complete the sentences below.",
+            "Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "Write your answers in boxes 23-26 on your answer sheet."
+          ],
+          "context": [],
+          "options": [],
+          "items": [],
+          "source_html": "<div class=\"group\">\n      <h4>Questions 23-26</h4>\n      <p>Complete the sentences below.</p>\n      <p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>\n      <p>Write your answers in boxes 23-26 on your answer sheet.</p>\n      \n      <div style=\"margin-bottom: 16px;\">\n        <p><a id=\"q10-anchor\"></a><strong>23</strong> Initially, orbiting satellites are used to measure <input class=\"blank\" type=\"text\" name=\"q10\"> coming from farmland.</p>\n      </div>\n      \n      <div style=\"margin-bottom: 16px;\">\n        <p><a id=\"q11-anchor\"></a><strong>24</strong> <input class=\"blank\" type=\"text\" name=\"q11\"> believes that confusion about irregular weather will cause more farmers to use satellite technology.</p>\n      </div>\n      \n      <div style=\"margin-bottom: 16px;\">\n        <p><a id=\"q12-anchor\"></a><strong>25</strong> As a result of satellite technology, it may become possible to insure against the risk of <input class=\"blank\" type=\"text\" name=\"q12\">.</p>\n      </div>\n      \n      <div style=\"margin-bottom: 16px;\">\n        <p><a id=\"q13-anchor\"></a><strong>26</strong> In Africa, much of the soil suffers from the loss of <input class=\"blank\" type=\"text\" name=\"q13\">.</p>\n      </div>\n    </div>",
+          "source_kind": "zyz-html",
+          "source_question_ids": [
+            "q10",
+            "q11",
+            "q12",
+            "q13"
+          ],
+          "kind": "sentence_completion",
+          "allow_option_reuse": false
+        }
+      ]
+    }
+  ]
+}

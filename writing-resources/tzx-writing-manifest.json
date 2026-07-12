@@ -1,0 +1,3612 @@
+{
+  "generated_at": "2026-07-08T15:43:52.727Z",
+  "image_compression": "webp q72/q58 via cwebp",
+  "groups": [
+    {
+      "id": "tzx-writing-task1",
+      "title": "躺着学写作 Task 1",
+      "subtitle": "小作文题库与范文 · 107 篇",
+      "icon": "T1",
+      "tags": [
+        {
+          "tag": "柱状图",
+          "count": 30
+        },
+        {
+          "tag": "饼状图",
+          "count": 9
+        },
+        {
+          "tag": "流程图",
+          "count": 11
+        },
+        {
+          "tag": "地图",
+          "count": 16
+        },
+        {
+          "tag": "混合图",
+          "count": 7
+        },
+        {
+          "tag": "曲线图",
+          "count": 19
+        },
+        {
+          "tag": "表格",
+          "count": 12
+        },
+        {
+          "tag": "混合类",
+          "count": 3
+        }
+      ],
+      "images": {
+        "original_bytes": 38132527,
+        "output_bytes": 5484728,
+        "count": 107
+      },
+      "resources": [
+        {
+          "id": "3690",
+          "title": "政府的交通开销",
+          "subtitle": "柱状图 · ID 3690 · 命中 2023-11-18",
+          "tag": "柱状图",
+          "hit": "2023-11-18",
+          "url": "./writing-resources/tzx-task1/3690.html"
+        },
+        {
+          "id": "3695",
+          "title": "四国的电力结构",
+          "subtitle": "饼状图 · ID 3695 · 命中 2025-04-19",
+          "tag": "饼状图",
+          "hit": "2025-04-19",
+          "url": "./writing-resources/tzx-task1/3695.html"
+        },
+        {
+          "id": "3696",
+          "title": "制作奶酪流程",
+          "subtitle": "流程图 · ID 3696 · 命中 2025-11-06",
+          "tag": "流程图",
+          "hit": "2025-11-06",
+          "url": "./writing-resources/tzx-task1/3696.html"
+        },
+        {
+          "id": "3697",
+          "title": "学校布局地图",
+          "subtitle": "地图 · ID 3697 · 命中 2025-04-28",
+          "tag": "地图",
+          "hit": "2025-04-28",
+          "url": "./writing-resources/tzx-task1/3697.html"
+        },
+        {
+          "id": "3698",
+          "title": "英国移民",
+          "subtitle": "混合图 · ID 3698 · 命中 2024-03-02",
+          "tag": "混合图",
+          "hit": "2024-03-02",
+          "url": "./writing-resources/tzx-task1/3698.html"
+        },
+        {
+          "id": "3708",
+          "title": "欧洲国家旅游情况",
+          "subtitle": "曲线图 · ID 3708 · 命中 2024-03-26",
+          "tag": "曲线图",
+          "hit": "2024-03-26",
+          "url": "./writing-resources/tzx-task1/3708.html"
+        },
+        {
+          "id": "3718",
+          "title": "香蕉价格",
+          "subtitle": "曲线图 · ID 3718 · 命中 2025-03-31",
+          "tag": "曲线图",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task1/3718.html"
+        },
+        {
+          "id": "3719",
+          "title": "法国电力生产",
+          "subtitle": "曲线图 · ID 3719 · 命中 2024-02-02",
+          "tag": "曲线图",
+          "hit": "2024-02-02",
+          "url": "./writing-resources/tzx-task1/3719.html"
+        },
+        {
+          "id": "3738",
+          "title": "澳大利亚失业率",
+          "subtitle": "混合图 · ID 3738 · 命中 2024-07-01",
+          "tag": "混合图",
+          "hit": "2024-07-01",
+          "url": "./writing-resources/tzx-task1/3738.html"
+        },
+        {
+          "id": "3739",
+          "title": "澳大利亚出口变化",
+          "subtitle": "曲线图 · ID 3739 · 命中 2024-02-03",
+          "tag": "曲线图",
+          "hit": "2024-02-03",
+          "url": "./writing-resources/tzx-task1/3739.html"
+        },
+        {
+          "id": "3740",
+          "title": "五国教师待遇对比",
+          "subtitle": "表格 · ID 3740 · 命中 2024-03-18",
+          "tag": "表格",
+          "hit": "2024-03-18",
+          "url": "./writing-resources/tzx-task1/3740.html"
+        },
+        {
+          "id": "3750",
+          "title": "澳大利亚汽车销量",
+          "subtitle": "饼状图 · ID 3750 · 命中 2024-05-29",
+          "tag": "饼状图",
+          "hit": "2024-05-29",
+          "url": "./writing-resources/tzx-task1/3750.html"
+        },
+        {
+          "id": "3751",
+          "title": "四国风能发电量",
+          "subtitle": "曲线图 · ID 3751 · 命中 2025-03-23",
+          "tag": "曲线图",
+          "hit": "2025-03-23",
+          "url": "./writing-resources/tzx-task1/3751.html"
+        },
+        {
+          "id": "3752",
+          "title": "组织捐赠资金情况",
+          "subtitle": "柱状图 · ID 3752 · 命中 2025-04-15",
+          "tag": "柱状图",
+          "hit": "2025-04-15",
+          "url": "./writing-resources/tzx-task1/3752.html"
+        },
+        {
+          "id": "3753",
+          "title": "手机品牌市场占有率",
+          "subtitle": "曲线图 · ID 3753 · 命中 2024-01-30",
+          "tag": "曲线图",
+          "hit": "2024-01-30",
+          "url": "./writing-resources/tzx-task1/3753.html"
+        },
+        {
+          "id": "3754",
+          "title": "四国牛奶产量",
+          "subtitle": "表格 · ID 3754 · 命中 2025-04-27",
+          "tag": "表格",
+          "hit": "2025-04-27",
+          "url": "./writing-resources/tzx-task1/3754.html"
+        },
+        {
+          "id": "3755",
+          "title": "工作缺勤原因",
+          "subtitle": "柱状图 · ID 3755 · 命中 2024-03-02",
+          "tag": "柱状图",
+          "hit": "2024-03-02",
+          "url": "./writing-resources/tzx-task1/3755.html"
+        },
+        {
+          "id": "3756",
+          "title": "志愿者组织变化",
+          "subtitle": "饼状图 · ID 3756 · 命中 2024-06-29",
+          "tag": "饼状图",
+          "hit": "2024-06-29",
+          "url": "./writing-resources/tzx-task1/3756.html"
+        },
+        {
+          "id": "3757",
+          "title": "英语课程比例变化",
+          "subtitle": "饼状图 · ID 3757 · 命中 2024-02-03",
+          "tag": "饼状图",
+          "hit": "2024-02-03",
+          "url": "./writing-resources/tzx-task1/3757.html"
+        },
+        {
+          "id": "7025",
+          "title": "蛋白质摄入与卡路里",
+          "subtitle": "柱状图 · ID 7025 · 命中 2024-08-17",
+          "tag": "柱状图",
+          "hit": "2024-08-17",
+          "url": "./writing-resources/tzx-task1/7025.html"
+        },
+        {
+          "id": "7053",
+          "title": "奶制品产量",
+          "subtitle": "柱状图 · ID 7053 · 命中 2025-11-04",
+          "tag": "柱状图",
+          "hit": "2025-11-04",
+          "url": "./writing-resources/tzx-task1/7053.html"
+        },
+        {
+          "id": "7054",
+          "title": "出口衣物",
+          "subtitle": "混合类 · ID 7054 · 命中 2024-02-24",
+          "tag": "混合类",
+          "hit": "2024-02-24",
+          "url": "./writing-resources/tzx-task1/7054.html"
+        },
+        {
+          "id": "7055",
+          "title": "学习外语",
+          "subtitle": "柱状图 · ID 7055 · 命中 2024-04-06",
+          "tag": "柱状图",
+          "hit": "2024-04-06",
+          "url": "./writing-resources/tzx-task1/7055.html"
+        },
+        {
+          "id": "7057",
+          "title": "三国失业率对比",
+          "subtitle": "曲线图 · ID 7057 · 命中 2024-02-24",
+          "tag": "曲线图",
+          "hit": "2024-02-24",
+          "url": "./writing-resources/tzx-task1/7057.html"
+        },
+        {
+          "id": "7058",
+          "title": "学生地区分布",
+          "subtitle": "混合图 · ID 7058 · 命中 2024-05-09",
+          "tag": "混合图",
+          "hit": "2024-05-09",
+          "url": "./writing-resources/tzx-task1/7058.html"
+        },
+        {
+          "id": "7059",
+          "title": "大学申请者来源",
+          "subtitle": "柱状图 · ID 7059 · 命中 2024-06-22",
+          "tag": "柱状图",
+          "hit": "2024-06-22",
+          "url": "./writing-resources/tzx-task1/7059.html"
+        },
+        {
+          "id": "7060",
+          "title": "买车",
+          "subtitle": "柱状图 · ID 7060 · 命中 2025-07-27",
+          "tag": "柱状图",
+          "hit": "2025-07-27",
+          "url": "./writing-resources/tzx-task1/7060.html"
+        },
+        {
+          "id": "7061",
+          "title": "医院评价",
+          "subtitle": "柱状图 · ID 7061 · 命中 2024-04-27",
+          "tag": "柱状图",
+          "hit": "2024-04-27",
+          "url": "./writing-resources/tzx-task1/7061.html"
+        },
+        {
+          "id": "7062",
+          "title": "汽车销售",
+          "subtitle": "柱状图 · ID 7062 · 命中 2024-03-16",
+          "tag": "柱状图",
+          "hit": "2024-03-16",
+          "url": "./writing-resources/tzx-task1/7062.html"
+        },
+        {
+          "id": "7063",
+          "title": "学习时长",
+          "subtitle": "柱状图 · ID 7063 · 命中 2025-01-05",
+          "tag": "柱状图",
+          "hit": "2025-01-05",
+          "url": "./writing-resources/tzx-task1/7063.html"
+        },
+        {
+          "id": "7064",
+          "title": "观看或参与运动",
+          "subtitle": "柱状图 · ID 7064 · 命中 2024-04-20",
+          "tag": "柱状图",
+          "hit": "2024-04-20",
+          "url": "./writing-resources/tzx-task1/7064.html"
+        },
+        {
+          "id": "7065",
+          "title": "出行方式",
+          "subtitle": "表格 · ID 7065 · 命中 2024-12-23",
+          "tag": "表格",
+          "hit": "2024-12-23",
+          "url": "./writing-resources/tzx-task1/7065.html"
+        },
+        {
+          "id": "7072",
+          "title": "煤炭发电流程",
+          "subtitle": "流程图 · ID 7072 · 命中 2025-11-09",
+          "tag": "流程图",
+          "hit": "2025-11-09",
+          "url": "./writing-resources/tzx-task1/7072.html"
+        },
+        {
+          "id": "7073",
+          "title": "工作类型人数对比",
+          "subtitle": "柱状图 · ID 7073 · 命中 2024-06-08",
+          "tag": "柱状图",
+          "hit": "2024-06-08",
+          "url": "./writing-resources/tzx-task1/7073.html"
+        },
+        {
+          "id": "7078",
+          "title": "欧洲移民原因",
+          "subtitle": "饼状图 · ID 7078 · 命中 2024-08-03",
+          "tag": "饼状图",
+          "hit": "2024-08-03",
+          "url": "./writing-resources/tzx-task1/7078.html"
+        },
+        {
+          "id": "7079",
+          "title": "大学课程男女人数",
+          "subtitle": "混合类 · ID 7079 · 命中 2024-08-10",
+          "tag": "混合类",
+          "hit": "2024-08-10",
+          "url": "./writing-resources/tzx-task1/7079.html"
+        },
+        {
+          "id": "7080",
+          "title": "会议中心布局",
+          "subtitle": "地图 · ID 7080 · 命中 2024-06-22",
+          "tag": "地图",
+          "hit": "2024-06-22",
+          "url": "./writing-resources/tzx-task1/7080.html"
+        },
+        {
+          "id": "7081",
+          "title": "办公室布局",
+          "subtitle": "地图 · ID 7081 · 命中 2025-04-30",
+          "tag": "地图",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task1/7081.html"
+        },
+        {
+          "id": "7082",
+          "title": "村子变化",
+          "subtitle": "地图 · ID 7082 · 命中 2025-11-05",
+          "tag": "地图",
+          "hit": "2025-11-05",
+          "url": "./writing-resources/tzx-task1/7082.html"
+        },
+        {
+          "id": "7095",
+          "title": "垃圾填埋",
+          "subtitle": "流程图 · ID 7095 · 命中 2025-11-13",
+          "tag": "流程图",
+          "hit": "2025-11-13",
+          "url": "./writing-resources/tzx-task1/7095.html"
+        },
+        {
+          "id": "7097",
+          "title": "上学的方式",
+          "subtitle": "柱状图 · ID 7097 · 命中 2025-04-14",
+          "tag": "柱状图",
+          "hit": "2025-04-14",
+          "url": "./writing-resources/tzx-task1/7097.html"
+        },
+        {
+          "id": "7195",
+          "title": "各类图书销量变化",
+          "subtitle": "饼状图 · ID 7195 · 命中 2024-08-31",
+          "tag": "饼状图",
+          "hit": "2024-08-31",
+          "url": "./writing-resources/tzx-task1/7195.html"
+        },
+        {
+          "id": "7199",
+          "title": "制造汽车的时间",
+          "subtitle": "曲线图 · ID 7199 · 命中 2024-09-28",
+          "tag": "曲线图",
+          "hit": "2024-09-28",
+          "url": "./writing-resources/tzx-task1/7199.html"
+        },
+        {
+          "id": "7205",
+          "title": "市民开销",
+          "subtitle": "柱状图 · ID 7205 · 命中 2024-08-06",
+          "tag": "柱状图",
+          "hit": "2024-08-06",
+          "url": "./writing-resources/tzx-task1/7205.html"
+        },
+        {
+          "id": "7206",
+          "title": "图书馆布局",
+          "subtitle": "地图 · ID 7206 · 命中 2024-09-24",
+          "tag": "地图",
+          "hit": "2024-09-24",
+          "url": "./writing-resources/tzx-task1/7206.html"
+        },
+        {
+          "id": "7207",
+          "title": "网购",
+          "subtitle": "饼状图 · ID 7207 · 命中 2024-09-12",
+          "tag": "饼状图",
+          "hit": "2024-09-12",
+          "url": "./writing-resources/tzx-task1/7207.html"
+        },
+        {
+          "id": "7208",
+          "title": "毕业生的就业率和薪资",
+          "subtitle": "混合类 · ID 7208 · 命中 2024-10-31",
+          "tag": "混合类",
+          "hit": "2024-10-31",
+          "url": "./writing-resources/tzx-task1/7208.html"
+        },
+        {
+          "id": "7209",
+          "title": "学生课程",
+          "subtitle": "饼状图 · ID 7209 · 命中 2024-08-17",
+          "tag": "饼状图",
+          "hit": "2024-08-17",
+          "url": "./writing-resources/tzx-task1/7209.html"
+        },
+        {
+          "id": "7210",
+          "title": "退休年龄",
+          "subtitle": "表格 · ID 7210 · 命中 2025-04-24",
+          "tag": "表格",
+          "hit": "2025-04-24",
+          "url": "./writing-resources/tzx-task1/7210.html"
+        },
+        {
+          "id": "7211",
+          "title": "制药公司销售分布",
+          "subtitle": "柱状图 · ID 7211 · 命中 2025-04-17",
+          "tag": "柱状图",
+          "hit": "2025-04-17",
+          "url": "./writing-resources/tzx-task1/7211.html"
+        },
+        {
+          "id": "7637",
+          "title": "新西兰男女就业数据",
+          "subtitle": "表格 · ID 7637 · 命中 2024-12-07",
+          "tag": "表格",
+          "hit": "2024-12-07",
+          "url": "./writing-resources/tzx-task1/7637.html"
+        },
+        {
+          "id": "7639",
+          "title": "欧盟进口服装价格",
+          "subtitle": "柱状图 · ID 7639 · 命中 2024-11-23",
+          "tag": "柱状图",
+          "hit": "2024-11-23",
+          "url": "./writing-resources/tzx-task1/7639.html"
+        },
+        {
+          "id": "7640",
+          "title": "旅游信息办公室咨询",
+          "subtitle": "曲线图 · ID 7640 · 命中 2024-11-16",
+          "tag": "曲线图",
+          "hit": "2024-11-16",
+          "url": "./writing-resources/tzx-task1/7640.html"
+        },
+        {
+          "id": "7641",
+          "title": "欧洲国家家庭计算机",
+          "subtitle": "曲线图 · ID 7641 · 命中 2024-10-26",
+          "tag": "曲线图",
+          "hit": "2024-10-26",
+          "url": "./writing-resources/tzx-task1/7641.html"
+        },
+        {
+          "id": "7642",
+          "title": "菠萝种植与加工过程",
+          "subtitle": "流程图 · ID 7642 · 命中 2025-11-06",
+          "tag": "流程图",
+          "hit": "2025-11-06",
+          "url": "./writing-resources/tzx-task1/7642.html"
+        },
+        {
+          "id": "7643",
+          "title": "澳大利亚与马来西亚人口对比",
+          "subtitle": "表格 · ID 7643 · 命中 2024-09-28",
+          "tag": "表格",
+          "hit": "2024-09-28",
+          "url": "./writing-resources/tzx-task1/7643.html"
+        },
+        {
+          "id": "7644",
+          "title": "欧洲国家工人因病缺勤情况",
+          "subtitle": "曲线图 · ID 7644 · 命中 2024-09-07",
+          "tag": "曲线图",
+          "hit": "2024-09-07",
+          "url": "./writing-resources/tzx-task1/7644.html"
+        },
+        {
+          "id": "7645",
+          "title": "小博物馆",
+          "subtitle": "地图 · ID 7645 · 命中 2024-08-24",
+          "tag": "地图",
+          "hit": "2024-08-24",
+          "url": "./writing-resources/tzx-task1/7645.html"
+        },
+        {
+          "id": "7646",
+          "title": "城市人口增长及未来预测",
+          "subtitle": "柱状图 · ID 7646 · 命中 2024-08-03",
+          "tag": "柱状图",
+          "hit": "2024-08-03",
+          "url": "./writing-resources/tzx-task1/7646.html"
+        },
+        {
+          "id": "7647",
+          "title": "澳大利亚劳动力",
+          "subtitle": "曲线图 · ID 7647 · 命中 2024-07-06",
+          "tag": "曲线图",
+          "hit": "2024-07-06",
+          "url": "./writing-resources/tzx-task1/7647.html"
+        },
+        {
+          "id": "7648",
+          "title": "临时外来劳工",
+          "subtitle": "表格 · ID 7648 · 命中 2024-06-22",
+          "tag": "表格",
+          "hit": "2024-06-22",
+          "url": "./writing-resources/tzx-task1/7648.html"
+        },
+        {
+          "id": "7650",
+          "title": "家庭烟熏制作",
+          "subtitle": "流程图 · ID 7650 · 命中 2025-11-12",
+          "tag": "流程图",
+          "hit": "2025-11-12",
+          "url": "./writing-resources/tzx-task1/7650.html"
+        },
+        {
+          "id": "7651",
+          "title": "结婚年龄分布",
+          "subtitle": "柱状图 · ID 7651 · 命中 2024-03-23",
+          "tag": "柱状图",
+          "hit": "2024-03-23",
+          "url": "./writing-resources/tzx-task1/7651.html"
+        },
+        {
+          "id": "7652",
+          "title": "网上购物",
+          "subtitle": "混合图 · ID 7652 · 命中 2025-05-13",
+          "tag": "混合图",
+          "hit": "2025-05-13",
+          "url": "./writing-resources/tzx-task1/7652.html"
+        },
+        {
+          "id": "7653",
+          "title": "可再生能源",
+          "subtitle": "柱状图 · ID 7653 · 命中 2024-02-03",
+          "tag": "柱状图",
+          "hit": "2024-02-03",
+          "url": "./writing-resources/tzx-task1/7653.html"
+        },
+        {
+          "id": "7654",
+          "title": "英国空气污染源对比",
+          "subtitle": "曲线图 · ID 7654 · 命中 2025-05-27",
+          "tag": "曲线图",
+          "hit": "2025-05-27",
+          "url": "./writing-resources/tzx-task1/7654.html"
+        },
+        {
+          "id": "7655",
+          "title": "北美国家家庭组成",
+          "subtitle": "表格 · ID 7655 · 命中 2025-05-18",
+          "tag": "表格",
+          "hit": "2025-05-18",
+          "url": "./writing-resources/tzx-task1/7655.html"
+        },
+        {
+          "id": "7657",
+          "title": "城市房价",
+          "subtitle": "混合图 · ID 7657 · 命中 2025-05-19",
+          "tag": "混合图",
+          "hit": "2025-05-19",
+          "url": "./writing-resources/tzx-task1/7657.html"
+        },
+        {
+          "id": "7738",
+          "title": "太阳能制水流程",
+          "subtitle": "流程图 · ID 7738 · 命中 2025-04-14",
+          "tag": "流程图",
+          "hit": "2025-04-14",
+          "url": "./writing-resources/tzx-task1/7738.html"
+        },
+        {
+          "id": "7739",
+          "title": "家庭用车",
+          "subtitle": "柱状图 · ID 7739 · 命中 2025-03-31",
+          "tag": "柱状图",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task1/7739.html"
+        },
+        {
+          "id": "7741",
+          "title": "澳大利亚线上与线下购物",
+          "subtitle": "表格 · ID 7741 · 命中 2025-11-14",
+          "tag": "表格",
+          "hit": "2025-11-14",
+          "url": "./writing-resources/tzx-task1/7741.html"
+        },
+        {
+          "id": "7857",
+          "title": "火山爆发",
+          "subtitle": "地图 · ID 7857 · 命中 2025-06-05",
+          "tag": "地图",
+          "hit": "2025-06-05",
+          "url": "./writing-resources/tzx-task1/7857.html"
+        },
+        {
+          "id": "7858",
+          "title": "隧道",
+          "subtitle": "地图 · ID 7858 · 命中 2025-06-02",
+          "tag": "地图",
+          "hit": "2025-06-02",
+          "url": "./writing-resources/tzx-task1/7858.html"
+        },
+        {
+          "id": "7859",
+          "title": "澳洲气温和雨天",
+          "subtitle": "混合图 · ID 7859 · 命中 2025-11-07",
+          "tag": "混合图",
+          "hit": "2025-11-07",
+          "url": "./writing-resources/tzx-task1/7859.html"
+        },
+        {
+          "id": "7860",
+          "title": "纸张回收",
+          "subtitle": "流程图 · ID 7860 · 命中 2025-06-03",
+          "tag": "流程图",
+          "hit": "2025-06-03",
+          "url": "./writing-resources/tzx-task1/7860.html"
+        },
+        {
+          "id": "7861",
+          "title": "英国燃料",
+          "subtitle": "曲线图 · ID 7861 · 命中 2025-06-09",
+          "tag": "曲线图",
+          "hit": "2025-06-09",
+          "url": "./writing-resources/tzx-task1/7861.html"
+        },
+        {
+          "id": "7862",
+          "title": "博物馆游客人数",
+          "subtitle": "柱状图 · ID 7862 · 命中 2025-06-11",
+          "tag": "柱状图",
+          "hit": "2025-06-11",
+          "url": "./writing-resources/tzx-task1/7862.html"
+        },
+        {
+          "id": "7863",
+          "title": "雨水收集",
+          "subtitle": "流程图 · ID 7863 · 命中 2025-06-06",
+          "tag": "流程图",
+          "hit": "2025-06-06",
+          "url": "./writing-resources/tzx-task1/7863.html"
+        },
+        {
+          "id": "7864",
+          "title": "商学院毕业生就业",
+          "subtitle": "混合图 · ID 7864 · 命中 2025-06-05",
+          "tag": "混合图",
+          "hit": "2025-06-05",
+          "url": "./writing-resources/tzx-task1/7864.html"
+        },
+        {
+          "id": "7877",
+          "title": "新西兰旅游的交通",
+          "subtitle": "柱状图 · ID 7877 · 命中 2025-06-21",
+          "tag": "柱状图",
+          "hit": "2025-06-21",
+          "url": "./writing-resources/tzx-task1/7877.html"
+        },
+        {
+          "id": "7878",
+          "title": "欧洲大学交换生",
+          "subtitle": "表格 · ID 7878 · 命中 2025-06-19",
+          "tag": "表格",
+          "hit": "2025-06-19",
+          "url": "./writing-resources/tzx-task1/7878.html"
+        },
+        {
+          "id": "7885",
+          "title": "回收易拉罐",
+          "subtitle": "流程图 · ID 7885 · 命中 2025-06-26",
+          "tag": "流程图",
+          "hit": "2025-06-26",
+          "url": "./writing-resources/tzx-task1/7885.html"
+        },
+        {
+          "id": "7886",
+          "title": "城市乡村人口变化",
+          "subtitle": "曲线图 · ID 7886 · 命中 2025-11-13",
+          "tag": "曲线图",
+          "hit": "2025-11-13",
+          "url": "./writing-resources/tzx-task1/7886.html"
+        },
+        {
+          "id": "7887",
+          "title": "温热带山区温度对比",
+          "subtitle": "地图 · ID 7887 · 命中 2025-06-25",
+          "tag": "地图",
+          "hit": "2025-06-25",
+          "url": "./writing-resources/tzx-task1/7887.html"
+        },
+        {
+          "id": "7888",
+          "title": "艺术馆变化",
+          "subtitle": "地图 · ID 7888 · 命中 2025-06-24",
+          "tag": "地图",
+          "hit": "2025-06-24",
+          "url": "./writing-resources/tzx-task1/7888.html"
+        },
+        {
+          "id": "7932",
+          "title": "咖啡与茶的进口量",
+          "subtitle": "柱状图 · ID 7932 · 命中 2025-07-14",
+          "tag": "柱状图",
+          "hit": "2025-07-14",
+          "url": "./writing-resources/tzx-task1/7932.html"
+        },
+        {
+          "id": "7936",
+          "title": "矿场变化",
+          "subtitle": "地图 · ID 7936 · 命中 2025-07-21",
+          "tag": "地图",
+          "hit": "2025-07-21",
+          "url": "./writing-resources/tzx-task1/7936.html"
+        },
+        {
+          "id": "7937",
+          "title": "三个国家工作时间",
+          "subtitle": "柱状图 · ID 7937 · 命中 2025-07-29",
+          "tag": "柱状图",
+          "hit": "2025-07-29",
+          "url": "./writing-resources/tzx-task1/7937.html"
+        },
+        {
+          "id": "7938",
+          "title": "澳大利亚沙滩变化",
+          "subtitle": "地图 · ID 7938 · 命中 2025-07-26",
+          "tag": "地图",
+          "hit": "2025-07-26",
+          "url": "./writing-resources/tzx-task1/7938.html"
+        },
+        {
+          "id": "7939",
+          "title": "英国科技产品的使用",
+          "subtitle": "曲线图 · ID 7939 · 命中 2025-07-25",
+          "tag": "曲线图",
+          "hit": "2025-07-25",
+          "url": "./writing-resources/tzx-task1/7939.html"
+        },
+        {
+          "id": "7951",
+          "title": "火灾逃生出口",
+          "subtitle": "地图 · ID 7951 · 命中 2025-08-17",
+          "tag": "地图",
+          "hit": "2025-08-17",
+          "url": "./writing-resources/tzx-task1/7951.html"
+        },
+        {
+          "id": "7952",
+          "title": "公共休息室的变化",
+          "subtitle": "地图 · ID 7952 · 命中 2025-08-15",
+          "tag": "地图",
+          "hit": "2025-08-15",
+          "url": "./writing-resources/tzx-task1/7952.html"
+        },
+        {
+          "id": "7953",
+          "title": "净水器",
+          "subtitle": "流程图 · ID 7953 · 命中 2025-08-17",
+          "tag": "流程图",
+          "hit": "2025-08-17",
+          "url": "./writing-resources/tzx-task1/7953.html"
+        },
+        {
+          "id": "7958",
+          "title": "全日制与非全日制教育",
+          "subtitle": "柱状图 · ID 7958 · 命中 2025-08-22",
+          "tag": "柱状图",
+          "hit": "2025-08-22",
+          "url": "./writing-resources/tzx-task1/7958.html"
+        },
+        {
+          "id": "7959",
+          "title": "太阳能板",
+          "subtitle": "流程图 · ID 7959 · 命中 2025-08-24",
+          "tag": "流程图",
+          "hit": "2025-08-24",
+          "url": "./writing-resources/tzx-task1/7959.html"
+        },
+        {
+          "id": "7960",
+          "title": "滑雪场降雪量",
+          "subtitle": "柱状图 · ID 7960 · 命中 2025-08-22",
+          "tag": "柱状图",
+          "hit": "2025-08-22",
+          "url": "./writing-resources/tzx-task1/7960.html"
+        },
+        {
+          "id": "7961",
+          "title": "加拿大美国留学生来源",
+          "subtitle": "表格 · ID 7961 · 命中 2025-08-25",
+          "tag": "表格",
+          "hit": "2025-08-25",
+          "url": "./writing-resources/tzx-task1/7961.html"
+        },
+        {
+          "id": "7962",
+          "title": "电影数量和票房",
+          "subtitle": "柱状图 · ID 7962 · 命中 2025-08-26",
+          "tag": "柱状图",
+          "hit": "2025-08-26",
+          "url": "./writing-resources/tzx-task1/7962.html"
+        },
+        {
+          "id": "7963",
+          "title": "剧院的变化",
+          "subtitle": "地图 · ID 7963 · 命中 2025-08-25",
+          "tag": "地图",
+          "hit": "2025-08-25",
+          "url": "./writing-resources/tzx-task1/7963.html"
+        },
+        {
+          "id": "7964",
+          "title": "欧洲监狱人口性别比",
+          "subtitle": "曲线图 · ID 7964 · 命中 2025-08-26",
+          "tag": "曲线图",
+          "hit": "2025-08-26",
+          "url": "./writing-resources/tzx-task1/7964.html"
+        },
+        {
+          "id": "8104",
+          "title": "澳大利亚日照和温度",
+          "subtitle": "曲线图 · ID 8104 · 命中 2025-09-18",
+          "tag": "曲线图",
+          "hit": "2025-09-18",
+          "url": "./writing-resources/tzx-task1/8104.html"
+        },
+        {
+          "id": "8105",
+          "title": "北美市民锻炼频率",
+          "subtitle": "曲线图 · ID 8105 · 命中 2025-09-15",
+          "tag": "曲线图",
+          "hit": "2025-09-15",
+          "url": "./writing-resources/tzx-task1/8105.html"
+        },
+        {
+          "id": "8106",
+          "title": "男女驾照考试通过率",
+          "subtitle": "柱状图 · ID 8106 · 命中 2025-09-21",
+          "tag": "柱状图",
+          "hit": "2025-09-21",
+          "url": "./writing-resources/tzx-task1/8106.html"
+        },
+        {
+          "id": "8107",
+          "title": "超市购买食物的比例",
+          "subtitle": "饼状图 · ID 8107 · 命中 2025-09-22",
+          "tag": "饼状图",
+          "hit": "2025-09-22",
+          "url": "./writing-resources/tzx-task1/8107.html"
+        },
+        {
+          "id": "8108",
+          "title": "沃顿博物馆",
+          "subtitle": "地图 · ID 8108 · 命中 2025-09-12",
+          "tag": "地图",
+          "hit": "2025-09-12",
+          "url": "./writing-resources/tzx-task1/8108.html"
+        },
+        {
+          "id": "8130",
+          "title": "缓解全球变暖的建议",
+          "subtitle": "表格 · ID 8130 · 命中 2025-09-30",
+          "tag": "表格",
+          "hit": "2025-09-30",
+          "url": "./writing-resources/tzx-task1/8130.html"
+        },
+        {
+          "id": "8152",
+          "title": "医生工资",
+          "subtitle": "柱状图 · ID 8152 · 命中 2025-10-17",
+          "tag": "柱状图",
+          "hit": "2025-10-17",
+          "url": "./writing-resources/tzx-task1/8152.html"
+        }
+      ]
+    },
+    {
+      "id": "tzx-writing-task2",
+      "title": "躺着学写作 Task 2",
+      "subtitle": "大作文题库与范文 · 334 篇",
+      "icon": "T2",
+      "tags": [
+        {
+          "tag": "观点类",
+          "count": 139
+        },
+        {
+          "tag": "报告类",
+          "count": 49
+        },
+        {
+          "tag": "利弊类",
+          "count": 46
+        },
+        {
+          "tag": "混合类",
+          "count": 21
+        },
+        {
+          "tag": "讨论类",
+          "count": 79
+        }
+      ],
+      "images": null,
+      "resources": [
+        {
+          "id": "2461",
+          "title": "城镇规划：公共设施与商场",
+          "subtitle": "观点类 · ID 2461 · 命中 2019-01-12",
+          "tag": "观点类",
+          "hit": "2019-01-12",
+          "url": "./writing-resources/tzx-task2/2461.html"
+        },
+        {
+          "id": "2462",
+          "title": "浪费食物的原因及解决办法",
+          "subtitle": "报告类 · ID 2462 · 命中 2019-01-17",
+          "tag": "报告类",
+          "hit": "2019-01-17",
+          "url": "./writing-resources/tzx-task2/2462.html"
+        },
+        {
+          "id": "2463",
+          "title": "网媒与纸媒",
+          "subtitle": "观点类 · ID 2463 · 命中 2019-01-19",
+          "tag": "观点类",
+          "hit": "2019-01-19",
+          "url": "./writing-resources/tzx-task2/2463.html"
+        },
+        {
+          "id": "2464",
+          "title": "女性平等就业权",
+          "subtitle": "观点类 · ID 2464 · 命中 2019-01-26",
+          "tag": "观点类",
+          "hit": "2019-01-26",
+          "url": "./writing-resources/tzx-task2/2464.html"
+        },
+        {
+          "id": "2465",
+          "title": "科技改变孩子休闲的利弊",
+          "subtitle": "利弊类 · ID 2465 · 命中 2019-02-14",
+          "tag": "利弊类",
+          "hit": "2019-02-14",
+          "url": "./writing-resources/tzx-task2/2465.html"
+        },
+        {
+          "id": "2466",
+          "title": "电子设备对孩子心理的影响",
+          "subtitle": "观点类 · ID 2466 · 命中 2019-02-16",
+          "tag": "观点类",
+          "hit": "2019-02-16",
+          "url": "./writing-resources/tzx-task2/2466.html"
+        },
+        {
+          "id": "2467",
+          "title": "动物保护问题与人口问题",
+          "subtitle": "观点类 · ID 2467 · 命中 2019-02-23",
+          "tag": "观点类",
+          "hit": "2019-02-23",
+          "url": "./writing-resources/tzx-task2/2467.html"
+        },
+        {
+          "id": "2469",
+          "title": "是否需要出国留学",
+          "subtitle": "观点类 · ID 2469 · 命中 2019-03-09",
+          "tag": "观点类",
+          "hit": "2019-03-09",
+          "url": "./writing-resources/tzx-task2/2469.html"
+        },
+        {
+          "id": "2470",
+          "title": "报纸对人们思想的影响",
+          "subtitle": "混合类 · ID 2470 · 命中 2019-03-14",
+          "tag": "混合类",
+          "hit": "2019-03-14",
+          "url": "./writing-resources/tzx-task2/2470.html"
+        },
+        {
+          "id": "2471",
+          "title": "教师的影响是否比家长更大",
+          "subtitle": "观点类 · ID 2471 · 命中 2019-03-23",
+          "tag": "观点类",
+          "hit": "2019-03-23",
+          "url": "./writing-resources/tzx-task2/2471.html"
+        },
+        {
+          "id": "2819",
+          "title": "减少通勤时间的方法",
+          "subtitle": "讨论类 · ID 2819 · 命中 2019-04-06",
+          "tag": "讨论类",
+          "hit": "2019-04-06",
+          "url": "./writing-resources/tzx-task2/2819.html"
+        },
+        {
+          "id": "2820",
+          "title": "名人帮助国际援助组织的利弊",
+          "subtitle": "讨论类 · ID 2820 · 命中 2019-04-13",
+          "tag": "讨论类",
+          "hit": "2019-04-13",
+          "url": "./writing-resources/tzx-task2/2820.html"
+        },
+        {
+          "id": "2821",
+          "title": "农村青年进城的原因及利弊",
+          "subtitle": "混合类 · ID 2821 · 命中 2019-04-25",
+          "tag": "混合类",
+          "hit": "2019-04-25",
+          "url": "./writing-resources/tzx-task2/2821.html"
+        },
+        {
+          "id": "2822",
+          "title": "保护古建筑的利弊",
+          "subtitle": "混合类 · ID 2822 · 命中 2019-04-27",
+          "tag": "混合类",
+          "hit": "2019-04-27",
+          "url": "./writing-resources/tzx-task2/2822.html"
+        },
+        {
+          "id": "2823",
+          "title": "工作中使用科技的影响",
+          "subtitle": "观点类 · ID 2823 · 命中 2019-05-04",
+          "tag": "观点类",
+          "hit": "2019-05-04",
+          "url": "./writing-resources/tzx-task2/2823.html"
+        },
+        {
+          "id": "2824",
+          "title": "人口过剩的影响",
+          "subtitle": "观点类 · ID 2824 · 命中 2019-05-11",
+          "tag": "观点类",
+          "hit": "2019-05-11",
+          "url": "./writing-resources/tzx-task2/2824.html"
+        },
+        {
+          "id": "2826",
+          "title": "青少年犯罪的原因及惩罚措施",
+          "subtitle": "报告类 · ID 2826 · 命中 2019-05-23",
+          "tag": "报告类",
+          "hit": "2019-05-23",
+          "url": "./writing-resources/tzx-task2/2826.html"
+        },
+        {
+          "id": "2828",
+          "title": "个人能否改善环境",
+          "subtitle": "观点类 · ID 2828 · 命中 2019-06-13",
+          "tag": "观点类",
+          "hit": "2019-06-13",
+          "url": "./writing-resources/tzx-task2/2828.html"
+        },
+        {
+          "id": "2830",
+          "title": "知识是否都是有用的",
+          "subtitle": "讨论类 · ID 2830 · 命中 2019-06-29",
+          "tag": "讨论类",
+          "hit": "2019-06-29",
+          "url": "./writing-resources/tzx-task2/2830.html"
+        },
+        {
+          "id": "2831",
+          "title": "线上商务活动的利弊",
+          "subtitle": "利弊类 · ID 2831 · 命中 2019-07-06",
+          "tag": "利弊类",
+          "hit": "2019-07-06",
+          "url": "./writing-resources/tzx-task2/2831.html"
+        },
+        {
+          "id": "2832",
+          "title": "是否要修缮老旧建筑",
+          "subtitle": "观点类 · ID 2832 · 命中 2019-07-18",
+          "tag": "观点类",
+          "hit": "2019-07-18",
+          "url": "./writing-resources/tzx-task2/2832.html"
+        },
+        {
+          "id": "2834",
+          "title": "有求必应对孩子的影响",
+          "subtitle": "报告类 · ID 2834 · 命中 2019-07-27",
+          "tag": "报告类",
+          "hit": "2019-07-27",
+          "url": "./writing-resources/tzx-task2/2834.html"
+        },
+        {
+          "id": "2835",
+          "title": "历史课是否重要",
+          "subtitle": "讨论类 · ID 2835 · 命中 2019-08-01",
+          "tag": "讨论类",
+          "hit": "2019-08-01",
+          "url": "./writing-resources/tzx-task2/2835.html"
+        },
+        {
+          "id": "2836",
+          "title": "医药公司：助人与盈利",
+          "subtitle": "讨论类 · ID 2836 · 命中 2019-08-10",
+          "tag": "讨论类",
+          "hit": "2019-08-10",
+          "url": "./writing-resources/tzx-task2/2836.html"
+        },
+        {
+          "id": "2837",
+          "title": "孩子使用电子设备的利弊",
+          "subtitle": "利弊类 · ID 2837 · 命中 2019-08-17",
+          "tag": "利弊类",
+          "hit": "2019-08-17",
+          "url": "./writing-resources/tzx-task2/2837.html"
+        },
+        {
+          "id": "2838",
+          "title": "谁对医疗研发负责",
+          "subtitle": "观点类 · ID 2838 · 命中 2019-08-24",
+          "tag": "观点类",
+          "hit": "2019-08-24",
+          "url": "./writing-resources/tzx-task2/2838.html"
+        },
+        {
+          "id": "2839",
+          "title": "展览：线下与线上",
+          "subtitle": "观点类 · ID 2839 · 命中 2025-04-23",
+          "tag": "观点类",
+          "hit": "2025-04-23",
+          "url": "./writing-resources/tzx-task2/2839.html"
+        },
+        {
+          "id": "2840",
+          "title": "经济发展与环境的关系",
+          "subtitle": "讨论类 · ID 2840 · 命中 2019-09-07",
+          "tag": "讨论类",
+          "hit": "2019-09-07",
+          "url": "./writing-resources/tzx-task2/2840.html"
+        },
+        {
+          "id": "2841",
+          "title": "通识教育与专业教育",
+          "subtitle": "讨论类 · ID 2841 · 命中 2019-09-12",
+          "tag": "讨论类",
+          "hit": "2019-09-12",
+          "url": "./writing-resources/tzx-task2/2841.html"
+        },
+        {
+          "id": "2843",
+          "title": "亲子年龄差增大的利弊",
+          "subtitle": "利弊类 · ID 2843 · 命中 2019-09-28",
+          "tag": "利弊类",
+          "hit": "2019-09-28",
+          "url": "./writing-resources/tzx-task2/2843.html"
+        },
+        {
+          "id": "2844",
+          "title": "青少年犯罪率上升",
+          "subtitle": "观点类 · ID 2844 · 命中 2019-10-10",
+          "tag": "观点类",
+          "hit": "2019-10-10",
+          "url": "./writing-resources/tzx-task2/2844.html"
+        },
+        {
+          "id": "2847",
+          "title": "清理污染：个人与政府",
+          "subtitle": "观点类 · ID 2847 · 命中 2019-10-26",
+          "tag": "观点类",
+          "hit": "2019-10-26",
+          "url": "./writing-resources/tzx-task2/2847.html"
+        },
+        {
+          "id": "2848",
+          "title": "如何应对工作环境变化",
+          "subtitle": "讨论类 · ID 2848 · 命中 2019-11-02",
+          "tag": "讨论类",
+          "hit": "2019-11-02",
+          "url": "./writing-resources/tzx-task2/2848.html"
+        },
+        {
+          "id": "2849",
+          "title": "年轻人与老年人的价值",
+          "subtitle": "讨论类 · ID 2849 · 命中 2019-11-07",
+          "tag": "讨论类",
+          "hit": "2019-11-07",
+          "url": "./writing-resources/tzx-task2/2849.html"
+        },
+        {
+          "id": "2851",
+          "title": "学习书写",
+          "subtitle": "观点类 · ID 2851 · 命中 2019-11-23",
+          "tag": "观点类",
+          "hit": "2019-11-23",
+          "url": "./writing-resources/tzx-task2/2851.html"
+        },
+        {
+          "id": "2852",
+          "title": "是否需要动物制品",
+          "subtitle": "观点类 · ID 2852 · 命中 2019-11-30",
+          "tag": "观点类",
+          "hit": "2019-11-30",
+          "url": "./writing-resources/tzx-task2/2852.html"
+        },
+        {
+          "id": "2853",
+          "title": "住养老院的利弊",
+          "subtitle": "利弊类 · ID 2853 · 命中 2019-12-07",
+          "tag": "利弊类",
+          "hit": "2019-12-07",
+          "url": "./writing-resources/tzx-task2/2853.html"
+        },
+        {
+          "id": "2854",
+          "title": "频繁换工作",
+          "subtitle": "利弊类 · ID 2854 · 命中 2025-04-29",
+          "tag": "利弊类",
+          "hit": "2025-04-29",
+          "url": "./writing-resources/tzx-task2/2854.html"
+        },
+        {
+          "id": "2855",
+          "title": "浪费型社会",
+          "subtitle": "报告类 · ID 2855 · 命中 2019-12-14",
+          "tag": "报告类",
+          "hit": "2019-12-14",
+          "url": "./writing-resources/tzx-task2/2855.html"
+        },
+        {
+          "id": "2856",
+          "title": "在家时间减少",
+          "subtitle": "报告类 · ID 2856 · 命中 2019-12-21",
+          "tag": "报告类",
+          "hit": "2019-12-21",
+          "url": "./writing-resources/tzx-task2/2856.html"
+        },
+        {
+          "id": "2857",
+          "title": "庭审是否要电视转播",
+          "subtitle": "利弊类 · ID 2857 · 命中 2020-01-04",
+          "tag": "利弊类",
+          "hit": "2020-01-04",
+          "url": "./writing-resources/tzx-task2/2857.html"
+        },
+        {
+          "id": "2858",
+          "title": "气候变化对企业的影响",
+          "subtitle": "讨论类 · ID 2858 · 命中 2020-01-11",
+          "tag": "讨论类",
+          "hit": "2020-01-11",
+          "url": "./writing-resources/tzx-task2/2858.html"
+        },
+        {
+          "id": "2859",
+          "title": "室外空间减少的利弊",
+          "subtitle": "利弊类 · ID 2859 · 命中 2020-01-16",
+          "tag": "利弊类",
+          "hit": "2020-01-16",
+          "url": "./writing-resources/tzx-task2/2859.html"
+        },
+        {
+          "id": "2862",
+          "title": "体育运动是否重要",
+          "subtitle": "讨论类 · ID 2862 · 命中 2020-07-11",
+          "tag": "讨论类",
+          "hit": "2020-07-11",
+          "url": "./writing-resources/tzx-task2/2862.html"
+        },
+        {
+          "id": "2863",
+          "title": "解决环境问题的办法",
+          "subtitle": "观点类 · ID 2863 · 命中 2025-03-08",
+          "tag": "观点类",
+          "hit": "2025-03-08",
+          "url": "./writing-resources/tzx-task2/2863.html"
+        },
+        {
+          "id": "2864",
+          "title": "国际援助的资金投入",
+          "subtitle": "观点类 · ID 2864 · 命中 2020-07-25",
+          "tag": "观点类",
+          "hit": "2020-07-25",
+          "url": "./writing-resources/tzx-task2/2864.html"
+        },
+        {
+          "id": "2865",
+          "title": "国际援助的形式",
+          "subtitle": "观点类 · ID 2865 · 命中 2020-08-01",
+          "tag": "观点类",
+          "hit": "2020-08-01",
+          "url": "./writing-resources/tzx-task2/2865.html"
+        },
+        {
+          "id": "2867",
+          "title": "拯救动植物是否为时已晚",
+          "subtitle": "讨论类 · ID 2867 · 命中 2020-08-08",
+          "tag": "讨论类",
+          "hit": "2020-08-08",
+          "url": "./writing-resources/tzx-task2/2867.html"
+        },
+        {
+          "id": "2870",
+          "title": "反社会行为的原因及解决办法",
+          "subtitle": "报告类 · ID 2870 · 命中 2020-09-05",
+          "tag": "报告类",
+          "hit": "2020-09-05",
+          "url": "./writing-resources/tzx-task2/2870.html"
+        },
+        {
+          "id": "2871",
+          "title": "艺术的独特作用",
+          "subtitle": "报告类 · ID 2871 · 命中 2025-04-30",
+          "tag": "报告类",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task2/2871.html"
+        },
+        {
+          "id": "2872",
+          "title": "私家车出行问题",
+          "subtitle": "观点类 · ID 2872 · 命中 2020-09-17",
+          "tag": "观点类",
+          "hit": "2020-09-17",
+          "url": "./writing-resources/tzx-task2/2872.html"
+        },
+        {
+          "id": "2873",
+          "title": "手机交流的利弊",
+          "subtitle": "利弊类 · ID 2873 · 命中 2020-09-26",
+          "tag": "利弊类",
+          "hit": "2020-09-26",
+          "url": "./writing-resources/tzx-task2/2873.html"
+        },
+        {
+          "id": "2874",
+          "title": "使用机器人的利弊",
+          "subtitle": "利弊类 · ID 2874 · 命中 2020-10-10",
+          "tag": "利弊类",
+          "hit": "2020-10-10",
+          "url": "./writing-resources/tzx-task2/2874.html"
+        },
+        {
+          "id": "2875",
+          "title": "是否要与其他星球联系",
+          "subtitle": "讨论类 · ID 2875 · 命中 2025-04-30",
+          "tag": "讨论类",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task2/2875.html"
+        },
+        {
+          "id": "2876",
+          "title": "媒体是否要披露犯罪细节",
+          "subtitle": "观点类 · ID 2876 · 命中 2025-04-19",
+          "tag": "观点类",
+          "hit": "2025-04-19",
+          "url": "./writing-resources/tzx-task2/2876.html"
+        },
+        {
+          "id": "2877",
+          "title": "成功是否靠运气",
+          "subtitle": "观点类 · ID 2877 · 命中 2020-10-31",
+          "tag": "观点类",
+          "hit": "2020-10-31",
+          "url": "./writing-resources/tzx-task2/2877.html"
+        },
+        {
+          "id": "2879",
+          "title": "竞争的影响及利弊",
+          "subtitle": "混合类 · ID 2879 · 命中 2025-03-08",
+          "tag": "混合类",
+          "hit": "2025-03-08",
+          "url": "./writing-resources/tzx-task2/2879.html"
+        },
+        {
+          "id": "2880",
+          "title": "是否每个人都要接受全日制教育",
+          "subtitle": "观点类 · ID 2880 · 命中 2020-11-21",
+          "tag": "观点类",
+          "hit": "2020-11-21",
+          "url": "./writing-resources/tzx-task2/2880.html"
+        },
+        {
+          "id": "2882",
+          "title": "年轻人：遵循传统与率性而为",
+          "subtitle": "讨论类 · ID 2882 · 命中 2020-12-03",
+          "tag": "讨论类",
+          "hit": "2020-12-03",
+          "url": "./writing-resources/tzx-task2/2882.html"
+        },
+        {
+          "id": "2883",
+          "title": "政府是否应该在科技教育上投资更多",
+          "subtitle": "观点类 · ID 2883 · 命中 2024-12-14",
+          "tag": "观点类",
+          "hit": "2024-12-14",
+          "url": "./writing-resources/tzx-task2/2883.html"
+        },
+        {
+          "id": "2884",
+          "title": "名人是否给年轻人树立了坏榜样",
+          "subtitle": "观点类 · ID 2884 · 命中 2025-11-09",
+          "tag": "观点类",
+          "hit": "2025-11-09",
+          "url": "./writing-resources/tzx-task2/2884.html"
+        },
+        {
+          "id": "2886",
+          "title": "跨国公司及全球化是否对所有人都有利",
+          "subtitle": "观点类 · ID 2886 · 命中 2021-01-09",
+          "tag": "观点类",
+          "hit": "2021-01-09",
+          "url": "./writing-resources/tzx-task2/2886.html"
+        },
+        {
+          "id": "2888",
+          "title": "听说读写是否同等重要",
+          "subtitle": "观点类 · ID 2888 · 命中 2021-01-23",
+          "tag": "观点类",
+          "hit": "2021-01-23",
+          "url": "./writing-resources/tzx-task2/2888.html"
+        },
+        {
+          "id": "2889",
+          "title": "塑料污染问题及解决办法",
+          "subtitle": "报告类 · ID 2889 · 命中 2021-01-30",
+          "tag": "报告类",
+          "hit": "2021-01-30",
+          "url": "./writing-resources/tzx-task2/2889.html"
+        },
+        {
+          "id": "2890",
+          "title": "跨境旅游的利弊",
+          "subtitle": "利弊类 · ID 2890 · 命中 2021-02-06",
+          "tag": "利弊类",
+          "hit": "2021-02-06",
+          "url": "./writing-resources/tzx-task2/2890.html"
+        },
+        {
+          "id": "2891",
+          "title": "育儿：学习与运动",
+          "subtitle": "观点类 · ID 2891 · 命中 2025-04-10",
+          "tag": "观点类",
+          "hit": "2025-04-10",
+          "url": "./writing-resources/tzx-task2/2891.html"
+        },
+        {
+          "id": "2892",
+          "title": "学历能否带来成功",
+          "subtitle": "讨论类 · ID 2892 · 命中 2021-02-25",
+          "tag": "讨论类",
+          "hit": "2021-02-25",
+          "url": "./writing-resources/tzx-task2/2892.html"
+        },
+        {
+          "id": "2893",
+          "title": "淡水需求问题及解决办法",
+          "subtitle": "报告类 · ID 2893 · 命中 2021-02-27",
+          "tag": "报告类",
+          "hit": "2021-02-27",
+          "url": "./writing-resources/tzx-task2/2893.html"
+        },
+        {
+          "id": "2894",
+          "title": "是否只需要保护对人类有用的动物",
+          "subtitle": "观点类 · ID 2894 · 命中 2021-03-04",
+          "tag": "观点类",
+          "hit": "2021-03-04",
+          "url": "./writing-resources/tzx-task2/2894.html"
+        },
+        {
+          "id": "2896",
+          "title": "音乐是否是人类的通用语",
+          "subtitle": "观点类 · ID 2896 · 命中 2021-03-13",
+          "tag": "观点类",
+          "hit": "2021-03-13",
+          "url": "./writing-resources/tzx-task2/2896.html"
+        },
+        {
+          "id": "2897",
+          "title": "警察持枪是否会加剧暴力问题",
+          "subtitle": "观点类 · ID 2897 · 命中 2021-03-20",
+          "tag": "观点类",
+          "hit": "2021-03-20",
+          "url": "./writing-resources/tzx-task2/2897.html"
+        },
+        {
+          "id": "2898",
+          "title": "步行减少的原因及解决办法",
+          "subtitle": "报告类 · ID 2898 · 命中 2021-03-27",
+          "tag": "报告类",
+          "hit": "2021-03-27",
+          "url": "./writing-resources/tzx-task2/2898.html"
+        },
+        {
+          "id": "2899",
+          "title": "进口食品的利弊",
+          "subtitle": "利弊类 · ID 2899 · 命中 2022-04-09",
+          "tag": "利弊类",
+          "hit": "2022-04-09",
+          "url": "./writing-resources/tzx-task2/2899.html"
+        },
+        {
+          "id": "2900",
+          "title": "数字媒体能否取代纸媒",
+          "subtitle": "观点类 · ID 2900 · 命中 2022-04-16",
+          "tag": "观点类",
+          "hit": "2022-04-16",
+          "url": "./writing-resources/tzx-task2/2900.html"
+        },
+        {
+          "id": "2901",
+          "title": "城市功能分区的利弊",
+          "subtitle": "利弊类 · ID 2901 · 命中 2022-04-23",
+          "tag": "利弊类",
+          "hit": "2022-04-23",
+          "url": "./writing-resources/tzx-task2/2901.html"
+        },
+        {
+          "id": "2902",
+          "title": "远离家庭的原因及影响",
+          "subtitle": "报告类 · ID 2902 · 命中 2022-04-30",
+          "tag": "报告类",
+          "hit": "2022-04-30",
+          "url": "./writing-resources/tzx-task2/2902.html"
+        },
+        {
+          "id": "2903",
+          "title": "国内外工作",
+          "subtitle": "讨论类 · ID 2903 · 命中 2022-05-07",
+          "tag": "讨论类",
+          "hit": "2022-05-07",
+          "url": "./writing-resources/tzx-task2/2903.html"
+        },
+        {
+          "id": "2904",
+          "title": "现代与传统方法",
+          "subtitle": "讨论类 · ID 2904 · 命中 2022-05-12",
+          "tag": "讨论类",
+          "hit": "2022-05-12",
+          "url": "./writing-resources/tzx-task2/2904.html"
+        },
+        {
+          "id": "2905",
+          "title": "全球普及",
+          "subtitle": "利弊类 · ID 2905 · 命中 2022-05-21",
+          "tag": "利弊类",
+          "hit": "2022-05-21",
+          "url": "./writing-resources/tzx-task2/2905.html"
+        },
+        {
+          "id": "2906",
+          "title": "城市交通难题",
+          "subtitle": "报告类 · ID 2906 · 命中 2022-05-28",
+          "tag": "报告类",
+          "hit": "2022-05-28",
+          "url": "./writing-resources/tzx-task2/2906.html"
+        },
+        {
+          "id": "2907",
+          "title": "历史学习",
+          "subtitle": "观点类 · ID 2907 · 命中 2022-06-04",
+          "tag": "观点类",
+          "hit": "2022-06-04",
+          "url": "./writing-resources/tzx-task2/2907.html"
+        },
+        {
+          "id": "2908",
+          "title": "长寿退休的挑战",
+          "subtitle": "报告类 · ID 2908 · 命中 2022-06-11",
+          "tag": "报告类",
+          "hit": "2022-06-11",
+          "url": "./writing-resources/tzx-task2/2908.html"
+        },
+        {
+          "id": "2909",
+          "title": "能源需求",
+          "subtitle": "利弊类 · ID 2909 · 命中 2022-06-25",
+          "tag": "利弊类",
+          "hit": "2022-06-25",
+          "url": "./writing-resources/tzx-task2/2909.html"
+        },
+        {
+          "id": "2910",
+          "title": "教学质量与成功",
+          "subtitle": "观点类 · ID 2910 · 命中 2022-07-07",
+          "tag": "观点类",
+          "hit": "2022-07-07",
+          "url": "./writing-resources/tzx-task2/2910.html"
+        },
+        {
+          "id": "2911",
+          "title": "城市生活",
+          "subtitle": "报告类 · ID 2911 · 命中 2022-07-09",
+          "tag": "报告类",
+          "hit": "2022-07-09",
+          "url": "./writing-resources/tzx-task2/2911.html"
+        },
+        {
+          "id": "2912",
+          "title": "人口迁徙",
+          "subtitle": "利弊类 · ID 2912 · 命中 2022-07-23",
+          "tag": "利弊类",
+          "hit": "2022-07-23",
+          "url": "./writing-resources/tzx-task2/2912.html"
+        },
+        {
+          "id": "2913",
+          "title": "视觉信息",
+          "subtitle": "讨论类 · ID 2913 · 命中 2022-08-06",
+          "tag": "讨论类",
+          "hit": "2022-08-06",
+          "url": "./writing-resources/tzx-task2/2913.html"
+        },
+        {
+          "id": "2915",
+          "title": "消费与环境",
+          "subtitle": "报告类 · ID 2915 · 命中 2022-08-13",
+          "tag": "报告类",
+          "hit": "2022-08-13",
+          "url": "./writing-resources/tzx-task2/2915.html"
+        },
+        {
+          "id": "2917",
+          "title": "极限运动",
+          "subtitle": "讨论类 · ID 2917 · 命中 2025-03-21",
+          "tag": "讨论类",
+          "hit": "2025-03-21",
+          "url": "./writing-resources/tzx-task2/2917.html"
+        },
+        {
+          "id": "2918",
+          "title": "大一课程选择",
+          "subtitle": "报告类 · ID 2918 · 命中 2022-09-03",
+          "tag": "报告类",
+          "hit": "2022-09-03",
+          "url": "./writing-resources/tzx-task2/2918.html"
+        },
+        {
+          "id": "2919",
+          "title": "消费习惯",
+          "subtitle": "观点类 · ID 2919 · 命中 2022-09-10",
+          "tag": "观点类",
+          "hit": "2022-09-10",
+          "url": "./writing-resources/tzx-task2/2919.html"
+        },
+        {
+          "id": "2920",
+          "title": "城镇商店衰退",
+          "subtitle": "利弊类 · ID 2920 · 命中 2022-09-17",
+          "tag": "利弊类",
+          "hit": "2022-09-17",
+          "url": "./writing-resources/tzx-task2/2920.html"
+        },
+        {
+          "id": "2921",
+          "title": "机器人未来发展",
+          "subtitle": "讨论类 · ID 2921 · 命中 2022-09-24",
+          "tag": "讨论类",
+          "hit": "2022-09-24",
+          "url": "./writing-resources/tzx-task2/2921.html"
+        },
+        {
+          "id": "2968",
+          "title": "网络新闻的利弊",
+          "subtitle": "利弊类 · ID 2968 · 命中 2021-04-03",
+          "tag": "利弊类",
+          "hit": "2021-04-03",
+          "url": "./writing-resources/tzx-task2/2968.html"
+        },
+        {
+          "id": "2969",
+          "title": "骑自行车出行",
+          "subtitle": "报告类 · ID 2969 · 命中 2021-04-10",
+          "tag": "报告类",
+          "hit": "2021-04-10",
+          "url": "./writing-resources/tzx-task2/2969.html"
+        },
+        {
+          "id": "2970",
+          "title": "节假日的户外活动",
+          "subtitle": "报告类 · ID 2970 · 命中 2025-03-15",
+          "tag": "报告类",
+          "hit": "2025-03-15",
+          "url": "./writing-resources/tzx-task2/2970.html"
+        },
+        {
+          "id": "2971",
+          "title": "快餐取代传统食物的影响",
+          "subtitle": "观点类 · ID 2971 · 命中 2021-04-24",
+          "tag": "观点类",
+          "hit": "2021-04-24",
+          "url": "./writing-resources/tzx-task2/2971.html"
+        },
+        {
+          "id": "2972",
+          "title": "学生是否应该评价老师",
+          "subtitle": "讨论类 · ID 2972 · 命中 2021-04-29",
+          "tag": "讨论类",
+          "hit": "2021-04-29",
+          "url": "./writing-resources/tzx-task2/2972.html"
+        },
+        {
+          "id": "2973",
+          "title": "驾照是否要每年一考",
+          "subtitle": "观点类 · ID 2973 · 命中 2024-12-21",
+          "tag": "观点类",
+          "hit": "2024-12-21",
+          "url": "./writing-resources/tzx-task2/2973.html"
+        },
+        {
+          "id": "2974",
+          "title": "健康：社会责任与个人利益",
+          "subtitle": "观点类 · ID 2974 · 命中 2021-05-15",
+          "tag": "观点类",
+          "hit": "2021-05-15",
+          "url": "./writing-resources/tzx-task2/2974.html"
+        },
+        {
+          "id": "2975",
+          "title": "了解文化的最佳方法是学习语言吗",
+          "subtitle": "观点类 · ID 2975 · 命中 2021-05-20",
+          "tag": "观点类",
+          "hit": "2021-05-20",
+          "url": "./writing-resources/tzx-task2/2975.html"
+        },
+        {
+          "id": "2976",
+          "title": "名胜古迹为什么不吸引本地人",
+          "subtitle": "报告类 · ID 2976 · 命中 2021-05-22",
+          "tag": "报告类",
+          "hit": "2021-05-22",
+          "url": "./writing-resources/tzx-task2/2976.html"
+        },
+        {
+          "id": "2978",
+          "title": "孩子成长：家庭与外界",
+          "subtitle": "观点类 · ID 2978 · 命中 2021-06-05",
+          "tag": "观点类",
+          "hit": "2021-06-05",
+          "url": "./writing-resources/tzx-task2/2978.html"
+        },
+        {
+          "id": "2979",
+          "title": "高等教育：技能与学术",
+          "subtitle": "讨论类 · ID 2979 · 命中 2021-06-12",
+          "tag": "讨论类",
+          "hit": "2021-06-12",
+          "url": "./writing-resources/tzx-task2/2979.html"
+        },
+        {
+          "id": "2980",
+          "title": "努力的原因和利弊",
+          "subtitle": "混合类 · ID 2980 · 命中 2025-05-03",
+          "tag": "混合类",
+          "hit": "2025-05-03",
+          "url": "./writing-resources/tzx-task2/2980.html"
+        },
+        {
+          "id": "2981",
+          "title": "是否要通过出国旅游学习",
+          "subtitle": "讨论类 · ID 2981 · 命中 2025-03-30",
+          "tag": "讨论类",
+          "hit": "2025-03-30",
+          "url": "./writing-resources/tzx-task2/2981.html"
+        },
+        {
+          "id": "2982",
+          "title": "图书馆的必要性",
+          "subtitle": "讨论类 · ID 2982 · 命中 2021-07-01",
+          "tag": "讨论类",
+          "hit": "2021-07-01",
+          "url": "./writing-resources/tzx-task2/2982.html"
+        },
+        {
+          "id": "2983",
+          "title": "扫盲是否比教育重要",
+          "subtitle": "观点类 · ID 2983 · 命中 2021-07-10",
+          "tag": "观点类",
+          "hit": "2021-07-10",
+          "url": "./writing-resources/tzx-task2/2983.html"
+        },
+        {
+          "id": "2984",
+          "title": "广告推销",
+          "subtitle": "观点类 · ID 2984 · 命中 2021-07-17",
+          "tag": "观点类",
+          "hit": "2021-07-17",
+          "url": "./writing-resources/tzx-task2/2984.html"
+        },
+        {
+          "id": "2986",
+          "title": "食物的远程运输",
+          "subtitle": "混合类 · ID 2986 · 命中 2021-07-31",
+          "tag": "混合类",
+          "hit": "2021-07-31",
+          "url": "./writing-resources/tzx-task2/2986.html"
+        },
+        {
+          "id": "2987",
+          "title": "孩子犯错的自由",
+          "subtitle": "讨论类 · ID 2987 · 命中 2021-08-07",
+          "tag": "讨论类",
+          "hit": "2021-08-07",
+          "url": "./writing-resources/tzx-task2/2987.html"
+        },
+        {
+          "id": "2988",
+          "title": "发展中国家的旅游业",
+          "subtitle": "混合类 · ID 2988 · 命中 2021-08-14",
+          "tag": "混合类",
+          "hit": "2021-08-14",
+          "url": "./writing-resources/tzx-task2/2988.html"
+        },
+        {
+          "id": "2990",
+          "title": "毕业旅行",
+          "subtitle": "利弊类 · ID 2990 · 命中 2021-08-28",
+          "tag": "利弊类",
+          "hit": "2021-08-28",
+          "url": "./writing-resources/tzx-task2/2990.html"
+        },
+        {
+          "id": "2991",
+          "title": "无人驾驶汽车",
+          "subtitle": "观点类 · ID 2991 · 命中 2021-09-04",
+          "tag": "观点类",
+          "hit": "2021-09-04",
+          "url": "./writing-resources/tzx-task2/2991.html"
+        },
+        {
+          "id": "2992",
+          "title": "自然资源消耗",
+          "subtitle": "报告类 · ID 2992 · 命中 2021-09-11",
+          "tag": "报告类",
+          "hit": "2021-09-11",
+          "url": "./writing-resources/tzx-task2/2992.html"
+        },
+        {
+          "id": "2993",
+          "title": "大学生住宿",
+          "subtitle": "利弊类 · ID 2993 · 命中 2021-09-16",
+          "tag": "利弊类",
+          "hit": "2021-09-16",
+          "url": "./writing-resources/tzx-task2/2993.html"
+        },
+        {
+          "id": "2994",
+          "title": "经济增长能否提高国民幸福度",
+          "subtitle": "观点类 · ID 2994 · 命中 2021-09-18",
+          "tag": "观点类",
+          "hit": "2021-09-18",
+          "url": "./writing-resources/tzx-task2/2994.html"
+        },
+        {
+          "id": "2995",
+          "title": "团体运动与个人运动",
+          "subtitle": "讨论类 · ID 2995 · 命中 2021-10-09",
+          "tag": "讨论类",
+          "hit": "2021-10-09",
+          "url": "./writing-resources/tzx-task2/2995.html"
+        },
+        {
+          "id": "2996",
+          "title": "国际援助的方式",
+          "subtitle": "讨论类 · ID 2996 · 命中 2021-10-16",
+          "tag": "讨论类",
+          "hit": "2021-10-16",
+          "url": "./writing-resources/tzx-task2/2996.html"
+        },
+        {
+          "id": "2998",
+          "title": "员工着装问题",
+          "subtitle": "观点类 · ID 2998 · 命中 2025-04-13",
+          "tag": "观点类",
+          "hit": "2025-04-13",
+          "url": "./writing-resources/tzx-task2/2998.html"
+        },
+        {
+          "id": "2999",
+          "title": "父母施压",
+          "subtitle": "混合类 · ID 2999 · 命中 2021-10-30",
+          "tag": "混合类",
+          "hit": "2021-10-30",
+          "url": "./writing-resources/tzx-task2/2999.html"
+        },
+        {
+          "id": "3002",
+          "title": "解决交通问题的办法",
+          "subtitle": "观点类 · ID 3002 · 命中 2021-11-20",
+          "tag": "观点类",
+          "hit": "2021-11-20",
+          "url": "./writing-resources/tzx-task2/3002.html"
+        },
+        {
+          "id": "3003",
+          "title": "谁负责送孩子上学",
+          "subtitle": "观点类 · ID 3003 · 命中 2021-11-27",
+          "tag": "观点类",
+          "hit": "2021-11-27",
+          "url": "./writing-resources/tzx-task2/3003.html"
+        },
+        {
+          "id": "3004",
+          "title": "商店禁售有害食物",
+          "subtitle": "观点类 · ID 3004 · 命中 2021-12-02",
+          "tag": "观点类",
+          "hit": "2021-12-02",
+          "url": "./writing-resources/tzx-task2/3004.html"
+        },
+        {
+          "id": "3005",
+          "title": "解决环境问题是否要牺牲当代",
+          "subtitle": "观点类 · ID 3005 · 命中 2021-12-04",
+          "tag": "观点类",
+          "hit": "2021-12-04",
+          "url": "./writing-resources/tzx-task2/3005.html"
+        },
+        {
+          "id": "3006",
+          "title": "个人是否能解决环境问题",
+          "subtitle": "讨论类 · ID 3006 · 命中 2021-12-11",
+          "tag": "讨论类",
+          "hit": "2021-12-11",
+          "url": "./writing-resources/tzx-task2/3006.html"
+        },
+        {
+          "id": "3007",
+          "title": "不健康的饮食习惯",
+          "subtitle": "报告类 · ID 3007 · 命中 2021-12-18",
+          "tag": "报告类",
+          "hit": "2021-12-18",
+          "url": "./writing-resources/tzx-task2/3007.html"
+        },
+        {
+          "id": "3008",
+          "title": "大学生是否应承担学费",
+          "subtitle": "观点类 · ID 3008 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/3008.html"
+        },
+        {
+          "id": "3009",
+          "title": "网络学习能否取代学校",
+          "subtitle": "观点类 · ID 3009 · 命中 2021-12-30",
+          "tag": "观点类",
+          "hit": "2021-12-30",
+          "url": "./writing-resources/tzx-task2/3009.html"
+        },
+        {
+          "id": "3011",
+          "title": "社交媒体的利弊",
+          "subtitle": "利弊类 · ID 3011 · 命中 2022-01-15",
+          "tag": "利弊类",
+          "hit": "2022-01-15",
+          "url": "./writing-resources/tzx-task2/3011.html"
+        },
+        {
+          "id": "3012",
+          "title": "儿童肥胖问题",
+          "subtitle": "观点类 · ID 3012 · 命中 2025-10-28",
+          "tag": "观点类",
+          "hit": "2025-10-28",
+          "url": "./writing-resources/tzx-task2/3012.html"
+        },
+        {
+          "id": "3013",
+          "title": "退休老人的金钱分配",
+          "subtitle": "利弊类 · ID 3013 · 命中 2022-02-12",
+          "tag": "利弊类",
+          "hit": "2022-02-12",
+          "url": "./writing-resources/tzx-task2/3013.html"
+        },
+        {
+          "id": "3014",
+          "title": "网上获取新闻的利弊",
+          "subtitle": "利弊类 · ID 3014 · 命中 2022-02-19",
+          "tag": "利弊类",
+          "hit": "2022-02-19",
+          "url": "./writing-resources/tzx-task2/3014.html"
+        },
+        {
+          "id": "3015",
+          "title": "图书馆的必要性",
+          "subtitle": "观点类 · ID 3015 · 命中 2022-02-26",
+          "tag": "观点类",
+          "hit": "2022-02-26",
+          "url": "./writing-resources/tzx-task2/3015.html"
+        },
+        {
+          "id": "3016",
+          "title": "个人信息存于网络的利弊",
+          "subtitle": "利弊类 · ID 3016 · 命中 2025-03-04",
+          "tag": "利弊类",
+          "hit": "2025-03-04",
+          "url": "./writing-resources/tzx-task2/3016.html"
+        },
+        {
+          "id": "3017",
+          "title": "21世纪生活质量是否提高",
+          "subtitle": "观点类 · ID 3017 · 命中 2022-03-12",
+          "tag": "观点类",
+          "hit": "2022-03-12",
+          "url": "./writing-resources/tzx-task2/3017.html"
+        },
+        {
+          "id": "3018",
+          "title": "征地建房的利弊",
+          "subtitle": "利弊类 · ID 3018 · 命中 2022-03-19",
+          "tag": "利弊类",
+          "hit": "2022-03-19",
+          "url": "./writing-resources/tzx-task2/3018.html"
+        },
+        {
+          "id": "3019",
+          "title": "大城市住房短缺问题",
+          "subtitle": "观点类 · ID 3019 · 命中 2022-03-26",
+          "tag": "观点类",
+          "hit": "2022-03-26",
+          "url": "./writing-resources/tzx-task2/3019.html"
+        },
+        {
+          "id": "3296",
+          "title": "建筑投资",
+          "subtitle": "观点类 · ID 3296 · 命中 2022-10-08",
+          "tag": "观点类",
+          "hit": "2022-10-08",
+          "url": "./writing-resources/tzx-task2/3296.html"
+        },
+        {
+          "id": "3297",
+          "title": "噪音问题",
+          "subtitle": "报告类 · ID 3297 · 命中 2022-10-22",
+          "tag": "报告类",
+          "hit": "2022-10-22",
+          "url": "./writing-resources/tzx-task2/3297.html"
+        },
+        {
+          "id": "3299",
+          "title": "职场性别",
+          "subtitle": "观点类 · ID 3299 · 命中 2022-11-05",
+          "tag": "观点类",
+          "hit": "2022-11-05",
+          "url": "./writing-resources/tzx-task2/3299.html"
+        },
+        {
+          "id": "3300",
+          "title": "课程选择",
+          "subtitle": "观点类 · ID 3300 · 命中 2025-03-23",
+          "tag": "观点类",
+          "hit": "2025-03-23",
+          "url": "./writing-resources/tzx-task2/3300.html"
+        },
+        {
+          "id": "3301",
+          "title": "产品质量与成本",
+          "subtitle": "观点类 · ID 3301 · 命中 2022-11-26",
+          "tag": "观点类",
+          "hit": "2022-11-26",
+          "url": "./writing-resources/tzx-task2/3301.html"
+        },
+        {
+          "id": "3303",
+          "title": "当地艺术 vs. 外国艺术",
+          "subtitle": "观点类 · ID 3303 · 命中 2025-03-16",
+          "tag": "观点类",
+          "hit": "2025-03-16",
+          "url": "./writing-resources/tzx-task2/3303.html"
+        },
+        {
+          "id": "3305",
+          "title": "追寻理想社会",
+          "subtitle": "报告类 · ID 3305 · 命中 2025-03-30",
+          "tag": "报告类",
+          "hit": "2025-03-30",
+          "url": "./writing-resources/tzx-task2/3305.html"
+        },
+        {
+          "id": "3306",
+          "title": "食品生产",
+          "subtitle": "观点类 · ID 3306 · 命中 2022-12-31",
+          "tag": "观点类",
+          "hit": "2022-12-31",
+          "url": "./writing-resources/tzx-task2/3306.html"
+        },
+        {
+          "id": "3307",
+          "title": "广告的影响",
+          "subtitle": "混合类 · ID 3307 · 命中 2023-01-07",
+          "tag": "混合类",
+          "hit": "2023-01-07",
+          "url": "./writing-resources/tzx-task2/3307.html"
+        },
+        {
+          "id": "3308",
+          "title": "犯罪问题",
+          "subtitle": "报告类 · ID 3308 · 命中 2023-01-14",
+          "tag": "报告类",
+          "hit": "2023-01-14",
+          "url": "./writing-resources/tzx-task2/3308.html"
+        },
+        {
+          "id": "3309",
+          "title": "旅游地区变化",
+          "subtitle": "观点类 · ID 3309 · 命中 2023-01-28",
+          "tag": "观点类",
+          "hit": "2023-01-28",
+          "url": "./writing-resources/tzx-task2/3309.html"
+        },
+        {
+          "id": "3310",
+          "title": "水源使用",
+          "subtitle": "讨论类 · ID 3310 · 命中 2023-02-04",
+          "tag": "讨论类",
+          "hit": "2023-02-04",
+          "url": "./writing-resources/tzx-task2/3310.html"
+        },
+        {
+          "id": "3311",
+          "title": "公司薪资问题",
+          "subtitle": "观点类 · ID 3311 · 命中 2025-04-27",
+          "tag": "观点类",
+          "hit": "2025-04-27",
+          "url": "./writing-resources/tzx-task2/3311.html"
+        },
+        {
+          "id": "3312",
+          "title": "医疗与健康",
+          "subtitle": "讨论类 · ID 3312 · 命中 2023-02-18",
+          "tag": "讨论类",
+          "hit": "2023-02-18",
+          "url": "./writing-resources/tzx-task2/3312.html"
+        },
+        {
+          "id": "3313",
+          "title": "员工假期",
+          "subtitle": "观点类 · ID 3313 · 命中 2023-02-25",
+          "tag": "观点类",
+          "hit": "2023-02-25",
+          "url": "./writing-resources/tzx-task2/3313.html"
+        },
+        {
+          "id": "3314",
+          "title": "历史价值",
+          "subtitle": "讨论类 · ID 3314 · 命中 2025-03-23",
+          "tag": "讨论类",
+          "hit": "2025-03-23",
+          "url": "./writing-resources/tzx-task2/3314.html"
+        },
+        {
+          "id": "3315",
+          "title": "学生课程",
+          "subtitle": "讨论类 · ID 3315 · 命中 2023-03-18",
+          "tag": "讨论类",
+          "hit": "2023-03-18",
+          "url": "./writing-resources/tzx-task2/3315.html"
+        },
+        {
+          "id": "3316",
+          "title": "电视影响",
+          "subtitle": "讨论类 · ID 3316 · 命中 2025-04-30",
+          "tag": "讨论类",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task2/3316.html"
+        },
+        {
+          "id": "3317",
+          "title": "文盲问题",
+          "subtitle": "报告类 · ID 3317 · 命中 2023-04-01",
+          "tag": "报告类",
+          "hit": "2023-04-01",
+          "url": "./writing-resources/tzx-task2/3317.html"
+        },
+        {
+          "id": "3318",
+          "title": "国际体育赛事",
+          "subtitle": "讨论类 · ID 3318 · 命中 2025-04-23",
+          "tag": "讨论类",
+          "hit": "2025-04-23",
+          "url": "./writing-resources/tzx-task2/3318.html"
+        },
+        {
+          "id": "3319",
+          "title": "公民的责任",
+          "subtitle": "讨论类 · ID 3319 · 命中 2023-04-15",
+          "tag": "讨论类",
+          "hit": "2023-04-15",
+          "url": "./writing-resources/tzx-task2/3319.html"
+        },
+        {
+          "id": "3320",
+          "title": "经济发展与社会价值",
+          "subtitle": "利弊类 · ID 3320 · 命中 2025-03-28",
+          "tag": "利弊类",
+          "hit": "2025-03-28",
+          "url": "./writing-resources/tzx-task2/3320.html"
+        },
+        {
+          "id": "3321",
+          "title": "休闲时长",
+          "subtitle": "观点类 · ID 3321 · 命中 2025-04-01",
+          "tag": "观点类",
+          "hit": "2025-04-01",
+          "url": "./writing-resources/tzx-task2/3321.html"
+        },
+        {
+          "id": "3322",
+          "title": "是否资助艺术家",
+          "subtitle": "讨论类 · ID 3322 · 命中 2023-05-06",
+          "tag": "讨论类",
+          "hit": "2023-05-06",
+          "url": "./writing-resources/tzx-task2/3322.html"
+        },
+        {
+          "id": "3323",
+          "title": "偶像的影响",
+          "subtitle": "观点类 · ID 3323 · 命中 2023-05-13",
+          "tag": "观点类",
+          "hit": "2023-05-13",
+          "url": "./writing-resources/tzx-task2/3323.html"
+        },
+        {
+          "id": "3324",
+          "title": "长时间工作影响",
+          "subtitle": "观点类 · ID 3324 · 命中 2025-04-23",
+          "tag": "观点类",
+          "hit": "2025-04-23",
+          "url": "./writing-resources/tzx-task2/3324.html"
+        },
+        {
+          "id": "3325",
+          "title": "专业工作薪资",
+          "subtitle": "观点类 · ID 3325 · 命中 2025-04-13",
+          "tag": "观点类",
+          "hit": "2025-04-13",
+          "url": "./writing-resources/tzx-task2/3325.html"
+        },
+        {
+          "id": "3326",
+          "title": "老年人运动建议",
+          "subtitle": "报告类 · ID 3326 · 命中 2023-06-03",
+          "tag": "报告类",
+          "hit": "2023-06-03",
+          "url": "./writing-resources/tzx-task2/3326.html"
+        },
+        {
+          "id": "3327",
+          "title": "缴税问题",
+          "subtitle": "观点类 · ID 3327 · 命中 2023-06-10",
+          "tag": "观点类",
+          "hit": "2023-06-10",
+          "url": "./writing-resources/tzx-task2/3327.html"
+        },
+        {
+          "id": "3328",
+          "title": "再犯罪问题",
+          "subtitle": "报告类 · ID 3328 · 命中 2023-06-17",
+          "tag": "报告类",
+          "hit": "2023-06-17",
+          "url": "./writing-resources/tzx-task2/3328.html"
+        },
+        {
+          "id": "3329",
+          "title": "中学生学习国际新闻",
+          "subtitle": "讨论类 · ID 3329 · 命中 2023-06-24",
+          "tag": "讨论类",
+          "hit": "2023-06-24",
+          "url": "./writing-resources/tzx-task2/3329.html"
+        },
+        {
+          "id": "3378",
+          "title": "科技产品的利弊",
+          "subtitle": "观点类 · ID 3378 · 命中 2023-07-01",
+          "tag": "观点类",
+          "hit": "2023-07-01",
+          "url": "./writing-resources/tzx-task2/3378.html"
+        },
+        {
+          "id": "3379",
+          "title": "遵循当地习俗",
+          "subtitle": "观点类 · ID 3379 · 命中 2025-04-26",
+          "tag": "观点类",
+          "hit": "2025-04-26",
+          "url": "./writing-resources/tzx-task2/3379.html"
+        },
+        {
+          "id": "3380",
+          "title": "生活与工作的平衡",
+          "subtitle": "报告类 · ID 3380 · 命中 2025-03-22",
+          "tag": "报告类",
+          "hit": "2025-03-22",
+          "url": "./writing-resources/tzx-task2/3380.html"
+        },
+        {
+          "id": "3381",
+          "title": "马路安全问题",
+          "subtitle": "观点类 · ID 3381 · 命中 2023-07-22",
+          "tag": "观点类",
+          "hit": "2023-07-22",
+          "url": "./writing-resources/tzx-task2/3381.html"
+        },
+        {
+          "id": "3382",
+          "title": "商店和产品同质化",
+          "subtitle": "讨论类 · ID 3382 · 命中 2023-07-29",
+          "tag": "讨论类",
+          "hit": "2023-07-29",
+          "url": "./writing-resources/tzx-task2/3382.html"
+        },
+        {
+          "id": "3383",
+          "title": "垃圾回收问题",
+          "subtitle": "报告类 · ID 3383 · 命中 2023-08-05",
+          "tag": "报告类",
+          "hit": "2023-08-05",
+          "url": "./writing-resources/tzx-task2/3383.html"
+        },
+        {
+          "id": "3384",
+          "title": "犯罪年龄问题",
+          "subtitle": "观点类 · ID 3384 · 命中 2023-08-12",
+          "tag": "观点类",
+          "hit": "2023-08-12",
+          "url": "./writing-resources/tzx-task2/3384.html"
+        },
+        {
+          "id": "3385",
+          "title": "公共资金",
+          "subtitle": "观点类 · ID 3385 · 命中 2025-04-30",
+          "tag": "观点类",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task2/3385.html"
+        },
+        {
+          "id": "3386",
+          "title": "免费住房问题",
+          "subtitle": "讨论类 · ID 3386 · 命中 2023-08-26",
+          "tag": "讨论类",
+          "hit": "2023-08-26",
+          "url": "./writing-resources/tzx-task2/3386.html"
+        },
+        {
+          "id": "3387",
+          "title": "学习的目的",
+          "subtitle": "讨论类 · ID 3387 · 命中 2023-09-02",
+          "tag": "讨论类",
+          "hit": "2023-09-02",
+          "url": "./writing-resources/tzx-task2/3387.html"
+        },
+        {
+          "id": "3388",
+          "title": "青年义工问题",
+          "subtitle": "利弊类 · ID 3388 · 命中 2023-09-09",
+          "tag": "利弊类",
+          "hit": "2023-09-09",
+          "url": "./writing-resources/tzx-task2/3388.html"
+        },
+        {
+          "id": "3389",
+          "title": "极限运动",
+          "subtitle": "观点类 · ID 3389 · 命中 2025-04-30",
+          "tag": "观点类",
+          "hit": "2025-04-30",
+          "url": "./writing-resources/tzx-task2/3389.html"
+        },
+        {
+          "id": "3665",
+          "title": "手机的使用",
+          "subtitle": "观点类 · ID 3665 · 命中 2025-04-13",
+          "tag": "观点类",
+          "hit": "2025-04-13",
+          "url": "./writing-resources/tzx-task2/3665.html"
+        },
+        {
+          "id": "3666",
+          "title": "科研：政府还是私企",
+          "subtitle": "观点类 · ID 3666 · 命中 2023-10-21",
+          "tag": "观点类",
+          "hit": "2023-10-21",
+          "url": "./writing-resources/tzx-task2/3666.html"
+        },
+        {
+          "id": "3667",
+          "title": "读书方式",
+          "subtitle": "讨论类 · ID 3667 · 命中 2023-10-28",
+          "tag": "讨论类",
+          "hit": "2023-10-28",
+          "url": "./writing-resources/tzx-task2/3667.html"
+        },
+        {
+          "id": "3668",
+          "title": "现代与传统服饰",
+          "subtitle": "报告类 · ID 3668 · 命中 2023-11-04",
+          "tag": "报告类",
+          "hit": "2023-11-04",
+          "url": "./writing-resources/tzx-task2/3668.html"
+        },
+        {
+          "id": "3669",
+          "title": "罪犯惩罚",
+          "subtitle": "讨论类 · ID 3669 · 命中 2023-11-18",
+          "tag": "讨论类",
+          "hit": "2023-11-18",
+          "url": "./writing-resources/tzx-task2/3669.html"
+        },
+        {
+          "id": "3670",
+          "title": "国际关系",
+          "subtitle": "观点类 · ID 3670 · 命中 2023-11-25",
+          "tag": "观点类",
+          "hit": "2023-11-25",
+          "url": "./writing-resources/tzx-task2/3670.html"
+        },
+        {
+          "id": "3671",
+          "title": "私家车与环境",
+          "subtitle": "利弊类 · ID 3671 · 命中 2023-12-02",
+          "tag": "利弊类",
+          "hit": "2023-12-02",
+          "url": "./writing-resources/tzx-task2/3671.html"
+        },
+        {
+          "id": "3672",
+          "title": "经验与年龄",
+          "subtitle": "观点类 · ID 3672 · 命中 2023-12-09",
+          "tag": "观点类",
+          "hit": "2023-12-09",
+          "url": "./writing-resources/tzx-task2/3672.html"
+        },
+        {
+          "id": "3673",
+          "title": "学历的重要性",
+          "subtitle": "讨论类 · ID 3673 · 命中 2023-12-16",
+          "tag": "讨论类",
+          "hit": "2023-12-16",
+          "url": "./writing-resources/tzx-task2/3673.html"
+        },
+        {
+          "id": "3674",
+          "title": "成功的品质",
+          "subtitle": "混合类 · ID 3674 · 命中 2023-12-30",
+          "tag": "混合类",
+          "hit": "2023-12-30",
+          "url": "./writing-resources/tzx-task2/3674.html"
+        },
+        {
+          "id": "3699",
+          "title": "自由活动的规划",
+          "subtitle": "讨论类 · ID 3699 · 命中 2024-01-06",
+          "tag": "讨论类",
+          "hit": "2024-01-06",
+          "url": "./writing-resources/tzx-task2/3699.html"
+        },
+        {
+          "id": "3700",
+          "title": "着眼未来还是关注当下",
+          "subtitle": "观点类 · ID 3700 · 命中 2024-01-24",
+          "tag": "观点类",
+          "hit": "2024-01-24",
+          "url": "./writing-resources/tzx-task2/3700.html"
+        },
+        {
+          "id": "3701",
+          "title": "工作与社交",
+          "subtitle": "讨论类 · ID 3701 · 命中 2024-01-27",
+          "tag": "讨论类",
+          "hit": "2024-01-27",
+          "url": "./writing-resources/tzx-task2/3701.html"
+        },
+        {
+          "id": "3702",
+          "title": "电视对孩子的影响",
+          "subtitle": "讨论类 · ID 3702 · 命中 2024-02-03",
+          "tag": "讨论类",
+          "hit": "2024-02-03",
+          "url": "./writing-resources/tzx-task2/3702.html"
+        },
+        {
+          "id": "3703",
+          "title": "艺术：天赋与努力",
+          "subtitle": "讨论类 · ID 3703 · 命中 2024-02-24",
+          "tag": "讨论类",
+          "hit": "2024-02-24",
+          "url": "./writing-resources/tzx-task2/3703.html"
+        },
+        {
+          "id": "3704",
+          "title": "低碳出行",
+          "subtitle": "利弊类 · ID 3704 · 命中 2025-03-28",
+          "tag": "利弊类",
+          "hit": "2025-03-28",
+          "url": "./writing-resources/tzx-task2/3704.html"
+        },
+        {
+          "id": "3705",
+          "title": "成功的关键",
+          "subtitle": "报告类 · ID 3705 · 命中 2025-03-18",
+          "tag": "报告类",
+          "hit": "2025-03-18",
+          "url": "./writing-resources/tzx-task2/3705.html"
+        },
+        {
+          "id": "3706",
+          "title": "理科的选择",
+          "subtitle": "报告类 · ID 3706 · 命中 2025-11-11",
+          "tag": "报告类",
+          "hit": "2025-11-11",
+          "url": "./writing-resources/tzx-task2/3706.html"
+        },
+        {
+          "id": "3707",
+          "title": "高中毕业生个人理财",
+          "subtitle": "报告类 · ID 3707 · 命中 2024-03-23",
+          "tag": "报告类",
+          "hit": "2024-03-23",
+          "url": "./writing-resources/tzx-task2/3707.html"
+        },
+        {
+          "id": "3758",
+          "title": "广告的影响",
+          "subtitle": "讨论类 · ID 3758 · 命中 2024-04-06",
+          "tag": "讨论类",
+          "hit": "2024-04-06",
+          "url": "./writing-resources/tzx-task2/3758.html"
+        },
+        {
+          "id": "3759",
+          "title": "犯罪的原因",
+          "subtitle": "讨论类 · ID 3759 · 命中 2024-04-13",
+          "tag": "讨论类",
+          "hit": "2024-04-13",
+          "url": "./writing-resources/tzx-task2/3759.html"
+        },
+        {
+          "id": "3760",
+          "title": "科技发展对犯罪的影响",
+          "subtitle": "讨论类 · ID 3760 · 命中 2024-04-20",
+          "tag": "讨论类",
+          "hit": "2024-04-20",
+          "url": "./writing-resources/tzx-task2/3760.html"
+        },
+        {
+          "id": "3761",
+          "title": "博物馆存在的必要",
+          "subtitle": "观点类 · ID 3761 · 命中 2024-04-27",
+          "tag": "观点类",
+          "hit": "2024-04-27",
+          "url": "./writing-resources/tzx-task2/3761.html"
+        },
+        {
+          "id": "3762",
+          "title": "减少化石燃料消耗",
+          "subtitle": "观点类 · ID 3762 · 命中 2024-05-11",
+          "tag": "观点类",
+          "hit": "2024-05-11",
+          "url": "./writing-resources/tzx-task2/3762.html"
+        },
+        {
+          "id": "3763",
+          "title": "老年人使用手机",
+          "subtitle": "讨论类 · ID 3763 · 命中 2024-05-18",
+          "tag": "讨论类",
+          "hit": "2024-05-18",
+          "url": "./writing-resources/tzx-task2/3763.html"
+        },
+        {
+          "id": "3764",
+          "title": "政府国际援助",
+          "subtitle": "观点类 · ID 3764 · 命中 2024-05-25",
+          "tag": "观点类",
+          "hit": "2024-05-25",
+          "url": "./writing-resources/tzx-task2/3764.html"
+        },
+        {
+          "id": "3765",
+          "title": "医疗私有化利弊",
+          "subtitle": "利弊类 · ID 3765 · 命中 2024-06-01",
+          "tag": "利弊类",
+          "hit": "2024-06-01",
+          "url": "./writing-resources/tzx-task2/3765.html"
+        },
+        {
+          "id": "3766",
+          "title": "全球化与民族认同",
+          "subtitle": "讨论类 · ID 3766 · 命中 2024-06-08",
+          "tag": "讨论类",
+          "hit": "2024-06-08",
+          "url": "./writing-resources/tzx-task2/3766.html"
+        },
+        {
+          "id": "3767",
+          "title": "是否要防止物种灭绝",
+          "subtitle": "观点类 · ID 3767 · 命中 2024-06-22",
+          "tag": "观点类",
+          "hit": "2024-06-22",
+          "url": "./writing-resources/tzx-task2/3767.html"
+        },
+        {
+          "id": "7066",
+          "title": "高层管理者与普通员工薪资差距",
+          "subtitle": "观点类 · ID 7066 · 命中 2024-08-17",
+          "tag": "观点类",
+          "hit": "2024-08-17",
+          "url": "./writing-resources/tzx-task2/7066.html"
+        },
+        {
+          "id": "7067",
+          "title": "晚育的原因和利弊",
+          "subtitle": "混合类 · ID 7067 · 命中 2025-11-04",
+          "tag": "混合类",
+          "hit": "2025-11-04",
+          "url": "./writing-resources/tzx-task2/7067.html"
+        },
+        {
+          "id": "7068",
+          "title": "人们是否越来越相互独立",
+          "subtitle": "讨论类 · ID 7068 · 命中 2024-07-06",
+          "tag": "讨论类",
+          "hit": "2024-07-06",
+          "url": "./writing-resources/tzx-task2/7068.html"
+        },
+        {
+          "id": "7069",
+          "title": "电子产品使用的弊端",
+          "subtitle": "观点类 · ID 7069 · 命中 2024-07-20",
+          "tag": "观点类",
+          "hit": "2024-07-20",
+          "url": "./writing-resources/tzx-task2/7069.html"
+        },
+        {
+          "id": "7070",
+          "title": "居家办公的利弊",
+          "subtitle": "观点类 · ID 7070 · 命中 2024-07-27",
+          "tag": "观点类",
+          "hit": "2024-07-27",
+          "url": "./writing-resources/tzx-task2/7070.html"
+        },
+        {
+          "id": "7071",
+          "title": "高中毕业后间隔年的利弊",
+          "subtitle": "观点类 · ID 7071 · 命中 2024-08-03",
+          "tag": "观点类",
+          "hit": "2024-08-03",
+          "url": "./writing-resources/tzx-task2/7071.html"
+        },
+        {
+          "id": "7083",
+          "title": "政府投资",
+          "subtitle": "讨论类 · ID 7083 · 命中 2025-04-29",
+          "tag": "讨论类",
+          "hit": "2025-04-29",
+          "url": "./writing-resources/tzx-task2/7083.html"
+        },
+        {
+          "id": "7098",
+          "title": "努力工作的原因",
+          "subtitle": "观点类 · ID 7098 · 命中 2024-08-31",
+          "tag": "观点类",
+          "hit": "2024-08-31",
+          "url": "./writing-resources/tzx-task2/7098.html"
+        },
+        {
+          "id": "7153",
+          "title": "了解人们生活的途径",
+          "subtitle": "观点类 · ID 7153 · 命中 2024-09-07",
+          "tag": "观点类",
+          "hit": "2024-09-07",
+          "url": "./writing-resources/tzx-task2/7153.html"
+        },
+        {
+          "id": "7159",
+          "title": "年老继续工作",
+          "subtitle": "观点类 · ID 7159 · 命中 2024-09-14",
+          "tag": "观点类",
+          "hit": "2024-09-14",
+          "url": "./writing-resources/tzx-task2/7159.html"
+        },
+        {
+          "id": "7164",
+          "title": "文物的归还",
+          "subtitle": "观点类 · ID 7164 · 命中 2025-03-30",
+          "tag": "观点类",
+          "hit": "2025-03-30",
+          "url": "./writing-resources/tzx-task2/7164.html"
+        },
+        {
+          "id": "7216",
+          "title": "自行车的使用",
+          "subtitle": "报告类 · ID 7216 · 命中 2024-10-12",
+          "tag": "报告类",
+          "hit": "2024-10-12",
+          "url": "./writing-resources/tzx-task2/7216.html"
+        },
+        {
+          "id": "7217",
+          "title": "学习难度",
+          "subtitle": "报告类 · ID 7217 · 命中 2024-10-19",
+          "tag": "报告类",
+          "hit": "2024-10-19",
+          "url": "./writing-resources/tzx-task2/7217.html"
+        },
+        {
+          "id": "7218",
+          "title": "美容花钱",
+          "subtitle": "混合类 · ID 7218 · 命中 2025-11-02",
+          "tag": "混合类",
+          "hit": "2025-11-02",
+          "url": "./writing-resources/tzx-task2/7218.html"
+        },
+        {
+          "id": "7220",
+          "title": "家庭影响VS学校影响",
+          "subtitle": "观点类 · ID 7220 · 命中 2024-11-02",
+          "tag": "观点类",
+          "hit": "2024-11-02",
+          "url": "./writing-resources/tzx-task2/7220.html"
+        },
+        {
+          "id": "7414",
+          "title": "互联网替代面对面交流",
+          "subtitle": "利弊类 · ID 7414 · 命中 2024-11-16",
+          "tag": "利弊类",
+          "hit": "2024-11-16",
+          "url": "./writing-resources/tzx-task2/7414.html"
+        },
+        {
+          "id": "7417",
+          "title": "大学文凭VS工作",
+          "subtitle": "讨论类 · ID 7417 · 命中 2024-11-23",
+          "tag": "讨论类",
+          "hit": "2024-11-23",
+          "url": "./writing-resources/tzx-task2/7417.html"
+        },
+        {
+          "id": "7436",
+          "title": "名人隐私",
+          "subtitle": "观点类 · ID 7436 · 命中 2025-04-26",
+          "tag": "观点类",
+          "hit": "2025-04-26",
+          "url": "./writing-resources/tzx-task2/7436.html"
+        },
+        {
+          "id": "7443",
+          "title": "减少航班",
+          "subtitle": "观点类 · ID 7443 · 命中 2024-12-07",
+          "tag": "观点类",
+          "hit": "2024-12-07",
+          "url": "./writing-resources/tzx-task2/7443.html"
+        },
+        {
+          "id": "7445",
+          "title": "艺术课程",
+          "subtitle": "观点类 · ID 7445 · 命中 2025-10-28",
+          "tag": "观点类",
+          "hit": "2025-10-28",
+          "url": "./writing-resources/tzx-task2/7445.html"
+        },
+        {
+          "id": "7446",
+          "title": "快节奏生活",
+          "subtitle": "混合类 · ID 7446 · 命中 2024-12-21",
+          "tag": "混合类",
+          "hit": "2024-12-21",
+          "url": "./writing-resources/tzx-task2/7446.html"
+        },
+        {
+          "id": "7578",
+          "title": "剥削动物",
+          "subtitle": "讨论类 · ID 7578 · 命中 2024-12-28",
+          "tag": "讨论类",
+          "hit": "2024-12-28",
+          "url": "./writing-resources/tzx-task2/7578.html"
+        },
+        {
+          "id": "7579",
+          "title": "频繁换事业",
+          "subtitle": "混合类 · ID 7579 · 命中 2025-04-13",
+          "tag": "混合类",
+          "hit": "2025-04-13",
+          "url": "./writing-resources/tzx-task2/7579.html"
+        },
+        {
+          "id": "7594",
+          "title": "时尚与环境",
+          "subtitle": "观点类 · ID 7594 · 命中 2025-01-11",
+          "tag": "观点类",
+          "hit": "2025-01-11",
+          "url": "./writing-resources/tzx-task2/7594.html"
+        },
+        {
+          "id": "7604",
+          "title": "学习商科还是历史",
+          "subtitle": "观点类 · ID 7604 · 命中 2025-01-18",
+          "tag": "观点类",
+          "hit": "2025-01-18",
+          "url": "./writing-resources/tzx-task2/7604.html"
+        },
+        {
+          "id": "7608",
+          "title": "人口增长",
+          "subtitle": "讨论类 · ID 7608 · 命中 2025-02-08",
+          "tag": "讨论类",
+          "hit": "2025-02-08",
+          "url": "./writing-resources/tzx-task2/7608.html"
+        },
+        {
+          "id": "7617",
+          "title": "资源本地采购",
+          "subtitle": "观点类 · ID 7617 · 命中 2025-02-15",
+          "tag": "观点类",
+          "hit": "2025-02-15",
+          "url": "./writing-resources/tzx-task2/7617.html"
+        },
+        {
+          "id": "7619",
+          "title": "现代通信改变社交",
+          "subtitle": "观点类 · ID 7619 · 命中 2025-02-22",
+          "tag": "观点类",
+          "hit": "2025-02-22",
+          "url": "./writing-resources/tzx-task2/7619.html"
+        },
+        {
+          "id": "7649",
+          "title": "薪资",
+          "subtitle": "观点类 · ID 7649 · 命中 2025-03-15",
+          "tag": "观点类",
+          "hit": "2025-03-15",
+          "url": "./writing-resources/tzx-task2/7649.html"
+        },
+        {
+          "id": "7706",
+          "title": "学习数学",
+          "subtitle": "报告类 · ID 7706 · 命中 2025-03-22",
+          "tag": "报告类",
+          "hit": "2025-03-22",
+          "url": "./writing-resources/tzx-task2/7706.html"
+        },
+        {
+          "id": "7707",
+          "title": "修缮旧建筑",
+          "subtitle": "观点类 · ID 7707 · 命中 2025-03-29",
+          "tag": "观点类",
+          "hit": "2025-03-29",
+          "url": "./writing-resources/tzx-task2/7707.html"
+        },
+        {
+          "id": "7708",
+          "title": "电视和游戏的影响",
+          "subtitle": "观点类 · ID 7708 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7708.html"
+        },
+        {
+          "id": "7709",
+          "title": "垂直城市VS水平城市",
+          "subtitle": "观点类 · ID 7709 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7709.html"
+        },
+        {
+          "id": "7710",
+          "title": "孩子的休闲时间",
+          "subtitle": "讨论类 · ID 7710 · 命中 2025-03-31",
+          "tag": "讨论类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7710.html"
+        },
+        {
+          "id": "7711",
+          "title": "国际合作",
+          "subtitle": "观点类 · ID 7711 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7711.html"
+        },
+        {
+          "id": "7712",
+          "title": "小家庭",
+          "subtitle": "观点类 · ID 7712 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7712.html"
+        },
+        {
+          "id": "7713",
+          "title": "慈善组织",
+          "subtitle": "讨论类 · ID 7713 · 命中 2025-04-13",
+          "tag": "讨论类",
+          "hit": "2025-04-13",
+          "url": "./writing-resources/tzx-task2/7713.html"
+        },
+        {
+          "id": "7714",
+          "title": "工作为了赚钱",
+          "subtitle": "观点类 · ID 7714 · 命中 2025-03-31",
+          "tag": "观点类",
+          "hit": "2025-03-31",
+          "url": "./writing-resources/tzx-task2/7714.html"
+        },
+        {
+          "id": "7715",
+          "title": "健康生活",
+          "subtitle": "观点类 · ID 7715 · 命中 2025-04-02",
+          "tag": "观点类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7715.html"
+        },
+        {
+          "id": "7716",
+          "title": "网课",
+          "subtitle": "混合类 · ID 7716 · 命中 2025-04-02",
+          "tag": "混合类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7716.html"
+        },
+        {
+          "id": "7717",
+          "title": "购物习惯",
+          "subtitle": "观点类 · ID 7717 · 命中 2025-04-02",
+          "tag": "观点类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7717.html"
+        },
+        {
+          "id": "7718",
+          "title": "家庭类型",
+          "subtitle": "利弊类 · ID 7718 · 命中 2025-04-02",
+          "tag": "利弊类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7718.html"
+        },
+        {
+          "id": "7719",
+          "title": "多元文化和国际公司",
+          "subtitle": "观点类 · ID 7719 · 命中 2025-04-02",
+          "tag": "观点类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7719.html"
+        },
+        {
+          "id": "7720",
+          "title": "男主内女主外",
+          "subtitle": "混合类 · ID 7720 · 命中 2025-04-02",
+          "tag": "混合类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7720.html"
+        },
+        {
+          "id": "7721",
+          "title": "孩子的自由",
+          "subtitle": "利弊类 · ID 7721 · 命中 2025-11-11",
+          "tag": "利弊类",
+          "hit": "2025-11-11",
+          "url": "./writing-resources/tzx-task2/7721.html"
+        },
+        {
+          "id": "7722",
+          "title": "垃圾食品",
+          "subtitle": "讨论类 · ID 7722 · 命中 2025-04-02",
+          "tag": "讨论类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7722.html"
+        },
+        {
+          "id": "7723",
+          "title": "大学招生名额",
+          "subtitle": "观点类 · ID 7723 · 命中 2025-04-02",
+          "tag": "观点类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7723.html"
+        },
+        {
+          "id": "7724",
+          "title": "限制加班",
+          "subtitle": "报告类 · ID 7724 · 命中 2025-04-02",
+          "tag": "报告类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7724.html"
+        },
+        {
+          "id": "7725",
+          "title": "外国电影",
+          "subtitle": "讨论类 · ID 7725 · 命中 2025-04-02",
+          "tag": "讨论类",
+          "hit": "2025-04-02",
+          "url": "./writing-resources/tzx-task2/7725.html"
+        },
+        {
+          "id": "7726",
+          "title": "电脑技能与成功",
+          "subtitle": "观点类 · ID 7726 · 命中 2025-04-12",
+          "tag": "观点类",
+          "hit": "2025-04-12",
+          "url": "./writing-resources/tzx-task2/7726.html"
+        },
+        {
+          "id": "7727",
+          "title": "父亲休产假",
+          "subtitle": "观点类 · ID 7727 · 命中 2025-04-17",
+          "tag": "观点类",
+          "hit": "2025-04-17",
+          "url": "./writing-resources/tzx-task2/7727.html"
+        },
+        {
+          "id": "7729",
+          "title": "榜样",
+          "subtitle": "利弊类 · ID 7729 · 命中 2025-04-17",
+          "tag": "利弊类",
+          "hit": "2025-04-17",
+          "url": "./writing-resources/tzx-task2/7729.html"
+        },
+        {
+          "id": "7732",
+          "title": "惩罚犯罪的方式",
+          "subtitle": "讨论类 · ID 7732 · 命中 2025-04-03",
+          "tag": "讨论类",
+          "hit": "2025-04-03",
+          "url": "./writing-resources/tzx-task2/7732.html"
+        },
+        {
+          "id": "7733",
+          "title": "竞争公司的广告",
+          "subtitle": "报告类 · ID 7733 · 命中 2025-04-03",
+          "tag": "报告类",
+          "hit": "2025-04-03",
+          "url": "./writing-resources/tzx-task2/7733.html"
+        },
+        {
+          "id": "7734",
+          "title": "选拔学生",
+          "subtitle": "讨论类 · ID 7734 · 命中 2025-04-03",
+          "tag": "讨论类",
+          "hit": "2025-04-03",
+          "url": "./writing-resources/tzx-task2/7734.html"
+        },
+        {
+          "id": "7735",
+          "title": "女性参军",
+          "subtitle": "讨论类 · ID 7735 · 命中 2025-04-03",
+          "tag": "讨论类",
+          "hit": "2025-04-03",
+          "url": "./writing-resources/tzx-task2/7735.html"
+        },
+        {
+          "id": "7737",
+          "title": "国际合作、环境与商业",
+          "subtitle": "讨论类 · ID 7737 · 命中 2025-04-03",
+          "tag": "讨论类",
+          "hit": "2025-04-03",
+          "url": "./writing-resources/tzx-task2/7737.html"
+        },
+        {
+          "id": "7799",
+          "title": "学习不专注",
+          "subtitle": "报告类 · ID 7799 · 命中 2025-06-14",
+          "tag": "报告类",
+          "hit": "2025-06-14",
+          "url": "./writing-resources/tzx-task2/7799.html"
+        },
+        {
+          "id": "7813",
+          "title": "好新闻vs坏新闻",
+          "subtitle": "观点类 · ID 7813 · 命中 2025-06-15",
+          "tag": "观点类",
+          "hit": "2025-06-15",
+          "url": "./writing-resources/tzx-task2/7813.html"
+        },
+        {
+          "id": "7814",
+          "title": "艺术创作",
+          "subtitle": "讨论类 · ID 7814 · 命中 2025-06-10",
+          "tag": "讨论类",
+          "hit": "2025-06-10",
+          "url": "./writing-resources/tzx-task2/7814.html"
+        },
+        {
+          "id": "7815",
+          "title": "存储知识",
+          "subtitle": "利弊类 · ID 7815 · 命中 2025-06-09",
+          "tag": "利弊类",
+          "hit": "2025-06-09",
+          "url": "./writing-resources/tzx-task2/7815.html"
+        },
+        {
+          "id": "7816",
+          "title": "年轻人失业",
+          "subtitle": "报告类 · ID 7816 · 命中 2025-06-14",
+          "tag": "报告类",
+          "hit": "2025-06-14",
+          "url": "./writing-resources/tzx-task2/7816.html"
+        },
+        {
+          "id": "7817",
+          "title": "娱乐的影响",
+          "subtitle": "观点类 · ID 7817 · 命中 2025-05-15",
+          "tag": "观点类",
+          "hit": "2025-05-15",
+          "url": "./writing-resources/tzx-task2/7817.html"
+        },
+        {
+          "id": "7818",
+          "title": "公司的社会责任",
+          "subtitle": "观点类 · ID 7818 · 命中 2025-05-03",
+          "tag": "观点类",
+          "hit": "2025-05-03",
+          "url": "./writing-resources/tzx-task2/7818.html"
+        },
+        {
+          "id": "7820",
+          "title": "动物园",
+          "subtitle": "讨论类 · ID 7820 · 命中 2025-05-06",
+          "tag": "讨论类",
+          "hit": "2025-05-06",
+          "url": "./writing-resources/tzx-task2/7820.html"
+        },
+        {
+          "id": "7822",
+          "title": "政府和健康食物",
+          "subtitle": "讨论类 · ID 7822 · 命中 2025-05-16",
+          "tag": "讨论类",
+          "hit": "2025-05-16",
+          "url": "./writing-resources/tzx-task2/7822.html"
+        },
+        {
+          "id": "7865",
+          "title": "运动设施对谁开放",
+          "subtitle": "利弊类 · ID 7865 · 命中 2025-06-14",
+          "tag": "利弊类",
+          "hit": "2025-06-14",
+          "url": "./writing-resources/tzx-task2/7865.html"
+        },
+        {
+          "id": "7866",
+          "title": "国家发展导致污染",
+          "subtitle": "观点类 · ID 7866 · 命中 2025-06-21",
+          "tag": "观点类",
+          "hit": "2025-06-21",
+          "url": "./writing-resources/tzx-task2/7866.html"
+        },
+        {
+          "id": "7867",
+          "title": "免费公交解决环境问题",
+          "subtitle": "观点类 · ID 7867 · 命中 2025-06-14",
+          "tag": "观点类",
+          "hit": "2025-06-14",
+          "url": "./writing-resources/tzx-task2/7867.html"
+        },
+        {
+          "id": "7868",
+          "title": "私有医疗的利弊",
+          "subtitle": "利弊类 · ID 7868 · 命中 2025-06-14",
+          "tag": "利弊类",
+          "hit": "2025-06-14",
+          "url": "./writing-resources/tzx-task2/7868.html"
+        },
+        {
+          "id": "7869",
+          "title": "人们不愿等待",
+          "subtitle": "报告类 · ID 7869 · 命中 2025-06-16",
+          "tag": "报告类",
+          "hit": "2025-06-16",
+          "url": "./writing-resources/tzx-task2/7869.html"
+        },
+        {
+          "id": "7870",
+          "title": "国际交换生",
+          "subtitle": "利弊类 · ID 7870 · 命中 2025-06-13",
+          "tag": "利弊类",
+          "hit": "2025-06-13",
+          "url": "./writing-resources/tzx-task2/7870.html"
+        },
+        {
+          "id": "7871",
+          "title": "不使用技术",
+          "subtitle": "观点类 · ID 7871 · 命中 2025-06-06",
+          "tag": "观点类",
+          "hit": "2025-06-06",
+          "url": "./writing-resources/tzx-task2/7871.html"
+        },
+        {
+          "id": "7872",
+          "title": "教育罪犯",
+          "subtitle": "观点类 · ID 7872 · 命中 2025-06-17",
+          "tag": "观点类",
+          "hit": "2025-06-17",
+          "url": "./writing-resources/tzx-task2/7872.html"
+        },
+        {
+          "id": "7873",
+          "title": "家庭垃圾处理",
+          "subtitle": "报告类 · ID 7873 · 命中 2025-06-15",
+          "tag": "报告类",
+          "hit": "2025-06-15",
+          "url": "./writing-resources/tzx-task2/7873.html"
+        },
+        {
+          "id": "7889",
+          "title": "模仿行为",
+          "subtitle": "观点类 · ID 7889 · 命中 2025-06-19",
+          "tag": "观点类",
+          "hit": "2025-06-19",
+          "url": "./writing-resources/tzx-task2/7889.html"
+        },
+        {
+          "id": "7890",
+          "title": "年老继续工作",
+          "subtitle": "观点类 · ID 7890 · 命中 2025-11-12",
+          "tag": "观点类",
+          "hit": "2025-11-12",
+          "url": "./writing-resources/tzx-task2/7890.html"
+        },
+        {
+          "id": "7927",
+          "title": "信用卡的利弊",
+          "subtitle": "利弊类 · ID 7927 · 命中 2025-07-07",
+          "tag": "利弊类",
+          "hit": "2025-07-07",
+          "url": "./writing-resources/tzx-task2/7927.html"
+        },
+        {
+          "id": "7928",
+          "title": "广告与体育",
+          "subtitle": "利弊类 · ID 7928 · 命中 2025-07-09",
+          "tag": "利弊类",
+          "hit": "2025-07-09",
+          "url": "./writing-resources/tzx-task2/7928.html"
+        },
+        {
+          "id": "7929",
+          "title": "调查家族历史",
+          "subtitle": "混合类 · ID 7929 · 命中 2025-07-10",
+          "tag": "混合类",
+          "hit": "2025-07-10",
+          "url": "./writing-resources/tzx-task2/7929.html"
+        },
+        {
+          "id": "7930",
+          "title": "博物馆的目的",
+          "subtitle": "讨论类 · ID 7930 · 命中 2025-07-11",
+          "tag": "讨论类",
+          "hit": "2025-07-11",
+          "url": "./writing-resources/tzx-task2/7930.html"
+        },
+        {
+          "id": "7931",
+          "title": "领导的重要品质",
+          "subtitle": "观点类 · ID 7931 · 命中 2025-08-05",
+          "tag": "观点类",
+          "hit": "2025-08-05",
+          "url": "./writing-resources/tzx-task2/7931.html"
+        },
+        {
+          "id": "7934",
+          "title": "全球趋同",
+          "subtitle": "利弊类 · ID 7934 · 命中 2025-07-19",
+          "tag": "利弊类",
+          "hit": "2025-07-19",
+          "url": "./writing-resources/tzx-task2/7934.html"
+        },
+        {
+          "id": "7935",
+          "title": "分班教学",
+          "subtitle": "讨论类 · ID 7935 · 命中 2025-07-21",
+          "tag": "讨论类",
+          "hit": "2025-07-21",
+          "url": "./writing-resources/tzx-task2/7935.html"
+        },
+        {
+          "id": "7940",
+          "title": "城市趋同",
+          "subtitle": "混合类 · ID 7940 · 命中 2025-07-31",
+          "tag": "混合类",
+          "hit": "2025-07-31",
+          "url": "./writing-resources/tzx-task2/7940.html"
+        },
+        {
+          "id": "7941",
+          "title": "资助孩子体育艺术",
+          "subtitle": "观点类 · ID 7941 · 命中 2025-08-10",
+          "tag": "观点类",
+          "hit": "2025-08-10",
+          "url": "./writing-resources/tzx-task2/7941.html"
+        },
+        {
+          "id": "7942",
+          "title": "孩子沉迷游戏不锻炼",
+          "subtitle": "混合类 · ID 7942 · 命中 2025-08-08",
+          "tag": "混合类",
+          "hit": "2025-08-08",
+          "url": "./writing-resources/tzx-task2/7942.html"
+        },
+        {
+          "id": "7943",
+          "title": "体育竞技vs孩子兴趣",
+          "subtitle": "讨论类 · ID 7943 · 命中 2025-08-12",
+          "tag": "讨论类",
+          "hit": "2025-08-12",
+          "url": "./writing-resources/tzx-task2/7943.html"
+        },
+        {
+          "id": "7944",
+          "title": "建设道路vs 公交",
+          "subtitle": "讨论类 · ID 7944 · 命中 2025-08-14",
+          "tag": "讨论类",
+          "hit": "2025-08-14",
+          "url": "./writing-resources/tzx-task2/7944.html"
+        },
+        {
+          "id": "7945",
+          "title": "英语的全球普及",
+          "subtitle": "观点类 · ID 7945 · 命中 2025-08-15",
+          "tag": "观点类",
+          "hit": "2025-08-15",
+          "url": "./writing-resources/tzx-task2/7945.html"
+        },
+        {
+          "id": "7946",
+          "title": "出国旅游更热门",
+          "subtitle": "利弊类 · ID 7946 · 命中 2025-08-15",
+          "tag": "利弊类",
+          "hit": "2025-08-15",
+          "url": "./writing-resources/tzx-task2/7946.html"
+        },
+        {
+          "id": "7947",
+          "title": "工作闲暇失衡",
+          "subtitle": "报告类 · ID 7947 · 命中 2025-08-17",
+          "tag": "报告类",
+          "hit": "2025-08-17",
+          "url": "./writing-resources/tzx-task2/7947.html"
+        },
+        {
+          "id": "7948",
+          "title": "是否放弃传统",
+          "subtitle": "观点类 · ID 7948 · 命中 2025-08-16",
+          "tag": "观点类",
+          "hit": "2025-08-16",
+          "url": "./writing-resources/tzx-task2/7948.html"
+        },
+        {
+          "id": "7954",
+          "title": "公司的社会责任",
+          "subtitle": "观点类 · ID 7954 · 命中 2025-08-19",
+          "tag": "观点类",
+          "hit": "2025-08-19",
+          "url": "./writing-resources/tzx-task2/7954.html"
+        },
+        {
+          "id": "7955",
+          "title": "学科学的人变少",
+          "subtitle": "报告类 · ID 7955 · 命中 2025-08-21",
+          "tag": "报告类",
+          "hit": "2025-08-21",
+          "url": "./writing-resources/tzx-task2/7955.html"
+        },
+        {
+          "id": "7956",
+          "title": "商业文化交流",
+          "subtitle": "讨论类 · ID 7956 · 命中 2025-08-20",
+          "tag": "讨论类",
+          "hit": "2025-08-20",
+          "url": "./writing-resources/tzx-task2/7956.html"
+        },
+        {
+          "id": "7957",
+          "title": "高工资",
+          "subtitle": "讨论类 · ID 7957 · 命中 2025-08-21",
+          "tag": "讨论类",
+          "hit": "2025-08-21",
+          "url": "./writing-resources/tzx-task2/7957.html"
+        },
+        {
+          "id": "8021",
+          "title": "上学年龄",
+          "subtitle": "讨论类 · ID 8021 · 命中 2025-08-23",
+          "tag": "讨论类",
+          "hit": "2025-08-23",
+          "url": "./writing-resources/tzx-task2/8021.html"
+        },
+        {
+          "id": "8022",
+          "title": "城市过度拥挤",
+          "subtitle": "报告类 · ID 8022 · 命中 2025-08-25",
+          "tag": "报告类",
+          "hit": "2025-08-25",
+          "url": "./writing-resources/tzx-task2/8022.html"
+        },
+        {
+          "id": "8023",
+          "title": "整容",
+          "subtitle": "报告类 · ID 8023 · 命中 2025-08-27",
+          "tag": "报告类",
+          "hit": "2025-08-27",
+          "url": "./writing-resources/tzx-task2/8023.html"
+        },
+        {
+          "id": "8024",
+          "title": "城市与乡村生活的健康",
+          "subtitle": "讨论类 · ID 8024 · 命中 2025-08-29",
+          "tag": "讨论类",
+          "hit": "2025-08-29",
+          "url": "./writing-resources/tzx-task2/8024.html"
+        },
+        {
+          "id": "8050",
+          "title": "面对面商务会议",
+          "subtitle": "利弊类 · ID 8050 · 命中 2025-09-11",
+          "tag": "利弊类",
+          "hit": "2025-09-11",
+          "url": "./writing-resources/tzx-task2/8050.html"
+        },
+        {
+          "id": "8051",
+          "title": "女生学文男生学理",
+          "subtitle": "混合类 · ID 8051 · 命中 2025-09-10",
+          "tag": "混合类",
+          "hit": "2025-09-10",
+          "url": "./writing-resources/tzx-task2/8051.html"
+        },
+        {
+          "id": "8091",
+          "title": "年轻人喜欢逛街",
+          "subtitle": "利弊类 · ID 8091 · 命中 2025-09-20",
+          "tag": "利弊类",
+          "hit": "2025-09-20",
+          "url": "./writing-resources/tzx-task2/8091.html"
+        },
+        {
+          "id": "8092",
+          "title": "移居其他星球",
+          "subtitle": "观点类 · ID 8092 · 命中 2025-09-20",
+          "tag": "观点类",
+          "hit": "2025-09-20",
+          "url": "./writing-resources/tzx-task2/8092.html"
+        },
+        {
+          "id": "8093",
+          "title": "投资科研",
+          "subtitle": "观点类 · ID 8093 · 命中 2025-09-20",
+          "tag": "观点类",
+          "hit": "2025-09-20",
+          "url": "./writing-resources/tzx-task2/8093.html"
+        },
+        {
+          "id": "8109",
+          "title": "家用电器",
+          "subtitle": "利弊类 · ID 8109 · 命中 2025-09-27",
+          "tag": "利弊类",
+          "hit": "2025-09-27",
+          "url": "./writing-resources/tzx-task2/8109.html"
+        },
+        {
+          "id": "8110",
+          "title": "自行车",
+          "subtitle": "报告类 · ID 8110 · 命中 2025-09-27",
+          "tag": "报告类",
+          "hit": "2025-09-27",
+          "url": "./writing-resources/tzx-task2/8110.html"
+        },
+        {
+          "id": "8111",
+          "title": "公司提供运动和社交设施",
+          "subtitle": "观点类 · ID 8111 · 命中 2025-09-27",
+          "tag": "观点类",
+          "hit": "2025-09-27",
+          "url": "./writing-resources/tzx-task2/8111.html"
+        },
+        {
+          "id": "8112",
+          "title": "无车日的利弊",
+          "subtitle": "利弊类 · ID 8112 · 命中 2025-11-01",
+          "tag": "利弊类",
+          "hit": "2025-11-01",
+          "url": "./writing-resources/tzx-task2/8112.html"
+        },
+        {
+          "id": "8113",
+          "title": "艺术和科学",
+          "subtitle": "报告类 · ID 8113 · 命中 2025-09-26",
+          "tag": "报告类",
+          "hit": "2025-09-26",
+          "url": "./writing-resources/tzx-task2/8113.html"
+        },
+        {
+          "id": "8114",
+          "title": "男女穿衣相似",
+          "subtitle": "报告类 · ID 8114 · 命中 2025-09-27",
+          "tag": "报告类",
+          "hit": "2025-09-27",
+          "url": "./writing-resources/tzx-task2/8114.html"
+        },
+        {
+          "id": "8115",
+          "title": "投资艺术品",
+          "subtitle": "观点类 · ID 8115 · 命中 2025-10-03",
+          "tag": "观点类",
+          "hit": "2025-10-03",
+          "url": "./writing-resources/tzx-task2/8115.html"
+        },
+        {
+          "id": "8131",
+          "title": "面试",
+          "subtitle": "观点类 · ID 8131 · 命中 2025-11-01",
+          "tag": "观点类",
+          "hit": "2025-11-01",
+          "url": "./writing-resources/tzx-task2/8131.html"
+        },
+        {
+          "id": "8132",
+          "title": "艺术VS健康和教育",
+          "subtitle": "讨论类 · ID 8132 · 命中 2025-10-11",
+          "tag": "讨论类",
+          "hit": "2025-10-11",
+          "url": "./writing-resources/tzx-task2/8132.html"
+        },
+        {
+          "id": "8133",
+          "title": "提高驾驶年龄",
+          "subtitle": "观点类 · ID 8133 · 命中 2025-10-11",
+          "tag": "观点类",
+          "hit": "2025-10-11",
+          "url": "./writing-resources/tzx-task2/8133.html"
+        },
+        {
+          "id": "8153",
+          "title": "预防疾病VS治疗疾病",
+          "subtitle": "观点类 · ID 8153 · 命中 2025-10-15",
+          "tag": "观点类",
+          "hit": "2025-10-15",
+          "url": "./writing-resources/tzx-task2/8153.html"
+        },
+        {
+          "id": "8154",
+          "title": "少盖房子多种树",
+          "subtitle": "观点类 · ID 8154 · 命中 2025-10-15",
+          "tag": "观点类",
+          "hit": "2025-10-15",
+          "url": "./writing-resources/tzx-task2/8154.html"
+        },
+        {
+          "id": "8155",
+          "title": "公司工厂迁移",
+          "subtitle": "观点类 · ID 8155 · 命中 2025-10-16",
+          "tag": "观点类",
+          "hit": "2025-10-16",
+          "url": "./writing-resources/tzx-task2/8155.html"
+        },
+        {
+          "id": "8183",
+          "title": "失能老人的养老",
+          "subtitle": "观点类 · ID 8183 · 命中 2025-11-03",
+          "tag": "观点类",
+          "hit": "2025-11-03",
+          "url": "./writing-resources/tzx-task2/8183.html"
+        },
+        {
+          "id": "8190",
+          "title": "削减环保住房以解决健康问题",
+          "subtitle": "观点类 · ID 8190 · 命中 2025-11-16",
+          "tag": "观点类",
+          "hit": "2025-11-16",
+          "url": "./writing-resources/tzx-task2/8190.html"
+        },
+        {
+          "id": "8191",
+          "title": "解决垃圾食品问题",
+          "subtitle": "讨论类 · ID 8191 · 命中 2025-11-22",
+          "tag": "讨论类",
+          "hit": "2025-11-22",
+          "url": "./writing-resources/tzx-task2/8191.html"
+        },
+        {
+          "id": "8192",
+          "title": "学校是否应该选择学生",
+          "subtitle": "讨论类 · ID 8192 · 命中 2025-11-23",
+          "tag": "讨论类",
+          "hit": "2025-11-23",
+          "url": "./writing-resources/tzx-task2/8192.html"
+        },
+        {
+          "id": "8193",
+          "title": "生育年龄推迟",
+          "subtitle": "混合类 · ID 8193 · 命中 2025-11-23",
+          "tag": "混合类",
+          "hit": "2025-11-23",
+          "url": "./writing-resources/tzx-task2/8193.html"
+        }
+      ]
+    }
+  ]
+}
