@@ -2132,6 +2132,15 @@ body.reading-split-dragging {
 }
 
 @media (max-width: 860px) {
+  body.is-reading.is-reading-test.is-reading-question-input-active {
+    position: fixed;
+    top: var(--reading-keyboard-scroll-offset, 0);
+    right: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
   .reading-module .reader-shell {
     --mobile-question-height: 35dvh;
     display: block;

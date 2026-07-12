@@ -42,6 +42,7 @@ const state = {
   dataCache: new Map(),
   lastReaderRoute: null,
   selectionDoubtCleanup: null,
+  questionKeyboardCleanup: null,
   readerTimerId: null,
   route: { view: "library" },
   initialized: false,
@@ -89,6 +90,7 @@ async function openReadingWorkspace() {
 
 function hideReadingApp() {
   teardownArticleDoubtSelection();
+  teardownQuestionKeyboardScrollLock();
   teardownReaderTimer();
   document.body.classList.remove("is-reading-test");
 }
@@ -203,6 +205,7 @@ function emitReadingRouteChange(route = state.route) {
 async function renderRoute() {
   const route = parseRoute();
   teardownArticleDoubtSelection();
+  teardownQuestionKeyboardScrollLock();
   teardownReaderTimer();
   emitReadingRouteChange(route);
   if (route.view === "test") {
@@ -833,6 +836,7 @@ function renderReader(data, passageNo, collection = data.collection || "cambridg
     setupHtmlSourceControls();
   }
   setupSplitResizer(data.id, activePassageNo);
+  setupQuestionKeyboardScrollLock();
   setupReaderAutoHide();
   setupArticleDoubtSelection(data.id, activePassageNo);
 }
@@ -1238,6 +1242,120 @@ function teardownArticleDoubtSelection() {
   if (!state.selectionDoubtCleanup) return;
   state.selectionDoubtCleanup();
   state.selectionDoubtCleanup = null;
+}
+
+function setupQuestionKeyboardScrollLock() {
+  teardownQuestionKeyboardScrollLock();
+
+  const questionPane = document.querySelector(".question-pane");
+  const isMobile = window.matchMedia("(max-width: 860px)").matches;
+  if (!questionPane || !isMobile) return;
+
+  const fieldSelector = 'input, textarea, select, [contenteditable="true"]';
+  const visualViewport = window.visualViewport;
+  let locked = false;
+  let lockedScrollY = 0;
+  let keyboardWasOpen = false;
+  let baselineViewportHeight = visualViewport?.height || window.innerHeight;
+  let releaseTimer = 0;
+  let restoreFrame = 0;
+
+  const isQuestionField = (target) =>
+    target instanceof Element && Boolean(target.closest(fieldSelector)) && questionPane.contains(target);
+
+  const lockArticlePosition = () => {
+    if (releaseTimer) {
+      window.clearTimeout(releaseTimer);
+      releaseTimer = 0;
+    }
+    if (locked) return;
+
+    locked = true;
+    keyboardWasOpen = false;
+    baselineViewportHeight = Math.max(
+      baselineViewportHeight,
+      visualViewport?.height || window.innerHeight,
+    );
+    lockedScrollY = window.scrollY;
+    document.documentElement.style.setProperty("--reading-keyboard-scroll-offset", `${-lockedScrollY}px`);
+    document.body.classList.add("is-reading-question-input-active");
+  };
+
+  const unlockArticlePosition = () => {
+    if (!locked) return;
+
+    const restoreScrollY = lockedScrollY;
+    locked = false;
+    document.body.classList.remove("is-reading-question-input-active");
+    document.documentElement.style.removeProperty("--reading-keyboard-scroll-offset");
+    window.scrollTo({ top: restoreScrollY, behavior: "auto" });
+    restoreFrame = window.requestAnimationFrame(() => {
+      restoreFrame = 0;
+      window.scrollTo({ top: restoreScrollY, behavior: "auto" });
+    });
+  };
+
+  const handleFocusIn = (event) => {
+    if (isQuestionField(event.target)) {
+      lockArticlePosition();
+    }
+  };
+
+  const handlePointerDown = (event) => {
+    if (isQuestionField(event.target)) {
+      lockArticlePosition();
+    }
+  };
+
+  const handleFocusOut = () => {
+    if (releaseTimer) window.clearTimeout(releaseTimer);
+    releaseTimer = window.setTimeout(() => {
+      releaseTimer = 0;
+      if (isQuestionField(document.activeElement)) return;
+      unlockArticlePosition();
+    }, 450);
+  };
+
+  const handleViewportResize = () => {
+    const currentHeight = visualViewport?.height || window.innerHeight;
+    if (!locked) {
+      if (!isQuestionField(document.activeElement)) {
+        baselineViewportHeight = Math.max(baselineViewportHeight, currentHeight);
+      }
+      return;
+    }
+
+    const heightReduction = baselineViewportHeight - currentHeight;
+    if (heightReduction >= 120) {
+      keyboardWasOpen = true;
+    } else if (keyboardWasOpen && heightReduction <= 60) {
+      unlockArticlePosition();
+    }
+  };
+
+  questionPane.addEventListener("pointerdown", handlePointerDown, { passive: true });
+  questionPane.addEventListener("focusin", handleFocusIn);
+  questionPane.addEventListener("focusout", handleFocusOut);
+  (visualViewport || window).addEventListener("resize", handleViewportResize, { passive: true });
+
+  state.questionKeyboardCleanup = () => {
+    questionPane.removeEventListener("pointerdown", handlePointerDown);
+    questionPane.removeEventListener("focusin", handleFocusIn);
+    questionPane.removeEventListener("focusout", handleFocusOut);
+    (visualViewport || window).removeEventListener("resize", handleViewportResize);
+    if (releaseTimer) window.clearTimeout(releaseTimer);
+    if (restoreFrame) window.cancelAnimationFrame(restoreFrame);
+    releaseTimer = 0;
+    restoreFrame = 0;
+    unlockArticlePosition();
+  };
+}
+
+function teardownQuestionKeyboardScrollLock() {
+  if (!state.questionKeyboardCleanup) return;
+  const cleanup = state.questionKeyboardCleanup;
+  state.questionKeyboardCleanup = null;
+  cleanup();
 }
 
 function getSelectionMenuRect(range) {
